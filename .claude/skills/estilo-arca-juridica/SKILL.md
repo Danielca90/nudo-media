@@ -8,8 +8,16 @@ description: Estilo de Arca Jurídica (@arcajuridica), firma colombiana de aboga
 Complementa `videos-explicativos` e `instagram-reels-colombia`. Lo que se define aquí manda sobre lo general.
 El contenido legal se valida con `asesoria-juridica-colombia` antes de publicar.
 
+## Skills que se cargan juntas (todas en este repo, `.claude/skills/`)
+- `videos-explicativos` — método de video (guion, plan visual, voz, subtítulos, Remotion, render).
+- `instagram-reels-colombia` — guion de Reel por escenas, carrusel, portada, pie de foto, hashtags.
+- `redes-sociales-colombia` — voz, pilares, ganchos, calificación de posts, calendario y reglas colombianas.
+  Para Arca se trata de **usted/ustedes** (servicios jurídicos), no tuteo, salvo en las piezas
+  gráficas que ya usan "tu empresa" como gancho.
+
 ## Marca
-- Nombre: **Arca Jurídica · Abogados Consultores** · Instagram **@arcajuridica**.
+- Nombre: **Arca Jurídica · Abogados Consultores** · Instagram **@arcajuridica**
+  (https://www.instagram.com/arcajuridica/, confirmado por el usuario).
 - Rubro: asesoría laboral para empresas en Colombia (contratación laboral o civil,
   tercerización, compensación, turnos y jornadas, procesos disciplinarios,
   reglamento interno de trabajo, gestión del talento humano).

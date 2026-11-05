@@ -59,3 +59,4 @@ Reglas:
 - [referencias/videos-de-referencia.md](referencias/videos-de-referencia.md) — qué se
   aprendió de cada video de referencia que mandó el usuario.
 - Buenas prácticas oficiales de Remotion: skill `remotion-best-practices` (en este repo).
+- Redes: `instagram-reels-colombia` y `redes-sociales-colombia` (en este repo) para guion de Reel, pie de foto, hashtags y reglas colombianas.
