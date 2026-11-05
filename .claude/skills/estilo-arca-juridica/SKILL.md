@@ -98,6 +98,7 @@ gráficos llamativos, y **100 % automáticos**: la abogada no graba nada por aho
   |---|---|---|
   | `Bodega` | Reel 01 · despidos | Estanterías con cajas, portón de carga, letrero SALIDA, reloj de marcación, estiba, líneas de seguridad, polvo en los haces de luz |
   | `OficinaDiciembre` | Reel 02 · contratos que vencen el 31 dic | Atardecer, guirnalda de luces de diciembre, flor de pascua, calendario DIC 31, archivador CONTRATOS / AVISOS / 2027, lámpara |
+  | `Porteria` | Noticia SL1015-2026 · discapacidad presunta | Recepción PORTERÍA, monitores de cámaras, torniquetes, ascensor, escalera, gorra y radio del vigilante |
   | `Oficina` (kit) | Genérico, ya no usar como fondo principal | — |
   Ideas para los próximos: sala de juntas / Ministerio del Trabajo (requerimiento), consultorio o
   sala de lactancia (fueros), área de nómina con pantallas y calculadora (liquidación, prima),

@@ -1,0 +1,727 @@
+[
+{
+"text": "La",
+"start": 0.0,
+"end": 0.14
+},
+{
+"text": "Corte",
+"start": 0.14,
+"end": 0.36
+},
+{
+"text": "Suprema",
+"start": 0.36,
+"end": 0.9
+},
+{
+"text": "acaba",
+"start": 0.9,
+"end": 1.3
+},
+{
+"text": "de",
+"start": 1.3,
+"end": 1.54
+},
+{
+"text": "ampliar",
+"start": 1.54,
+"end": 1.78
+},
+{
+"text": "la",
+"start": 1.78,
+"end": 1.9
+},
+{
+"text": "protección",
+"start": 1.9,
+"end": 2.38
+},
+{
+"text": "a",
+"start": 2.38,
+"end": 2.54
+},
+{
+"text": "trabajadores",
+"start": 2.54,
+"end": 3.08
+},
+{
+"text": "con",
+"start": 3.08,
+"end": 3.34
+},
+{
+"text": "discapacidad.",
+"start": 3.34,
+"end": 4.06
+},
+{
+"text": "Un",
+"start": 4.32,
+"end": 4.52
+},
+{
+"text": "vigilante",
+"start": 4.52,
+"end": 5.02
+},
+{
+"text": "volvió",
+"start": 5.02,
+"end": 5.44
+},
+{
+"text": "de",
+"start": 5.44,
+"end": 5.56
+},
+{
+"text": "una",
+"start": 5.56,
+"end": 5.7
+},
+{
+"text": "incapacidad",
+"start": 5.7,
+"end": 6.3
+},
+{
+"text": "por",
+"start": 6.3,
+"end": 6.54
+},
+{
+"text": "un",
+"start": 6.54,
+"end": 6.66
+},
+{
+"text": "accidente",
+"start": 6.66,
+"end": 7.12
+},
+{
+"text": "en",
+"start": 7.12,
+"end": 7.2
+},
+{
+"text": "la",
+"start": 7.2,
+"end": 7.3
+},
+{
+"text": "rodilla,",
+"start": 7.3,
+"end": 7.7
+},
+{
+"text": "con",
+"start": 7.7,
+"end": 7.98
+},
+{
+"text": "concepto",
+"start": 7.98,
+"end": 8.54
+},
+{
+"text": "de",
+"start": 8.54,
+"end": 8.66
+},
+{
+"text": "apto",
+"start": 8.66,
+"end": 9.12
+},
+{
+"text": "con",
+"start": 9.12,
+"end": 9.3
+},
+{
+"text": "recomendaciones.",
+"start": 9.3,
+"end": 10.04
+},
+{
+"text": "Al",
+"start": 10.44,
+"end": 10.6
+},
+{
+"text": "día",
+"start": 10.6,
+"end": 10.78
+},
+{
+"text": "siguiente",
+"start": 10.78,
+"end": 11.06
+},
+{
+"text": "lo",
+"start": 11.06,
+"end": 11.42
+},
+{
+"text": "despidieron.",
+"start": 11.42,
+"end": 12.04
+},
+{
+"text": "Para",
+"start": 12.32,
+"end": 12.46
+},
+{
+"text": "la",
+"start": 12.46,
+"end": 12.6
+},
+{
+"text": "Corte",
+"start": 12.6,
+"end": 12.94
+},
+{
+"text": "fue",
+"start": 12.94,
+"end": 13.26
+},
+{
+"text": "un",
+"start": 13.26,
+"end": 13.4
+},
+{
+"text": "despido",
+"start": 13.4,
+"end": 13.8
+},
+{
+"text": "discriminatorio.",
+"start": 13.8,
+"end": 14.7
+},
+{
+"text": "La",
+"start": 15.06,
+"end": 15.2
+},
+{
+"text": "Corte",
+"start": 15.2,
+"end": 15.42
+},
+{
+"text": "recordó",
+"start": 15.42,
+"end": 15.96
+},
+{
+"text": "que",
+"start": 15.96,
+"end": 16.08
+},
+{
+"text": "la",
+"start": 16.08,
+"end": 16.18
+},
+{
+"text": "protección",
+"start": 16.18,
+"end": 16.66
+},
+{
+"text": "cubre",
+"start": 16.66,
+"end": 17.08
+},
+{
+"text": "a",
+"start": 17.08,
+"end": 17.24
+},
+{
+"text": "quien",
+"start": 17.24,
+"end": 17.34
+},
+{
+"text": "tiene",
+"start": 17.34,
+"end": 17.66
+},
+{
+"text": "una",
+"start": 17.66,
+"end": 17.98
+},
+{
+"text": "discapacidad,",
+"start": 17.98,
+"end": 18.8
+},
+{
+"text": "a",
+"start": 19.08,
+"end": 19.18
+},
+{
+"text": "quien",
+"start": 19.18,
+"end": 19.34
+},
+{
+"text": "la",
+"start": 19.34,
+"end": 19.54
+},
+{
+"text": "tuvo,",
+"start": 19.54,
+"end": 19.82
+},
+{
+"text": "a",
+"start": 20.28,
+"end": 20.34
+},
+{
+"text": "quien",
+"start": 20.34,
+"end": 20.46
+},
+{
+"text": "tiene",
+"start": 20.46,
+"end": 20.72
+},
+{
+"text": "una",
+"start": 20.72,
+"end": 20.92
+},
+{
+"text": "discapacidad",
+"start": 20.92,
+"end": 21.6
+},
+{
+"text": "presunta",
+"start": 21.6,
+"end": 22.16
+},
+{
+"text": "e",
+"start": 22.16,
+"end": 22.5
+},
+{
+"text": "incluso",
+"start": 22.5,
+"end": 22.88
+},
+{
+"text": "a",
+"start": 22.88,
+"end": 23.24
+},
+{
+"text": "quien",
+"start": 23.24,
+"end": 23.36
+},
+{
+"text": "está",
+"start": 23.36,
+"end": 23.66
+},
+{
+"text": "vinculado",
+"start": 23.66,
+"end": 24.22
+},
+{
+"text": "a",
+"start": 24.22,
+"end": 24.38
+},
+{
+"text": "una",
+"start": 24.38,
+"end": 24.5
+},
+{
+"text": "persona",
+"start": 24.5,
+"end": 24.84
+},
+{
+"text": "con",
+"start": 24.84,
+"end": 25.04
+},
+{
+"text": "discapacidad.",
+"start": 25.04,
+"end": 25.76
+},
+{
+"text": "Y",
+"start": 25.96,
+"end": 26.12
+},
+{
+"text": "si",
+"start": 26.12,
+"end": 26.2
+},
+{
+"text": "no",
+"start": 26.2,
+"end": 26.32
+},
+{
+"text": "cuentas",
+"start": 26.32,
+"end": 26.76
+},
+{
+"text": "con",
+"start": 26.76,
+"end": 26.9
+},
+{
+"text": "un",
+"start": 26.9,
+"end": 27.0
+},
+{
+"text": "soporte",
+"start": 27.0,
+"end": 27.32
+},
+{
+"text": "clínico",
+"start": 27.32,
+"end": 27.78
+},
+{
+"text": "especializado",
+"start": 27.78,
+"end": 28.48
+},
+{
+"text": "sobre",
+"start": 28.48,
+"end": 28.72
+},
+{
+"text": "su",
+"start": 28.72,
+"end": 28.88
+},
+{
+"text": "condición,",
+"start": 28.88,
+"end": 29.42
+},
+{
+"text": "se",
+"start": 29.64,
+"end": 29.76
+},
+{
+"text": "presume",
+"start": 29.76,
+"end": 30.22
+},
+{
+"text": "la",
+"start": 30.22,
+"end": 30.4
+},
+{
+"text": "discriminación.",
+"start": 30.4,
+"end": 31.18
+},
+{
+"text": "Antes",
+"start": 31.42,
+"end": 31.7
+},
+{
+"text": "de",
+"start": 31.7,
+"end": 31.88
+},
+{
+"text": "despedir",
+"start": 31.88,
+"end": 32.3
+},
+{
+"text": "a",
+"start": 32.3,
+"end": 32.42
+},
+{
+"text": "alguien",
+"start": 32.42,
+"end": 32.66
+},
+{
+"text": "que",
+"start": 32.66,
+"end": 32.86
+},
+{
+"text": "vuelve",
+"start": 32.86,
+"end": 33.2
+},
+{
+"text": "de",
+"start": 33.2,
+"end": 33.32
+},
+{
+"text": "una",
+"start": 33.32,
+"end": 33.48
+},
+{
+"text": "incapacidad,",
+"start": 33.48,
+"end": 34.12
+},
+{
+"text": "revisa",
+"start": 34.4,
+"end": 34.74
+},
+{
+"text": "su",
+"start": 34.74,
+"end": 34.92
+},
+{
+"text": "caso",
+"start": 34.92,
+"end": 35.18
+},
+{
+"text": "y",
+"start": 35.18,
+"end": 35.42
+},
+{
+"text": "documenta",
+"start": 35.42,
+"end": 36.0
+},
+{
+"text": "todo.",
+"start": 36.0,
+"end": 36.3
+},
+{
+"text": "Y",
+"start": 36.68,
+"end": 36.78
+},
+{
+"text": "no",
+"start": 36.78,
+"end": 36.9
+},
+{
+"text": "tienes",
+"start": 36.9,
+"end": 37.2
+},
+{
+"text": "que",
+"start": 37.2,
+"end": 37.4
+},
+{
+"text": "hacerlo",
+"start": 37.4,
+"end": 37.68
+},
+{
+"text": "solo.",
+"start": 37.68,
+"end": 38.0
+},
+{
+"text": "En",
+"start": 38.32,
+"end": 38.42
+},
+{
+"text": "Arca",
+"start": 38.42,
+"end": 38.64
+},
+{
+"text": "Jurídica",
+"start": 38.64,
+"end": 39.16
+},
+{
+"text": "revisamos",
+"start": 39.16,
+"end": 39.7
+},
+{
+"text": "cada",
+"start": 39.7,
+"end": 40.08
+},
+{
+"text": "caso",
+"start": 40.08,
+"end": 40.5
+},
+{
+"text": "antes",
+"start": 40.5,
+"end": 40.74
+},
+{
+"text": "de",
+"start": 40.74,
+"end": 40.92
+},
+{
+"text": "que",
+"start": 40.92,
+"end": 41.02
+},
+{
+"text": "decidas.",
+"start": 41.02,
+"end": 41.52
+},
+{
+"text": "Documentamos",
+"start": 41.86,
+"end": 42.38
+},
+{
+"text": "el",
+"start": 42.38,
+"end": 42.5
+},
+{
+"text": "soporte",
+"start": 42.5,
+"end": 42.84
+},
+{
+"text": "médico",
+"start": 42.84,
+"end": 43.22
+},
+{
+"text": "y",
+"start": 43.22,
+"end": 43.34
+},
+{
+"text": "legal,",
+"start": 43.34,
+"end": 43.8
+},
+{
+"text": "hacemos",
+"start": 44.12,
+"end": 44.3
+},
+{
+"text": "el",
+"start": 44.3,
+"end": 44.56
+},
+{
+"text": "seguimiento",
+"start": 44.56,
+"end": 45.14
+},
+{
+"text": "y",
+"start": 45.14,
+"end": 45.36
+},
+{
+"text": "te",
+"start": 45.36,
+"end": 45.5
+},
+{
+"text": "defendemos",
+"start": 45.5,
+"end": 46.14
+},
+{
+"text": "si",
+"start": 46.14,
+"end": 46.32
+},
+{
+"text": "llega",
+"start": 46.32,
+"end": 46.5
+},
+{
+"text": "una",
+"start": 46.5,
+"end": 46.68
+},
+{
+"text": "demanda.",
+"start": 46.68,
+"end": 47.2
+},
+{
+"text": "Escríbenos",
+"start": 47.48,
+"end": 48.0
+},
+{
+"text": "y",
+"start": 48.0,
+"end": 48.16
+},
+{
+"text": "blindamos",
+"start": 48.16,
+"end": 48.62
+},
+{
+"text": "legalmente",
+"start": 48.62,
+"end": 49.3
+},
+{
+"text": "tu",
+"start": 49.3,
+"end": 49.44
+},
+{
+"text": "empresa.",
+"start": 49.44,
+"end": 49.74
+}
+]

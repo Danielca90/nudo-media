@@ -92,7 +92,7 @@ export const Oficina: React.FC<{foco?: number; zoom?: number}> = ({foco = 0, zoo
 };
 
 // ---------- capa de marca fija ----------
-export const TituloFijo: React.FC<{lineas: [string, string]; hasta: number}> = ({lineas, hasta}) => {
+export const TituloFijo: React.FC<{lineas: [string, string]; hasta: number; ante?: string}> = ({lineas, hasta, ante}) => {
   const t = useT();
   const entra = usePop(0.05, 160, 16);
   const sale = tramo(t, hasta - 0.3, hasta);
@@ -102,6 +102,7 @@ export const TituloFijo: React.FC<{lineas: [string, string]; hasta: number}> = (
       <div style={{background: COLOR.teal, padding: '22px 34px 24px', transform: 'skewX(-6deg)',
         borderLeft: `10px solid ${COLOR.dorado}`, boxShadow: '0 18px 40px rgba(10,30,30,.28)'}}>
         <div style={{transform: 'skewX(6deg)', textAlign: 'center'}}>
+          {ante && <div style={{fontFamily: FUENTES.sans, fontWeight: 800, color: COLOR.dorado, fontSize: 22, letterSpacing: 5, marginBottom: 8}}>{ante}</div>}
           <div style={{fontFamily: FUENTES.serif, color: COLOR.crema, fontSize: 50, lineHeight: 1.15}}>{lineas[0]}</div>
           <div style={{fontFamily: FUENTES.serif, color: COLOR.dorado, fontSize: 50, lineHeight: 1.15, fontWeight: 700}}>{lineas[1]}</div>
         </div>
@@ -370,5 +371,28 @@ export const CierreServicios: React.FC<{
         </div>
       </AbsoluteFill>
     </AbsoluteFill>
+  );
+};
+
+// ---------- serie "Actualidad laboral" ----------
+/** Tarjeta de fuente: entidad, sala, número y fecha. Da credibilidad a las noticias. */
+export const Fuente: React.FC<{entidad: string; detalle: string; numero: string; fecha: string; en: number}> = ({entidad, detalle, numero, fecha, en}) => {
+  const p = usePop(en, 200, 15);
+  return (
+    <div style={{transform: `scale(${0.7 + 0.3 * p}) translateY(${(1 - p) * 60}px)`, opacity: Math.min(1, p * 1.5), width: 820,
+      background: COLOR.papel, borderRadius: 20, overflow: 'hidden', boxShadow: '0 30px 60px rgba(0,0,0,.28)'}}>
+      <div style={{background: COLOR.teal, padding: '22px 36px', display: 'flex', alignItems: 'center', gap: 22}}>
+        <svg width={64} height={64} viewBox="0 0 100 100"><path d="M50 8 L 92 30 H 8 Z" fill={COLOR.dorado} />
+          {[18, 38, 58, 78].map((x) => <rect key={x} x={x} y={36} width={8} height={40} fill={COLOR.dorado} />)}<rect x={8} y={80} width={84} height={10} fill={COLOR.dorado} /></svg>
+        <div>
+          <div style={{fontFamily: FUENTES.serif, fontWeight: 700, fontSize: 38, color: COLOR.crema}}>{entidad}</div>
+          <div style={{fontFamily: FUENTES.sans, fontWeight: 600, fontSize: 26, color: COLOR.dorado}}>{detalle}</div>
+        </div>
+      </div>
+      <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '24px 36px'}}>
+        <span style={{fontFamily: FUENTES.sans, fontWeight: 800, fontSize: 52, color: COLOR.tinta, letterSpacing: 1}}>{numero}</span>
+        <span style={{fontFamily: FUENTES.sans, fontWeight: 700, fontSize: 28, color: '#6B7B79'}}>{fecha}</span>
+      </div>
+    </div>
   );
 };
