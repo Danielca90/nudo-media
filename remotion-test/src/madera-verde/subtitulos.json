@@ -1,0 +1,590 @@
+[
+{
+"text": "¿Qué",
+"startMs": 0,
+"endMs": 80,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "pasa",
+"startMs": 160,
+"endMs": 400,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "si",
+"startMs": 480,
+"endMs": 560,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "haces",
+"startMs": 600,
+"endMs": 880,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "un",
+"startMs": 920,
+"endMs": 960,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "mueble",
+"startMs": 1040,
+"endMs": 1360,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "con",
+"startMs": 1440,
+"endMs": 1600,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "madera",
+"startMs": 1707,
+"endMs": 1920,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "verde?",
+"startMs": 2000,
+"endMs": 2640,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "La",
+"startMs": 2680,
+"endMs": 2720,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "madera",
+"startMs": 2800,
+"endMs": 3040,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "recién",
+"startMs": 3120,
+"endMs": 3440,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "cortada",
+"startMs": 3480,
+"endMs": 4000,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "tiene",
+"startMs": 4040,
+"endMs": 4320,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "más",
+"startMs": 4360,
+"endMs": 4480,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "de",
+"startMs": 4600,
+"endMs": 4720,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "treinta",
+"startMs": 4800,
+"endMs": 5040,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "por",
+"startMs": 5120,
+"endMs": 5360,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "ciento",
+"startMs": 5440,
+"endMs": 5600,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "de",
+"startMs": 5680,
+"endMs": 5760,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "agua.",
+"startMs": 5840,
+"endMs": 6320,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "Dentro",
+"startMs": 6373,
+"endMs": 6560,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "de",
+"startMs": 6600,
+"endMs": 6640,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "tu",
+"startMs": 6720,
+"endMs": 6800,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "casa",
+"startMs": 6880,
+"endMs": 7200,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "se",
+"startMs": 7240,
+"endMs": 7280,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "seca",
+"startMs": 7360,
+"endMs": 7600,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "hasta",
+"startMs": 7680,
+"endMs": 7840,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "quedar",
+"startMs": 7880,
+"endMs": 8080,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "en",
+"startMs": 8160,
+"endMs": 8240,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "diez...",
+"startMs": 8360,
+"endMs": 8960,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "y",
+"startMs": 9000,
+"endMs": 9040,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "al",
+"startMs": 9080,
+"endMs": 9120,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "secarse,",
+"startMs": 9200,
+"endMs": 9920,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "se",
+"startMs": 9960,
+"endMs": 10000,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "encoge.",
+"startMs": 10080,
+"endMs": 10800,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "Pero",
+"startMs": 10853,
+"endMs": 10960,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "no",
+"startMs": 11040,
+"endMs": 11120,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "se",
+"startMs": 11200,
+"endMs": 11280,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "encoge",
+"startMs": 11400,
+"endMs": 11680,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "igual:",
+"startMs": 11760,
+"endMs": 12240,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "casi",
+"startMs": 12347,
+"endMs": 12560,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "nada",
+"startMs": 12640,
+"endMs": 12880,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "a",
+"startMs": 12920,
+"endMs": 12960,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "lo",
+"startMs": 13040,
+"endMs": 13080,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "largo,",
+"startMs": 13120,
+"endMs": 13600,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "y",
+"startMs": 13640,
+"endMs": 13680,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "mucho",
+"startMs": 13920,
+"endMs": 14160,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "a",
+"startMs": 14200,
+"endMs": 14240,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "lo",
+"startMs": 14280,
+"endMs": 14320,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "ancho.",
+"startMs": 14400,
+"endMs": 14880,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "Por",
+"startMs": 14960,
+"endMs": 15040,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "eso",
+"startMs": 15160,
+"endMs": 15280,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "las",
+"startMs": 15360,
+"endMs": 15440,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "tablas",
+"startMs": 15520,
+"endMs": 15760,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "se",
+"startMs": 15840,
+"endMs": 15920,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "curvan,",
+"startMs": 16040,
+"endMs": 16560,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "las",
+"startMs": 16640,
+"endMs": 16720,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "juntas",
+"startMs": 16760,
+"endMs": 17040,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "se",
+"startMs": 17120,
+"endMs": 17200,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "abren",
+"startMs": 17280,
+"endMs": 17600,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "y",
+"startMs": 17760,
+"endMs": 17813,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "aparecen",
+"startMs": 17867,
+"endMs": 18240,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "grietas.",
+"startMs": 18320,
+"endMs": 19040,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "Antes",
+"startMs": 19160,
+"endMs": 19320,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "de",
+"startMs": 19360,
+"endMs": 19440,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "construir,",
+"startMs": 19520,
+"endMs": 20240,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "mide",
+"startMs": 20280,
+"endMs": 20480,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "la",
+"startMs": 20560,
+"endMs": 20600,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "humedad:",
+"startMs": 20640,
+"endMs": 21200,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "entre",
+"startMs": 21360,
+"endMs": 21520,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "ocho",
+"startMs": 21600,
+"endMs": 21760,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "y",
+"startMs": 22000,
+"endMs": 22080,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "doce",
+"startMs": 22160,
+"endMs": 22320,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "por",
+"startMs": 22400,
+"endMs": 22560,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "ciento.",
+"startMs": 22640,
+"endMs": 23120,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "Así",
+"startMs": 23240,
+"endMs": 23440,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "tu",
+"startMs": 23600,
+"endMs": 23680,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "mueble",
+"startMs": 23760,
+"endMs": 24000,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "se",
+"startMs": 24080,
+"endMs": 24160,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "queda",
+"startMs": 24280,
+"endMs": 24400,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "como",
+"startMs": 24480,
+"endMs": 24640,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "lo",
+"startMs": 24720,
+"endMs": 24800,
+"timestampMs": null,
+"confidence": null
+},
+{
+"text": "diseñaste.",
+"startMs": 24880,
+"endMs": 25680,
+"timestampMs": null,
+"confidence": null
+}
+]
