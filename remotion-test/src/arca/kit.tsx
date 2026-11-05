@@ -253,3 +253,45 @@ export const Cierre: React.FC<{desde: number}> = ({desde}) => {
     </AbsoluteFill>
   );
 };
+
+// ---------- cámara 2D ----------
+export type ClaveCam = {t: number; s?: number; x?: number; y?: number};
+/** Acercamientos y paneos por claves de tiempo (escala y desplazamiento del escenario, con suavizado). */
+export const Camara: React.FC<{claves: ClaveCam[]; children: React.ReactNode}> = ({claves, children}) => {
+  const t = useT();
+  const val = (k: 's' | 'x' | 'y', def: number) => {
+    const ts = claves.map((c) => c.t);
+    const vs = claves.map((c) => c[k] ?? def);
+    if (ts.length === 1) return vs[0];
+    return interpolate(t, ts, vs, {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic)});
+  };
+  return (
+    <AbsoluteFill style={{transform: `translate(${val('x', 0)}px, ${val('y', 0)}px) scale(${val('s', 1)})`}}>{children}</AbsoluteFill>
+  );
+};
+
+// ---------- número de paso ----------
+/** Número grande que entra al centro y luego se reduce a insignia arriba a la izquierda. */
+export const Paso: React.FC<{n: number; en: number; hasta: number; etiqueta: string}> = ({n, en, hasta, etiqueta}) => {
+  const t = useT();
+  const entra = usePop(en, 260, 15);
+  if (t < en || t > hasta) return null;
+  const va = tramo(t, en + 0.75, en + 1.15);
+  const sale = tramo(t, hasta - 0.2, hasta);
+  const x = interpolate(va, [0, 1], [540, 150]);
+  const y = interpolate(va, [0, 1], [880, 430]);
+  const s = interpolate(va, [0, 1], [1, 0.32]);
+  return (
+    <div style={{position: 'absolute', left: 0, top: 0, transform: `translate(${x + (1 - entra) * 600}px, ${y}px)`, opacity: 1 - sale}}>
+      <div style={{transform: `translate(-50%, -50%) scale(${s})`, display: 'flex', alignItems: 'center', gap: 40}}>
+        <div style={{width: 420, height: 420, borderRadius: '50%', background: COLOR.teal, border: `16px solid ${COLOR.dorado}`,
+          display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 30px 60px rgba(0,0,0,.3)'}}>
+          <span style={{fontFamily: FUENTES.serif, fontWeight: 700, fontSize: 300, color: COLOR.dorado, lineHeight: 1}}>{n}</span>
+        </div>
+      </div>
+      <div style={{position: 'absolute', left: 90 * (1 - va) + 80 * va, top: -40 + 10 * va, opacity: va,
+        whiteSpace: 'nowrap', fontFamily: FUENTES.sans, fontWeight: 800, fontSize: 40, color: COLOR.teal,
+        background: 'rgba(255,255,255,.9)', padding: '8px 20px', borderRadius: 10}}>{etiqueta}</div>
+    </div>
+  );
+};

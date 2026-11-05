@@ -1,0 +1,432 @@
+[
+{
+"text": "Si",
+"start": 0.0,
+"end": 0.16
+},
+{
+"text": "despides",
+"start": 0.16,
+"end": 0.58
+},
+{
+"text": "así,",
+"start": 0.58,
+"end": 1.0
+},
+{
+"text": "le",
+"start": 1.26,
+"end": 1.34
+},
+{
+"text": "estás",
+"start": 1.34,
+"end": 1.54
+},
+{
+"text": "regalando",
+"start": 1.54,
+"end": 2.06
+},
+{
+"text": "una",
+"start": 2.06,
+"end": 2.24
+},
+{
+"text": "demanda",
+"start": 2.24,
+"end": 2.8
+},
+{
+"text": "a",
+"start": 2.8,
+"end": 2.88
+},
+{
+"text": "tu",
+"start": 2.88,
+"end": 2.96
+},
+{
+"text": "trabajador.",
+"start": 2.96,
+"end": 3.54
+},
+{
+"text": "Antes",
+"start": 3.84,
+"end": 4.2
+},
+{
+"text": "de",
+"start": 4.2,
+"end": 4.36
+},
+{
+"text": "despedir",
+"start": 4.36,
+"end": 4.82
+},
+{
+"text": "a",
+"start": 4.82,
+"end": 4.94
+},
+{
+"text": "alguien,",
+"start": 4.94,
+"end": 5.26
+},
+{
+"text": "revisa",
+"start": 5.5,
+"end": 5.88
+},
+{
+"text": "tres",
+"start": 5.88,
+"end": 6.26
+},
+{
+"text": "cosas.",
+"start": 6.26,
+"end": 6.6
+},
+{
+"text": "Uno:",
+"start": 7.18,
+"end": 7.36
+},
+{
+"text": "¿Tiene",
+"start": 7.82,
+"end": 7.98
+},
+{
+"text": "estabilidad",
+"start": 7.98,
+"end": 8.56
+},
+{
+"text": "reforzada?",
+"start": 8.56,
+"end": 9.18
+},
+{
+"text": "embarazo,",
+"start": 9.58,
+"end": 10.22
+},
+{
+"text": "licencia",
+"start": 10.48,
+"end": 10.84
+},
+{
+"text": "de",
+"start": 10.84,
+"end": 10.98
+},
+{
+"text": "maternidad,",
+"start": 10.98,
+"end": 11.66
+},
+{
+"text": "una",
+"start": 11.9,
+"end": 12.06
+},
+{
+"text": "condición",
+"start": 12.06,
+"end": 12.44
+},
+{
+"text": "de",
+"start": 12.44,
+"end": 12.56
+},
+{
+"text": "salud",
+"start": 12.56,
+"end": 12.94
+},
+{
+"text": "o",
+"start": 12.94,
+"end": 13.24
+},
+{
+"text": "fuero",
+"start": 13.24,
+"end": 13.46
+},
+{
+"text": "sindical.",
+"start": 13.46,
+"end": 13.92
+},
+{
+"text": "Ahí",
+"start": 14.36,
+"end": 14.62
+},
+{
+"text": "necesitas",
+"start": 14.62,
+"end": 15.18
+},
+{
+"text": "autorización",
+"start": 15.18,
+"end": 15.76
+},
+{
+"text": "previa.",
+"start": 15.76,
+"end": 16.24
+},
+{
+"text": "Dos:",
+"start": 16.58,
+"end": 16.9
+},
+{
+"text": "Si",
+"start": 17.48,
+"end": 17.58
+},
+{
+"text": "es",
+"start": 17.58,
+"end": 17.72
+},
+{
+"text": "con",
+"start": 17.72,
+"end": 17.88
+},
+{
+"text": "justa",
+"start": 17.88,
+"end": 18.18
+},
+{
+"text": "causa,",
+"start": 18.18,
+"end": 18.5
+},
+{
+"text": "escucha",
+"start": 18.84,
+"end": 19.26
+},
+{
+"text": "primero",
+"start": 19.26,
+"end": 19.52
+},
+{
+"text": "sus",
+"start": 19.52,
+"end": 19.72
+},
+{
+"text": "descargos",
+"start": 19.72,
+"end": 20.3
+},
+{
+"text": "y",
+"start": 20.3,
+"end": 20.54
+},
+{
+"text": "pon",
+"start": 20.54,
+"end": 20.78
+},
+{
+"text": "los",
+"start": 20.78,
+"end": 20.96
+},
+{
+"text": "hechos",
+"start": 20.96,
+"end": 21.16
+},
+{
+"text": "concretos",
+"start": 21.16,
+"end": 21.9
+},
+{
+"text": "en",
+"start": 21.9,
+"end": 22.0
+},
+{
+"text": "la",
+"start": 22.0,
+"end": 22.12
+},
+{
+"text": "carta.",
+"start": 22.12,
+"end": 22.44
+},
+{
+"text": "Lo",
+"start": 22.76,
+"end": 22.88
+},
+{
+"text": "que",
+"start": 22.88,
+"end": 23.02
+},
+{
+"text": "no",
+"start": 23.02,
+"end": 23.22
+},
+{
+"text": "esté",
+"start": 23.22,
+"end": 23.4
+},
+{
+"text": "en",
+"start": 23.4,
+"end": 23.52
+},
+{
+"text": "la",
+"start": 23.52,
+"end": 23.62
+},
+{
+"text": "carta",
+"start": 23.62,
+"end": 23.96
+},
+{
+"text": "no",
+"start": 23.96,
+"end": 24.32
+},
+{
+"text": "lo",
+"start": 24.32,
+"end": 24.48
+},
+{
+"text": "puedes",
+"start": 24.48,
+"end": 24.72
+},
+{
+"text": "alegar",
+"start": 24.72,
+"end": 25.04
+},
+{
+"text": "después.",
+"start": 25.04,
+"end": 25.36
+},
+{
+"text": "Tres:",
+"start": 25.9,
+"end": 26.22
+},
+{
+"text": "Paga",
+"start": 26.68,
+"end": 26.84
+},
+{
+"text": "la",
+"start": 26.84,
+"end": 26.98
+},
+{
+"text": "liquidación",
+"start": 26.98,
+"end": 27.5
+},
+{
+"text": "completa",
+"start": 27.5,
+"end": 27.98
+},
+{
+"text": "el",
+"start": 27.98,
+"end": 28.46
+},
+{
+"text": "día",
+"start": 28.46,
+"end": 28.7
+},
+{
+"text": "de",
+"start": 28.7,
+"end": 28.82
+},
+{
+"text": "la",
+"start": 28.82,
+"end": 28.94
+},
+{
+"text": "terminación.",
+"start": 28.94,
+"end": 29.5
+},
+{
+"text": "Guarda",
+"start": 29.5,
+"end": 30.22
+},
+{
+"text": "este",
+"start": 30.22,
+"end": 30.34
+},
+{
+"text": "video",
+"start": 30.34,
+"end": 30.68
+},
+{
+"text": "antes",
+"start": 30.68,
+"end": 31.16
+},
+{
+"text": "de",
+"start": 31.16,
+"end": 31.34
+},
+{
+"text": "tu",
+"start": 31.34,
+"end": 31.46
+},
+{
+"text": "próximo",
+"start": 31.46,
+"end": 31.78
+},
+{
+"text": "despido.",
+"start": 31.78,
+"end": 32.36
+}
+]

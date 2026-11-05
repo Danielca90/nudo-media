@@ -65,7 +65,9 @@ gráficos llamativos, y **100 % automáticos**: la abogada no graba nada por aho
   hasta 3 palabras, Montserrat 800 blanca con borde verde y palabras clave en dorado.
 - **Cierre:** 2,4 s en verde con logo claro, "Tu empresa en buenas manos" (serif itálica dorada) y @.
 - Código: `remotion-test/src/arca/` (`marca.ts`, `kit.tsx` reutilizable, una carpeta por reel con
-  `GUION.md`, `palabras.json` y el componente). Primer video: `reel02/` (32,6 s).
+  `GUION.md`, `palabras.json` y el componente). Hechos: `reel02/` (32,6 s) y `reel01/` (35 s).
+- Técnica: 2D por defecto (temas legales = documentos, plazos, dinero). Seguir
+  `videos-explicativos/referencias/2d-motion-graphics.md`. Mixto solo si un objeto físico lo pide.
 - Logo: recortado del post de referencia (`public/arca/logo-*.png`, `emblema-*.png`). Cambiarlo por
   el archivo original en cuanto el usuario lo envíe.
 
