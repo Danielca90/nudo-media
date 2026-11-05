@@ -7,6 +7,10 @@ Basada en dos referencias analizadas (no se copian sus cuentas, marcas de agua n
   cámara lenta, partes que se separan, anillos que señalan detalles, subtítulo arriba
   con la palabra clave resaltada.
 
+- **C – Gancho del metro** (24,5 s): primeros planos muy cerrados, el objeto llena
+  el cuadro y se sale por los bordes; un plano translúcido con un "0" marca dónde empieza
+  la medida; el estado incorrecto se pinta de rojo; cierre con llamado a compartir.
+
 ## Regla principal: el efecto tiene que explicar algo
 Antes de agregar un efecto, responder: **¿qué entiende el espectador gracias a esto?**
 Si la respuesta es "se ve más lindo", no va.
@@ -21,11 +25,16 @@ Si la respuesta es "se ve más lindo", no va.
 | Medida / cifra | Cota o número que aparece junto al objeto | "−6 mm de ancho" |
 | Movimiento rápido real (algo que cae, gira rápido) | Motion blur | Solo si algo se mueve rápido |
 | Elemento activo / caliente / peligro | Glow suave y puntual | Grieta que aparece |
+| Punto de referencia / plano de medida | Plano translúcido + etiqueta ("0") | Dónde empieza a medir el metro |
+| Forma incorrecta de hacer algo | El objeto cambia a rojo mientras pasa | Apretar el gancho del metro |
+| Movimiento de una pieza | Flecha 2D blanca simple al lado | Gancho que entra / sale |
 | Capa sobre otra (agua, aire, calor) | Transparencia | Humedad saliendo de la madera |
 
 **Por defecto: sin motion blur, sin glow, sin partículas.** Se activan escena por escena.
 
 ## Cámara
+- **Primeros planos grandes**: el objeto ocupa 60–90 % del ancho y puede salirse del
+  cuadro. Nada de objetos chiquitos en el centro de un fondo vacío.
 - Una idea por plano. Cambiar de plano cuando cambia la idea (cada 1,5–3 s).
 - Movimientos lentos y continuos (dolly / órbita suave). Nada de giros sin motivo.
 - Acercar la cámara a lo que el texto está nombrando en ese momento.
@@ -45,6 +54,8 @@ Si la respuesta es "se ve más lindo", no va.
 2. **Desarrollo:** una idea por plano, siempre mostrando lo que se dice.
 3. **Revelación:** corte, vista interna o antes/después.
 4. **Cierre:** consejo práctico + marca Nudo (discreta, sin pantalla final larga).
+   Opcional: llamado a compartir ("mándaselo a quien…") en 1–2 s, sin copiar
+   la animación de interfaz de otras cuentas.
 
 ## Color: cada cosa con su color real
 - **Los objetos llevan sus colores reales**, nunca los de la marca: un metro es amarillo
