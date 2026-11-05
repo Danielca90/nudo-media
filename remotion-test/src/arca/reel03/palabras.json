@@ -1,0 +1,612 @@
+[
+{
+"text": "Hay",
+"start": 0.0,
+"end": 0.16
+},
+{
+"text": "trabajadores",
+"start": 0.16,
+"end": 0.76
+},
+{
+"text": "que",
+"start": 0.76,
+"end": 1.02
+},
+{
+"text": "no",
+"start": 1.02,
+"end": 1.3
+},
+{
+"text": "puedes",
+"start": 1.3,
+"end": 1.64
+},
+{
+"text": "despedir",
+"start": 1.64,
+"end": 2.12
+},
+{
+"text": "sin",
+"start": 2.12,
+"end": 2.26
+},
+{
+"text": "permiso.",
+"start": 2.26,
+"end": 2.68
+},
+{
+"text": "Si",
+"start": 2.94,
+"end": 3.08
+},
+{
+"text": "lo",
+"start": 3.08,
+"end": 3.24
+},
+{
+"text": "haces,",
+"start": 3.24,
+"end": 3.54
+},
+{
+"text": "el",
+"start": 3.76,
+"end": 3.84
+},
+{
+"text": "despido",
+"start": 3.84,
+"end": 4.22
+},
+{
+"text": "no",
+"start": 4.22,
+"end": 4.6
+},
+{
+"text": "vale.",
+"start": 4.6,
+"end": 4.88
+},
+{
+"text": "Uno:",
+"start": 5.32,
+"end": 5.48
+},
+{
+"text": "La",
+"start": 5.92,
+"end": 5.94
+},
+{
+"text": "trabajadora",
+"start": 5.94,
+"end": 6.48
+},
+{
+"text": "embarazada.",
+"start": 6.48,
+"end": 7.1
+},
+{
+"text": "Dos:",
+"start": 7.34,
+"end": 7.66
+},
+{
+"text": "La",
+"start": 8.02,
+"end": 8.08
+},
+{
+"text": "que",
+"start": 8.08,
+"end": 8.2
+},
+{
+"text": "está",
+"start": 8.2,
+"end": 8.44
+},
+{
+"text": "en",
+"start": 8.44,
+"end": 8.58
+},
+{
+"text": "licencia",
+"start": 8.58,
+"end": 8.94
+},
+{
+"text": "de",
+"start": 8.94,
+"end": 9.08
+},
+{
+"text": "maternidad.",
+"start": 9.08,
+"end": 9.68
+},
+{
+"text": "Para",
+"start": 9.98,
+"end": 10.16
+},
+{
+"text": "ellas",
+"start": 10.16,
+"end": 10.44
+},
+{
+"text": "necesitas",
+"start": 10.44,
+"end": 11.02
+},
+{
+"text": "autorización",
+"start": 11.02,
+"end": 11.64
+},
+{
+"text": "del",
+"start": 11.64,
+"end": 11.9
+},
+{
+"text": "inspector",
+"start": 11.9,
+"end": 12.28
+},
+{
+"text": "de",
+"start": 12.28,
+"end": 12.48
+},
+{
+"text": "trabajo.",
+"start": 12.48,
+"end": 12.84
+},
+{
+"text": "Tres:",
+"start": 13.16,
+"end": 13.42
+},
+{
+"text": "Quien",
+"start": 13.86,
+"end": 13.9
+},
+{
+"text": "tiene",
+"start": 13.9,
+"end": 14.16
+},
+{
+"text": "una",
+"start": 14.16,
+"end": 14.32
+},
+{
+"text": "condición",
+"start": 14.32,
+"end": 14.74
+},
+{
+"text": "de",
+"start": 14.74,
+"end": 14.86
+},
+{
+"text": "salud",
+"start": 14.86,
+"end": 15.18
+},
+{
+"text": "que",
+"start": 15.18,
+"end": 15.36
+},
+{
+"text": "le",
+"start": 15.36,
+"end": 15.46
+},
+{
+"text": "limita",
+"start": 15.46,
+"end": 15.78
+},
+{
+"text": "trabajar,",
+"start": 15.78,
+"end": 16.24
+},
+{
+"text": "incluso",
+"start": 16.56,
+"end": 16.98
+},
+{
+"text": "si",
+"start": 16.98,
+"end": 17.24
+},
+{
+"text": "la",
+"start": 17.24,
+"end": 17.34
+},
+{
+"text": "discapacidad",
+"start": 17.34,
+"end": 18.02
+},
+{
+"text": "es",
+"start": 18.02,
+"end": 18.32
+},
+{
+"text": "presunta.",
+"start": 18.32,
+"end": 18.76
+},
+{
+"text": "Ahí",
+"start": 19.04,
+"end": 19.28
+},
+{
+"text": "necesitas",
+"start": 19.28,
+"end": 19.82
+},
+{
+"text": "autorización",
+"start": 19.82,
+"end": 20.46
+},
+{
+"text": "del",
+"start": 20.46,
+"end": 20.7
+},
+{
+"text": "Ministerio",
+"start": 20.7,
+"end": 21.22
+},
+{
+"text": "del",
+"start": 21.22,
+"end": 21.36
+},
+{
+"text": "Trabajo.",
+"start": 21.36,
+"end": 21.72
+},
+{
+"text": "Cuatro:",
+"start": 22.0,
+"end": 22.3
+},
+{
+"text": "Quien",
+"start": 22.68,
+"end": 22.76
+},
+{
+"text": "tiene",
+"start": 22.76,
+"end": 23.1
+},
+{
+"text": "fuero",
+"start": 23.1,
+"end": 23.4
+},
+{
+"text": "sindical.",
+"start": 23.4,
+"end": 23.84
+},
+{
+"text": "Primero",
+"start": 24.18,
+"end": 24.64
+},
+{
+"text": "un",
+"start": 24.86,
+"end": 24.88
+},
+{
+"text": "juez",
+"start": 24.88,
+"end": 25.2
+},
+{
+"text": "debe",
+"start": 25.2,
+"end": 25.38
+},
+{
+"text": "levantar",
+"start": 25.38,
+"end": 25.84
+},
+{
+"text": "el",
+"start": 25.84,
+"end": 25.96
+},
+{
+"text": "fuero.",
+"start": 25.96,
+"end": 26.24
+},
+{
+"text": "Si",
+"start": 26.5,
+"end": 26.66
+},
+{
+"text": "no",
+"start": 26.66,
+"end": 26.8
+},
+{
+"text": "pides",
+"start": 26.8,
+"end": 27.1
+},
+{
+"text": "el",
+"start": 27.1,
+"end": 27.22
+},
+{
+"text": "permiso,",
+"start": 27.22,
+"end": 27.68
+},
+{
+"text": "te",
+"start": 27.8,
+"end": 27.86
+},
+{
+"text": "pueden",
+"start": 27.86,
+"end": 28.14
+},
+{
+"text": "ordenar",
+"start": 28.14,
+"end": 28.56
+},
+{
+"text": "el",
+"start": 28.56,
+"end": 28.66
+},
+{
+"text": "reintegro,",
+"start": 28.66,
+"end": 29.22
+},
+{
+"text": "pagar",
+"start": 29.34,
+"end": 29.54
+},
+{
+"text": "los",
+"start": 29.54,
+"end": 29.74
+},
+{
+"text": "salarios",
+"start": 29.74,
+"end": 30.2
+},
+{
+"text": "y",
+"start": 30.2,
+"end": 30.44
+},
+{
+"text": "una",
+"start": 30.44,
+"end": 30.62
+},
+{
+"text": "indemnización.",
+"start": 30.62,
+"end": 31.16
+},
+{
+"text": "Y",
+"start": 31.6,
+"end": 31.72
+},
+{
+"text": "no",
+"start": 31.72,
+"end": 31.94
+},
+{
+"text": "tienes",
+"start": 31.94,
+"end": 32.24
+},
+{
+"text": "que",
+"start": 32.24,
+"end": 32.36
+},
+{
+"text": "hacerlo",
+"start": 32.36,
+"end": 32.68
+},
+{
+"text": "solo.",
+"start": 32.68,
+"end": 32.98
+},
+{
+"text": "En",
+"start": 33.24,
+"end": 33.36
+},
+{
+"text": "Arca",
+"start": 33.36,
+"end": 33.58
+},
+{
+"text": "Jurídica",
+"start": 33.58,
+"end": 34.08
+},
+{
+"text": "revisamos",
+"start": 34.08,
+"end": 34.58
+},
+{
+"text": "si",
+"start": 34.58,
+"end": 34.74
+},
+{
+"text": "tu",
+"start": 34.74,
+"end": 34.84
+},
+{
+"text": "trabajador",
+"start": 34.84,
+"end": 35.4
+},
+{
+"text": "tiene",
+"start": 35.4,
+"end": 35.64
+},
+{
+"text": "alguna",
+"start": 35.64,
+"end": 35.9
+},
+{
+"text": "protección,",
+"start": 35.9,
+"end": 36.52
+},
+{
+"text": "tramitamos",
+"start": 36.72,
+"end": 37.28
+},
+{
+"text": "la",
+"start": 37.28,
+"end": 37.4
+},
+{
+"text": "autorización,",
+"start": 37.4,
+"end": 37.96
+},
+{
+"text": "redactamos",
+"start": 38.26,
+"end": 38.82
+},
+{
+"text": "cada",
+"start": 38.82,
+"end": 39.14
+},
+{
+"text": "documento",
+"start": 39.14,
+"end": 39.9
+},
+{
+"text": "y",
+"start": 39.9,
+"end": 40.0
+},
+{
+"text": "te",
+"start": 40.0,
+"end": 40.12
+},
+{
+"text": "defendemos",
+"start": 40.12,
+"end": 40.7
+},
+{
+"text": "si",
+"start": 40.7,
+"end": 40.86
+},
+{
+"text": "llega",
+"start": 40.86,
+"end": 41.06
+},
+{
+"text": "una",
+"start": 41.06,
+"end": 41.24
+},
+{
+"text": "demanda.",
+"start": 41.24,
+"end": 41.78
+},
+{
+"text": "Escríbenos",
+"start": 42.06,
+"end": 42.58
+},
+{
+"text": "y",
+"start": 42.58,
+"end": 42.72
+},
+{
+"text": "blindamos",
+"start": 42.72,
+"end": 43.2
+},
+{
+"text": "legalmente",
+"start": 43.2,
+"end": 43.92
+},
+{
+"text": "tu",
+"start": 43.92,
+"end": 44.06
+},
+{
+"text": "empresa.",
+"start": 44.06,
+"end": 44.36
+}
+]

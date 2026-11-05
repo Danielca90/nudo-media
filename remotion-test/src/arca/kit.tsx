@@ -3,6 +3,8 @@
 import React from 'react';
 import {AbsoluteFill, Img, interpolate, spring, staticFile, useCurrentFrame, Easing} from 'remotion';
 import {COLOR, FUENTES, FPS, W, H, SEGURO} from './marca';
+import {createAvatar} from '@dicebear/core';
+import {notionists} from '@dicebear/collection';
 
 export type Palabra = {text: string; start: number; end: number};
 
@@ -393,6 +395,27 @@ export const Fuente: React.FC<{entidad: string; detalle: string; numero: string;
         <span style={{fontFamily: FUENTES.sans, fontWeight: 800, fontSize: 52, color: COLOR.tinta, letterSpacing: 1}}>{numero}</span>
         <span style={{fontFamily: FUENTES.sans, fontWeight: 700, fontSize: 28, color: '#6B7B79'}}>{fecha}</span>
       </div>
+    </div>
+  );
+};
+
+// ---------- avatares (DiceBear notionists, CC0) ----------
+/** Avatar sobrio de trazo lineal sobre círculo de la marca. Opciones fijas: sin gestos ni íconos en la ropa. */
+export const Avatar: React.FC<{semilla: string; size?: number; fondo?: string; mujer?: boolean}> = ({semilla, size = 150, fondo = COLOR.crema, mujer}) => {
+  const uri = React.useMemo(
+    () =>
+      createAvatar(notionists, {
+        seed: semilla,
+        gestureProbability: 0,
+        bodyIconProbability: 0,
+        beardProbability: mujer ? 0 : 30,
+        glassesProbability: 20,
+      }).toDataUri(),
+    [semilla, mujer],
+  );
+  return (
+    <div style={{width: size, height: size, borderRadius: '50%', background: fondo, overflow: 'hidden', border: `5px solid ${COLOR.dorado}`, flexShrink: 0}}>
+      <Img src={uri} style={{width: '100%', height: '100%'}} />
     </div>
   );
 };
