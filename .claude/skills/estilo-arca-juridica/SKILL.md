@@ -111,6 +111,10 @@ Estructura de arriba abajo:
 - Nombrar gobiernos/políticos solo como dato de origen de la norma, sin opinión partidista.
 - Marcar el contenido como orientativo cuando dé pasos legales concretos.
 
+## Calendarios
+- `arca-juridica/calendario-nov-dic-2026.html` — 4 semanas (10 nov – 4 dic 2026): 12 reels,
+  4 carruseles, historias. Publicado en https://claude.ai/artifact/TAd4AACaWkT6g86bpNkB7e
+
 ## Correcciones del usuario
 - 2026-11-05: estilo inicial aprendido de un post (Nuevo Estatuto del Trabajo) y un reel
   a cámara sobre procesos disciplinarios.

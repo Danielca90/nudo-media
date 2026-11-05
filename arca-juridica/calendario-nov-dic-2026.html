@@ -1,0 +1,291 @@
+<title>Calendario Arca Jurídica</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: brand header, rules strip, then one band per week with 3 reel cards + carousel + stories row */
+:root{
+  --bg:#F7F6F1; --surface:#FFFFFF; --ink:#16302F; --muted:#5B6B69; --line:#DCD8CC;
+  --teal:#1B3A3B; --teal-2:#24504F; --gold:#A8843F; --gold-soft:#F1E8D4; --warn:#9A4B1F; --warn-soft:#F6E6DA;
+  --on-teal:#F7F6F1;
+  --display:"Libre Baskerville",Georgia,"Times New Roman",serif;
+  --body:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0E1A1A; --surface:#152525; --ink:#EDEBE3; --muted:#A3B2AF; --line:#2A3D3C;
+  --teal:#1F4746; --teal-2:#2B5958; --gold:#D3B377; --gold-soft:#2C2A1F; --warn:#E7A57E; --warn-soft:#33241B;
+  --on-teal:#F2F0E8; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1A1A; --surface:#152525; --ink:#EDEBE3; --muted:#A3B2AF; --line:#2A3D3C;
+  --teal:#1F4746; --teal-2:#2B5958; --gold:#D3B377; --gold-soft:#2C2A1F; --warn:#E7A57E; --warn-soft:#33241B;
+  --on-teal:#F2F0E8; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.55}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header{background:var(--teal);color:var(--on-teal)}
+header .wrap{padding-block:40px 32px;display:grid;gap:14px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1{font-family:var(--display);font-weight:400;font-size:clamp(28px,4.4vw,44px);line-height:1.15;margin:0;text-wrap:balance}
+h1 em{color:var(--gold);font-style:italic}
+header p{margin:0;max-width:68ch;opacity:.9}
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:10px}
+.rule{border-top:1px solid color-mix(in srgb,var(--gold) 60%,transparent);padding-top:10px;min-width:0}
+.rule b{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:4px}
+.rule span{font-size:14px}
+main .wrap{padding-block:28px 56px;display:grid;gap:44px}
+.note{background:var(--warn-soft);color:var(--ink);border-left:3px solid var(--warn);padding:12px 16px;border-radius:4px;font-size:14px}
+.note b{color:var(--warn)}
+section.week{display:grid;gap:16px}
+.week-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 16px;border-bottom:2px solid var(--gold);padding-bottom:8px}
+.week-head h2{font-family:var(--display);font-weight:400;font-size:26px;margin:0}
+.week-head .dates{color:var(--muted);font-size:14px;font-variant-numeric:tabular-nums}
+.week-head .theme{margin-left:auto;font-size:13px;color:var(--gold);font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px;display:grid;gap:12px;align-content:start;min-width:0}
+.meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.chip{font-size:12px;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--teal);color:var(--on-teal);font-variant-numeric:tabular-nums}
+.chip.alt{background:var(--gold-soft);color:var(--ink)}
+.chip.verify{background:var(--warn-soft);color:var(--warn)}
+.num{font-family:var(--display);color:var(--gold);font-size:14px}
+.card h3{margin:0;font-size:17px;line-height:1.3}
+.hook{font-family:var(--display);font-style:italic;font-size:17px;line-height:1.45;margin:0;padding-left:12px;border-left:2px solid var(--gold);text-wrap:pretty}
+.label{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:3px}
+.ontitle{background:var(--teal);color:var(--on-teal);padding:6px 10px;border-radius:3px;font-weight:600;font-size:14px;display:inline-block}
+ol{margin:0;padding-left:20px;display:grid;gap:4px}
+ol li::marker{color:var(--gold);font-weight:700}
+.cta{font-weight:600}
+.base{font-size:12.5px;color:var(--muted)}
+.trial{font-size:13.5px;background:var(--gold-soft);padding:8px 10px;border-radius:4px}
+.support{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.support .card{background:transparent;border-style:dashed}
+.support h3{font-size:15px}
+footer .wrap{padding-block:0 48px;color:var(--muted);font-size:13px;display:grid;gap:6px}
+@media (max-width:420px){.week-head .theme{margin-left:0}}
+</style>
+
+<header><div class="wrap">
+  <div class="eyebrow">Arca Jurídica · @arcajuridica · Plan de contenido</div>
+  <h1>Cuatro semanas para <em>salir de la base</em> de seguidores</h1>
+  <p>12 reels, 4 carruseles e historias semanales, del 10 de noviembre al 4 de diciembre de 2026. Cada tema responde a algo que una empresa necesita resolver ya, y varios están atados a fechas reales de cierre de año.</p>
+  <div class="rules">
+    <div class="rule"><b>Cuándo</b><span>Reels mar, mié y vie a las 6:00 p. m. (hora de Bogotá), el pico de actividad de los seguidores. Carrusel los jueves a las 12:00 m.</span></div>
+    <div class="rule"><b>Quién</b><span>La abogada a cámara en todos los reels. Selfie para los de alerta, oficina con el letrero para los de explicación.</span></div>
+    <div class="rule"><b>Estructura</b><span>Gancho en 2 s → situación concreta → 3 puntos numerados en pantalla → remate y llamado a la acción. 25 a 35 s.</span></div>
+    <div class="rule"><b>Meta</b><span>Tiempo medio ≥ 12 s, más de la mitad de las vistas de no seguidores y 3 guardados o envíos por cada 100 personas.</span></div>
+  </div>
+</div></header>
+
+<main><div class="wrap">
+
+<div class="note"><b>Revisión legal antes de grabar.</b> Cifras y normas verificadas al 5/11/2026 con los datos de referencia de la firma (SMMLV 2026 $1.750.905; auxilio de transporte $249.095; recargo festivo 90 % desde el 1/07/2026). Los temas marcados <b>Verificar</b> dependen de cambios de la Ley 2466 de 2025 o de un cálculo de plazos: la abogada los confirma antes de grabar.</div>
+
+<!-- SEMANA 1 -->
+<section class="week">
+  <div class="week-head"><h2>Semana 1</h2><span class="dates">10 – 13 nov</span><span class="theme">Despedir sin riesgo</span></div>
+  <div class="grid">
+    <article class="card">
+      <div class="meta"><span class="num">01</span><span class="chip">Mar 10 nov · 6:00 p. m.</span><span class="chip alt">Oficina</span></div>
+      <h3>Cómo despedir sin una demanda</h3>
+      <p class="hook">“Si despides así, le estás regalando una demanda a tu trabajador.”</p>
+      <div><div class="label">Título fijo en pantalla</div><span class="ontitle">Despedir sin demanda: 3 pasos</span></div>
+      <ol>
+        <li>Antes de nada, revisa si tiene estabilidad reforzada: embarazo, lactancia, salud, fuero sindical o prepensión.</li>
+        <li>Si es con justa causa, escribe los hechos concretos en la carta y haz los descargos antes. La causa que no quede en la carta no se puede alegar después.</li>
+        <li>Paga la liquidación completa el día de la terminación.</li>
+      </ol>
+      <div class="cta">“Guárdalo antes de tu próximo despido.”</div>
+      <div class="trial"><b>Reel de prueba:</b> “El error número uno al despedir a alguien en Colombia.”</div>
+      <div class="base">Base: arts. 62 (parágrafo), 64 y 65 CST; Ley 361 de 1997; arts. 239–240 CST.</div>
+    </article>
+    <article class="card">
+      <div class="meta"><span class="num">02</span><span class="chip">Mié 11 nov · 6:00 p. m.</span><span class="chip alt">Selfie</span><span class="chip verify">Verificar</span></div>
+      <h3>Contratos a término fijo que vencen el 31 de diciembre</h3>
+      <p class="hook">“¿Tienes contratos que vencen el 31 de diciembre? Tienes hasta el 1 de diciembre para avisar.”</p>
+      <div><div class="label">Título fijo en pantalla</div><span class="ontitle">Avisa 30 días antes o se renueva</span></div>
+      <ol>
+        <li>Si no lo vas a renovar, avisa por escrito con al menos 30 días de anticipación.</li>
+        <li>Si no avisas, el contrato se renueva solo por un período igual.</li>
+        <li>Guarda la prueba de que el trabajador recibió el aviso: firma o correo.</li>
+      </ol>
+      <div class="cta">“Envíaselo a quien maneja RR. HH. en tu empresa.”</div>
+      <div class="base">Base: art. 46 CST. Verificar: duración máxima y renovaciones del término fijo tras la Ley 2466 de 2025, y el cómputo exacto del plazo.</div>
+    </article>
+    <article class="card">
+      <div class="meta"><span class="num">03</span><span class="chip">Vie 13 nov · 6:00 p. m.</span><span class="chip alt">Oficina</span></div>
+      <h3>Las 4 personas que no puedes despedir sin permiso</h3>
+      <p class="hook">“A estas 4 personas no las puedes despedir sin permiso. Y si lo haces, el despido no vale.”</p>
+      <div><div class="label">Título fijo en pantalla</div><span class="ontitle">No las despidas sin permiso</span></div>
+      <ol>
+        <li>Embarazada o en lactancia: autorización del inspector de trabajo.</li>
+        <li>Trabajador con una condición de salud que limita su trabajo: autorización del Ministerio del Trabajo.</li>
+        <li>Fuero sindical: permiso de un juez. Prepensionados: protección por jurisprudencia.</li>
+      </ol>
+      <div class="cta">“¿Tienes un caso así? Escríbenos antes de decidir.”</div>
+      <div class="base">Base: arts. 239–240 CST; Ley 361 de 1997, art. 26; art. 405 CST; jurisprudencia de la Corte Constitucional. Riesgo: reintegro e indemnizaciones.</div>
+    </article>
+  </div>
+  <div class="support">
+    <div class="card"><div class="meta"><span class="chip alt">Jue 12 nov · 12:00 m.</span><span class="chip alt">Carrusel 4:5</span></div><h3>Checklist antes de despedir a alguien</h3><div class="base">8 diapositivas: fueros · causa concreta · descargos · carta · liquidación · seguridad social al día · paz y salvo · llamado a la acción. Es la versión para guardar del reel 01.</div></div>
+    <div class="card"><div class="meta"><span class="chip alt">Historias</span></div><h3>Encuesta y caja de preguntas</h3><div class="base">Lunes: “¿Has tenido que despedir a alguien este año? Sí / No”. Jueves: caja “¿Qué te preocupa al despedir a alguien?”. Las respuestas reales alimentan los reels de respuesta.</div></div>
+  </div>
+</section>
+
+<!-- SEMANA 2 -->
+<section class="week">
+  <div class="week-head"><h2>Semana 2</h2><span class="dates">17 – 20 nov (lunes 16 festivo)</span><span class="theme">Lo que cuesta equivocarse</span></div>
+  <div class="grid">
+    <article class="card">
+      <div class="meta"><span class="num">04</span><span class="chip">Mar 17 nov · 6:00 p. m.</span><span class="chip alt">Oficina</span></div>
+      <h3>Cuánto cuesta despedir sin justa causa</h3>
+      <p class="hook">“Despedir sin justa causa a alguien con 3 años en tu empresa te puede costar 7 millones de pesos.”</p>
+      <div><div class="label">Título fijo en pantalla</div><span class="ontitle">Despido sin justa causa: la cuenta</span></div>
+      <ol>
+        <li>Contrato indefinido y salario menor a 10 mínimos: 30 días de salario por el primer año.</li>
+        <li>Más 20 días por cada año adicional, y proporcional por fracción.</li>
+        <li>Ejemplo en pantalla: $3.000.000 de salario y 3 años = 70 días = $7.000.000, aparte de la liquidación.</li>
+      </ol>
+      <div class="cta">“Antes de despedir, haz la cuenta. O escríbenos y la hacemos contigo.”</div>
+      <div class="trial"><b>Reel de prueba:</b> “¿Cuánto cuesta despedir a alguien en Colombia? Te hago la cuenta.”</div>
+      <div class="base">Base: art. 64 CST. Para salarios de 10 mínimos o más: 20 días el primer año y 15 por cada año adicional.</div>
+    </article>
+    <article class="card">
+      <div class="meta"><span class="num">05</span><span class="chip">Mié 18 nov · 6:00 p. m.</span><span class="chip alt">Oficina</span><span class="chip verify">Verificar</span></div>
+      <h3>Llegó tarde tres veces: ¿lo puedes despedir?</h3>
+      <p class="hook">“Llegó tarde por tercera vez y lo despediste ese mismo día. Error.”</p>
+      <div><div class="label">Título fijo en pantalla</div><span class="ontitle">Proceso disciplinario en 3 pasos</span></div>
+      <ol>
+        <li>Citación por escrito con los hechos, las pruebas y la fecha de los descargos.</li>
+        <li>Diligencia de descargos: el trabajador se defiende y puede ir acompañado.</li>
+        <li>Decisión por escrito, proporcional a la falta y según tu reglamento interno de trabajo.</li>
+      </ol>
+      <div class="cta">“Si tu reglamento interno no tiene esto, escríbenos.”</div>
+      <div class="base">Reemplaza al reel publicado de procesos disciplinarios. Base: art. 115 CST, Sentencia C-593 de 2014. Verificar: plazos y garantías que agregó la Ley 2466 de 2025.</div>
+    </article>
+    <article class="card">
+      <div class="meta"><span class="num">06</span><span class="chip">Vie 20 nov · 6:00 p. m.</span><span class="chip alt">Selfie</span></div>
+      <h3>Prestación de servicios que en realidad es contrato laboral</h3>
+      <p class="hook">“Tu contratista de prestación de servicios puede ser tu empleado. Y cobrarte todo lo que no le pagaste.”</p>
+      <div><div class="label">Título fijo en pantalla</div><span class="ontitle">¿Contratista o empleado?</span></div>
+      <ol>
+        <li>Si cumple horario, recibe órdenes y trabaja solo para ti, es subordinación.</li>
+        <li>Puede reclamar prestaciones, vacaciones y seguridad social, con sanciones de la UGPP.</li>
+        <li>Para hacerlo bien: autonomía real, entregables definidos y cuenta de cobro o factura.</li>
+      </ol>
+      <div class="cta">“Envíaselo a quien contrata en tu empresa.”</div>
+      <div class="base">Base: arts. 23 y 24 CST (primacía de la realidad).</div>
+    </article>
+  </div>
+  <div class="support">
+    <div class="card"><div class="meta"><span class="chip alt">Jue 19 nov · 12:00 m.</span><span class="chip alt">Carrusel 4:5</span></div><h3>¿Cuánto cuesta despedir? 3 ejemplos</h3><div class="base">Salario mínimo con 1 año · $3.000.000 con 3 años · salario alto con 5 años. Una tabla por diapositiva, cifras en COP y nota “cálculo orientativo”.</div></div>
+    <div class="card"><div class="meta"><span class="chip alt">Historias</span></div><h3>Mito o realidad</h3><div class="base">Lunes: “Si renuncia, no le pagas la liquidación. ¿Mito o realidad?”. Jueves: caja de preguntas sobre contratistas.</div></div>
+  </div>
+</section>
+
+<!-- SEMANA 3 -->
+<section class="week">
+  <div class="week-head"><h2>Semana 3</h2><span class="dates">24 – 27 nov</span><span class="theme">Cuando llega el problema</span></div>
+  <div class="grid">
+    <article class="card">
+      <div class="meta"><span class="num">07</span><span class="chip">Mar 24 nov · 6:00 p. m.</span><span class="chip alt">Selfie</span></div>
+      <h3>Te llegó una carta del Ministerio del Trabajo</h3>
+      <p class="hook">“Si te llegó una carta del Ministerio del Trabajo, no la respondas sin ver esto.”</p>
+      <div><div class="label">Título fijo en pantalla</div><span class="ontitle">¿Te llegó carta del Ministerio?</span></div>
+      <ol>
+        <li>Mira el plazo y la lista exacta de documentos que te piden.</li>
+        <li>Reúne contratos, nómina, pagos de seguridad social y el SG-SST.</li>
+        <li>Responde a tiempo, completo y con asesoría. No responder puede terminar en multa.</li>
+      </ol>
+      <div class="cta">“En Arca somos el abogado de cabecera de tu empresa. Escríbenos antes de responder.”</div>
+      <div class="trial"><b>Reel de prueba:</b> reeditar el reel publicado de “¿Sabes qué hacer?”, empezando en la frase del Ministerio.</div>
+      <div class="base">Base: Ley 1610 de 2013 (inspección del trabajo); Decreto 1072 de 2015.</div>
+    </article>
+    <article class="card">
+      <div class="meta"><span class="num">08</span><span class="chip">Mié 25 nov · 6:00 p. m.</span><span class="chip alt">Oficina</span></div>
+      <h3>El período de prueba que no existe</h3>
+      <p class="hook">“Si el período de prueba no está por escrito, no existe.”</p>
+      <div><div class="label">Título fijo en pantalla</div><span class="ontitle">Período de prueba: 3 reglas</span></div>
+      <ol>
+        <li>Debe constar por escrito; si no, despedir “en prueba” es despedir sin justa causa.</li>
+        <li>Máximo 2 meses. En término fijo menor a un año, hasta la quinta parte del plazo.</li>
+        <li>Aun en prueba, se respetan la estabilidad reforzada y las prestaciones.</li>
+      </ol>
+      <div class="cta">“Revisa tus contratos hoy. Guárdalo.”</div>
+      <div class="base">Base: arts. 77, 78 y 80 CST.</div>
+    </article>
+    <article class="card">
+      <div class="meta"><span class="num">09</span><span class="chip">Vie 27 nov · 6:00 p. m.</span><span class="chip alt">Selfie</span><span class="chip verify">Verificar</span></div>
+      <h3>Vacaciones colectivas en diciembre</h3>
+      <p class="hook">“¿Puedes mandar a toda tu empresa a vacaciones en diciembre? Sí, pero así.”</p>
+      <div><div class="label">Título fijo en pantalla</div><span class="ontitle">Vacaciones colectivas: cómo hacerlo</span></div>
+      <ol>
+        <li>Avisa la fecha con al menos 15 días de anticipación.</li>
+        <li>A quien no ha cumplido el año, se le anticipan las vacaciones; déjalo por escrito.</li>
+        <li>Paga las vacaciones antes de que salgan.</li>
+      </ol>
+      <div class="cta">“Si cierras en diciembre, guárdalo.”</div>
+      <div class="base">Base: arts. 186 y 187 CST. Verificar: fecha límite de aviso para un cierre desde el 21 de diciembre y el tratamiento de vacaciones anticipadas.</div>
+    </article>
+  </div>
+  <div class="support">
+    <div class="card"><div class="meta"><span class="chip alt">Jue 26 nov · 12:00 m.</span><span class="chip alt">Carrusel 4:5</span></div><h3>Requerimiento del Ministerio: qué preparar</h3><div class="base">Lista de documentos que suelen pedir, con casillas para marcar. Es la versión para guardar del reel 07.</div></div>
+    <div class="card"><div class="meta"><span class="chip alt">Historias</span></div><h3>Encuesta de cierre</h3><div class="base">Lunes: “¿Tu empresa cierra en diciembre? Sí / No / Algunos días”. Jueves: caja “Pregúntale a la abogada”.</div></div>
+  </div>
+</section>
+
+<!-- SEMANA 4 -->
+<section class="week">
+  <div class="week-head"><h2>Semana 4</h2><span class="dates">1 – 4 dic</span><span class="theme">Cierre de año sin sustos</span></div>
+  <div class="grid">
+    <article class="card">
+      <div class="meta"><span class="num">10</span><span class="chip">Mar 1 dic · 6:00 p. m.</span><span class="chip alt">Oficina</span></div>
+      <h3>Prima de diciembre: fecha límite y el error al calcularla</h3>
+      <p class="hook">“La prima de diciembre tiene fecha límite: el 20. Y muchos la calculan mal.”</p>
+      <div><div class="label">Título fijo en pantalla</div><span class="ontitle">Prima de diciembre: hasta el 20</span></div>
+      <ol>
+        <li>Son 15 días de salario por el semestre completo, proporcional si trabajó menos.</li>
+        <li>Para quien gana hasta 2 mínimos, el auxilio de transporte entra en la base.</li>
+        <li>Ejemplo: $1.750.905 + $249.095 = $2.000.000 de base → $1.000.000 de prima.</li>
+      </ol>
+      <div class="cta">“Envíaselo a quien hace la nómina.”</div>
+      <div class="trial"><b>Reel de prueba:</b> “¿Cuánto le toca de prima a quien gana el mínimo? Un millón. Así se calcula.”</div>
+      <div class="base">Base: art. 306 CST; Ley 1788 de 2016; cifras 2026 de los datos de referencia de la firma.</div>
+    </article>
+    <article class="card">
+      <div class="meta"><span class="num">11</span><span class="chip">Mié 2 dic · 6:00 p. m.</span><span class="chip alt">Selfie</span></div>
+      <h3>La liquidación que se paga tarde</h3>
+      <p class="hook">“Cada día que tardas en pagar una liquidación te puede costar un día de salario.”</p>
+      <div><div class="label">Título fijo en pantalla</div><span class="ontitle">Liquidación tarde = sanción diaria</span></div>
+      <ol>
+        <li>La liquidación se paga cuando termina el contrato, sin importar si renunció o lo despediste.</li>
+        <li>Si no pagas, el juez puede ordenar un día de salario por cada día de retraso, hasta 24 meses, y luego intereses.</li>
+        <li>No es automática: el juez revisa si actuaste de buena fe. Documenta todo.</li>
+      </ol>
+      <div class="cta">“Guárdalo y págalo a tiempo.”</div>
+      <div class="base">Base: art. 65 CST; jurisprudencia de la Corte Suprema sobre buena fe.</div>
+    </article>
+    <article class="card">
+      <div class="meta"><span class="num">12</span><span class="chip">Vie 4 dic · 6:00 p. m.</span><span class="chip alt">Oficina</span></div>
+      <h3>Trabajar el 8 o el 25 de diciembre</h3>
+      <p class="hook">“Si tu equipo trabaja el 8 o el 25 de diciembre, esto es lo que debes pagar.”</p>
+      <div><div class="label">Título fijo en pantalla</div><span class="ontitle">Festivos de diciembre: el recargo</span></div>
+      <ol>
+        <li>Desde julio de 2026, el recargo por festivo es del 90 %.</li>
+        <li>Ejemplo: salario $2.100.000 ÷ 210 horas = $10.000 la hora → $19.000 en festivo.</li>
+        <li>Si es de noche, desde las 7:00 p. m. se suma el recargo nocturno.</li>
+      </ol>
+      <div class="cta">“Envíaselo a quien programa los turnos.”</div>
+      <div class="base">Base: Ley 2466 de 2025; Ley 2101 de 2021 (42 horas, divisor 210).</div>
+    </article>
+  </div>
+  <div class="support">
+    <div class="card"><div class="meta"><span class="chip alt">Jue 3 dic · 12:00 m.</span><span class="chip alt">Carrusel 4:5</span></div><h3>Checklist laboral de cierre de año</h3><div class="base">Prima (20 dic) · dotación (20 dic) · vacaciones colectivas · preavisos · intereses de cesantías (31 ene) · cesantías al fondo (14 feb). Es la pieza para guardar del mes.</div></div>
+    <div class="card"><div class="meta"><span class="chip alt">Historias</span></div><h3>Cuenta regresiva a la prima</h3><div class="base">Sticker de cuenta regresiva al 20 de diciembre, con enlace al reel 10. Jueves: respuestas a las preguntas de la caja.</div></div>
+  </div>
+</section>
+
+</div></main>
+
+<footer><div class="wrap">
+  <div>Después de cada semana: revisar en Insights el tiempo medio, la proporción de no seguidores y los guardados y envíos de cada reel. El gancho que gane se repite en la semana siguiente.</div>
+  <div>Contenido orientativo. Todo texto lo revisa y aprueba la abogada de Arca Jurídica antes de grabar o publicar.</div>
+</div></footer>
