@@ -19,6 +19,21 @@ se quedan. Cambian el primer segundo, la estructura, el texto en pantalla y el f
 | Público | 25–54 años = 88 %; 58,8 % mujeres; Colombia 90,9 % | Es el público correcto (gerentes, dueñas, jefas de RR. HH. y nómina), pero pequeño |
 | Seguidores activos | Todos los días 9 a. m.–9 p. m.; picos **mar, mié y vie 6–9 p. m.** | Publicar 6–7 p. m. esos días |
 
+### Por pieza (5/11/2026)
+| Reel | Vistas | Personas | Tiempo medio | Me gusta | Coment. | Reposts | Envíos | Guardados | Seguidores |
+|---|---|---|---|---|---|---|---|---|---|
+| Animación "Aterrizamos donde tu empresa nos necesita" | 177 | 96 | **2 s** | 5 | 1 | 2 | 0 | 0 | 0 |
+| Abogada a cámara (blusa rosada), publicado también en Facebook | 161 | 61 | **7 s** | 5 | 0 | 2 | 1 | 1 | 0 |
+
+Lectura:
+- La animación tiene más vistas pero la gente se va a los 2 s: no engancha, y por eso
+  Instagram deja de mostrarla. **La abogada retiene 3,5 veces más** y es la única pieza con
+  envío y guardado. Confirma: la cara de la abogada es el activo; las animaciones genéricas no.
+- 7 s sigue siendo poco: se pierde a la mayoría antes de la idea central. El arreglo prioritario
+  es el **arranque** (gancho en 2 s + título fijo) y llevar la información útil antes del seg. 7.
+- Ninguna pieza trae seguidores: falta el llamado a seguir y un perfil que convierta.
+- Meta por reel: tiempo medio ≥ 12 s en un reel de 25–30 s; ≥ 3 envíos + guardados por cada 100 personas.
+
 Metas a 6 semanas: no seguidores > 50 % de las vistas de reels; al menos 1 reel > 1.000 vistas;
 seguidores +5 % al mes. Falta por reel (pestaña Contenido): retención a 3 s, tiempo medio,
 guardados, envíos y % no seguidores.
