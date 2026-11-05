@@ -16,7 +16,9 @@ Se usa junto con:
 - `asesoria-juridica-colombia` (lectura jurídica y datos vigentes).
 
 ## 1. Leer y verificar (no saltarse nada)
-1. Abrir el link (WebFetch). Si es un medio de prensa, **buscar la fuente primaria** y usarla:
+1. Abrir el link (WebFetch). **Instagram, TikTok y otras redes no se pueden leer desde esta nube**
+   (piden inicio de sesión): pedir al usuario capturas del post y del pie de foto, o el link de la
+   noticia original, en un solo mensaje. Si es un medio de prensa, **buscar la fuente primaria** y usarla:
    - Leyes: Diario Oficial, Secretaría del Senado, Función Pública (Gestor Normativo).
    - Sentencias: relatoría de la Corte Suprema (Sala de Casación Laboral) o de la Corte Constitucional.
      Si solo hay comunicado de prensa y la sentencia no está publicada, decirlo.
