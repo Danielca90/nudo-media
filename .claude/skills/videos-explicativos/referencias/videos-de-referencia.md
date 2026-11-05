@@ -18,3 +18,4 @@ razonable, borde negro, énfasis en la palabra clave, sincronía exacta con la v
 |---|---|---|
 | F | Reel a cámara, procesos disciplinarios (22 s) | Plano único de la abogada con letrero de la marca al fondo, subtítulo de una palabra clave en mayúsculas en el tercio inferior, @ con ícono de Instagram que cambia de posición |
 | G | Post "Nuevo Estatuto del Trabajo" | Paleta verde petróleo + dorado + crema, título serif en banda inclinada, 4 servicios con íconos en círculo, cierre en banda verde |
+| H | Reel selfie exterior, "¿Sabes qué hacer?" (28,7 s) | Ráfaga de preguntas + giro "Pero…", posicionamiento "abogado de cabecera", subtítulo display grueso blanco con borde negro, @ que cambia de lugar |

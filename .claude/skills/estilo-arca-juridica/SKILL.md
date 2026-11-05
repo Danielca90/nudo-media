@@ -12,8 +12,9 @@ El contenido legal se valida con `asesoria-juridica-colombia` antes de publicar.
 - `videos-explicativos` — método de video (guion, plan visual, voz, subtítulos, Remotion, render).
 - `instagram-reels-colombia` — guion de Reel por escenas, carrusel, portada, pie de foto, hashtags.
 - `redes-sociales-colombia` — voz, pilares, ganchos, calificación de posts, calendario y reglas colombianas.
-  Para Arca se trata de **usted/ustedes** (servicios jurídicos), no tuteo, salvo en las piezas
-  gráficas que ya usan "tu empresa" como gancho.
+  Trato: **tú** al gerente en ganchos y preguntas ("¿Tienes un contador?", "tu empresa"),
+  como hace la abogada en sus reels; **ustedes / su empresa** cuando explica a varios.
+  Nunca voseo.
 
 ## Marca
 - Nombre: **Arca Jurídica · Abogados Consultores** · Instagram **@arcajuridica**
@@ -42,7 +43,7 @@ El contenido legal se valida con `asesoria-juridica-colombia` antes de publicar.
 - Logo: arco/libro abierto en verde con "V" dorada + "ARCA JURÍDICA / ABOGADOS CONSULTORES".
   Usar siempre el archivo real del logo; no redibujarlo.
 
-## Formato 1 – Reel con la abogada a cámara (video de referencia)
+## Formato 1 – Reel con la abogada a cámara (videos de referencia F y H)
 - Grabación real, vertical, plano medio-corto; la abogada habla directo a cámara con
   micrófono de mano. Fondo: su oficina con el **letrero de madera de Arca Jurídica**
   visible arriba a la izquierda, planta y repisas. Luz natural.
@@ -59,6 +60,29 @@ El contenido legal se valida con `asesoria-juridica-colombia` antes de publicar.
   que…"). Referencias concretas: términos de ley, reglamento interno de trabajo,
   políticas disciplinarias.
 - Duración: 20–40 s, un solo punto por video.
+
+### Variante exterior tipo selfie (ref. H, 28,7 s)
+- La abogada graba en selfie, en la calle o un edificio, cámara un poco desde abajo,
+  cielo azul de fondo, ropa casual (camisa azul). Más espontáneo que el de la oficina.
+- Guion modelo **"¿Sabes qué hacer?"**:
+  1. Ráfaga de preguntas de lo que el gerente sí tiene: "¿Tienes un contador? ¿Tienes quien
+     maneje el sistema de gestión de seguridad y salud en el trabajo? ¿Quien apoye recursos humanos?"
+  2. Giro con "Pero…": la situación difícil (despedir a un trabajador, un requerimiento del
+     Ministerio del Trabajo, un reclamo de un colaborador) → "¿Sabes qué hacer? ¿Sabes cómo solucionarlo?"
+  3. Posicionamiento: **"En Arca Jurídica somos el abogado de cabecera de tu empresa"**.
+  4. Cierre: cada decisión que tomes con tus trabajadores debe tener respaldo legal → llamado a escribir.
+     (La referencia termina cortada en "es importante que cada decisión que tomes": el cierre
+     debe quedar completo y con llamado a la acción.)
+- Subtítulos de esta variante: fuente display redondeada y gruesa tipo cómic (estilo
+  Luckiest Guy / Bangers), blanca con **borde negro grueso**, una palabra a la vez, en el
+  tercio inferior. Es la versión preferida frente al sans con sombra de la ref. F porque se
+  lee mejor sobre fondos claros.
+- Mejoras frente a la referencia: no subtitular palabras vacías ("DE", "DEL", "PERO");
+  solo la palabra clave de cada frase (SALUD, DESPEDIRLO, MINISTERIO, CABECERA, IMPORTANTE).
+  La ref. tiene un filtro/compresión que posteriza el cielo y la piel (manchas de color):
+  exportar sin ese filtro, con buena calidad.
+- El @ con ícono de Instagram sigue saltando de posición; en un momento el ícono sale en
+  el degradado rosa de Instagram: se acepta como acento puntual.
 - Si se hace con voz de ElevenLabs en vez de grabación: voz femenina, español colombiano,
   sobria (pendiente que el usuario elija la voz).
 
@@ -87,3 +111,5 @@ Estructura de arriba abajo:
 ## Correcciones del usuario
 - 2026-11-05: estilo inicial aprendido de un post (Nuevo Estatuto del Trabajo) y un reel
   a cámara sobre procesos disciplinarios.
+- 2026-11-05: segundo reel (selfie exterior, "¿sabes qué hacer?", abogado de cabecera):
+  la abogada tutea al gerente; subtítulo cómico con borde negro.
