@@ -43,4 +43,9 @@ export const EFECTOS_POR_DEFECTO = {motionBlur: false, glow: false, particulas: 
 
 export const RITMO = {segundosPorPlanoMin: 1.5, segundosPorPlanoMax: 3, ganchoMaxSegundos: 2};
 
-export const VOZ = {proveedor: 'ElevenLabs'};
+// Voz que ya usa la cuenta en ElevenLabs (guardada en su workspace).
+export const VOZ = {
+  proveedor: 'ElevenLabs',
+  nombre: 'BRIAN - VOZ PARA REDES SOCIALES',
+  voiceId: 'U9TSK9KHMlMU2qkeXlQP', // español latino, joven, tono cercano
+};

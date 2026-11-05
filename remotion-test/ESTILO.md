@@ -74,7 +74,7 @@ Si la respuesta es "se ve más lindo", no va.
 - Marca: logo o @ de Nudo pequeño y fijo, no animado, solo al final o en una esquina.
 
 ## Audio
-- Voz en off con **ElevenLabs**. Es lo que guía todo: primero guion y voz, después
+- Voz en off con **ElevenLabs**, voz **"BRIAN - VOZ PARA REDES SOCIALES"** (id `U9TSK9KHMlMU2qkeXlQP`). Es lo que guía todo: primero guion y voz, después
   la animación. Los subtítulos salen de los tiempos de esa voz.
 - Música baja (−18 a −22 dB bajo la voz). Sonidos puntuales solo para acciones (crack, golpe).
 
