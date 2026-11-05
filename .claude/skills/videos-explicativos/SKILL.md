@@ -25,6 +25,24 @@ cámara, efectos, voz y subtítulos.
 
 La skill de marca puede fijar o vetar una técnica (Arca Jurídica: 2D por defecto).
 
+### Regla de propósito (manda sobre cualquier técnica o efecto)
+- **Los primeros 3 segundos son el gancho y cuentan la historia**: se ve la situación concreta del
+  tema (el chat del despido, el contrato que vence, el caso de la Corte) mientras la voz la dice.
+  Nunca un fondo abstracto, una palabra suelta o un efecto de demostración.
+- **Imagen y voz dicen lo mismo en cada momento.** Si la voz habla de una persona, un documento o
+  una fecha, eso es lo que se ve.
+- **Cada efecto, técnica o herramienta nueva tiene que tener un propósito narrativo.** Antes de
+  usarlo: ¿qué entiende el espectador gracias a esto? ¿si lo quito, se pierde algo de la historia?
+  Si la respuesta es "se ve más llamativo" o "es para probar la herramienta", no va.
+- **Lo nuevo no rompe el estilo que ya funciona.** Una herramienta nueva (p. ej. HyperFrames) entra
+  solo dentro del lenguaje visual de la marca y al servicio de la historia, nunca como un plano
+  aparte con otro estilo.
+- Lección (2026-11-05, reel 03 de Arca): se abrió con una lente 3D de vidrio sobre la palabra
+  "PERMISO" en fondo liso mientras la voz hablaba de trabajadores protegidos. Rompió el gancho: la
+  imagen no contaba nada, no tenía relación con la voz y se veía distinta al resto del video. No
+  repetir.
+
+
 En cualquier técnica:
 - Entender el tema primero: objetos reales, secuencia causa → efecto y el momento "ajá" que el
   video revela.

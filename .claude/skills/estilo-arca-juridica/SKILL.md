@@ -107,11 +107,13 @@ gráficos llamativos, y **100 % automáticos**: la abogada no graba nada por aho
   realidad), sala de capacitación de aprendices.
 - Los objetos de cada escena también salen del tema (chat de "Carlos · Bodega", caja de regalo
   DEMANDA, carta con hechos reales del caso), no solo hojas genéricas del kit.
-- **Planos 3D con HyperFrames** (`hyperframes/arca-3d/`, ver `hyperframes-ffmpeg-assets.md`): usar
-  como acento, no en todo el video. **Sin logo animado en 3D** (pedido del usuario). Listos: `arca-vidrio-permiso.html`
-  (gancho del reel 03: lente sobre "PERMISO") y `arca-vidrio.html` (lente de vidrio con refracción sobre
-  "ARCA" dorado, fondo verde, "Tu empresa en buenas manos"). Ideas: `extruded-logo` para el cierre,
-  `exploded-stack` para las capas de un contrato, `news-ticker` para "Actualidad laboral".
+- **Planos 3D con HyperFrames:** el estilo de Arca es el 2D con escenario propio de los reels 01, 02 y la
+  noticia SL1015 (el usuario lo considera perfecto). HyperFrames solo entra si cumple las condiciones
+  de `hyperframes-ffmpeg-assets.md`: cuenta parte de la historia, muestra lo que dice la voz, se integra
+  al estilo de la marca y nunca abre el video como elemento abstracto. **Sin logo animado en 3D.**
+  Lección del reel 03: la lente de vidrio sobre "PERMISO" en el gancho no tenía propósito y rompió el
+  inicio; el gancho debe mostrar la situación (p. ej. la trabajadora embarazada recibiendo la carta de
+  despido en el pasillo) desde el primer cuadro.
 - **Avatares:** DiceBear `notionists` (CC0, trazo lineal sobrio) con opciones fijas, sobre círculo
   verde o crema de la marca. Nunca estilos caricaturescos ni semillas al azar sin revisar.
  título en caja verde inclinada con línea 2 en dorado (arriba, dentro de la zona
@@ -208,3 +210,5 @@ Estructura de arriba abajo:
   cada tema; solo la capa de marca se repite.
 - 2026-11-05: pilar de actualidad: reformas, casaciones, sentencias que amplían derechos. El
   usuario manda el link apenas sale la noticia → skill `noticias-laborales`.
+- 2026-11-05: el gancho del reel 03 (3D abstracto) rompió la regla de los primeros 3 s. Efectos y
+  herramientas nuevas solo con propósito narrativo y sin romper el estilo 2D que ya funciona.

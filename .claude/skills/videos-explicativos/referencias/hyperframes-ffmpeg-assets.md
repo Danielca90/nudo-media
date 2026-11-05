@@ -9,6 +9,18 @@ Probado en esta nube el 2026-11-05 (HyperFrames 0.9.16, FFmpeg 6.1.1, Node 22, s
 | **HyperFrames** (`hyperframes/<marca>/`) | Planos "héroe" de 3–6 s con 3D real, vidrio, reflejos, sombras, shaders y bloques del catálogo | Cuando un momento del video gana mucho con 3D o con un bloque hecho (ver lista) |
 | **FFmpeg** (`herramientas/ffmpeg.sh`) | Posproducción: normalizar audio, empalmar voces, música con ducking, unir y superponer clips, portadas, hojas de contacto | Siempre al final |
 
+**Condiciones para usar HyperFrames (todas):**
+1. El plano 3D cuenta algo de la historia que el 2D no puede contar igual de bien (un objeto físico
+   real del tema, un mecanismo, capas de algo que se separan). No sirve para "darle algo de 3D" al video.
+2. Muestra lo que la voz está diciendo en ese momento.
+3. Respeta el estilo ya establecido de la marca (escenario, paleta, tipografía, capa de marca) y se
+   integra dentro de la escena, no como un plano aparte con otro look.
+4. **Nunca en el gancho** (primeros 3 s) como elemento abstracto: el gancho muestra la situación
+   concreta del tema.
+5. Si hay duda, no se usa: los videos 2D con escenario propio son el estándar que funciona.
+Ejemplo de lo que NO se hace: lente de vidrio sobre la palabra "PERMISO" en fondo liso abriendo el
+reel 03 de Arca (no contaba nada y rompía el estilo).
+
 Regla: HyperFrames **no reemplaza** a Remotion (existe una skill de migración, pero el kit, la voz y los
 subtítulos sincronizados ya están en Remotion). Se usa para los planos que Remotion hace peor: 3D con
 materiales físicos, refracción, reflejos y shaders. Costo: ~30 s de render por segundo de video
@@ -37,8 +49,8 @@ vertical sin GPU (5 s ≈ 2,5 min), así que se reserva para momentos cortos.
 ### Bloques útiles del catálogo
 | Bloque | Qué hace | Uso sugerido |
 |---|---|---|
-| `glass-hero` | Objeto de vidrio que refracta un titular | Palabra clave del gancho, cierre de marca |
-| `extruded-logo` | Letras 3D biseladas con luz que corre | Cierre de marca premium |
+| `glass-hero` | Objeto de vidrio que refracta un titular | Solo si el objeto de vidrio tiene sentido en la historia (nunca como gancho abstracto) |
+| `extruded-logo` | Letras 3D biseladas con luz que corre | No para Arca (el usuario no quiere logo animado en 3D) |
 | `exploded-stack` | Capas isométricas que se separan con etiquetas | "Capas" de un contrato o de un mueble |
 | `product-turntable` | Producto girando en una base de estudio (carga GLB/glTF) | **Nudo**: muebles en 3D real |
 | `orbit-card`, `cuboid-carousel`, `carousel-vision-*` | Tarjetas en movimiento 3D | Servicios, listas |

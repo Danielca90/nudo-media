@@ -25,3 +25,7 @@ de la Ley 361 de 1997) y el trámite de levantamiento del fuero (art. 405 y ss. 
 | 26,5–31,5 | Si no pides el permiso, te pueden ordenar el reintegro, pagar los salarios y una indemnización. | Vuelta a Talento Humano; "SI NO PIDES EL PERMISO…" + Reintegro / Salarios / Indemnización |
 | 31,5–44,7 | Remate de venta | Pila de documentos del tema → escudo → "Arca Jurídica se encarga" → ESCRÍBENOS |
 | 44,7–47,2 | — | Cierre de marca (2D) |
+
+**Pendiente (2026-11-05):** el usuario rechazó el gancho 3D (lente sobre "PERMISO"): no cuenta nada y rompe el estilo.
+Antes de publicar, rehacer los primeros 5 s en 2D dentro del pasillo, mostrando la situación (p. ej. carta de
+despido entregada a la trabajadora embarazada) con el sello "EL DESPIDO NO VALE". El resto del video se mantiene.
