@@ -1,6 +1,7 @@
 import React from 'react';
-import {AbsoluteFill, Sequence, interpolate, useCurrentFrame} from 'remotion';
-import {ESCENAS, f, DURACION_SEG} from './tiempos';
+import {AbsoluteFill, Sequence, interpolate, useCurrentFrame, staticFile} from 'remotion';
+import {Audio} from '@remotion/media';
+import {ESCENAS, f, DURACION_SEG, VOZ_ARCHIVO} from './tiempos';
 import {FondoTaller, EscenaGancho, EscenaTronco, EscenaCelulas, EscenaDirecciones, EscenaDefectos, EscenaMedir, EscenaCierre} from './Escenas';
 import {Subtitulos} from './Subtitulos';
 
@@ -50,5 +51,6 @@ export const MaderaVerdeFinal: React.FC = () => (
       <EscenaCierre />
     </Plano>
     <Subtitulos />
+    <Audio src={staticFile(VOZ_ARCHIVO)} />
   </AbsoluteFill>
 );
