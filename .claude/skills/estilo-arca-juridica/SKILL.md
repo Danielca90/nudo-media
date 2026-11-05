@@ -47,6 +47,28 @@ se copió de los videos de referencia, que no estaban llegando a no seguidores.
 - Logo: arco/libro abierto en verde con "V" dorada + "ARCA JURÍDICA / ABOGADOS CONSULTORES".
   Usar siempre el archivo real del logo; no redibujarlo.
 
+## Formato 0 – Video animado automático (formato principal desde 2026-11-05)
+Pedido del usuario: videos **animados**, sin 3D, tipo motion graphics / stop motion con texto y
+gráficos llamativos, y **100 % automáticos**: la abogada no graba nada por ahora.
+- **Voz:** ElevenLabs, voz clonada **"Andrea Arca"** (`XrTN5zwTQo5HkNatlJ58`, español de Colombia),
+  modelo `eleven_v4`. Guion en tú al gerente, 25–32 s, números en palabras.
+- **Mundo visual:** oficina plana en la paleta de la marca (pared crema, ventana con ciudad,
+  bandera de Colombia, planta, zócalo verde con filete dorado). Nítida en el gancho y
+  desenfocada después para que resalten los objetos.
+- **Objetos que explican:** calendario de diciembre, contratos y avisos en papel blanco con borde
+  verde, fichas de fecha, barras y contadores, sellos que caen con sacudida (rojo óxido solo para
+  error o riesgo), checks verdes, botones finales "GUÁRDALO" / "ENVÍALO".
+- **Movimiento:** resortes (entradas con rebote corto), trazos que se dibujan, contadores, sellos
+  con sacudida, avión de papel que vuela. Llamativo pero sobrio: nada de personajes caricaturescos.
+- **Capas fijas:** título en caja verde inclinada con línea 2 en dorado (arriba, dentro de la zona
+  segura) · emblema + ARCA JURÍDICA | @arcajuridica sobre el zócalo · subtítulos en frases de
+  hasta 3 palabras, Montserrat 800 blanca con borde verde y palabras clave en dorado.
+- **Cierre:** 2,4 s en verde con logo claro, "Tu empresa en buenas manos" (serif itálica dorada) y @.
+- Código: `remotion-test/src/arca/` (`marca.ts`, `kit.tsx` reutilizable, una carpeta por reel con
+  `GUION.md`, `palabras.json` y el componente). Primer video: `reel02/` (32,6 s).
+- Logo: recortado del post de referencia (`public/arca/logo-*.png`, `emblema-*.png`). Cambiarlo por
+  el archivo original en cuanto el usuario lo envíe.
+
 ## Formato 1 – Reel con la abogada a cámara (videos de referencia F y H)
 - Grabación real, vertical, plano medio-corto; la abogada habla directo a cámara con
   micrófono de mano. Fondo: su oficina con el **letrero de madera de Arca Jurídica**
@@ -86,8 +108,7 @@ se copió de los videos de referencia, que no estaban llegando a no seguidores.
   exportar sin ese filtro, con buena calidad.
 - El @ con ícono de Instagram sigue saltando de posición; en un momento el ícono sale en
   el degradado rosa de Instagram: se acepta como acento puntual.
-- Si se hace con voz de ElevenLabs en vez de grabación: voz femenina, español colombiano,
-  sobria (pendiente que el usuario elija la voz).
+- Si se hace con voz de ElevenLabs: voz clonada "Andrea Arca" (ver Formato 0).
 
 ## Formato 2 – Post gráfico / flyer (imagen de referencia)
 Estructura de arriba abajo:
@@ -122,3 +143,5 @@ Estructura de arriba abajo:
   la abogada tutea al gerente; subtítulo cómico con borde negro.
 - 2026-11-05: la cuenta no llega a no seguidores. Objetivo: más alcance sin volverlo
   caricaturesco ni ridículo. Estrategia en estrategia-alcance.md.
+- 2026-11-05: formato principal = video animado automático (motion graphics, sin 3D, sin que la
+  abogada grabe). Primer reel: 02, contratos a término fijo.

@@ -46,3 +46,15 @@
 
 ## Red necesaria
 `elevenlabsusercontent.com` (audio), `remotion.dev` y `github.com` (docs y skills), registro de npm.
+
+## Lecciones del primer video de Arca (2026-11-05)
+- **Fuentes:** el navegador de render no puede bajar de Google Fonts (error de certificado por el
+  proxy). Descargar los .woff2 con `curl` a `public/fonts/` y cargarlos con `FontFace` +
+  `delayRender` (ver `src/arca/marca.ts`). `@remotion/google-fonts` no sirve en esta nube.
+- **Tiempos por palabra sin gastar créditos:** transcribir el MP3 con `faster-whisper` local
+  (modelo `small`, `word_timestamps=True`, audio pasado como arreglo numpy) en un venv del
+  scratchpad, y corregir el texto contra el guion. Evita la transcripción de ElevenLabs.
+- **Motion graphics sin 3D** renderiza mucho más rápido: ~1 min para 33 s.
+- Componentes 2D reutilizables en `src/arca/kit.tsx`: `Oficina`, `TituloFijo`, `MarcaEsquina`,
+  `Subtitulos` (por frase), `Sello`, `useSacudida`, `Hoja`, `Ciclo`, `Check`, `Cierre`, y los
+  helpers de tiempo `usePop`, `tramo`, `ventana`.

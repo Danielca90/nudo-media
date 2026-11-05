@@ -1,0 +1,482 @@
+[
+{
+"text": "¿Tienes",
+"start": 0.0,
+"end": 0.32
+},
+{
+"text": "contratos",
+"start": 0.32,
+"end": 0.74
+},
+{
+"text": "a",
+"start": 0.74,
+"end": 0.9
+},
+{
+"text": "término",
+"start": 0.9,
+"end": 1.28
+},
+{
+"text": "fijo",
+"start": 1.28,
+"end": 1.6
+},
+{
+"text": "que",
+"start": 1.6,
+"end": 1.8
+},
+{
+"text": "vencen",
+"start": 1.8,
+"end": 2.14
+},
+{
+"text": "el",
+"start": 2.14,
+"end": 2.3
+},
+{
+"text": "31",
+"start": 2.3,
+"end": 2.6
+},
+{
+"text": "de",
+"start": 2.6,
+"end": 2.98
+},
+{
+"text": "diciembre?",
+"start": 2.98,
+"end": 3.44
+},
+{
+"text": "Ojo,",
+"start": 3.92,
+"end": 4.26
+},
+{
+"text": "porque",
+"start": 4.7,
+"end": 4.7
+},
+{
+"text": "si",
+"start": 4.7,
+"end": 4.9
+},
+{
+"text": "no",
+"start": 4.9,
+"end": 5.14
+},
+{
+"text": "avisas",
+"start": 5.14,
+"end": 5.44
+},
+{
+"text": "a",
+"start": 5.44,
+"end": 5.6
+},
+{
+"text": "tiempo,",
+"start": 5.6,
+"end": 5.88
+},
+{
+"text": "se",
+"start": 6.08,
+"end": 6.16
+},
+{
+"text": "renuevan",
+"start": 6.16,
+"end": 6.58
+},
+{
+"text": "solos.",
+"start": 6.58,
+"end": 7.14
+},
+{
+"text": "La",
+"start": 7.46,
+"end": 7.64
+},
+{
+"text": "ley",
+"start": 7.64,
+"end": 7.84
+},
+{
+"text": "te",
+"start": 7.84,
+"end": 8.0
+},
+{
+"text": "pide",
+"start": 8.0,
+"end": 8.18
+},
+{
+"text": "avisar",
+"start": 8.18,
+"end": 8.52
+},
+{
+"text": "por",
+"start": 8.52,
+"end": 8.7
+},
+{
+"text": "escrito,",
+"start": 8.7,
+"end": 9.12
+},
+{
+"text": "con",
+"start": 9.42,
+"end": 9.54
+},
+{
+"text": "mínimo",
+"start": 9.54,
+"end": 9.8
+},
+{
+"text": "30",
+"start": 9.8,
+"end": 10.36
+},
+{
+"text": "días",
+"start": 10.36,
+"end": 10.7
+},
+{
+"text": "de",
+"start": 10.7,
+"end": 10.84
+},
+{
+"text": "anticipación.",
+"start": 10.84,
+"end": 11.48
+},
+{
+"text": "Para",
+"start": 11.84,
+"end": 11.98
+},
+{
+"text": "un",
+"start": 11.98,
+"end": 12.12
+},
+{
+"text": "contrato",
+"start": 12.12,
+"end": 12.46
+},
+{
+"text": "que",
+"start": 12.46,
+"end": 12.62
+},
+{
+"text": "vence",
+"start": 12.62,
+"end": 12.86
+},
+{
+"text": "el",
+"start": 12.86,
+"end": 13.0
+},
+{
+"text": "31",
+"start": 13.0,
+"end": 13.36
+},
+{
+"text": "de",
+"start": 13.36,
+"end": 13.7
+},
+{
+"text": "diciembre,",
+"start": 13.7,
+"end": 14.18
+},
+{
+"text": "eso",
+"start": 14.4,
+"end": 14.62
+},
+{
+"text": "es",
+"start": 14.62,
+"end": 14.78
+},
+{
+"text": "a",
+"start": 14.78,
+"end": 15.0
+},
+{
+"text": "más",
+"start": 15.0,
+"end": 15.32
+},
+{
+"text": "tardar",
+"start": 15.32,
+"end": 15.82
+},
+{
+"text": "el",
+"start": 15.82,
+"end": 16.0
+},
+{
+"text": "1",
+"start": 16.0,
+"end": 16.28
+},
+{
+"text": "de",
+"start": 16.28,
+"end": 16.56
+},
+{
+"text": "diciembre.",
+"start": 16.56,
+"end": 17.06
+},
+{
+"text": "Si",
+"start": 17.38,
+"end": 17.54
+},
+{
+"text": "no",
+"start": 17.54,
+"end": 17.7
+},
+{
+"text": "avisas,",
+"start": 17.7,
+"end": 18.04
+},
+{
+"text": "el",
+"start": 18.32,
+"end": 18.38
+},
+{
+"text": "contrato",
+"start": 18.38,
+"end": 18.76
+},
+{
+"text": "se",
+"start": 18.76,
+"end": 18.9
+},
+{
+"text": "renueva",
+"start": 18.9,
+"end": 19.3
+},
+{
+"text": "por",
+"start": 19.3,
+"end": 19.5
+},
+{
+"text": "el",
+"start": 19.5,
+"end": 19.62
+},
+{
+"text": "mismo",
+"start": 19.62,
+"end": 19.94
+},
+{
+"text": "tiempo",
+"start": 19.94,
+"end": 20.28
+},
+{
+"text": "que",
+"start": 20.28,
+"end": 20.44
+},
+{
+"text": "tenía.",
+"start": 20.44,
+"end": 20.76
+},
+{
+"text": "Y",
+"start": 21.06,
+"end": 21.22
+},
+{
+"text": "guarda",
+"start": 21.22,
+"end": 21.58
+},
+{
+"text": "la",
+"start": 21.58,
+"end": 21.66
+},
+{
+"text": "prueba:",
+"start": 21.66,
+"end": 21.94
+},
+{
+"text": "una",
+"start": 22.32,
+"end": 22.46
+},
+{
+"text": "firma",
+"start": 22.46,
+"end": 22.76
+},
+{
+"text": "de",
+"start": 22.76,
+"end": 22.88
+},
+{
+"text": "recibido",
+"start": 22.88,
+"end": 23.4
+},
+{
+"text": "o",
+"start": 23.4,
+"end": 23.66
+},
+{
+"text": "un",
+"start": 23.66,
+"end": 23.8
+},
+{
+"text": "correo.",
+"start": 23.8,
+"end": 24.22
+},
+{
+"text": "No",
+"start": 24.42,
+"end": 24.64
+},
+{
+"text": "lo",
+"start": 24.64,
+"end": 24.82
+},
+{
+"text": "dejes",
+"start": 24.82,
+"end": 25.08
+},
+{
+"text": "para",
+"start": 25.08,
+"end": 25.34
+},
+{
+"text": "el",
+"start": 25.34,
+"end": 25.46
+},
+{
+"text": "último",
+"start": 25.46,
+"end": 25.66
+},
+{
+"text": "día.",
+"start": 25.66,
+"end": 26.0
+},
+{
+"text": "Guarda",
+"start": 26.0,
+"end": 26.74
+},
+{
+"text": "este",
+"start": 26.74,
+"end": 26.84
+},
+{
+"text": "video",
+"start": 26.84,
+"end": 27.14
+},
+{
+"text": "y",
+"start": 27.14,
+"end": 27.44
+},
+{
+"text": "envíaselo",
+"start": 27.44,
+"end": 27.98
+},
+{
+"text": "a",
+"start": 27.98,
+"end": 28.08
+},
+{
+"text": "quien",
+"start": 28.08,
+"end": 28.16
+},
+{
+"text": "maneja",
+"start": 28.16,
+"end": 28.56
+},
+{
+"text": "recursos",
+"start": 28.56,
+"end": 28.9
+},
+{
+"text": "humanos",
+"start": 28.9,
+"end": 29.28
+},
+{
+"text": "en",
+"start": 29.28,
+"end": 29.48
+},
+{
+"text": "tu",
+"start": 29.48,
+"end": 29.58
+},
+{
+"text": "empresa.",
+"start": 29.58,
+"end": 29.86
+}
+]
