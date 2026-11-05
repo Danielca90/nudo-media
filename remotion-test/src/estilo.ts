@@ -12,7 +12,8 @@ export const SUBTITULOS = {
   rangoY: [0.36, 0.46],
   familia: '"Inter", "Helvetica Neue", Arial, sans-serif',
   peso: 800,
-  tamano: 64,
+  tamano: 66,
+  borde: 9, // borde negro (px) para leerse sobre cualquier fondo o modelo
   palabrasPorBloque: 5,
   palabraActiva: '#ffffff',
   palabraDicha: 'rgba(255,255,255,0.5)',

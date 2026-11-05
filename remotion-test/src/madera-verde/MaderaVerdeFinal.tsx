@@ -1,40 +1,42 @@
 import React from 'react';
 import {AbsoluteFill, Sequence, interpolate, useCurrentFrame} from 'remotion';
 import {ESCENAS, f, DURACION_SEG} from './tiempos';
-import {FondoTaller, EscenaTabla, EscenaDirecciones, EscenaDefectos, EscenaMedir, EscenaCierre} from './Escenas';
+import {FondoTaller, EscenaGancho, EscenaTronco, EscenaCelulas, EscenaDirecciones, EscenaDefectos, EscenaMedir, EscenaCierre} from './Escenas';
 import {Subtitulos} from './Subtitulos';
 
-const FUNDIDO = 6; // frames de fundido entre planos
+const FUNDIDO = 4;
+
+const Fundido: React.FC<{total: number; children: React.ReactNode}> = ({total, children}) => {
+  const frame = useCurrentFrame();
+  const op = interpolate(frame, [0, FUNDIDO, total - FUNDIDO, total], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  return <AbsoluteFill style={{opacity: op}}>{children}</AbsoluteFill>;
+};
 
 const Plano: React.FC<{desde: number; hasta: number; children: React.ReactNode}> = ({desde, hasta, children}) => {
   const ini = f(desde);
-  const fin = f(hasta);
+  const total = f(hasta) - ini + FUNDIDO;
   return (
-    <Sequence from={ini} durationInFrames={fin - ini + FUNDIDO}>
-      <Fundido total={fin - ini + FUNDIDO}>{children}</Fundido>
+    <Sequence from={ini} durationInFrames={total}>
+      <Fundido total={total}>{children}</Fundido>
     </Sequence>
   );
 };
 
-const Fundido: React.FC<{total: number; children: React.ReactNode}> = ({total, children}) => {
-  const frame = useCurrentFrame();
-  const op = interpolate(frame, [0, FUNDIDO, total - FUNDIDO, total], [0, 1, 1, 0], {
-    extrapolateLeft: 'clamp',
-    extrapolateRight: 'clamp',
-  });
-  return <AbsoluteFill style={{opacity: op}}>{children}</AbsoluteFill>;
-};
-
 export const DURACION_FRAMES = f(DURACION_SEG);
+const T_CELULAS = 4.04;
 
 export const MaderaVerdeFinal: React.FC = () => (
   <AbsoluteFill>
     <FondoTaller />
-    <Sequence durationInFrames={f(ESCENAS.direcciones) + FUNDIDO}>
-      <Fundido total={f(ESCENAS.direcciones) + FUNDIDO}>
-        <EscenaTabla />
-      </Fundido>
-    </Sequence>
+    <Plano desde={ESCENAS.gancho} hasta={ESCENAS.agua}>
+      <EscenaGancho />
+    </Plano>
+    <Plano desde={ESCENAS.agua} hasta={T_CELULAS}>
+      <EscenaTronco />
+    </Plano>
+    <Plano desde={T_CELULAS} hasta={ESCENAS.direcciones}>
+      <EscenaCelulas />
+    </Plano>
     <Plano desde={ESCENAS.direcciones} hasta={ESCENAS.defectos}>
       <EscenaDirecciones />
     </Plano>

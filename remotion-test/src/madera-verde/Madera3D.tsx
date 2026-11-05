@@ -2,6 +2,7 @@ import React, {useMemo} from 'react';
 import * as THREE from 'three';
 import {useThree} from '@react-three/fiber';
 import {MATERIALES, ANOTACIONES} from '../estilo';
+import {FOV} from './camara';
 
 // ---------- Texturas (colores reales de la madera) ----------
 const texturaVeta = () => {
@@ -71,6 +72,7 @@ export type TablaProps = {
   encoge?: number; // 0..1 reducción de ancho (exagerada para que se vea)
   curva?: number; // 0..1 abarquillado (bordes que suben)
   grieta?: number; // 0..1 grieta que avanza desde la punta
+  curvaMax?: number; // altura máxima del abarquillado
   position?: [number, number, number];
   rotation?: [number, number, number];
 };
@@ -83,6 +85,7 @@ export const Tabla: React.FC<TablaProps> = ({
   encoge = 0,
   curva = 0,
   grieta = 0,
+  curvaMax = 0.22,
   position = [0, 0, 0],
   rotation = [0, 0, 0],
 }) => {
@@ -100,7 +103,7 @@ export const Tabla: React.FC<TablaProps> = ({
     const x = base[i * 3] * escalaX;
     const y = base[i * 3 + 1];
     const z = base[i * 3 + 2];
-    pos.setXYZ(i, x, y + curva * 0.22 * (x / hw) ** 2, z);
+    pos.setXYZ(i, x, y + curva * curvaMax * (x / hw) ** 2, z);
   }
   pos.needsUpdate = true;
   geo.computeVertexNormals();
@@ -122,6 +125,12 @@ export const Tabla: React.FC<TablaProps> = ({
       {grieta > 0 && (
         <mesh position={[0.18, espesor / 2 + curva * 0.004 + 0.003, largo / 2 - (grieta * 1.4) / 2]}>
           <boxGeometry args={[0.035, 0.01, grieta * 1.4]} />
+          <meshBasicMaterial color="#2a1a0e" />
+        </mesh>
+      )}
+      {grieta > 0 && (
+        <mesh position={[0.18, espesor / 2 - (espesor * 0.75 * grieta) / 2 + curva * 0.004, largo / 2 + 0.004]}>
+          <boxGeometry args={[0.03, espesor * 0.75 * grieta, 0.01]} />
           <meshBasicMaterial color="#2a1a0e" />
         </mesh>
       )}
@@ -191,6 +200,8 @@ export const Anillo: React.FC<{position: [number, number, number]; progreso: num
 // ---------- Cámara ----------
 export const Camara: React.FC<{pos: [number, number, number]; mira: [number, number, number]}> = ({pos, mira}) => {
   const {camera} = useThree();
+  (camera as THREE.PerspectiveCamera).fov = FOV;
+  (camera as THREE.PerspectiveCamera).near = 0.05;
   camera.position.set(...pos);
   camera.lookAt(...mira);
   camera.updateProjectionMatrix();
@@ -204,3 +215,127 @@ export const Luces: React.FC<{calida?: boolean}> = ({calida = true}) => (
     <directionalLight position={[-4, 2, -3]} intensity={0.6} color="#bcd4ff" />
   </>
 );
+
+// ---------- Mesa: tablero de 3 tablas encoladas + patas + faldón ----------
+export const ANCHO_TABLA = 0.9;
+export const LARGO_MESA = 3.2;
+export const ALTO_MESA = 1.45; // cara superior del tablero
+export const xTabla = (k: number, sep: number) => k * (ANCHO_TABLA + sep);
+
+export const Mesa: React.FC<{seca?: number; curva?: number; junta?: number; grieta?: number}> = ({
+  seca = 1,
+  curva = 0,
+  junta = 0,
+  grieta = 0,
+}) => {
+  const sep = 0.07 * junta;
+  const color = VERDE.clone().lerp(SECA, seca).multiplyScalar(0.92);
+  const pata = (x: number, z: number) => (
+    <mesh key={`${x}${z}`} position={[x, (ALTO_MESA - 0.12) / 2, z]}>
+      <boxGeometry args={[0.14, ALTO_MESA - 0.12, 0.14]} />
+      <meshStandardMaterial color={color} roughness={0.7} />
+    </mesh>
+  );
+  return (
+    <group>
+      {[-1, 0, 1].map((k) => (
+        <Tabla
+          key={k}
+          ancho={ANCHO_TABLA}
+          largo={LARGO_MESA}
+          espesor={0.12}
+          seca={seca}
+          // tablas alternadas: la del medio va con los anillos al revés
+          curva={curva}
+          curvaMax={0.07}
+          grieta={k === 1 ? grieta : 0}
+          position={[xTabla(k, sep), ALTO_MESA - 0.06, 0]}
+          rotation={k === 0 ? [0, 0, Math.PI] : [0, 0, 0]}
+        />
+      ))}
+      {pata(-1.15, -1.3)}
+      {pata(1.15, -1.3)}
+      {pata(-1.15, 1.3)}
+      {pata(1.15, 1.3)}
+      {/* faldón */}
+      <mesh position={[0, ALTO_MESA - 0.22, 1.3]}>
+        <boxGeometry args={[2.3, 0.18, 0.06]} />
+        <meshStandardMaterial color={color} roughness={0.7} />
+      </mesh>
+      <mesh position={[0, ALTO_MESA - 0.22, -1.3]}>
+        <boxGeometry args={[2.3, 0.18, 0.06]} />
+        <meshStandardMaterial color={color} roughness={0.7} />
+      </mesh>
+      {/* piso del taller */}
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 0]}>
+        <circleGeometry args={[6, 48]} />
+        <meshStandardMaterial color="#3b2f25" roughness={1} />
+      </mesh>
+    </group>
+  );
+};
+
+// ---------- Tronco recién cortado ----------
+const texturaCorte = () => {
+  const c = document.createElement('canvas');
+  c.width = 512;
+  c.height = 512;
+  const ctx = c.getContext('2d')!;
+  ctx.fillStyle = '#d9c79a';
+  ctx.fillRect(0, 0, 512, 512);
+  for (let r = 8; r < 250; r += 11) {
+    ctx.strokeStyle = `rgba(140,100,50,${0.35 + ((r / 11) % 3) * 0.12})`;
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.ellipse(256 + Math.sin(r) * 3, 256 + Math.cos(r) * 3, r, r * 0.97, 0, 0, Math.PI * 2);
+    ctx.stroke();
+  }
+  ctx.fillStyle = '#7a5a33';
+  ctx.beginPath();
+  ctx.arc(256, 256, 7, 0, Math.PI * 2);
+  ctx.fill();
+  // albura húmeda (más clara) en el borde
+  const g = ctx.createRadialGradient(256, 256, 190, 256, 256, 256);
+  g.addColorStop(0, 'rgba(235,225,180,0)');
+  g.addColorStop(1, 'rgba(235,225,180,0.55)');
+  ctx.fillStyle = g;
+  ctx.fillRect(0, 0, 512, 512);
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace;
+  return t;
+};
+const texturaCorteza = () => {
+  const c = document.createElement('canvas');
+  c.width = 512;
+  c.height = 512;
+  const ctx = c.getContext('2d')!;
+  ctx.fillStyle = '#4b3a2c';
+  ctx.fillRect(0, 0, 512, 512);
+  for (let i = 0; i < 160; i++) {
+    ctx.strokeStyle = i % 2 ? 'rgba(25,18,12,0.55)' : 'rgba(110,90,70,0.35)';
+    ctx.lineWidth = 2 + (i % 4);
+    const x = (i * 37) % 512;
+    ctx.beginPath();
+    ctx.moveTo(x, 0);
+    for (let y = 0; y <= 512; y += 32) ctx.lineTo(x + Math.sin(y / 40 + i) * 8, y);
+    ctx.stroke();
+  }
+  const t = new THREE.CanvasTexture(c);
+  t.colorSpace = THREE.SRGBColorSpace;
+  t.wrapS = t.wrapT = THREE.RepeatWrapping;
+  t.repeat.set(3, 1);
+  return t;
+};
+
+export const Tronco: React.FC<{radio?: number; largo?: number}> = ({radio = 1.15, largo = 3.4}) => {
+  const corte = useMemo(texturaCorte, []);
+  const corteza = useMemo(texturaCorteza, []);
+  return (
+    <mesh rotation={[Math.PI / 2, 0, 0]}>
+      <cylinderGeometry args={[radio, radio * 1.03, largo, 48, 1]} />
+      <meshStandardMaterial attach="material-0" map={corteza} roughness={1} />
+      <meshStandardMaterial attach="material-1" map={corte} roughness={0.8} />
+      <meshStandardMaterial attach="material-2" map={corte} roughness={0.8} />
+    </mesh>
+  );
+};
