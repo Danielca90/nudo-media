@@ -34,8 +34,10 @@ Si la respuesta es "se ve más lindo", no va.
 - Sincronizados con la voz, **palabra por palabra** o en frases cortas (2–5 palabras).
 - Palabra activa en blanco y **negrita**; palabras ya dichas en gris.
 - Palabra clave de la frase con **recuadro de resalte** (una o dos por video, no más).
-- Posición: tercio superior (estilo B) o centro (estilo A). Nunca en la zona inferior
-  de 300 px ni a la derecha de 900 px (ahí van los botones de Instagram/TikTok).
+- Posición: **zona media**, con el centro del texto entre 36% y 46% del alto
+  (≈ y 700–880 px en 1080×1920). **No pegados arriba**: el texto alto queda incómodo
+  y se pierde al mirar el objeto. El objeto se encuadra debajo o alrededor del texto.
+- Nunca en los 320 px inferiores ni a la derecha de 920 px (botones de Instagram/TikTok).
 - Tipografía sans redondeada, peso 700–800, ~64 px a 1080 px de ancho.
 
 ## Ritmo y estructura (≈15–30 s)
@@ -44,16 +46,36 @@ Si la respuesta es "se ve más lindo", no va.
 3. **Revelación:** corte, vista interna o antes/después.
 4. **Cierre:** consejo práctico + marca Nudo (discreta, sin pantalla final larga).
 
+## Color: cada cosa con su color real
+- **Los objetos llevan sus colores reales**, nunca los de la marca: un metro es amarillo
+  con números negros, el pino es claro, el nogal es marrón oscuro, el acero es gris,
+  la cola blanca es blanca, el agua es azul.
+- Los colores de la marca **no se usan para pintar objetos ni fondos**. Así cada video
+  tiene su propia paleta según el tema y no se ven todos iguales.
+- Solo las anotaciones (flechas, anillos, resaltes) usan colores fijos, y deben
+  contrastar con los colores reales de la escena de ese video.
+
+## Fondo: distinto según el tema
+- **No hay fondo fijo** (en particular, no repetir el fondo azulado de siempre).
+- Elegir el fondo por el tema y el ambiente real del objeto, por ejemplo:
+  - madera / taller → tonos cálidos (marrón, ámbar, banco de trabajo desenfocado)
+  - exterior / humedad → cielo, verde, gris de lluvia
+  - construcción / corte → diorama con tierra y pasto
+  - herramientas / metal → gris neutro o negro con luz lateral
+  - acabados / pintura → fondo claro tipo estudio
+- El fondo nunca compite con el objeto: menos saturado y más oscuro o más claro que él.
+
 ## Look
 - Dos modos según el tema:
-  - **Taller / objeto:** fondo oscuro cálido con viñeta, luz principal suave, maderas
-    con textura real (estilo B).
+  - **Taller / objeto:** objeto aislado, fondo elegido según el tema, luz principal
+    suave, materiales con su color y textura real (estilo B).
   - **Explicación de construcción:** diorama low-poly en corte, colores planos (estilo A).
 - Materiales sencillos, sombras suaves, sin reflejos exagerados.
-- Marca: handle/logo de Nudo pequeño y fijo, no animado.
+- Marca: logo o @ de Nudo pequeño y fijo, no animado, solo al final o en una esquina.
 
 ## Audio
-- Voz en off es lo que guía todo: primero guion y voz, después la animación.
+- Voz en off con **ElevenLabs**. Es lo que guía todo: primero guion y voz, después
+  la animación. Los subtítulos salen de los tiempos de esa voz.
 - Música baja (−18 a −22 dB bajo la voz). Sonidos puntuales solo para acciones (crack, golpe).
 
 ## Técnica (Remotion)
