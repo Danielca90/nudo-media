@@ -42,6 +42,8 @@ publicidad veraz, Ley 1480 de 2011). Sí: "blindamos legalmente tu empresa", "pr
 - `videos-explicativos` — método de video (guion, plan visual, voz, subtítulos, Remotion, render).
 - `instagram-reels-colombia` — guion de Reel por escenas, carrusel, portada, pie de foto, hashtags.
 - `redes-sociales-colombia` — voz, pilares, ganchos, calificación de posts, calendario y reglas colombianas.
+- `noticias-laborales` — cuando el usuario manda un link de una reforma, sentencia o cambio
+  laboral: verificar la fuente primaria y sacar el reel el mismo día.
   Trato: **tú** al gerente en ganchos y preguntas ("¿Tienes un contador?", "tu empresa"),
   como hace la abogada en sus reels; **ustedes / su empresa** cuando explica a varios.
   Nunca voseo.
@@ -195,3 +197,5 @@ Estructura de arriba abajo:
   "Propuesta de valor".
 - 2026-11-05: el contenido no puede verse repetitivo: escenario y objetos de contexto propios de
   cada tema; solo la capa de marca se repite.
+- 2026-11-05: pilar de actualidad: reformas, casaciones, sentencias que amplían derechos. El
+  usuario manda el link apenas sale la noticia → skill `noticias-laborales`.

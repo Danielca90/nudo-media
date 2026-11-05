@@ -99,6 +99,12 @@ Equilibrio sugerido: 60 % temas que interesan a empleador y trabajador (alcance)
 40 % temas solo de empresa (clientes). Siempre contado desde el lado de la empresa
 ("cómo hacerlo bien"), para no alejar al cliente.
 
+### E2. Pilar de actualidad laboral
+Reformas, sentencias de casación, cambios de precedente y ampliación de derechos: es lo que más
+buscan y comparten gerentes y RR. HH., y posiciona a Arca como la firma que se entera primero.
+Se produce con la skill `noticias-laborales` el mismo día que sale la noticia y desplaza al reel
+del calendario de ese día.
+
 ### F. Distribución
 - **Hora:** martes, miércoles y viernes 6–7 p. m. (hora de Bogotá), cuando los seguidores están
   activos: el primer empujón viene de ellos y eso decide si Instagram lo muestra a más gente.
