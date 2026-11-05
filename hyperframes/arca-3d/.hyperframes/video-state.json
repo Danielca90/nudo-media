@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "historyId": "e4968567-4d9b-43ba-9adc-ba81674b9adf",
+  "currentRevision": null,
+  "pendingChanges": false,
+  "files": {
+    "AGENTS.md": {
+      "hash": "1a68041fc901ff835682a2a8d6f63c96dbb0b9eef8fb0971e97a79eaf69303d3",
+      "content": "/root/.cache/hyperframes/history/e4968567-4d9b-43ba-9adc-ba81674b9adf/blobs/1a/1a68041fc901ff835682a2a8d6f63c96dbb0b9eef8fb0971e97a79eaf69303d3"
+    },
+    "CLAUDE.md": {
+      "hash": "1a68041fc901ff835682a2a8d6f63c96dbb0b9eef8fb0971e97a79eaf69303d3",
+      "content": "/root/.cache/hyperframes/history/e4968567-4d9b-43ba-9adc-ba81674b9adf/blobs/1a/1a68041fc901ff835682a2a8d6f63c96dbb0b9eef8fb0971e97a79eaf69303d3"
+    },
+    "compositions/arca-vidrio.html": {
+      "hash": "14b2b90453081151d6d30403532f4e79c2f3c3d91700040011c4632a28cc0832",
+      "content": "/root/.cache/hyperframes/history/e4968567-4d9b-43ba-9adc-ba81674b9adf/blobs/14/14b2b90453081151d6d30403532f4e79c2f3c3d91700040011c4632a28cc0832"
+    },
+    "compositions/assets/fonts/Geist-Bold.typeface.json": {
+      "hash": "0413a22e5ea454b0dfcc7283d86e651305d4e47f53abe55f78fe3f858213fc63",
+      "content": "/root/.cache/hyperframes/history/e4968567-4d9b-43ba-9adc-ba81674b9adf/blobs/04/0413a22e5ea454b0dfcc7283d86e651305d4e47f53abe55f78fe3f858213fc63"
+    },
+    "compositions/assets/fonts/Geist-OFL.txt": {
+      "hash": "930853ee1daa68554d9e35c8a9175affb74f699fad9a5da6ee5ebe76379d9137",
+      "content": "/root/.cache/hyperframes/history/e4968567-4d9b-43ba-9adc-ba81674b9adf/blobs/93/930853ee1daa68554d9e35c8a9175affb74f699fad9a5da6ee5ebe76379d9137"
+    },
+    "compositions/extruded-logo.html": {
+      "hash": "e3f0cd23004cc651500707fb79c496df90493ec9fb4df42775e516421af52392",
+      "content": "/root/.cache/hyperframes/history/e4968567-4d9b-43ba-9adc-ba81674b9adf/blobs/e3/e3f0cd23004cc651500707fb79c496df90493ec9fb4df42775e516421af52392"
+    },
+    "compositions/glass-hero.html": {
+      "hash": "d49ba5ea111af72138f1693d8cc1de60520191fbe96ff71ac88f6a1fe02cea88",
+      "content": "/root/.cache/hyperframes/history/e4968567-4d9b-43ba-9adc-ba81674b9adf/blobs/d4/d49ba5ea111af72138f1693d8cc1de60520191fbe96ff71ac88f6a1fe02cea88"
+    },
+    "hyperframes.json": {
+      "hash": "53c432c05c8653ba4755a95a5f2296541e2fab11cf5376c3644910b81d7c3e26",
+      "content": "/root/.cache/hyperframes/history/e4968567-4d9b-43ba-9adc-ba81674b9adf/blobs/53/53c432c05c8653ba4755a95a5f2296541e2fab11cf5376c3644910b81d7c3e26"
+    },
+    "hyperframes.lock.json": {
+      "hash": "072053dacab8879e43fce8091333eaf1f0ee8d07a5b6aee05f21949a8790735c",
+      "content": "/root/.cache/hyperframes/history/e4968567-4d9b-43ba-9adc-ba81674b9adf/blobs/07/072053dacab8879e43fce8091333eaf1f0ee8d07a5b6aee05f21949a8790735c"
+    },
+    "index.html": {
+      "hash": "bc7ff2e743d8c95e30ff5c0cc87ad41e44151942473924011cdad94a9a5e35fe",
+      "content": "/root/.cache/hyperframes/history/e4968567-4d9b-43ba-9adc-ba81674b9adf/blobs/bc/bc7ff2e743d8c95e30ff5c0cc87ad41e44151942473924011cdad94a9a5e35fe"
+    },
+    "meta.json": {
+      "hash": "f22b3a33a99ace7175c5f62a868b8a43c9cc4edf8b5462444ff179875d8d6cf7",
+      "content": "/root/.cache/hyperframes/history/e4968567-4d9b-43ba-9adc-ba81674b9adf/blobs/f2/f22b3a33a99ace7175c5f62a868b8a43c9cc4edf8b5462444ff179875d8d6cf7"
+    },
+    "package.json": {
+      "hash": "28dea255f3b28b9c7348f3aa20b735a525174d7479d0f1d8e6c235c4eef662e0",
+      "content": "/root/.cache/hyperframes/history/e4968567-4d9b-43ba-9adc-ba81674b9adf/blobs/28/28dea255f3b28b9c7348f3aa20b735a525174d7479d0f1d8e6c235c4eef662e0"
+    }
+  },
+  "revisions": {},
+  "checks": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "96e4733d-59ba-4f20-8fcb-8fe7d20780ef",
+      "completedAt": 1793896794433,
+      "output": "/home/user/nudo-media/hyperframes/arca-3d/renders/arca-vidrio.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
+}

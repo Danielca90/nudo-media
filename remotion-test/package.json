@@ -8,6 +8,8 @@
     "render:madera-verde": "remotion render src/index.ts MaderaVerdeFinal out/madera-verde-final.mp4 --gl=swangle --chrome-mode=headless-shell --browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell"
   },
   "dependencies": {
+    "@dicebear/collection": "^9.4.2",
+    "@dicebear/core": "^9.4.3",
     "@react-three/fiber": "^9.2.0",
     "@remotion/captions": "^4.0.541",
     "@remotion/cli": "^4.0.541",
@@ -16,6 +18,7 @@
     "@remotion/motion-blur": "^4.0.541",
     "@remotion/three": "^4.0.541",
     "@remotion/transitions": "^4.0.541",
+    "lucide-react": "^1.69.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "remotion": "^4.0.541",

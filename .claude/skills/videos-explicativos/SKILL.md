@@ -71,7 +71,8 @@ Reglas:
    Reutilizar los componentes listados en `produccion.md`.
 6. **Revisar con cuadros sueltos** (`remotion still`) de cada escena antes del render:
    encuadre, etiquetas dentro de pantalla, subtítulos legibles, nada tapado.
-7. **Renderizar**, normalizar el audio a −14 LUFS y enviar el MP4 al usuario.
+7. **Renderizar** (Remotion; planos 3D héroe con HyperFrames), posproducir con `herramientas/ffmpeg.sh`
+   (normalizar a −14 LUFS, música, unir) y enviar el MP4 al usuario.
    Hacer commit y push del código (nunca de los MP4).
 8. **Aprender.** Si el usuario corrige algo, actualizar la skill que corresponda
    (general o de marca) en el mismo turno.
@@ -80,6 +81,8 @@ Reglas:
 
 - [referencias/3d-detalle.md](referencias/3d-detalle.md) — estándar de detalle 3D (en inglés, del complemento video-3d-addon).
 - [referencias/2d-motion-graphics.md](referencias/2d-motion-graphics.md) — estándar de motion graphics 2D.
+- [referencias/hyperframes-ffmpeg-assets.md](referencias/hyperframes-ffmpeg-assets.md) — HyperFrames para planos 3D
+  (vidrio, reflejos, shaders, 448 bloques), FFmpeg (`herramientas/ffmpeg.sh`) y biblioteca de assets con licencias.
 - [referencias/estilo.md](referencias/estilo.md) — reglas de estilo generales (método de 8
   reglas, efectos con propósito, cámara, subtítulos, color, fondo, volumen, ritmo).
 - [referencias/produccion.md](referencias/produccion.md) — pipeline técnico: ElevenLabs,

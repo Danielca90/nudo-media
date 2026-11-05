@@ -106,7 +106,13 @@ gráficos llamativos, y **100 % automáticos**: la abogada no graba nada por aho
   realidad), sala de capacitación de aprendices.
 - Los objetos de cada escena también salen del tema (chat de "Carlos · Bodega", caja de regalo
   DEMANDA, carta con hechos reales del caso), no solo hojas genéricas del kit.
-- **Capas fijas:** título en caja verde inclinada con línea 2 en dorado (arriba, dentro de la zona
+- **Planos 3D con HyperFrames** (`hyperframes/arca-3d/`, ver `hyperframes-ffmpeg-assets.md`): usar
+  como acento, no en todo el video. Listo: `arca-vidrio.html` (lente de vidrio con refracción sobre
+  "ARCA" dorado, fondo verde, "Tu empresa en buenas manos"). Ideas: `extruded-logo` para el cierre,
+  `exploded-stack` para las capas de un contrato, `news-ticker` para "Actualidad laboral".
+- **Avatares:** DiceBear `notionists` (CC0, trazo lineal sobrio) con opciones fijas, sobre círculo
+  verde o crema de la marca. Nunca estilos caricaturescos ni semillas al azar sin revisar.
+ título en caja verde inclinada con línea 2 en dorado (arriba, dentro de la zona
   segura) · emblema + ARCA JURÍDICA | @arcajuridica sobre el zócalo · subtítulos en frases de
   hasta 3 palabras, Montserrat 800 blanca con borde verde y palabras clave en dorado.
 - **Cierre:** 2,4 s en verde con logo claro, "Tu empresa en buenas manos" (serif itálica dorada) y @.
