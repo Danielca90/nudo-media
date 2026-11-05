@@ -7,6 +7,22 @@ Arca no está conectada a Metricool. Pedir los datos o conectarla para medir.
 Principio: **cambiar el empaque, no la seriedad.** La abogada, la información y el tono
 se quedan. Cambian el primer segundo, la estructura, el texto en pantalla y el formato.
 
+## 0. Línea base (Insights de Instagram, últimos 30 días al 5/11/2026)
+| Dato | Valor | Lectura |
+|---|---|---|
+| Seguidores | 846 (+0,6 %, ≈ +5 netos) | Crecimiento plano; se gana y se pierde casi igual |
+| Cuentas alcanzadas | **242** | Menos que los seguidores: ni siquiera llega a toda su base |
+| Vistas de historias | 1,2 K, casi todas de seguidores | Base fiel: sirve para convertir, no para crecer |
+| Vistas de reels | 1 K: ≈ 61 % seguidores, **≈ 28 % no seguidores**, ≈ 9 % Facebook (estimado de la barra) | Instagram prueba los reels con no seguidores y los frena pronto |
+| Vistas de posts (imagen) | 78 | El flyer casi no circula: priorizar reel + carrusel |
+| Mejores piezas | 177 (animación "Aterrizamos donde tu empresa nos necesita"), 161 (abogada a cámara), 142, 116 ("Somos el abogado presente") | Techo ≈ 180 vistas por pieza; ninguna salió de la base |
+| Público | 25–54 años = 88 %; 58,8 % mujeres; Colombia 90,9 % | Es el público correcto (gerentes, dueñas, jefas de RR. HH. y nómina), pero pequeño |
+| Seguidores activos | Todos los días 9 a. m.–9 p. m.; picos **mar, mié y vie 6–9 p. m.** | Publicar 6–7 p. m. esos días |
+
+Metas a 6 semanas: no seguidores > 50 % de las vistas de reels; al menos 1 reel > 1.000 vistas;
+seguidores +5 % al mes. Falta por reel (pestaña Contenido): retención a 3 s, tiempo medio,
+guardados, envíos y % no seguidores.
+
 ## 1. Diagnóstico: por qué no llega a no seguidores
 
 | # | Problema | Dónde se ve |
@@ -69,6 +85,14 @@ Equilibrio sugerido: 60 % temas que interesan a empleador y trabajador (alcance)
 ("cómo hacerlo bien"), para no alejar al cliente.
 
 ### F. Distribución
+- **Hora:** martes, miércoles y viernes 6–7 p. m. (hora de Bogotá), cuando los seguidores están
+  activos: el primer empujón viene de ellos y eso decide si Instagram lo muestra a más gente.
+- **Historias para convertir, reels para crecer:** las historias ya tienen buena audiencia fiel.
+  Usarlas con encuestas y caja de preguntas ("¿Qué te preocupa al despedir a alguien?"); las
+  preguntas reales se vuelven reels de respuesta. Compartir cada reel nuevo en historia.
+- **Facebook** aporta ≈ 9 % de las vistas de reels: mantener la publicación cruzada.
+- **Perfil que convierta:** bio con qué hacen y para quién + enlace de WhatsApp; fijar los
+  3 mejores reels. Hoy los reels no traen seguidores.
 - **Reels de prueba** de Instagram (se muestran solo a no seguidores): probar 2 ganchos
   distintos del mismo video y publicar en la cuenta el que gane.
 - **Publicaciones en colaboración** con cuentas de contadores, RR. HH., SST o cámaras de
