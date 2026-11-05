@@ -11,6 +11,18 @@ Basada en dos referencias analizadas (no se copian sus cuentas, marcas de agua n
   el cuadro y se sale por los bordes; un plano translúcido con un "0" marca dónde empieza
   la medida; el estado incorrecto se pinta de rojo; cierre con llamado a compartir.
 
+- **D – Hielo en el músculo** (43,5 s): corte con muchas capas reales (piel, grasa,
+  vasos, fibras, nervio), acercamientos al detalle que se nombra, etiquetas con línea
+  guía, tarjetas de datos con la fuente, comparaciones lado a lado.
+
+## Contexto y detalle en los modelos
+- Mostrar el objeto **en su contexto real** (la mesa terminada, el tronco del que sale
+  la tabla), no solo una pieza suelta.
+- Cuando el porqué está en lo pequeño, **acercarse hasta verlo** (vista ampliada de
+  las células, los anillos en la testa, la grieta).
+- **Etiquetas con línea guía** que apuntan al punto exacto ("CORTEZA", "JUNTA ABIERTA").
+- **Tarjetas de datos** con el número, una barra y **la fuente** en chico (da credibilidad).
+
 ## Regla principal: el efecto tiene que explicar algo
 Antes de agregar un efecto, responder: **¿qué entiende el espectador gracias a esto?**
 Si la respuesta es "se ve más lindo", no va.
@@ -36,18 +48,23 @@ Si la respuesta es "se ve más lindo", no va.
 - **Primeros planos grandes**: el objeto ocupa 60–90 % del ancho y puede salirse del
   cuadro. Nada de objetos chiquitos en el centro de un fondo vacío.
 - Una idea por plano. Cambiar de plano cuando cambia la idea (cada 1,5–3 s).
+- **Acercamientos sincronizados**: la cámara se mueve hacia lo que la voz nombra
+  justo en esa palabra (juntas → acercar a la junta; grietas → acercar a la grieta).
+- Algo cambia en pantalla cada ~1 s (etiqueta, dato, acercamiento), aunque no haya corte.
 - Movimientos lentos y continuos (dolly / órbita suave). Nada de giros sin motivo.
 - Acercar la cámara a lo que el texto está nombrando en ese momento.
 
 ## Subtítulos (lo que más retiene en las referencias)
 - Sincronizados con la voz, **palabra por palabra** o en frases cortas (2–5 palabras).
 - Palabra activa en blanco y **negrita**; palabras ya dichas en gris.
-- Palabra clave de la frase con **recuadro de resalte** (una o dos por video, no más).
+- **Borde negro** en todas las palabras (≈4–5 px visibles) para leerse sobre cualquier modelo.
+- Palabra clave de cada idea con **recuadro azul de resalte** (≈1 por frase, no más).
+- La palabra aparece apenas antes de oírse (~0,05 s) para leer y escuchar a la vez.
 - Posición: **zona media**, con el centro del texto entre 36% y 46% del alto
   (≈ y 700–880 px en 1080×1920). **No pegados arriba**: el texto alto queda incómodo
   y se pierde al mirar el objeto. El objeto se encuadra debajo o alrededor del texto.
 - Nunca en los 320 px inferiores ni a la derecha de 920 px (botones de Instagram/TikTok).
-- Tipografía sans redondeada, peso 700–800, ~64 px a 1080 px de ancho.
+- Tipografía sans, peso 800, ~66 px a 1080 px de ancho (tamaño cómodo, no gigante).
 
 ## Ritmo y estructura (≈15–30 s)
 1. **Gancho (0–2 s):** pregunta concreta sobre el objeto, ya visible en pantalla.
