@@ -29,7 +29,7 @@ const Lienzo: React.FC<{cam: {pos: Vec; mira: Vec}; children: React.ReactNode}> 
 
 const NotaExagerada: React.FC<{op: number}> = ({op}) => (
   <div style={{position: 'absolute', left: 70, top: 1560, fontFamily: 'Inter', fontSize: 26, color: 'rgba(255,255,255,0.6)', opacity: op}}>
-    Deformación exagerada para que se vea
+    Deformación exagerada
   </div>
 );
 
@@ -47,7 +47,7 @@ export const EscenaGancho: React.FC = () => {
       <Lienzo cam={cam}>
         <Mesa seca={0} />
       </Lienzo>
-      <Etiqueta punto={proyectar([0.9, ALTO_MESA, 1.3], cam)} texto="MADERA VERDE = RECIÉN CORTADA" dx={-60} dy={330} op={etq} />
+      <Etiqueta punto={proyectar([0.9, ALTO_MESA, 1.3], cam)} texto="VERDE = RECIÉN CORTADA" dx={-60} dy={330} op={etq} />
     </AbsoluteFill>
   );
 };
@@ -147,14 +147,14 @@ export const EscenaCelulas: React.FC = () => {
   return (
     <AbsoluteFill style={{transform: `scale(${1.25 - 0.25 * entra})`, opacity: entra}}>
       <div style={{position: 'absolute', left: 60, top: 860, fontFamily: 'Inter', fontWeight: 800, fontSize: 26, letterSpacing: 4, color: 'rgba(255,255,255,0.7)'}}>
-        🔍 VISTA AMPLIADA · CÉLULAS DE LA MADERA
+        🔍 CÉLULAS DE LA MADERA
       </div>
       <div style={{position: 'absolute', left: 40, top: 910}}>
         <Celulas agua={agua} encoge={encoge} seg={seg} />
       </div>
       <Etiqueta punto={{x: 40 + 92, y: 910 + 100 + 30 + 8}} texto="PARED CELULAR" dx={40} dy={-115} op={etqPared} />
       <Etiqueta punto={{x: 40 + 520, y: 910 + 100 + 30 + 260}} texto="AGUA" dx={180} dy={60} op={etqAgua} color="#93c5fd" />
-      <Tarjeta titulo="HUMEDAD DE LA MADERA" top={1390} op={tarjeta} fuente={bajo30 ? 'Bajo ~30 % las paredes pierden agua y se encogen' : 'Madera recién cortada: más de 30 % (puede pasar de 100 %)'}>
+      <Tarjeta titulo="HUMEDAD DE LA MADERA" top={1390} op={tarjeta} fuente={bajo30 ? 'Bajo 30 %: se encoge' : 'Recién cortada: más de 30 %'}>
         <div style={{display: 'flex', alignItems: 'baseline', gap: 20}}>
           <Valor texto={`${Math.round(humedad)} %`} color={humedad > 30 ? '#93c5fd' : '#fff'} />
           <div style={{flex: 1, height: 22, background: 'rgba(255,255,255,0.08)', borderRadius: 11, position: 'relative'}}>
@@ -230,7 +230,7 @@ export const EscenaDirecciones: React.FC = () => {
       </Lienzo>
       <Cota a={proyectar([0.95, 0.12, -2.2], cam)} b={proyectar([0.95, 0.12, 2.2], cam)} texto="LARGO" op={opL * (1 - opA * 0.6)} color="#ffffff" />
       <Cota a={proyectar([-0.8 * sx, 0.12, 2.45], cam)} b={proyectar([0.8 * sx, 0.12, 2.45], cam)} texto="ANCHO" op={opA} color={ANOTACIONES.fuerza[0]} dy={20} />
-      <Tarjeta titulo="CUÁNTO SE ENCOGE (DE VERDE A 10 %)" top={1360} op={tarjeta} fuente="Promedio, varía según la especie · Wood Handbook (USDA)">
+      <Tarjeta titulo="CONTRACCIÓN AL SECAR" top={1360} op={tarjeta} fuente="Fuente: Wood Handbook (USDA)">
         <Barra etiqueta="Largo" valor={opL * 0.1} max={6} color="#ffffff" texto="0,1 %" />
         <Barra etiqueta="Ancho" valor={opA * 5} max={6} color={ANOTACIONES.fuerza[0]} texto={opA > 0 ? '≈ 5 %' : '—'} />
       </Tarjeta>
@@ -307,7 +307,7 @@ export const EscenaMedir: React.FC = () => {
       <div style={{position: 'absolute', left: 390, top: 820 + (1 - entra) * -600, transformOrigin: '150px 120px', transform: `scale(${0.85 + zoom * 0.35})`}}>
         <Higrometro valor={valor} enRango={valor >= 8 && valor <= 12} />
       </div>
-      <Tarjeta titulo="HUMEDAD IDEAL · MUEBLES DE INTERIOR" top={1380} op={tarjeta} fuente="Medidor de púas: se clava en la madera y da el % de agua">
+      <Tarjeta titulo="HUMEDAD IDEAL PARA MUEBLES" top={1380} op={tarjeta}>
         <div style={{position: 'relative', height: 70, marginTop: 18}}>
           <div style={{position: 'absolute', left: 0, right: 0, top: 22, height: 22, background: 'rgba(255,255,255,0.1)', borderRadius: 11}} />
           <div style={{position: 'absolute', left: `${(8 / 30) * 100}%`, width: `${(4 / 30) * 100}%`, top: 22, height: 22, background: '#22c55e', borderRadius: 6, opacity: 0.4 + banda * 0.6}} />
@@ -337,7 +337,7 @@ export const EscenaCierre: React.FC = () => {
       <Lienzo cam={cam}>
         <Mesa seca={1} />
       </Lienzo>
-      <Etiqueta punto={proyectar([0, ALTO_MESA, 0.4], cam)} texto="✓ SECA, PLANA Y ESTABLE" dx={-200} dy={330} op={ok} color="#86efac" />
+      <Etiqueta punto={proyectar([0, ALTO_MESA, 0.4], cam)} texto="✓ SECA Y PLANA" dx={-200} dy={330} op={ok} color="#86efac" />
       <div style={{position: 'absolute', top: 1540, left: 0, right: 0, textAlign: 'center', fontFamily: 'Inter', fontWeight: 700, fontSize: 36, color: 'rgba(255,255,255,0.9)', opacity: marca}}>
         @somos_nudodesign
       </div>

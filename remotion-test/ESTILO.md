@@ -23,6 +23,24 @@ Basada en dos referencias analizadas (no se copian sus cuentas, marcas de agua n
 - **Etiquetas con línea guía** que apuntan al punto exacto ("CORTEZA", "JUNTA ABIERTA").
 - **Tarjetas de datos** con el número, una barra y **la fuente** en chico (da credibilidad).
 
+## Método para construir cada video (8 reglas)
+Tomadas de un tutorial sobre cómo pedirle a Claude videos explicativos:
+1. **Primero proponer una acción visual por bloque del guion, después construir.**
+   Antes de programar, escribir la lista: frase → qué se ve / qué se mueve.
+2. **Máximo 4 palabras por escena en pantalla, aparte de los subtítulos.**
+   Etiquetas y tarjetas cortas ("JUNTA ABIERTA", "HUMEDAD IDEAL"). Nada de frases largas.
+3. **Convertir las ideas en acciones.** "Se encoge" = la pieza se achica en pantalla;
+   "el agua sale" = el agua sale.
+4. **Dibujar las analogías del guion literalmente.** Si la voz dice "aguja en un pajar",
+   se ve una aguja en un pajar.
+5. **Mostrar las magnitudes con escala** y enfocar lo importante (barras, comparaciones
+   lado a lado, una referencia conocida para el tamaño).
+6. **Conservar elementos entre escenas** para que se vea cómo se transforman (la misma
+   mesa al principio y al final; la misma tabla que sale del tronco).
+7. **Sincronizar cada acción clave con la palabra correspondiente** de la voz.
+8. **Dejar una imagen final clara en cada escena**: cada plano termina en un estado
+   que se entiende solo, aunque se pause el video.
+
 ## Regla principal: el efecto tiene que explicar algo
 Antes de agregar un efecto, responder: **¿qué entiende el espectador gracias a esto?**
 Si la respuesta es "se ve más lindo", no va.
