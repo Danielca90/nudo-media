@@ -15,12 +15,9 @@ const tramo = (seg: number, a: number, b: number, e = true) =>
   interpolate(seg, [a, b], [0, 1], e ? {...clamp, easing: ease} : clamp);
 const pulso = (seg: number, t: number) => spring({frame: Math.round((seg - t) * FPS), fps: FPS, config: {damping: 15}});
 
-export const FondoTaller: React.FC = () => (
-  <AbsoluteFill style={{background: 'radial-gradient(ellipse at 50% 60%, #4a3a2b 0%, #2b211a 40%, #15100c 78%, #0e0b08 100%)'}} />
-);
 
 const Lienzo: React.FC<{cam: {pos: Vec; mira: Vec}; children: React.ReactNode}> = ({cam, children}) => (
-  <ThreeCanvas width={VIDEO.width} height={VIDEO.height}>
+  <ThreeCanvas width={VIDEO.width} height={VIDEO.height} shadows>
     <Camara pos={cam.pos} mira={cam.mira} />
     <Luces />
     {children}
@@ -28,7 +25,7 @@ const Lienzo: React.FC<{cam: {pos: Vec; mira: Vec}; children: React.ReactNode}> 
 );
 
 const NotaExagerada: React.FC<{op: number}> = ({op}) => (
-  <div style={{position: 'absolute', left: 70, top: 1560, fontFamily: 'Inter', fontSize: 26, color: 'rgba(255,255,255,0.6)', opacity: op}}>
+  <div style={{position: 'absolute', left: 70, top: 1560, fontFamily: 'Inter', fontWeight: 600, fontSize: 26, color: 'rgba(255,255,255,0.85)', WebkitTextStroke: '5px #000', paintOrder: 'stroke fill', opacity: op}}>
     Deformación exagerada
   </div>
 );
@@ -338,7 +335,7 @@ export const EscenaCierre: React.FC = () => {
         <Mesa seca={1} />
       </Lienzo>
       <Etiqueta punto={proyectar([0, ALTO_MESA, 0.4], cam)} texto="✓ SECA Y PLANA" dx={-200} dy={330} op={ok} color="#86efac" />
-      <div style={{position: 'absolute', top: 1540, left: 0, right: 0, textAlign: 'center', fontFamily: 'Inter', fontWeight: 700, fontSize: 36, color: 'rgba(255,255,255,0.9)', opacity: marca}}>
+      <div style={{position: 'absolute', top: 1540, left: 0, right: 0, textAlign: 'center', fontFamily: 'Inter', fontWeight: 700, fontSize: 36, color: '#fff', WebkitTextStroke: '7px #000', paintOrder: 'stroke fill', opacity: marca}}>
         @somos_nudodesign
       </div>
     </AbsoluteFill>

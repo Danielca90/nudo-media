@@ -3,6 +3,8 @@ import * as THREE from 'three';
 import {useThree} from '@react-three/fiber';
 import {MATERIALES, ANOTACIONES} from '../estilo';
 import {FOV} from './camara';
+import {RoundedBoxGeometry} from 'three/examples/jsm/geometries/RoundedBoxGeometry.js';
+import {useFondo} from './fondo';
 
 // ---------- Texturas (colores reales de la madera) ----------
 const texturaVeta = () => {
@@ -114,7 +116,7 @@ export const Tabla: React.FC<TablaProps> = ({
 
   return (
     <group position={position} rotation={rotation}>
-      <mesh geometry={geo}>
+      <mesh geometry={geo} castShadow receiveShadow>
         <meshStandardMaterial attach="material-0" {...caraProps} />
         <meshStandardMaterial attach="material-1" {...caraProps} />
         <meshStandardMaterial attach="material-2" map={veta} {...caraProps} />
@@ -210,11 +212,42 @@ export const Camara: React.FC<{pos: [number, number, number]; mira: [number, num
 
 export const Luces: React.FC<{calida?: boolean}> = ({calida = true}) => (
   <>
-    <ambientLight intensity={0.55} color={calida ? '#fff1dc' : '#ffffff'} />
-    <directionalLight position={[3, 6, 5]} intensity={2.4} color={calida ? '#ffe2b8' : '#ffffff'} />
-    <directionalLight position={[-4, 2, -3]} intensity={0.6} color="#bcd4ff" />
+    <hemisphereLight args={[calida ? '#fff3e2' : '#ffffff', '#2a2622', 0.7]} />
+    <directionalLight
+      position={[4, 8, 5]}
+      intensity={2.6}
+      color={calida ? '#ffe6c4' : '#ffffff'}
+      castShadow
+      shadow-mapSize-width={2048}
+      shadow-mapSize-height={2048}
+      shadow-bias={-0.0015}
+      shadow-normalBias={0.06}
+      shadow-camera-left={-6}
+      shadow-camera-right={6}
+      shadow-camera-top={6}
+      shadow-camera-bottom={-6}
+    />
+    {/* luz de relleno suave del otro lado */}
+    <directionalLight position={[-5, 3, 2]} intensity={0.5} color="#dfe8ff" />
+    {/* luz de contorno desde atrás: separa el objeto del fondo */}
+    <directionalLight position={[-2, 4, -6]} intensity={1.4} color="#fff2dc" />
   </>
 );
+
+// Degradado vertical en los vértices: más oscuro abajo, más claro arriba (da volumen).
+export const degradadoVertical = (g: THREE.BufferGeometry, minimo = 0.55) => {
+  g.computeBoundingBox();
+  const {min, max} = g.boundingBox!;
+  const pos = g.attributes.position;
+  const colores = new Float32Array(pos.count * 3);
+  for (let i = 0; i < pos.count; i++) {
+    const t = (pos.getY(i) - min.y) / (max.y - min.y || 1);
+    const c = minimo + (1 - minimo) * Math.pow(t, 0.8);
+    colores.set([c, c, c], i * 3);
+  }
+  g.setAttribute('color', new THREE.BufferAttribute(colores, 3));
+  return g;
+};
 
 // ---------- Mesa: tablero de 3 tablas encoladas + patas + faldón ----------
 export const ANCHO_TABLA = 0.9;
@@ -230,10 +263,12 @@ export const Mesa: React.FC<{seca?: number; curva?: number; junta?: number; grie
 }) => {
   const sep = 0.07 * junta;
   const color = VERDE.clone().lerp(SECA, seca).multiplyScalar(0.92);
+  const geoPata = useMemo(() => degradadoVertical(new RoundedBoxGeometry(0.15, ALTO_MESA - 0.12, 0.15, 4, 0.03)), []);
+  const geoFaldon = useMemo(() => degradadoVertical(new RoundedBoxGeometry(2.3, 0.18, 0.06, 3, 0.015), 0.75), []);
+  const {sombra} = useFondo();
   const pata = (x: number, z: number) => (
-    <mesh key={`${x}${z}`} position={[x, (ALTO_MESA - 0.12) / 2, z]}>
-      <boxGeometry args={[0.14, ALTO_MESA - 0.12, 0.14]} />
-      <meshStandardMaterial color={color} roughness={0.7} />
+    <mesh key={`${x}${z}`} geometry={geoPata} position={[x, (ALTO_MESA - 0.12) / 2, z]} castShadow receiveShadow>
+      <meshStandardMaterial color={color} vertexColors roughness={0.6} />
     </mesh>
   );
   return (
@@ -258,18 +293,16 @@ export const Mesa: React.FC<{seca?: number; curva?: number; junta?: number; grie
       {pata(-1.15, 1.3)}
       {pata(1.15, 1.3)}
       {/* faldón */}
-      <mesh position={[0, ALTO_MESA - 0.22, 1.3]}>
-        <boxGeometry args={[2.3, 0.18, 0.06]} />
-        <meshStandardMaterial color={color} roughness={0.7} />
+      <mesh geometry={geoFaldon} position={[0, ALTO_MESA - 0.22, 1.3]} castShadow receiveShadow>
+        <meshStandardMaterial color={color} vertexColors roughness={0.6} />
       </mesh>
-      <mesh position={[0, ALTO_MESA - 0.22, -1.3]}>
-        <boxGeometry args={[2.3, 0.18, 0.06]} />
-        <meshStandardMaterial color={color} roughness={0.7} />
+      <mesh geometry={geoFaldon} position={[0, ALTO_MESA - 0.22, -1.3]} castShadow receiveShadow>
+        <meshStandardMaterial color={color} vertexColors roughness={0.6} />
       </mesh>
-      {/* piso del taller */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0, 0]}>
-        <circleGeometry args={[6, 48]} />
-        <meshStandardMaterial color="#3b2f25" roughness={1} />
+      {/* piso invisible: solo muestra la sombra, combina con cualquier fondo */}
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.001, 0]} receiveShadow>
+        <planeGeometry args={[14, 14]} />
+        <shadowMaterial opacity={sombra} />
       </mesh>
     </group>
   );
