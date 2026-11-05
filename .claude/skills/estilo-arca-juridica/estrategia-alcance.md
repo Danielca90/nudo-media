@@ -137,6 +137,23 @@ Guion propuesto (verificar la norma con `asesoria-juridica-colombia` antes de gr
 4. Base: "Y todo esto tiene que estar en tu reglamento interno de trabajo."
 5. Remate: "Guárdalo antes de tu próximo proceso. Y si tu reglamento no lo tiene, escríbenos."
 
+### Reel animado "Aterrizamos donde tu empresa nos necesita" (23,7 s, 2 s de tiempo medio)
+Animación bien hecha y fiel a la marca (verde petróleo, dorado, serif), pero:
+- Abre con una metáfora ("El futuro ya despegó") sobre una ciudad oscura casi quieta y texto
+  pequeño: en 2 s no hay problema, persona ni promesa → el no seguidor se va.
+- Todo el guion habla de Arca, nada del espectador: es un anuncio de marca, no contenido.
+  No hay dato, paso ni consejo que guardar o enviar.
+- Los últimos ~5 s son solo logo; el @ con ícono queda encima del texto en varios cuadros.
+Uso correcto: como anuncio pagado o en historias, no como reel para crecer.
+Transformación propuesta (reutiliza la animación como fondo):
+1. 0–2 s: la abogada en selfie: "Tu empresa va a toda velocidad… y hay 3 cosas que la
+   hacen aterrizar de emergencia." (título fijo: "3 errores que frenan tu empresa").
+2. El carro animado como fondo, con tarjetas numeradas: 1) contratos mal hechos o sin
+   firmar; 2) despedir sin proceso disciplinario; 3) no tener reglamento interno actualizado.
+   Una frase concreta de consecuencia por cada uno (verificar con asesoria-juridica-colombia).
+3. Aterrizaje del carro + "En Arca aterrizamos donde tu empresa nos necesita. Guárdalo y
+   escríbenos." Logo 1 s, no 5.
+
 ### Post – Nuevo Estatuto del Trabajo
 - Convertirlo en reel de la abogada: "Lo que cambia para tu empresa con [norma]" + carrusel
   con los 3–5 cambios concretos. Verificar antes el estado real (radicado / aprobado / vigente).
