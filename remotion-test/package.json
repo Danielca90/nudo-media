@@ -1,0 +1,23 @@
+{
+  "name": "nudo-remotion-test",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render src/index.ts MaderaVerde out/madera-verde.mp4",
+    "render:cloud-session": "remotion render src/index.ts MaderaVerde out/madera-verde.mp4 --gl=swangle --chrome-mode=headless-shell --browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell"
+  },
+  "dependencies": {
+    "@react-three/fiber": "^9.2.0",
+    "@remotion/cli": "^4.0.541",
+    "@remotion/motion-blur": "^4.0.541",
+    "@remotion/three": "^4.0.541",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "remotion": "^4.0.541",
+    "three": "^0.178.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.178.0",
+    "typescript": "^5.8.3"
+  }
+}
