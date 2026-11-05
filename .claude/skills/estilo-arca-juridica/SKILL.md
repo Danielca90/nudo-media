@@ -78,14 +78,31 @@ Pedido del usuario: videos **animados**, sin 3D, tipo motion graphics / stop mot
 gráficos llamativos, y **100 % automáticos**: la abogada no graba nada por ahora.
 - **Voz:** ElevenLabs, voz clonada **"Andrea Arca"** (`XrTN5zwTQo5HkNatlJ58`, español de Colombia),
   modelo `eleven_v4`. Guion en tú al gerente, 25–32 s, números en palabras.
-- **Mundo visual:** oficina plana en la paleta de la marca (pared crema, ventana con ciudad,
-  bandera de Colombia, planta, zócalo verde con filete dorado). Nítida en el gancho y
-  desenfocada después para que resalten los objetos.
+- **Mundo visual:** escenario ilustrado plano en la paleta de la marca, **distinto según el tema**
+  (ver la regla de abajo). Nítido en el gancho y desenfocado después para que resalten los
+  objetos; parte baja oscura (verde) para el logo y los subtítulos.
 - **Objetos que explican:** calendario de diciembre, contratos y avisos en papel blanco con borde
   verde, fichas de fecha, barras y contadores, sellos que caen con sacudida (rojo óxido solo para
   error o riesgo), checks verdes, botones finales "GUÁRDALO" / "ENVÍALO".
 - **Movimiento:** resortes (entradas con rebote corto), trazos que se dibujan, contadores, sellos
   con sacudida, avión de papel que vuela. Llamativo pero sobrio: nada de personajes caricaturescos.
+- **Escenario propio por tema (regla del usuario, 2026-11-05):** nada de plantilla con el mismo
+  fondo. Lo único que se repite es la capa de marca (título, subtítulos, logo/@, remate de venta,
+  cierre). El escenario y los objetos de contexto se diseñan para cada tema, en
+  `src/arca/escenarios/`, y **dos videos seguidos del calendario nunca comparten escenario**.
+  Antes de programar, escribir en `GUION.md`: ¿dónde pasa esta historia? ¿qué objetos de ese
+  lugar cuentan el tema? Escenarios ya usados:
+  | Escenario | Tema | Elementos de contexto |
+  |---|---|---|
+  | `Bodega` | Reel 01 · despidos | Estanterías con cajas, portón de carga, letrero SALIDA, reloj de marcación, estiba, líneas de seguridad, polvo en los haces de luz |
+  | `OficinaDiciembre` | Reel 02 · contratos que vencen el 31 dic | Atardecer, guirnalda de luces de diciembre, flor de pascua, calendario DIC 31, archivador CONTRATOS / AVISOS / 2027, lámpara |
+  | `Oficina` (kit) | Genérico, ya no usar como fondo principal | — |
+  Ideas para los próximos: sala de juntas / Ministerio del Trabajo (requerimiento), consultorio o
+  sala de lactancia (fueros), área de nómina con pantallas y calculadora (liquidación, prima),
+  obra o planta con turnos y reloj (recargos y festivos), coworking / freelancer (contrato
+  realidad), sala de capacitación de aprendices.
+- Los objetos de cada escena también salen del tema (chat de "Carlos · Bodega", caja de regalo
+  DEMANDA, carta con hechos reales del caso), no solo hojas genéricas del kit.
 - **Capas fijas:** título en caja verde inclinada con línea 2 en dorado (arriba, dentro de la zona
   segura) · emblema + ARCA JURÍDICA | @arcajuridica sobre el zócalo · subtítulos en frases de
   hasta 3 palabras, Montserrat 800 blanca con borde verde y palabras clave en dorado.
@@ -176,3 +193,5 @@ Estructura de arriba abajo:
 - 2026-11-05: la cuenta es de asesoría legal: todo video termina vendiendo el servicio
   (revisar, validar, redactar, hacer seguimiento, defender ante demandas, blindar). Ver
   "Propuesta de valor".
+- 2026-11-05: el contenido no puede verse repetitivo: escenario y objetos de contexto propios de
+  cada tema; solo la capa de marca se repite.

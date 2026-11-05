@@ -36,8 +36,11 @@ llamado a la acción → cierre de marca (2–3 s).
   físico se entiende mejor en volumen. El 3D sigue las reglas de `3d-detalle.md`.
 
 ## 4. Estándar de detalle 2D
-- **Contexto siempre:** un lugar dibujado (oficina, taller, cocina) en la paleta de la marca,
-  nítido en el gancho y desenfocado detrás de la explicación.
+- **Contexto siempre, y propio del tema:** un lugar dibujado donde pasa la historia (la bodega
+  donde trabaja el empleado despedido, la oficina en diciembre para un plazo de fin de año), con
+  objetos que cuenten el tema. Nítido en el gancho y desenfocado detrás de la explicación.
+  **No reutilizar el mismo fondo en videos seguidos**: el kit es solo para la capa de marca y
+  las piezas genéricas; escenario y objetos se diseñan por tema.
 - **Profundidad:** sombras suaves bajo cada tarjeta, capas a distinta escala, desenfoque del
   fondo, leve deriva del fondo (paralaje). Nada pegado plano sobre plano.
 - **Objetos con detalle:** un documento tiene encabezado, filete de color, líneas de texto,

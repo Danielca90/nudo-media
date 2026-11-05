@@ -6,8 +6,9 @@ import {Audio} from '@remotion/media';
 import {staticFile} from 'remotion';
 import {COLOR, FUENTES} from '../marca';
 import palabrasJson from './palabras.json';
+import {OficinaDiciembre} from '../escenarios/OficinaDiciembre';
 import {
-  Oficina, TituloFijo, MarcaEsquina, Subtitulos, Sello, Hoja, Ciclo, Check, Cierre, CierreServicios,
+  TituloFijo, MarcaEsquina, Subtitulos, Sello, Hoja, Ciclo, Check, Cierre, CierreServicios,
   useT, usePop, tramo, ventana, useSacudida, Palabra,
 } from '../kit';
 
@@ -18,7 +19,7 @@ const CLAVES = ['31', 'diciembre?', 'renuevan', 'solos.', 'escrito,', '30', 'dí
 
 // Escenas (segundos, según la voz)
 const S = {
-  gancho: [0, 3.9],
+  gancho: [-1, 3.9],
   contrato: [3.9, 7.4],
   aviso: [7.4, 11.8],
   linea: [11.8, 17.3],
@@ -283,8 +284,8 @@ export const Reel02: React.FC = () => {
   return (
     <AbsoluteFill style={{background: COLOR.pared}}>
       <Audio src={staticFile('arca/voz-reel02-v2.mp3')} />
-      <Oficina foco={foco} zoom={zoom} />
-      <AbsoluteFill style={{background: COLOR.crema, opacity: foco * 0.3, height: 1240}} />
+      <OficinaDiciembre foco={foco} zoom={zoom} />
+      <AbsoluteFill style={{background: COLOR.crema, opacity: foco * 0.2, height: 1240}} />
       <Escena r={S.gancho}><Gancho /></Escena>
       <Escena r={S.contrato}><Contrato /></Escena>
       <Escena r={S.aviso}><Aviso /></Escena>

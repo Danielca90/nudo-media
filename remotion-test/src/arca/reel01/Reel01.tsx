@@ -4,8 +4,9 @@ import {AbsoluteFill, staticFile} from 'remotion';
 import {Audio} from '@remotion/media';
 import {COLOR, FUENTES} from '../marca';
 import palabrasJson from './palabras.json';
+import {Bodega} from '../escenarios/Bodega';
 import {
-  Oficina, TituloFijo, MarcaEsquina, Subtitulos, Sello, Hoja, Check, Cierre, Camara, Paso, CierreServicios,
+  TituloFijo, MarcaEsquina, Subtitulos, Sello, Hoja, Check, Cierre, Camara, Paso, CierreServicios,
   useT, usePop, tramo, ventana, useSacudida, Palabra,
 } from '../kit';
 
@@ -277,11 +278,11 @@ export const Reel01: React.FC = () => {
   return (
     <AbsoluteFill style={{background: COLOR.pared}}>
       <Audio src={staticFile('arca/voz-reel01-v2.mp3')} />
-      <Oficina foco={foco} zoom={zoom} />
-      <AbsoluteFill style={{background: COLOR.crema, opacity: foco * 0.3, height: 1240}} />
+      <Bodega foco={foco} zoom={zoom} />
+      <AbsoluteFill style={{background: COLOR.crema, opacity: foco * 0.22, height: 1240}} />
 
       {/* 1. Gancho: mensaje de despido → "regalo" de demanda (plano general → acercamiento) */}
-      <Escena r={[0, 1.55]}>
+      <Escena r={[-1, 1.55]}>
         <Camara claves={[{t: 0, s: 1}, {t: 1.5, s: 1.12, y: 40}]}><Centro top={160}><Telefono /></Centro></Camara>
       </Escena>
       <Escena r={[1.4, 3.8]}>
