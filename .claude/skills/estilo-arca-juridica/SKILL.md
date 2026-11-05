@@ -99,6 +99,7 @@ gráficos llamativos, y **100 % automáticos**: la abogada no graba nada por aho
   | `Bodega` | Reel 01 · despidos | Estanterías con cajas, portón de carga, letrero SALIDA, reloj de marcación, estiba, líneas de seguridad, polvo en los haces de luz |
   | `OficinaDiciembre` | Reel 02 · contratos que vencen el 31 dic | Atardecer, guirnalda de luces de diciembre, flor de pascua, calendario DIC 31, archivador CONTRATOS / AVISOS / 2027, lámpara |
   | `Porteria` | Noticia SL1015-2026 · discapacidad presunta | Recepción PORTERÍA, monitores de cámaras, torniquetes, ascensor, escalera, gorra y radio del vigilante |
+  | `Pasillo` | Reel 03 · protecciones que exigen permiso | Pasillo con puertas Talento Humano, Sala Amiga de la Familia Lactante, Enfermería · SST y Sindicato (cartelera ASAMBLEA); la cámara se detiene en la puerta de cada protección |
   | `Oficina` (kit) | Genérico, ya no usar como fondo principal | — |
   Ideas para los próximos: sala de juntas / Ministerio del Trabajo (requerimiento), consultorio o
   sala de lactancia (fueros), área de nómina con pantallas y calculadora (liquidación, prima),
@@ -107,7 +108,8 @@ gráficos llamativos, y **100 % automáticos**: la abogada no graba nada por aho
 - Los objetos de cada escena también salen del tema (chat de "Carlos · Bodega", caja de regalo
   DEMANDA, carta con hechos reales del caso), no solo hojas genéricas del kit.
 - **Planos 3D con HyperFrames** (`hyperframes/arca-3d/`, ver `hyperframes-ffmpeg-assets.md`): usar
-  como acento, no en todo el video. Listo: `arca-vidrio.html` (lente de vidrio con refracción sobre
+  como acento, no en todo el video. **Sin logo animado en 3D** (pedido del usuario). Listos: `arca-vidrio-permiso.html`
+  (gancho del reel 03: lente sobre "PERMISO") y `arca-vidrio.html` (lente de vidrio con refracción sobre
   "ARCA" dorado, fondo verde, "Tu empresa en buenas manos"). Ideas: `extruded-logo` para el cierre,
   `exploded-stack` para las capas de un contrato, `news-ticker` para "Actualidad laboral".
 - **Avatares:** DiceBear `notionists` (CC0, trazo lineal sobrio) con opciones fijas, sobre círculo

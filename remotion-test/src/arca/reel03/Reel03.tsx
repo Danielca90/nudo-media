@@ -5,7 +5,7 @@ import {AbsoluteFill, OffthreadVideo, interpolate, Easing, staticFile} from 'rem
 import {Audio} from '@remotion/media';
 import {COLOR, FUENTES} from '../marca';
 import palabrasJson from './palabras.json';
-import {Pasillo, PUERTAS} from '../escenarios/Pasillo';
+import {Pasillo, PUERTAS, PASILLO_ANCHO} from '../escenarios/Pasillo';
 import {
   TituloFijo, MarcaEsquina, Subtitulos, Sello, Check, Cierre, CierreServicios, Avatar,
   useT, usePop, tramo, ventana, Palabra,
@@ -18,7 +18,7 @@ const CLAVES = ['permiso.', 'vale.', 'embarazada.', 'maternidad.', 'inspector', 
   'juez', 'reintegro,', 'salarios', 'indemnización.', 'solo.', 'revisamos', 'tramitamos', 'redactamos', 'defendemos', 'Escríbenos', 'blindamos'];
 
 // Cámara a lo largo del pasillo: se detiene en la puerta de cada protección.
-const centro = (cx: number) => cx - 540;
+const centro = (cx: number) => Math.min(Math.max(cx - 540, 0), PASILLO_ANCHO - 1080 - 40);
 const CAMARA: [number, number][] = [
   [5.0, centro(PUERTAS.talento)], [5.6, centro(PUERTAS.lactancia)], [12.9, centro(PUERTAS.lactancia)],
   [13.6, centro(PUERTAS.sst)], [21.8, centro(PUERTAS.sst)], [22.5, centro(PUERTAS.sindicato)],
