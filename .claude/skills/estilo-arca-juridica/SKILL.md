@@ -8,6 +8,10 @@ description: Estilo de Arca Jurídica (@arcajuridica), firma colombiana de aboga
 Complementa `videos-explicativos` e `instagram-reels-colombia`. Lo que se define aquí manda sobre lo general.
 El contenido legal se valida con `asesoria-juridica-colombia` antes de publicar.
 
+**Antes de cualquier pieza, leer [estrategia-alcance.md](estrategia-alcance.md)**: gancho en
+2 s, título fijo, estructura de retención, formatos para no seguidores. Manda sobre lo que
+se copió de los videos de referencia, que no estaban llegando a no seguidores.
+
 ## Skills que se cargan juntas (todas en este repo, `.claude/skills/`)
 - `videos-explicativos` — método de video (guion, plan visual, voz, subtítulos, Remotion, render).
 - `instagram-reels-colombia` — guion de Reel por escenas, carrusel, portada, pie de foto, hashtags.
@@ -73,10 +77,9 @@ El contenido legal se valida con `asesoria-juridica-colombia` antes de publicar.
   4. Cierre: cada decisión que tomes con tus trabajadores debe tener respaldo legal → llamado a escribir.
      (La referencia termina cortada en "es importante que cada decisión que tomes": el cierre
      debe quedar completo y con llamado a la acción.)
-- Subtítulos de esta variante: fuente display redondeada y gruesa tipo cómic (estilo
-  Luckiest Guy / Bangers), blanca con **borde negro grueso**, una palabra a la vez, en el
-  tercio inferior. Es la versión preferida frente al sans con sombra de la ref. F porque se
-  lee mejor sobre fondos claros.
+- Subtítulos de la referencia: fuente display tipo cómic, blanca con borde negro, una palabra
+  a la vez. **Ya no se usa** (ver estrategia): frase corta en sans gruesa blanca con borde
+  oscuro y palabra clave en dorado.
 - Mejoras frente a la referencia: no subtitular palabras vacías ("DE", "DEL", "PERO");
   solo la palabra clave de cada frase (SALUD, DESPEDIRLO, MINISTERIO, CABECERA, IMPORTANTE).
   La ref. tiene un filtro/compresión que posteriza el cielo y la piel (manchas de color):
@@ -113,3 +116,5 @@ Estructura de arriba abajo:
   a cámara sobre procesos disciplinarios.
 - 2026-11-05: segundo reel (selfie exterior, "¿sabes qué hacer?", abogado de cabecera):
   la abogada tutea al gerente; subtítulo cómico con borde negro.
+- 2026-11-05: la cuenta no llega a no seguidores. Objetivo: más alcance sin volverlo
+  caricaturesco ni ridículo. Estrategia en estrategia-alcance.md.
