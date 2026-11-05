@@ -10,7 +10,7 @@ export const SAFE = {top: 220, bottom: 320, right: 160, left: 60};
 export const SUBTITULOS = {
   centroY: 0.4, // 40% del alto (≈ 770 px)
   rangoY: [0.36, 0.46],
-  familia: '"Nunito", "Helvetica Neue", Arial, sans-serif',
+  familia: '"Inter", "Helvetica Neue", Arial, sans-serif',
   peso: 800,
   tamano: 64,
   palabrasPorBloque: 5,
