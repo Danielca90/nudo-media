@@ -12,3 +12,9 @@ Se toma el estilo, nunca el contenido, las cuentas ni las marcas de agua.
 
 Detalles de subtítulos que pidió el usuario a partir de estas referencias: tamaño
 razonable, borde negro, énfasis en la palabra clave, sincronía exacta con la voz.
+
+## Arca Jurídica (2026-11-05)
+| Ref | Pieza | Qué se tomó |
+|---|---|---|
+| F | Reel a cámara, procesos disciplinarios (22 s) | Plano único de la abogada con letrero de la marca al fondo, subtítulo de una palabra clave en mayúsculas en el tercio inferior, @ con ícono de Instagram que cambia de posición |
+| G | Post "Nuevo Estatuto del Trabajo" | Paleta verde petróleo + dorado + crema, título serif en banda inclinada, 4 servicios con íconos en círculo, cierre en banda verde |

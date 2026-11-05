@@ -16,7 +16,7 @@ Cada marca tiene **su propia skill de estilo**, separada de esta:
 | Marca | Skill | Estado |
 |---|---|---|
 | Nudo Design (@somos_nudodesign) | `estilo-nudo-design` | Creada |
-| Arca Jurídica | `estilo-arca-juridica` | Pendiente: se construye con las instrucciones del usuario |
+| Arca Jurídica (@arcajuridica) | `estilo-arca-juridica` | Creada (reel a cámara + post gráfico) |
 
 Reglas:
 1. **Antes de empezar un video, identificar la marca y cargar su skill `estilo-<marca>`.**
