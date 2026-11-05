@@ -22,5 +22,7 @@ con justa causa (el guion lo presenta como el paso correcto).
 | 22,8–25,8 | Se abre / comparación | Lo que no esté en la carta, no lo puedes alegar después. | "+ otra causa" intenta entrar, rebota con X roja; sello "NO VALE DESPUÉS" |
 | 25,9–26,6 | Número | Tres: | "3" → insignia "Liquidación" |
 | 26,5–29,4 | Paneo | paga la liquidación completa el día de la terminación. | Recibo "Liquidación final" con 4 checks; ficha "EL MISMO DÍA" |
-| 29–32,6 | General | Guarda este video antes de tu próximo despido. | Vuelve la lista con los 3 checks + botón "GUÁRDALO" |
-| 32,6–35 | Cierre | — | Logo, "Tu empresa en buenas manos", @arcajuridica |
+| 29,4–44 | Remate de venta | Y no tienes que hacerlo solo. En Arca Jurídica revisamos… redactamos la carta, los descargos y la liquidación, hacemos el seguimiento y te defendemos si llega una demanda. Escríbenos y blindamos legalmente tu empresa. | Pila de documentos → escudo de Arca → lista "Arca Jurídica se encarga" con check dorado en cada verbo → botón ESCRÍBENOS |
+| 44–46,5 | Cierre | — | Logo, "Tu empresa en buenas manos", @arcajuridica |
+
+2026-11-05: el cierre "Guarda este video" se cambió por el remate de venta (propuesta de valor de Arca). Voz: original recortada + cierre nuevo (`voz-reel01-v2.mp3`).

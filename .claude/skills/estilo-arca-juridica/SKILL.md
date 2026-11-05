@@ -12,6 +12,32 @@ El contenido legal se valida con `asesoria-juridica-colombia` antes de publicar.
 2 s, título fijo, estructura de retención, formatos para no seguidores. Manda sobre lo que
 se copió de los videos de referencia, que no estaban llegando a no seguidores.
 
+## Propuesta de valor (lo que se vende en TODOS los videos)
+
+Arca es una cuenta de **asesoría legal**: los videos enseñan para enganchar, pero el remate
+siempre vende el servicio. Mensaje del usuario (2026-11-05):
+> Nosotros nos encargamos de revisar, validar y velar porque todos esos requisitos se cumplan,
+> de redactar todos los documentos y hacer los seguimientos respectivos, e incluso de la
+> protección ante futuras demandas. Blindamos legalmente al empresario.
+
+Estructura obligatoria de cada guion:
+1. **Gancho** con el riesgo o el error (2 s).
+2. **Los requisitos / pasos** (mostrar que es más complejo de lo que parece: esa es la razón
+   para contratar asesoría).
+3. **Giro de venta:** "Y no tienes que hacerlo solo." 
+4. **Propuesta de valor adaptada al tema**, con estos verbos: *revisamos / validamos* que cada
+   requisito se cumpla · *redactamos* los documentos (nombrar los del tema) · *hacemos el
+   seguimiento* · *te defendemos si llega una demanda*.
+5. **Llamado a la acción:** "Escríbenos y blindamos legalmente tu empresa."
+
+Visual del remate (componente `CierreServicios` en `kit.tsx`): escudo de Arca + lista
+"Arca se encarga" con checks dorados sincronizados con cada verbo + botón "ESCRÍBENOS".
+
+**Límite ético (no negociable):** no prometer resultados. Nunca "no vas a tener demandas",
+"cero demandas" ni "garantizado" (código disciplinario del abogado, Ley 1123 de 2007, y
+publicidad veraz, Ley 1480 de 2011). Sí: "blindamos legalmente tu empresa", "prevenimos",
+"reducimos el riesgo", "te defendemos si llega una demanda".
+
 ## Skills que se cargan juntas (todas en este repo, `.claude/skills/`)
 - `videos-explicativos` — método de video (guion, plan visual, voz, subtítulos, Remotion, render).
 - `instagram-reels-colombia` — guion de Reel por escenas, carrusel, portada, pie de foto, hashtags.
@@ -147,3 +173,6 @@ Estructura de arriba abajo:
   caricaturesco ni ridículo. Estrategia en estrategia-alcance.md.
 - 2026-11-05: formato principal = video animado automático (motion graphics, sin 3D, sin que la
   abogada grabe). Primer reel: 02, contratos a término fijo.
+- 2026-11-05: la cuenta es de asesoría legal: todo video termina vendiendo el servicio
+  (revisar, validar, redactar, hacer seguimiento, defender ante demandas, blindar). Ver
+  "Propuesta de valor".

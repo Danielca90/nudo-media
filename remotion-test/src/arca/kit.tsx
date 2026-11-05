@@ -295,3 +295,80 @@ export const Paso: React.FC<{n: number; en: number; hasta: number; etiqueta: str
     </div>
   );
 };
+
+// ---------- remate de venta: "Arca se encarga" ----------
+export type Servicio = {texto: string; en: number};
+/**
+ * Propuesta de valor al final de cada video (ver skill estilo-arca-juridica).
+ * 1) pila de documentos del tema ("no tienes que hacerlo solo"), 2) escudo de Arca,
+ * 3) lista de servicios con check dorado en cada verbo, 4) botón ESCRÍBENOS.
+ */
+export const CierreServicios: React.FC<{
+  desde: number; hasta: number; documentos: string[]; arcaEn: number; servicios: Servicio[]; escribenosEn: number;
+}> = ({desde, hasta, documentos, arcaEn, servicios, escribenosEn}) => {
+  const t = useT();
+  const frame = useCurrentFrame();
+  const escudo = usePop(arcaEn, 200, 13);
+  const boton = usePop(escribenosEn, 240, 11);
+  const o = ventana(t, desde, hasta, 0.2);
+  if (o <= 0) return null;
+  const pila = 1 - tramo(t, arcaEn - 0.1, arcaEn + 0.35);
+  const lista = tramo(t, arcaEn + 0.2, arcaEn + 0.6);
+  const latido = t > escribenosEn + 0.4 ? 1 + Math.sin((frame / FPS - escribenosEn) * 6) * 0.03 : 1;
+  return (
+    <AbsoluteFill style={{opacity: o}}>
+      {/* 1. pila de documentos */}
+      {pila > 0 && (
+        <AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', paddingBottom: 190, opacity: pila,
+          transform: `scale(${0.85 + 0.15 * pila}) translateY(${(1 - pila) * 120}px)`}}>
+          {documentos.map((d, i) => {
+            const p = spring({frame: frame - Math.round((desde + i * 0.22) * FPS), fps: FPS, config: {stiffness: 220, damping: 14}});
+            const rot = [-7, 5, -3, 8][i % 4];
+            return (
+              <div key={d} style={{position: 'absolute', transform: `translateY(${(1 - p) * -700 + i * -26}px) rotate(${rot}deg)`}}>
+                <div style={{width: 520, height: 300, background: COLOR.papel, borderRadius: 10, borderTop: `12px solid ${COLOR.teal}`,
+                  boxShadow: '0 20px 40px rgba(0,0,0,.22)', padding: '30px 36px', boxSizing: 'border-box'}}>
+                  <div style={{fontFamily: FUENTES.serif, fontWeight: 700, fontSize: 34, color: COLOR.teal}}>{d}</div>
+                  {[92, 80, 86].map((w, k) => <div key={k} style={{height: 12, width: `${w}%`, background: '#DCE3E1', borderRadius: 6, marginTop: 22}} />)}
+                </div>
+              </div>
+            );
+          })}
+        </AbsoluteFill>
+      )}
+      {/* 2-4. escudo + servicios + botón */}
+      <AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', paddingBottom: 170, gap: 30}}>
+        <div style={{transform: `scale(${escudo})`, position: 'relative', width: 230, height: 260}}>
+          <svg width={230} height={260} viewBox="0 0 230 260" style={{position: 'absolute', filter: 'drop-shadow(0 18px 30px rgba(0,0,0,.3))'}}>
+            <path d="M115 8 L 218 46 V 120 C 218 186, 172 230, 115 252 C 58 230, 12 186, 12 120 V 46 Z" fill={COLOR.teal} stroke={COLOR.dorado} strokeWidth={10} />
+          </svg>
+          <Img src={staticFile('arca/emblema-claro.png')} style={{position: 'absolute', left: 40, top: 92, width: 150}} />
+        </div>
+        <div style={{opacity: lista, transform: `translateY(${(1 - lista) * 40}px)`, width: 820, background: COLOR.papel, borderRadius: 22,
+          padding: '30px 42px', boxSizing: 'border-box', boxShadow: '0 30px 60px rgba(0,0,0,.25)', borderTop: `14px solid ${COLOR.teal}`}}>
+          <div style={{fontFamily: FUENTES.serif, fontWeight: 700, fontSize: 44, color: COLOR.teal, marginBottom: 10}}>
+            Arca Jurídica <span style={{color: COLOR.doradoOsc}}>se encarga</span>
+          </div>
+          {servicios.map((s, i) => {
+            const c = tramo(t, s.en, s.en + 0.3);
+            return (
+              <div key={s.texto} style={{display: 'flex', alignItems: 'center', gap: 22, padding: '14px 0',
+                borderBottom: i < servicios.length - 1 ? '2px solid #E4E9E7' : 'none'}}>
+                <div style={{width: 56, height: 56, borderRadius: 28, background: c > 0 ? COLOR.dorado : '#E4E9E7', display: 'flex',
+                  alignItems: 'center', justifyContent: 'center', transform: `scale(${1 + Math.sin(c * Math.PI) * 0.25})`, flexShrink: 0}}>
+                  <svg width={34} height={34} viewBox="0 0 100 100"><path d="M22 52 L 42 71 L 78 31" fill="none" stroke={COLOR.teal} strokeWidth={14}
+                    strokeLinecap="round" strokeLinejoin="round" strokeDasharray={90} strokeDashoffset={90 * (1 - c)} /></svg>
+                </div>
+                <div style={{fontFamily: FUENTES.sans, fontWeight: 700, fontSize: 36, color: c > 0.5 ? COLOR.tinta : '#9AA8A6', lineHeight: 1.15}}>{s.texto}</div>
+              </div>
+            );
+          })}
+        </div>
+        <div style={{transform: `scale(${boton * latido})`, background: COLOR.dorado, color: COLOR.teal, borderRadius: 999, padding: '20px 56px',
+          fontFamily: FUENTES.sans, fontWeight: 800, fontSize: 48, letterSpacing: 2, boxShadow: '0 20px 40px rgba(0,0,0,.3)'}}>
+          ESCRÍBENOS
+        </div>
+      </AbsoluteFill>
+    </AbsoluteFill>
+  );
+};

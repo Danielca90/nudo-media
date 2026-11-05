@@ -7,14 +7,14 @@ import {staticFile} from 'remotion';
 import {COLOR, FUENTES} from '../marca';
 import palabrasJson from './palabras.json';
 import {
-  Oficina, TituloFijo, MarcaEsquina, Subtitulos, Sello, Hoja, Ciclo, Check, Cierre,
+  Oficina, TituloFijo, MarcaEsquina, Subtitulos, Sello, Hoja, Ciclo, Check, Cierre, CierreServicios,
   useT, usePop, tramo, ventana, useSacudida, Palabra,
 } from '../kit';
 
 const PALABRAS = palabrasJson as Palabra[];
-export const DURACION_SEG = 32.6;
-const FIN_VOZ = 30.2;
-const CLAVES = ['31', 'diciembre?', 'renuevan', 'solos.', 'escrito,', '30', 'días', '1', 'renueva', 'prueba:', 'firma', 'correo.', 'último', 'Guarda', 'envíaselo', 'recursos', 'humanos'];
+export const DURACION_SEG = 41.1;
+const FIN_VOZ = 38.7;
+const CLAVES = ['31', 'diciembre?', 'renuevan', 'solos.', 'escrito,', '30', 'días', '1', 'renueva', 'prueba:', 'firma', 'correo.', 'último', 'solo.', 'revisamos', 'contratos,', 'redactamos', 'aviso,', 'control', 'fechas', 'defendemos', 'Escríbenos', 'blindamos'];
 
 // Escenas (segundos, según la voz)
 const S = {
@@ -25,7 +25,7 @@ const S = {
   renueva: [17.3, 21.0],
   prueba: [21.0, 24.35],
   ultimo: [24.35, 26.0],
-  cta: [26.0, FIN_VOZ],
+  cta: [25.95, FIN_VOZ],
 } as const;
 
 const Escena: React.FC<{r: readonly [number, number]; children: React.ReactNode}> = ({r, children}) => {
@@ -276,38 +276,13 @@ const UltimoDia: React.FC = () => {
   );
 };
 
-const CTA: React.FC = () => {
-  const t = useT();
-  const g = usePop(26.0, 220, 12);
-  const e = usePop(27.4, 200, 13);
-  const vuelo = tramo(t, 27.4, 28.2);
-  const Boton: React.FC<{s: number; texto: string; icono: React.ReactNode; dx?: number}> = ({s, texto, icono, dx = 0}) => (
-    <div style={{transform: `translateX(${dx}px) scale(${s})`, display: 'flex', alignItems: 'center', gap: 30, background: COLOR.teal,
-      borderRadius: 26, padding: '30px 46px', boxShadow: '0 24px 50px rgba(0,0,0,.25)', border: `4px solid ${COLOR.dorado}`}}>
-      {icono}
-      <div style={{fontFamily: FUENTES.sans, fontWeight: 800, fontSize: 54, color: COLOR.crema}}>{texto}</div>
-    </div>
-  );
-  return (
-    <AbsoluteFill style={{alignItems: 'center', justifyContent: 'center', paddingTop: 120, gap: 60}}>
-      <Boton s={g} texto="GUÁRDALO" icono={
-        <svg width={80} height={100} viewBox="0 0 80 100"><path d="M8 6 h64 v88 l-32 -24 l-32 24z" fill={COLOR.dorado} /></svg>} />
-      <Boton s={e} texto="ENVÍALO A RR. HH." icono={
-        <svg width={100} height={100} viewBox="0 0 100 100" style={{transform: `translate(${(1 - vuelo) * -60}px, ${(1 - vuelo) * 40}px) rotate(${(1 - vuelo) * -20}deg)`}}>
-          <path d="M6 48 L 94 8 L 70 92 L 48 60 Z" fill={COLOR.dorado} />
-          <path d="M48 60 L 94 8" stroke={COLOR.teal} strokeWidth={5} />
-        </svg>} />
-    </AbsoluteFill>
-  );
-};
-
 export const Reel02: React.FC = () => {
   const t = useT();
   const foco = tramo(t, 3.6, 4.2);
   const zoom = 1 + tramo(t, 0, 3.9) * 0.06 + foco * 0.06;
   return (
     <AbsoluteFill style={{background: COLOR.pared}}>
-      <Audio src={staticFile('arca/voz-reel02.mp3')} />
+      <Audio src={staticFile('arca/voz-reel02-v2.mp3')} />
       <Oficina foco={foco} zoom={zoom} />
       <AbsoluteFill style={{background: COLOR.crema, opacity: foco * 0.3, height: 1240}} />
       <Escena r={S.gancho}><Gancho /></Escena>
@@ -317,7 +292,14 @@ export const Reel02: React.FC = () => {
       <Escena r={S.renueva}><Renueva /></Escena>
       <Escena r={S.prueba}><Prueba /></Escena>
       <Escena r={S.ultimo}><UltimoDia /></Escena>
-      <Escena r={S.cta}><CTA /></Escena>
+      <CierreServicios desde={S.cta[0]} hasta={FIN_VOZ} arcaEn={27.96} escribenosEn={35.94}
+        documentos={['Contrato a término fijo', 'Aviso de no renovación', 'Constancia de recibido']}
+        servicios={[
+          {texto: 'Revisamos tus contratos', en: 28.86},
+          {texto: 'Redactamos cada aviso', en: 30.44},
+          {texto: 'Llevamos el control de las fechas', en: 32.14},
+          {texto: 'Te defendemos si llega una demanda', en: 33.86},
+        ]} />
       <MarcaEsquina hasta={FIN_VOZ} />
       <TituloFijo lineas={['¿Tu contrato vence', 'el 31 de diciembre?']} hasta={FIN_VOZ} />
       <Subtitulos palabras={PALABRAS} claves={CLAVES} y={1452} max={3} hasta={FIN_VOZ} />

@@ -5,15 +5,15 @@ import {Audio} from '@remotion/media';
 import {COLOR, FUENTES} from '../marca';
 import palabrasJson from './palabras.json';
 import {
-  Oficina, TituloFijo, MarcaEsquina, Subtitulos, Sello, Hoja, Check, Cierre, Camara, Paso,
+  Oficina, TituloFijo, MarcaEsquina, Subtitulos, Sello, Hoja, Check, Cierre, Camara, Paso, CierreServicios,
   useT, usePop, tramo, ventana, useSacudida, Palabra,
 } from '../kit';
 
 const PALABRAS = palabrasJson as Palabra[];
-const FIN_VOZ = 32.6;
-export const DURACION_SEG = 35.0;
+const FIN_VOZ = 44.05;
+export const DURACION_SEG = 46.5;
 const CLAVES = ['regalando', 'demanda', 'tres', 'estabilidad', 'reforzada?', 'autorización', 'descargos', 'hechos', 'concretos',
-  'carta.', 'alegar', 'liquidación', 'completa', 'día', 'Guarda', 'despido.'];
+  'carta.', 'alegar', 'liquidación', 'completa', 'día', 'solo.', 'revisamos', 'Redactamos', 'Hacemos', 'seguimiento', 'defendemos', 'Escríbenos', 'blindamos'];
 
 const Escena: React.FC<{r: [number, number]; children: React.ReactNode}> = ({r, children}) => {
   const t = useT();
@@ -270,27 +270,13 @@ const Liquidacion: React.FC = () => {
   );
 };
 
-const Guardalo: React.FC = () => {
-  const g = usePop(29.45, 220, 12);
-  return (
-    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 44}}>
-      <Lista titulo="Antes de despedir" entradas={[29.0, 29.0, 29.0]} checks={[29.6, 30.0, 30.4]} />
-      <div style={{transform: `scale(${g})`, display: 'flex', alignItems: 'center', gap: 26, background: COLOR.teal, borderRadius: 24,
-        padding: '24px 44px', border: `4px solid ${COLOR.dorado}`, boxShadow: '0 24px 50px rgba(0,0,0,.25)'}}>
-        <svg width={64} height={80} viewBox="0 0 80 100"><path d="M8 6 h64 v88 l-32 -24 l-32 24z" fill={COLOR.dorado} /></svg>
-        <div style={{fontFamily: FUENTES.sans, fontWeight: 800, fontSize: 52, color: COLOR.crema}}>GUÁRDALO</div>
-      </div>
-    </div>
-  );
-};
-
 export const Reel01: React.FC = () => {
   const t = useT();
   const foco = tramo(t, 3.5, 4.0);
   const zoom = 1 + tramo(t, 0, 3.8) * 0.05 + foco * 0.06;
   return (
     <AbsoluteFill style={{background: COLOR.pared}}>
-      <Audio src={staticFile('arca/voz-reel01.mp3')} />
+      <Audio src={staticFile('arca/voz-reel01-v2.mp3')} />
       <Oficina foco={foco} zoom={zoom} />
       <AbsoluteFill style={{background: COLOR.crema, opacity: foco * 0.3, height: 1240}} />
 
@@ -334,10 +320,15 @@ export const Reel01: React.FC = () => {
         <Camara claves={[{t: 26.5, s: 0.95, x: 40}, {t: 29.4, s: 1.06, x: -20}]}><Centro top={200}><Liquidacion /></Centro></Camara>
       </Escena>
 
-      {/* 6. Remate: la lista vuelve con los 3 checks */}
-      <Escena r={[29.0, FIN_VOZ]}>
-        <Camara claves={[{t: 29.0, s: 0.9}, {t: FIN_VOZ, s: 0.98}]}><Centro><Guardalo /></Centro></Camara>
-      </Escena>
+      {/* 6. Remate de venta: Arca se encarga (propuesta de valor) */}
+      <CierreServicios desde={29.45} hasta={FIN_VOZ} arcaEn={31.4} escribenosEn={41.2}
+        documentos={['Carta de terminación', 'Diligencia de descargos', 'Liquidación final']}
+        servicios={[
+          {texto: 'Revisamos cada requisito', en: 32.2},
+          {texto: 'Redactamos carta, descargos y liquidación', en: 34.6},
+          {texto: 'Hacemos el seguimiento', en: 37.66},
+          {texto: 'Te defendemos si llega una demanda', en: 39.12},
+        ]} />
 
       <MarcaEsquina hasta={FIN_VOZ} />
       <TituloFijo lineas={['Despedir sin demanda:', 'revisa 3 cosas']} hasta={FIN_VOZ} />
