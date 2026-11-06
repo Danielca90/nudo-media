@@ -62,6 +62,10 @@ texto grande arriba "¿DESPEDISTE A ALGUIEN POR MENSAJE?", y el sello o la etiqu
 segundo 1. Voz: "¿Despediste a alguien con un mensaje? Le acabas de regalar una demanda."
 
 ### Reglas nuevas para el gancho de Arca (obligatorias)
+0. **(2026-11-06) El cuadro 0 es una imagen rica, no solo texto.** El usuario: "solo se ven dos elementos, el texto y la
+   voz; no cautiva". Abrir con un bodegón del caso sobre la mesa (carta de despido con sello, comprobante de nómina,
+   carnet con datos reservados, fajos de billetes genéricos, calculadora con la cifra, bolígrafo) y la cámara inclinada
+   que se endereza; el texto del gancho encima sobre una sombra oscura. Componentes en `remotion-test/src/arca/bodegon.tsx`.
 1. **Cuadro 0 con la situación ya en pantalla**, nada entrando desde afuera: persona + conflicto
    (avatar de trabajador y gerente, la carta, el chat, el monto). Movimiento desde el primer cuadro.
 2. **Texto del gancho grande, sans condensada, en segunda persona y como pregunta o advertencia
