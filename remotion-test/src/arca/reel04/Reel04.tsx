@@ -2,7 +2,7 @@
 // Estructura de exposición (estrategia-alcance.md 0c) + tipografía cinética (ref. I) + historia con números (ref. J).
 // Render rápido: solo imágenes horneadas, texto y transform/opacity. Usar --gl=angle.
 import React from 'react';
-import {AbsoluteFill, Img, interpolate, spring, staticFile, useCurrentFrame} from 'remotion';
+import {AbsoluteFill, Easing, Img, interpolate, spring, staticFile, useCurrentFrame} from 'remotion';
 import {Audio} from '@remotion/media';
 import {COLOR, FUENTES, FPS, SEGURO} from '../marca';
 import palabrasJson from './palabras.json';
@@ -15,17 +15,75 @@ export const DUR_ARCA04 = 47.3;
 
 // ---------- piezas básicas ----------
 type Fondo = 'noche' | 'crema' | 'mesa';
-/** Escena con corte seco (micro-zoom de entrada de 4 cuadros). */
+/** Transiciones de cámara: la escena entrante define cómo entra ella y cómo sale la anterior. */
+type Trans = 'corte' | 'barrido' | 'zoom' | 'giro' | 'caida';
+const ENTRA: Record<string, Trans> = {
+  '2': 'barrido', '3.68': 'zoom', '5.86': 'giro', '7.98': 'zoom', '25.38': 'zoom', '27.3': 'barrido',
+  '29.06': 'giro', '32.14': 'caida', '35.02': 'zoom', '42.16': 'barrido',
+};
+const D = 0.32; // duración de cada transición (s)
+const salida = (fin: number): Trans => ENTRA[String(+fin.toFixed(2))] ?? 'corte';
+const easeOut = (x: number) => 1 - Math.pow(1 - x, 3);
+const easeIn = (x: number) => x * x * x;
+
+type Pose = {x: number; y: number; s: number; r: number; o: number};
+const poseEntrada = (tipo: Trans, p: number): Pose => {
+  const e = easeOut(p);
+  switch (tipo) {
+    case 'barrido': return {x: (1 - e) * 1100, y: 0, s: 1, r: (1 - e) * 4, o: 1};
+    case 'zoom': return {x: 0, y: 0, s: 0.35 + 0.65 * e, r: (1 - e) * -10, o: Math.min(1, p * 3)};
+    case 'giro': return {x: 0, y: 0, s: 1.5 - 0.5 * e, r: (1 - e) * 40, o: Math.min(1, p * 5)};
+    case 'caida': {
+      const back = 1 + 2.2 * Math.pow(p - 1, 3) + 1.2 * Math.pow(p - 1, 2);
+      return {x: 0, y: -(1 - back) * 1920, s: 1, r: 0, o: 1};
+    }
+    default: return {x: 0, y: 0, s: 1.04 - 0.04 * e, r: 0, o: 1};
+  }
+};
+const poseSalida = (tipo: Trans, q: number): Pose => {
+  const e = easeIn(q);
+  switch (tipo) {
+    case 'barrido': return {x: -e * 1100, y: 0, s: 1, r: -e * 4, o: 1};
+    case 'zoom': return {x: 0, y: 0, s: 1 + e * 1.8, r: e * 6, o: 1 - q};
+    case 'giro': return {x: 0, y: 0, s: 1 + e * 0.4, r: -e * 25, o: Math.max(0, 1 - q * 3)};
+    case 'caida': return {x: 0, y: e * 700, s: 1, r: 0, o: 1 - q};
+    default: return {x: 0, y: 0, s: 1, r: 0, o: q < 0.01 ? 1 : 0};
+  }
+};
+
+/** Escena con cámara viva: transición de entrada/salida, empuje lento, leve balanceo y paralaje del fondo. */
 const Escena: React.FC<{ini: number; fin: number; fondo: Fondo; children: React.ReactNode; lx?: number; ly?: number}> = ({ini, fin, fondo, children, lx, ly}) => {
   const t = useT();
-  if (t < ini || t >= fin) return null;
-  const e = tramo(t, ini, ini + 0.14);
-  const deriva = 1 + (t - ini) * 0.012;
-  return (
-    <AbsoluteFill style={{background: fondo === 'crema' ? COLOR.crema : DOC.noche}}>
-      {fondo === 'mesa' && <Mesa lx={lx} ly={ly} />}
-      <AbsoluteFill style={{transform: `scale(${(1.04 - 0.04 * e) * deriva})`}}>{children}</AbsoluteFill>
+  const tipoE = ENTRA[String(+ini.toFixed(2))] ?? 'corte';
+  const tipoS = salida(fin);
+  const extra = tipoS === 'corte' ? 0 : D;
+  if (t < ini || t >= fin + extra) return null;
+  const pe = Math.min(1, (t - ini) / D);
+  const pin = pe < 1 ? poseEntrada(tipoE, pe) : {x: 0, y: 0, s: 1, r: 0, o: 1};
+  const pout = t >= fin ? poseSalida(tipoS, (t - fin) / D) : {x: 0, y: 0, s: 1, r: 0, o: 1};
+  const vida = t - ini;
+  const empuje = 1 + Math.min(vida, 3) * 0.018;
+  const balanceo = Math.sin(vida * 0.9) * 0.7;
+  const x = pin.x + pout.x, y = pin.y + pout.y, sc = pin.s * pout.s, r = pin.r + pout.r, o = pin.o * pout.o;
+  const capa = (dx: number, op: number, key: string) => (
+    <AbsoluteFill key={key} style={{opacity: o * op, transform: `translate(${x + dx}px, ${y}px) rotate(${r}deg) scale(${sc})`}}>
+      <AbsoluteFill style={{background: fondo === 'crema' ? COLOR.crema : DOC.noche}}>
+        {fondo === 'mesa' && (
+          <AbsoluteFill style={{transform: `scale(${1 + vida * 0.007}) translateX(${Math.sin(vida * 0.4) * 10}px)`}}><Mesa lx={lx} ly={ly} /></AbsoluteFill>
+        )}
+        <AbsoluteFill style={{transform: `scale(${empuje}) rotate(${balanceo}deg)`}}>{children}</AbsoluteFill>
+      </AbsoluteFill>
     </AbsoluteFill>
+  );
+  // estela de movimiento en los barridos (copias tenues detrás, sin filtros)
+  const estela = (tipoE === 'barrido' && pe < 1) || (tipoS === 'barrido' && t >= fin);
+  const dir = t >= fin ? 1 : -1;
+  return (
+    <>
+      {estela && capa(dir * -160, 0.18, 'e2')}
+      {estela && capa(dir * -80, 0.3, 'e1')}
+      {capa(0, 1, 'p')}
+    </>
   );
 };
 
@@ -36,9 +94,13 @@ const L: React.FC<{en: number; size: number; color: string; peso?: number; serif
   const frame = useCurrentFrame();
   const p = en <= 0.01 ? 1 : spring({frame: frame - Math.round(en * FPS), fps: FPS, config: {stiffness: 230, damping: 15}});
   if (frame < Math.round(en * FPS)) return <div style={{height: size * 1.12}} />;
+  const golpe = size >= 150;
+  const d = (frame - Math.round(en * FPS)) / FPS;
+  const sacude = golpe && d > 0.12 && d < 0.3 ? Math.sin(d * 120) * 8 * (1 - (d - 0.12) / 0.18) : 0;
+  const tr = golpe ? `translateX(${sacude}px) scale(${1 + (1 - p) * 1.6})` : `translateY(${(1 - p) * 40}px) scale(${0.9 + 0.1 * p})`;
   return (
     <div style={{fontFamily: serif ? FUENTES.serif : FUENTES.sans, fontWeight: peso, fontStyle: italic ? 'italic' : 'normal', fontSize: size, color,
-      lineHeight: 1.08, letterSpacing: size > 120 ? -2 : 1, transform: `translateY(${(1 - p) * 40}px) scale(${0.9 + 0.1 * p})`, opacity: Math.min(1, p * 1.6),
+      lineHeight: 1.08, letterSpacing: size > 120 ? -2 : 1, transform: tr, opacity: Math.min(1, p * 1.6),
       fontVariantNumeric: 'tabular-nums'}}>
       {caja ? <span style={{background: caja, padding: '0 18px'}}>{children}</span> : children}
     </div>
@@ -94,10 +156,12 @@ const Tirilla: React.FC = () => {
   const verTotal = t >= 22.24;
   // la cámara sigue el renglón que se está diciendo
   const foco = t < 13.08 ? 0 : t < 16.48 ? 1 : t < 19.7 ? 2 : t < 22.24 ? 3 : 4;
-  const y = interpolate(t, [8, 9.2, 13.08, 13.4, 16.48, 16.8, 19.7, 20.0, 22.24, 22.6], [40, 0, 0, -15, -15, -30, -30, -45, -45, -60], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
-  const s = interpolate(t, [8, 9.2, 22.24, 22.8], [1.0, 1.1, 1.1, 1.0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const y = interpolate(t, [8, 9.2, 13.08, 13.4, 16.48, 16.8, 19.7, 20.0, 22.24, 22.7], [60, 140, 140, 90, 90, 40, 40, -10, -10, -90], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic)});
+  const rx = interpolate(t, [8, 22.24, 22.7], [24, 12, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const rz = interpolate(t, [8, 15, 22.24], [-3, 1.5, -1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const s = interpolate(t, [8, 9.2, 22.24, 22.7], [1.0, 1.06, 1.06, 1.1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic)});
   return (
-    <div style={{position: 'absolute', left: 70, top: 330, width: 940, transform: `translateY(${y}px) scale(${s}) rotate(-0.6deg)`, transformOrigin: '50% 0',
+    <div style={{position: 'absolute', left: 90, top: 330, width: 900, transform: `perspective(1800px) translateY(${y}px) rotateX(${rx}deg) rotateZ(${rz}deg) scale(${s})`, transformOrigin: '50% 0',
       filter: 'drop-shadow(0 30px 40px rgba(0,0,0,.55))'}}>
       <Zigzag />
       <div style={{background: DOC.papel, padding: '30px 54px 40px', fontFamily: MONO, color: DOC.tinta}}>

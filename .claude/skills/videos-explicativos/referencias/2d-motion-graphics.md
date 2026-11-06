@@ -89,3 +89,22 @@ Renderizar un cuadro por escena y revisarlos (hasta 3 rondas):
 - [ ] Ningún sello, tarjeta o marca tapa un texto importante.
 - [ ] Subtítulos dentro de la zona segura, legibles y sincronizados con la voz.
 - [ ] Sin parpadeos entre cuadros.
+
+## Lenguaje de cámara cinematográfico (2026-11-06, pedido del usuario)
+"Más dinámico, como los ejemplos": cada corte es un movimiento de cámara, no un corte seco. Implementado en
+`remotion-test/src/arca/reel04/Reel04.tsx` (`Escena`, `ENTRA`, `poseEntrada`, `poseSalida`); copiarlo a un kit
+compartido cuando se use en otro video.
+- **Transiciones (0,3 s):** la escena que entra define cómo entra ella y cómo sale la anterior.
+  - *Barrido* (whip): la nueva entra desde la derecha mientras la anterior sale a la izquierda, con leve giro y
+    **estela** hecha con 2 copias tenues desplazadas (sin `blur`).
+  - *Zoom a través*: la anterior se agranda ×2,8 y se desvanece (la cámara la atraviesa); la nueva llega desde
+    0,35× con un giro de −10°.
+  - *Giro de cámara*: la nueva entra rotando 40° y bajando de 1,5× a 1×; la anterior gira −25° y se apaga rápido.
+  - *Caída*: la nueva cae desde arriba con rebote.
+  - Alternarlas: nunca la misma dos veces seguidas.
+- **Dentro de cada escena:** empuje lento (máx. +5 %), balanceo de ±0,7°, **paralaje** (el fondo se mueve
+  más lento que el texto).
+- **Palabras clave (≥ 150 px) "golpean":** entran desde 2,6× hacia la pantalla y sacuden 0,2 s al llegar.
+- **Documento o tirilla en 3D:** `perspective` + `rotateX` que se endereza, cámara que baja renglón por
+  renglón y se acerca al total. Cuidar que con el zoom no se salga del ancho (1080 px).
+- Todo con `transform` y `opacity`: no sube el tiempo de render (47 s de video ≈ 3 min con `--gl=angle`).
