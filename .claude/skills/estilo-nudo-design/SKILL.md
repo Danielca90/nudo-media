@@ -69,6 +69,8 @@ Objetivo: muchos comentarios → Instagram empuja el video. Reglas:
 - `remotion-test/src/nudo/puerta-torcida/` — "¿La puerta de tu cocina quedó torcida?" (31 s, 3D: cocina
   completa, bisagra de cazoleta con 3 tornillos, destornillador; titular grande Anton en el cuadro 0;
   cierre con pregunta para comentar "¿cocina o clóset?"). Fuentes locales en `src/nudo/fuentes.ts`.
+- `remotion-test/src/nudo/polemica-maciza/` — polémica "La madera maciza NO es la mejor para tu cocina" (31 s, 3D:
+  puerta de listones que se hincha/encoge/tuerce, olla con vapor, contrachapado e hidrófugo; cierre SÍ / NO).
 
 ## Correcciones del usuario
 - 2026-11-05: subtítulos a media altura (no arriba), con borde negro y palabra clave resaltada.
