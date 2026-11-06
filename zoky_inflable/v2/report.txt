@@ -1,0 +1,64 @@
+Inflatable designer - zoky_panels: 3252 vertices, 6500 triangles, 12 panels
+Real size: 60.0 cm   material stretch: 1.00%   seam allowance: 12 mm
+iter   mean dev    max dev  seam err   (deviation in % of size)
+   1     2.513%     9.356%   16.801%
+   2     2.390%     9.893%   10.539%
+   3     2.341%    10.636%   12.530%
+   4     2.321%    11.497%   12.928%
+   5     2.322%    11.765%   13.661%
+   6     2.519%    12.705%    9.316%
+Best result at iteration 1  (151.3 s)
+
+Shape accuracy: mean deviation 15.1 mm, max 56.1 mm
+Wrinkle zones: 41% of the surface
+
+Seams (length on each side, mm):
+  C:     panel1    293.3  |  panel8        293.3   diff 0.1
+  B:     panel1    390.8  |  panel7        372.7   diff 18.2
+  A:     panel1    374.5  |  panel6        365.3   diff 9.2
+  F:     panel2    473.0  |  panel10       469.8   diff 3.2
+  D:     panel2     87.2  |  panel5         87.1   diff 0.1
+  G:     panel2    413.6  |  panel11       419.4   diff 5.9
+  E:     panel2    370.0  |  panel9        368.2   diff 1.8
+  J:     panel3    389.2  |  panel8        418.6   diff 29.5
+  H:     panel3    173.5  |  panel6        172.7   diff 0.8
+  M:     panel3    175.8  |  panel12       173.7   diff 2.1
+  L:     panel3    170.3  |  panel10       172.7   diff 2.4
+  K:     panel3    219.5  |  panel9        220.7   diff 1.2
+  I:     panel3    434.7  |  panel7        440.2   diff 5.5
+  S:     panel4    321.4  |  panel12       317.3   diff 4.0
+  O:     panel4     85.9  |  panel6         86.7   diff 0.8
+  P:     panel4    234.4  |  panel7        237.5   diff 3.1
+  Q:     panel4    240.3  |  panel9        224.3   diff 16.0
+  R:     panel4    198.2  |  panel11       190.5   diff 7.8
+  N:     panel4     58.7  |  panel5         63.5   diff 4.7
+  V:     panel5    222.0  |  panel12       184.7   diff 37.3
+  U:     panel5    190.3  |  panel11       162.2   diff 28.1
+  T:     panel5    129.2  |  panel10       116.9   diff 12.3
+  X:     panel6    221.2  |  panel8        222.4   diff 1.1
+  W:     panel6    255.3  |  panel7        255.6   diff 0.3
+  Y:     panel6    319.4  |  panel12       316.2   diff 3.2
+  S27:     panel7    110.4  |  panel9        112.1   diff 1.7
+  Z:     panel7    144.6  |  panel8        144.4   diff 0.1
+  S28:     panel9    287.8  |  panel10       290.6   diff 2.7
+  S29:     panel9    328.4  |  panel11       327.0   diff 1.4
+  S30:    panel10    389.0  |  panel12       384.9   diff 4.1
+
+Panels (sealed area / with allowance, cm^2):
+      panel1:      343  /       474   bbox 287 x 248 mm
+      panel2:      308  /       453   bbox 279 x 262 mm
+      panel3:      484  /       653   bbox 342 x 320 mm
+      panel4:      348  /       468   bbox 309 x 219 mm
+      panel5:      264  /       355   bbox 247 x 238 mm
+      panel6:      519  /       688   bbox 370 x 296 mm
+      panel7:      581  /       770   bbox 397 x 318 mm
+      panel8:      390  /       521   bbox 298 x 259 mm
+      panel9:      419  /       588   bbox 324 x 271 mm
+     panel10:      295  /       437   bbox 320 x 238 mm
+     panel11:      346  /       482   bbox 286 x 261 mm
+     panel12:      321  /       484   bbox 282 x 298 mm
+  total material: 6372 cm^2
+
+SVG colours: red = cut line, blue dashed = seal line, black = notches/labels, green = internal parts.
+Match notches and the small circle at the start of each seam between panels.
+Patterns are drawn as seen from the OUTSIDE of the inflatable.
