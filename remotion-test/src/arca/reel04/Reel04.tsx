@@ -8,6 +8,7 @@ import {COLOR, FUENTES, FPS, SEGURO} from '../marca';
 import palabrasJson from './palabras.json';
 import {Cierre, Check, useT, tramo, Palabra} from '../kit';
 import {DOC, Mesa, Pelicula, Papel, Firma, cop} from '../documental';
+import {Fajo, Calculadora, Desprendible, Carnet, Boligrafo, SelloTinta} from '../bodegon';
 
 const palabras = palabrasJson as Palabra[];
 export const FIN_VOZ = 44.8;
@@ -219,6 +220,28 @@ const Carta: React.FC<{escala?: number; x?: number; y?: number; rot?: number}> =
   </div>
 );
 
+
+/** Apertura: bodegón sobre la mesa visto desde arriba, con la cámara inclinada que se endereza y baja. */
+const Bodegon: React.FC = () => {
+  const t = useT();
+  const k = Math.min(1, t / 2);
+  const e = 1 - Math.pow(1 - k, 2);
+  const rx = 26 - 18 * e, rz = -7 + 5 * e, sc = 1.18 - 0.12 * e;
+  const fajo = interpolate(t, [0, 1.2], [60, 0], {extrapolateRight: 'clamp'});
+  return (
+    <AbsoluteFill style={{transform: `perspective(2200px) rotateX(${rx}deg) rotateZ(${rz}deg) scale(${sc})`, transformOrigin: '50% 55%'}}>
+      <Carnet x={40} y={170} rot={-11} />
+      <Desprendible x={440} y={150} rot={7} />
+      <Carta escala={0.5} x={40} y={1280} rot={-8} />
+      <SelloTinta texto="SIN JUSTA CAUSA" x={70} y={1590} rot={-14} s={0.75} />
+      <Fajo x={590 + fajo} y={1120} rot={-14} />
+      <Fajo x={-60} y={1060} rot={10} n={3} />
+      <Calculadora valor="3.000.000" x={660} y={1330} rot={12} s={0.9} />
+      <Boligrafo x={330} y={1180} rot={-32} />
+    </AbsoluteFill>
+  );
+};
+
 // ---------- video ----------
 const CREMA_T = '#F4EFE4';
 export const Reel04: React.FC = () => {
@@ -234,8 +257,10 @@ export const Reel04: React.FC = () => {
       <Audio src={staticFile('arca/voz-reel04v2.mp3')} />
 
       {/* 1. gancho: el dato que reconoce */}
-      <Escena ini={0} fin={2.0} fondo="noche">
-        <Bloque top={420}>
+      <Escena ini={0} fin={2.0} fondo="mesa" lx={0.5} ly={0.45}>
+        <Bodegon />
+        <AbsoluteFill style={{background: 'radial-gradient(ellipse 62% 22% at 50% 41%, rgba(11,22,22,.92) 0%, rgba(11,22,22,.75) 55%, rgba(11,22,22,0) 100%)'}} />
+        <Bloque top={560}>
           <L en={0} size={70} color={CREMA_T}>TU TRABAJADORA</L>
           <L en={0} size={70} color={CREMA_T}>GANA</L>
           <L en={0} size={165} color={COLOR.dorado} peso={900}>{cop(3000000)}</L>
