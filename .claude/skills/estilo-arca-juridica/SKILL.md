@@ -8,7 +8,8 @@ description: Estilo de Arca Jurídica (@arcajuridica), firma colombiana de aboga
 Complementa `videos-explicativos` e `instagram-reels-colombia`. Lo que se define aquí manda sobre lo general.
 El contenido legal se valida con `asesoria-juridica-colombia` antes de publicar.
 
-**Antes de cualquier pieza, leer [estrategia-alcance.md](estrategia-alcance.md)**: gancho en
+**Antes de cualquier pieza, leer [estrategia-alcance.md](estrategia-alcance.md), en especial "Reglas nuevas
+ para el gancho de Arca" (sección 0b, con datos del primer reel animado)**: gancho en
 2 s, título fijo, estructura de retención, formatos para no seguidores. Manda sobre lo que
 se copió de los videos de referencia, que no estaban llegando a no seguidores.
 
@@ -212,3 +213,6 @@ Estructura de arriba abajo:
   usuario manda el link apenas sale la noticia → skill `noticias-laborales`.
 - 2026-11-05: el gancho del reel 03 (3D abstracto) rompió la regla de los primeros 3 s. Efectos y
   herramientas nuevas solo con propósito narrativo y sin romper el estilo 2D que ya funciona.
+- 2026-11-06: el primer reel animado tuvo 2 s de tiempo medio. Gancho nuevo obligatorio: situación
+  humana en el cuadro 0, texto grande en segunda persona, fuente y marca después del segundo 3,
+  remate de venta ≤ 10 s (ver estrategia-alcance.md 0b).

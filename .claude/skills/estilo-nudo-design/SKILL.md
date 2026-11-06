@@ -30,6 +30,20 @@ Complementa la skill `videos-explicativos`. Lo que se define aquí manda sobre l
 - Gancho: pregunta concreta ("¿Qué pasa si haces un mueble con madera verde?").
 - Cierre: consejo práctico + **@somos_nudodesign** pequeño con borde negro, abajo al centro.
 
+## Lo que funciona y lo que falta (datos al 6/11/2026)
+- Funciona: reels 3D con un problema cotidiano en segunda persona y el objeto real desde el cuadro 0
+  ("¿Tu chazo gira y no agarra?" 2.645 vistas; células de la madera 2.215). Los carruseles con la
+  plantilla azul marino tienen 13–20 vistas: priorizar reels.
+- Falta: comentarios y seguidores. Cada reel termina con UNA de estas acciones (rotarlas y medir):
+  1. **Pregunta para comentar** que la gente pueda responder en una palabra:
+     "¿Tu pared es de ladrillo o de drywall? Te digo qué chazo usar." → responder cada comentario
+     en la primera hora (eso empuja el alcance).
+  2. **Palabra clave:** "Comenta CHAZO y te mando la guía" (respuesta manual por DM; no prometer
+     envíos automáticos si no hay herramienta).
+  3. **Serie con parte 2:** "Parte 2: el chazo correcto para cada pared. Síguenos para no perderla."
+     Marcar "EP. 1, EP. 2" en la portada.
+- Fijar en el perfil los 3 reels con más vistas; bio con qué hace Nudo, ciudad y WhatsApp.
+
 ## Videos hechos
 - `remotion-test/src/madera-verde/` — "¿Qué pasa si haces un mueble con madera verde?" (v3, 26,6 s).
 

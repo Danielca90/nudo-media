@@ -29,6 +29,10 @@ La skill de marca puede fijar o vetar una técnica (Arca Jurídica: 2D por defec
 - **Los primeros 3 segundos son el gancho y cuentan la historia**: se ve la situación concreta del
   tema (el chat del despido, el contrato que vence, el caso de la Corte) mientras la voz la dice.
   Nunca un fondo abstracto, una palabra suelta o un efecto de demostración.
+- **Prueba del cuadro 0:** ver el primer cuadro solo y sin sonido. Debe mostrar ya la situación (nada
+  entrando desde afuera), con texto grande en segunda persona sobre el problema del espectador.
+  Sin logo ni marca en los primeros 3 s. Si el tiempo medio de un reel publicado es ≤ 3 s, el
+  problema es el cuadro 0 y la primera frase, no el resto del video.
 - **Imagen y voz dicen lo mismo en cada momento.** Si la voz habla de una persona, un documento o
   una fecha, eso es lo que se ve.
 - **Cada efecto, técnica o herramienta nueva tiene que tener un propósito narrativo.** Antes de

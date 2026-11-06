@@ -38,6 +38,40 @@ Metas a 6 semanas: no seguidores > 50 % de las vistas de reels; al menos 1 reel 
 seguidores +5 % al mes. Falta por reel (pestaña Contenido): retención a 3 s, tiempo medio,
 guardados, envíos y % no seguidores.
 
+## 0b. Primer reel animado publicado (6/11/2026) vs. Nudo
+| | Arca (reel animado, publicado 5/11) | Nudo (mejores reels) |
+|---|---|---|
+| Vistas / personas | 170 / 47 (por encima de su reel típico en las primeras 12 h) | 2.645 y 2.215 ("¿Tu chazo gira y no agarra?", células de la madera) |
+| Tiempo medio | **2 s** | — (pedir el dato) |
+| Guardados / envíos / seguidores | 0 / 1 / 0 | Alcance alto, pero pocos comentarios y seguidores |
+
+Lectura: Instagram sí lo repartió (la curva supera al reel típico), pero la gente se fue en el
+primer cuadro. El problema es el **primer cuadro y la primera frase**, no la distribución.
+Comparado con los reels de Nudo que funcionan:
+- **Nudo abre con el problema del espectador, en segunda persona y en pantalla grande:**
+  "¿TU CHAZO GIRA Y NO AGARRA?", con el objeto real moviéndose desde el cuadro 0. Arca abrió con
+  una institución ("La Corte Suprema acaba de…"), una tarjeta de fuente y un título serif pequeño
+  dentro de una caja: se lee como noticiero o como anuncio, no como "esto me pasa a mí".
+- **Nudo muestra la cosa; Arca mostró papeles.** En temas legales la "cosa" es una persona en una
+  situación con consecuencia: el jefe entregando la carta, el trabajador que vuelve con muletas,
+  la multa, el monto. Documentos y tarjetas van después, como explicación.
+- **Nudo no pone marca al inicio.** Arca tenía título de marca, franja y logo desde el segundo 0.
+
+### Reglas nuevas para el gancho de Arca (obligatorias)
+1. **Cuadro 0 con la situación ya en pantalla**, nada entrando desde afuera: persona + conflicto
+   (avatar de trabajador y gerente, la carta, el chat, el monto). Movimiento desde el primer cuadro.
+2. **Texto del gancho grande, sans condensada, en segunda persona y como pregunta o advertencia
+   directa al gerente**, estilo de los reels ganadores de Nudo:
+   "¿DESPEDISTE A ALGUIEN QUE VOLVÍA DE UNA INCAPACIDAD?", "¿TU CONTRATO VENCE EL 31 DE DICIEMBRE?",
+   "ESTE DESPIDO TE PUEDE COSTAR $7 MILLONES". Ocupa el tercio superior; nada de caja con serif pequeño.
+3. **La fuente (Corte, ley) va en el segundo 3–6, no en el gancho.** En noticias: primero "lo que
+   te pasa", después "lo dijo la Corte Suprema".
+4. **Sin logo, franja ni @ en los primeros 3 s.** La marca aparece después del gancho y en el cierre.
+5. **Remate de venta de máximo 8–10 s** (hoy dura 13–14 s): servicios en 3 verbos + "Escríbenos".
+6. Antes de render: mirar el cuadro 0 solo, sin sonido, y preguntar: ¿un gerente que pasa el dedo
+   entiende en 1 segundo que esto le puede costar plata? Si no, rehacer.
+7. Probar 2 ganchos con "reels de prueba" (solo no seguidores) y publicar el que retenga más.
+
 ## 1. Diagnóstico: por qué no llega a no seguidores
 
 | # | Problema | Dónde se ve |
