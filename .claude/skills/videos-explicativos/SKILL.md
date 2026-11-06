@@ -67,7 +67,7 @@ Cada marca tiene **su propia skill de estilo**, separada de esta:
 | Arca Jurídica (@arcajuridica) | `arca-estilo` | Creada (reel a cámara + post gráfico) |
 
 Reglas:
-1. **Antes de empezar un video, identificar la marca y cargar su skill `estilo de la marca (`<marca>-estilo` o `estilo-<marca>`)`.**
+1. **Antes de empezar un video, identificar la marca y cargar su skill de estilo de la marca (`arca-estilo`, `estilo-nudo-design`…).**
    Si no existe, preguntar al usuario por la marca y crearla con
    [plantillas/marca-SKILL.md](plantillas/marca-SKILL.md) a medida que el usuario
    dé instrucciones (no inventar el estilo de una marca).
@@ -80,7 +80,7 @@ Reglas:
 
 ## Flujo de trabajo
 
-1. **Marca y tema.** Cargar `estilo de la marca (`<marca>-estilo` o `estilo-<marca>`)`. Confirmar tema, duración (≈15–45 s) y formato.
+1. **Marca y tema.** Cargar de estilo de la marca (`arca-estilo`, `estilo-nudo-design`…). Confirmar tema, duración (≈15–45 s) y formato.
 2. **Guion.** Escribir el guion para voz (frases cortas, números en palabras).
    Si el usuario pide no revisarlo, seguir directo.
 3. **Técnica + plan de acción visual (obligatorio antes de programar).** Elegir 2D, 3D o mixto. Tabla
