@@ -1,6 +1,6 @@
 ---
 name: videos-explicativos
-description: Método general para crear reels/videos explicativos verticales (1080×1920) con Remotion, 3D, voz de ElevenLabs y subtítulos sincronizados. Úsala siempre que se pida hacer, mejorar o renderizar un video explicativo para cualquier marca. El estilo propio de cada marca vive en una skill aparte (estilo de la marca (`<marca>-estilo` o `estilo-<marca>`)), que esta skill manda a cargar.
+description: Método general para crear reels/videos explicativos verticales (1080×1920) con Remotion, 3D, voz de ElevenLabs y subtítulos sincronizados. Úsala siempre que se pida hacer, mejorar o renderizar un video explicativo para cualquier marca. El estilo propio de cada marca vive en una skill aparte (arca-estilo, estilo-nudo-design…), que esta skill manda a cargar.
 ---
 
 # Videos explicativos (método general)
