@@ -14,23 +14,13 @@ export const DOC = {
   luz: 'rgba(255,214,150,',
 };
 
-/** Mesa de madera oscura con veta, iluminada por una lámpara cálida en (lx, ly). */
+/** Mesa de madera oscura (textura precalculada en public/arca/doc), con luz de lámpara en (lx, ly).
+ *  `foco` 0..1 mezcla con la versión ya desenfocada: sin filtros por cuadro. */
 export const Mesa: React.FC<{lx?: number; ly?: number; foco?: number}> = ({lx = 0.5, ly = 0.42, foco = 0}) => (
   <AbsoluteFill style={{background: DOC.noche}}>
-    <AbsoluteFill style={{filter: `blur(${foco * 8}px)`}}>
-      <svg width={W} height={H} viewBox={`0 0 ${W} ${H}`}>
-        <defs>
-          <filter id="veta" x="0" y="0" width="100%" height="100%">
-            <feTurbulence type="fractalNoise" baseFrequency="0.0025 0.06" numOctaves={4} seed={7} />
-            <feColorMatrix type="matrix" values="0 0 0 0 0.16  0 0 0 0 0.11  0 0 0 0 0.08  0 0 0 0.9 0" />
-          </filter>
-        </defs>
-        <rect width={W} height={H} fill={DOC.mesa} />
-        <rect width={W} height={H} filter="url(#veta)" opacity={0.85} />
-      </svg>
-    </AbsoluteFill>
-    {/* luz de lámpara */}
-    <AbsoluteFill style={{background: `radial-gradient(ellipse 75% 48% at ${lx * 100}% ${ly * 100}%, ${DOC.luz}0.30) 0%, ${DOC.luz}0.10) 45%, rgba(0,0,0,0) 75%)`, mixBlendMode: 'screen'}} />
+    <Img src={staticFile('arca/doc/mesa.jpg')} style={{position: 'absolute', width: W, height: H}} />
+    {foco > 0 && <Img src={staticFile('arca/doc/mesa-desenfocada.jpg')} style={{position: 'absolute', width: W, height: H, opacity: foco}} />}
+    <AbsoluteFill style={{background: `radial-gradient(ellipse 75% 48% at ${lx * 100}% ${ly * 100}%, ${DOC.luz}0.30) 0%, ${DOC.luz}0.10) 45%, rgba(0,0,0,0) 75%)`}} />
   </AbsoluteFill>
 );
 
@@ -40,15 +30,7 @@ export const Pelicula: React.FC<{grano?: number}> = ({grano = 0.09}) => {
   return (
     <>
       <AbsoluteFill style={{background: 'radial-gradient(ellipse 80% 70% at 50% 45%, rgba(0,0,0,0) 55%, rgba(0,0,0,.62) 100%)', pointerEvents: 'none'}} />
-      <AbsoluteFill style={{opacity: grano, mixBlendMode: 'overlay', pointerEvents: 'none'}}>
-        <svg width={W} height={H}>
-          <filter id={`g${frame % 8}`}>
-            <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves={2} seed={frame % 8} stitchTiles="stitch" />
-            <feColorMatrix type="saturate" values="0" />
-          </filter>
-          <rect width={W} height={H} filter={`url(#g${frame % 8})`} />
-        </svg>
-      </AbsoluteFill>
+      <Img src={staticFile(`arca/doc/grano${frame % 8}.png`)} style={{position: 'absolute', width: W, height: H, opacity: grano * 1.4, pointerEvents: 'none'}} />
     </>
   );
 };
@@ -60,13 +42,7 @@ export const Papel: React.FC<{ancho: number; alto: number; rot?: number; childre
   <div style={{position: 'absolute', width: ancho, height: alto, transform: `rotate(${rot}deg)`,
     background: `linear-gradient(160deg, #FBF8F1 0%, ${DOC.papel} 55%, #E8E1D2 100%)`,
     boxShadow: '0 40px 80px rgba(0,0,0,.55), 0 8px 20px rgba(0,0,0,.35)', borderRadius: 4, overflow: 'hidden', ...style}}>
-    <svg width={ancho} height={alto} style={{position: 'absolute', inset: 0, opacity: 0.35, mixBlendMode: 'multiply'}}>
-      <filter id={`fibra${ancho}${alto}`}>
-        <feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves={3} seed={3} />
-        <feColorMatrix type="matrix" values="0 0 0 0 0.85  0 0 0 0 0.8  0 0 0 0 0.72  0 0 0 0.35 0" />
-      </filter>
-      <rect width={ancho} height={alto} filter={`url(#fibra${ancho}${alto})`} />
-    </svg>
+    <div style={{position: 'absolute', inset: 0, backgroundImage: `url(${staticFile('arca/doc/fibra.png')})`, backgroundSize: '512px 512px', opacity: 0.18}} />
     <div style={{position: 'absolute', inset: 0}}>{children}</div>
   </div>
 );
@@ -83,7 +59,7 @@ export const Plano: React.FC<{ini: number; fin: number; zoom?: [number, number];
   const x = desde[0] + (hasta[0] - desde[0]) * p;
   const y = desde[1] + (hasta[1] - desde[1]) * p;
   return (
-    <AbsoluteFill style={{opacity: o, filter: `blur(${(1 - o) * 14}px)`}}>
+    <AbsoluteFill style={{opacity: o}}>
       <AbsoluteFill style={{transform: `translate(${x}px, ${y}px) scale(${s})`}}>{children}</AbsoluteFill>
     </AbsoluteFill>
   );

@@ -31,6 +31,16 @@
    `confidence: null`) en `subtitulos.json`.
 
 ## Render en esta nube
+**Velocidad (medido 2026-11-06, reel 04 de Arca, 4 CPU sin GPU):**
+| Cambio | Tiempo |
+|---|---|
+| Original: texturas SVG (`feTurbulence`) y `blur` calculados en cada cuadro, `--gl=swangle` | ~7 s/cuadro (≈1 h por reel) |
+| Texturas precalculadas como imágenes (`public/arca/doc/`: mesa, mesa desenfocada, 8 cuadros de grano, fibra de papel), sin `blur` ni `mix-blend-mode` a pantalla completa | ~1,3 s/cuadro |
+| Lo mismo con **`--gl=angle`** (o `swiftshader`) en lugar de `swangle` | **~0,15–0,25 s/cuadro (≈3–4 min por reel)** |
+Reglas: en 2D usar `--gl=angle`; `swangle` solo si hay `ThreeCanvas` (3D). Nada de filtros SVG, `blur` ni modos de mezcla
+por cuadro: hornear la textura una vez (Python + PIL) y moverla con `transform`/`opacity`. Planos pesados (3D, HyperFrames)
+se renderizan una vez a MP4 y se insertan con `OffthreadVideo`. Revisar con `--frames=A-B` antes del render completo.
+
 - La red bloquea la descarga del navegador de Remotion: usar el Chromium instalado.
 - Script listo: `npm run render:madera-verde`; para otro video copiar sus flags:
   `--gl=swangle --chrome-mode=headless-shell --browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell`

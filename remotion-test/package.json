@@ -5,7 +5,8 @@
     "studio": "remotion studio",
     "render": "remotion render src/index.ts MaderaVerde out/madera-verde.mp4",
     "render:cloud-session": "remotion render src/index.ts MaderaVerde out/madera-verde.mp4 --gl=swangle --chrome-mode=headless-shell --browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell",
-    "render:madera-verde": "remotion render src/index.ts MaderaVerdeFinal out/madera-verde-final.mp4 --gl=swangle --chrome-mode=headless-shell --browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell"
+    "render:madera-verde": "remotion render src/index.ts MaderaVerdeFinal out/madera-verde-final.mp4 --gl=swangle --chrome-mode=headless-shell --browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell",
+    "render:arca04": "remotion render src/index.ts ArcaReel04 out/arca-reel04.mp4 --gl=angle --concurrency=4 --chrome-mode=headless-shell --browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell"
   },
   "dependencies": {
     "@dicebear/collection": "^9.4.2",
