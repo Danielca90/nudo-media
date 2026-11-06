@@ -1,0 +1,138 @@
+Inflatable designer - panels_v3: 3120 vertices, 6236 triangles, 30 panels
+Real size: 60.0 cm   material stretch: 1.00%   seam allowance: 12 mm
+iter   mean dev    max dev  seam err   (deviation in % of size)
+   1     1.084%     6.554%    5.253%
+   2     1.027%     6.783%    3.509%
+   3     1.016%     6.969%    3.325%
+   4     1.013%     7.166%    3.887%
+   5     1.016%     7.322%    4.720%
+   6     1.024%     7.410%    3.925%
+   7     1.036%     7.538%    6.672%
+   8     1.036%     7.590%    5.900%
+Best result at iteration 1  (83.5 s)
+
+Shape accuracy: mean deviation 6.5 mm, max 39.3 mm
+Wrinkle zones: 34% of the surface
+
+Seams (length on each side, mm):
+  B:     panel1     19.7  |  panel9         19.8   diff 0.1
+  E:     panel1    361.3  |  panel28       348.3   diff 12.9
+  C:     panel1    115.3  |  panel11       112.7   diff 2.7
+  A:     panel1    168.3  |  panel7        168.2   diff 0.1
+  D:     panel1    150.6  |  panel13       150.9   diff 0.3
+  G:     panel2    261.6  |  panel18       264.1   diff 2.4
+  H:     panel2    152.5  |  panel20       153.4   diff 0.9
+  I:     panel2    164.2  |  panel24       167.3   diff 3.1
+  F:     panel2    104.7  |  panel15       105.2   diff 0.5
+  M:     panel3    125.8  |  panel30       125.8   diff 0.0
+  J:     panel3    140.2  |  panel13       140.2   diff 0.1
+  K:     panel3     29.9  |  panel17        29.8   diff 0.0
+  L:     panel3    141.7  |  panel29       140.8   diff 0.9
+  N:     panel4    119.0  |  panel5        118.8   diff 0.2
+  Q:     panel4    166.8  |  panel17       167.3   diff 0.5
+  U:     panel4    202.6  |  panel26       203.4   diff 0.7
+  R:     panel4     35.9  |  panel19        35.8   diff 0.1
+  P:     panel4    177.3  |  panel16       177.7   diff 0.3
+  T:     panel4    179.1  |  panel25       181.2   diff 2.1
+  O:     panel4     72.0  |  panel10        72.1   diff 0.0
+  S:     panel4     20.7  |  panel20        20.7   diff 0.1
+  V:     panel5    119.8  |  panel12       121.4   diff 1.6
+  W:     panel5     15.3  |  panel17        15.3   diff 0.0
+  X:     panel5     47.1  |  panel20        47.3   diff 0.3
+  Z:     panel5    321.0  |  panel27       326.5   diff 5.4
+  Y:     panel5     15.7  |  panel23        16.0   diff 0.3
+  S29:     panel6    280.8  |  panel19       284.4   diff 3.6
+  S30:     panel6    214.7  |  panel26       215.0   diff 0.3
+  S27:     panel6     76.9  |  panel11        76.8   diff 0.2
+  S31:     panel6     90.4  |  panel28        89.6   diff 0.8
+  S28:     panel6    178.9  |  panel14       179.7   diff 0.8
+  S33:     panel7    232.2  |  panel13       232.8   diff 0.5
+  S32:     panel7    202.8  |  panel11       201.8   diff 1.0
+  S34:     panel7    226.9  |  panel17       225.3   diff 1.6
+  S39:     panel8    191.4  |  panel22       191.5   diff 0.1
+  S38:     panel8    129.4  |  panel21       129.7   diff 0.3
+  S36:     panel8     51.9  |  panel16        52.0   diff 0.1
+  S37:     panel8    149.0  |  panel19       150.4   diff 1.4
+  S40:     panel8     68.2  |  panel29        68.2   diff 0.0
+  S35:     panel8     27.1  |  panel12        27.1   diff 0.0
+  S44:     panel9     20.6  |  panel30        20.3   diff 0.4
+  S42:     panel9    298.8  |  panel14       292.3   diff 6.5
+  S43:     panel9    114.3  |  panel28       113.7   diff 0.5
+  S41:     panel9    237.1  |  panel13       224.6   diff 12.5
+  S45:    panel10    137.3  |  panel20       135.8   diff 1.5
+  S47:    panel10    188.8  |  panel25       190.4   diff 1.6
+  S46:    panel10    110.6  |  panel24       110.3   diff 0.3
+  S49:    panel11    358.6  |  panel26       361.1   diff 2.5
+  S48:    panel11     11.2  |  panel17        11.2   diff 0.0
+  S50:    panel11     77.7  |  panel28        77.6   diff 0.1
+  S53:    panel12    280.9  |  panel23       284.3   diff 3.4
+  S52:    panel12     23.3  |  panel22        23.3   diff 0.0
+  S54:    panel12    200.0  |  panel29       199.0   diff 0.9
+  S51:    panel12    153.6  |  panel17       154.1   diff 0.4
+  S55:    panel13     94.8  |  panel17        94.7   diff 0.1
+  S56:    panel13    102.5  |  panel30       102.7   diff 0.2
+  S60:    panel14    156.0  |  panel30       157.0   diff 1.0
+  S59:    panel14    134.6  |  panel29       134.9   diff 0.3
+  S57:    panel14    157.3  |  panel19       157.2   diff 0.0
+  S58:    panel14    102.8  |  panel28       102.1   diff 0.7
+  S63:    panel15    183.8  |  panel22       183.7   diff 0.1
+  S61:    panel15    159.3  |  panel18       159.1   diff 0.3
+  S64:    panel15     44.9  |  panel24        44.8   diff 0.1
+  S62:    panel15    194.1  |  panel21       194.5   diff 0.4
+  S66:    panel16    140.2  |  panel21       140.8   diff 0.6
+  S67:    panel16    163.2  |  panel25       166.2   diff 3.0
+  S65:    panel16     21.6  |  panel19        21.5   diff 0.1
+  S68:    panel17     72.9  |  panel26        73.0   diff 0.0
+  S69:    panel17     68.2  |  panel29        68.2   diff 0.0
+  S72:    panel18    110.8  |  panel23       111.0   diff 0.2
+  S73:    panel18    129.4  |  panel27       128.8   diff 0.6
+  S70:    panel18    105.9  |  panel20       103.7   diff 2.2
+  S71:    panel18     10.6  |  panel22        10.6   diff 0.0
+  S75:    panel19     61.1  |  panel29        61.1   diff 0.0
+  S74:    panel19     64.2  |  panel26        64.2   diff 0.0
+  S77:    panel20    209.4  |  panel27       213.3   diff 3.9
+  S76:    panel20    117.9  |  panel24       116.5   diff 1.5
+  S78:    panel21     49.3  |  panel22        49.3   diff 0.0
+  S79:    panel21     45.2  |  panel24        45.2   diff 0.0
+  S80:    panel21     60.9  |  panel25        60.9   diff 0.0
+  S81:    panel22    243.3  |  panel23       248.3   diff 5.0
+  S82:    panel23     78.6  |  panel27        79.2   diff 0.6
+  S83:    panel24     25.8  |  panel25        25.8   diff 0.0
+  S84:    panel29    109.0  |  panel30       109.0   diff 0.0
+
+Panels (sealed area / with allowance, cm^2):
+      panel1:      169  /       272   bbox 254 x 174 mm
+      panel2:      169  /       254   bbox 224 x 203 mm
+      panel3:       57  /       118   bbox 183 x 138 mm
+      panel4:      212  /       333   bbox 279 x 197 mm
+      panel5:      118  /       198   bbox 182 x 174 mm
+      panel6:      165  /       279   bbox 238 x 198 mm
+      panel7:      197  /       304   bbox 217 x 216 mm
+      panel8:      135  /       213   bbox 183 x 177 mm
+      panel9:      186  /       280   bbox 263 x 172 mm
+     panel10:       69  /       131   bbox 163 x 138 mm
+     panel11:      154  /       262   bbox 267 x 171 mm
+     panel12:      154  /       254   bbox 235 x 212 mm
+     panel13:      281  /       398   bbox 273 x 227 mm
+     panel14:      273  /       400   bbox 275 x 251 mm
+     panel15:      103  /       195   bbox 194 x 188 mm
+     panel16:       73  /       142   bbox 167 x 139 mm
+     panel17:      189  /       291   bbox 248 x 197 mm
+     panel18:      189  /       284   bbox 235 x 184 mm
+     panel19:      177  /       275   bbox 242 x 177 mm
+     panel20:      170  /       267   bbox 254 x 170 mm
+     panel21:       94  /       178   bbox 203 x 167 mm
+     panel22:      107  /       197   bbox 187 x 190 mm
+     panel23:      168  /       266   bbox 228 x 197 mm
+     panel24:      104  /       170   bbox 184 x 138 mm
+     panel25:       99  /       186   bbox 212 x 175 mm
+     panel26:      150  /       265   bbox 260 x 175 mm
+     panel27:      179  /       279   bbox 246 x 192 mm
+     panel28:      128  /       217   bbox 201 x 179 mm
+     panel29:      168  /       274   bbox 260 x 175 mm
+     panel30:       74  /       143   bbox 167 x 153 mm
+  total material: 7324 cm^2
+
+SVG colours: red = cut line, blue dashed = seal line, black = notches/labels, green = internal parts.
+Match notches and the small circle at the start of each seam between panels.
+Patterns are drawn as seen from the OUTSIDE of the inflatable.

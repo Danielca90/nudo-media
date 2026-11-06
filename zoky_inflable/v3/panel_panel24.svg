@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="195.86mm" height="150.05mm" viewBox="0 0 195.86 150.05">
+<path d="M 37.069,119.324 L 65.273,124.266 L 81.822,130.001 L 88.649,128.622 L 94.067,144.049 L 115.845,136.584 L 127.487,141.092 L 138.435,131.105 L 149.592,131.476 L 154.758,118.626 L 188.721,119.126 L 172.400,99.701 L 181.302,94.555 L 189.856,64.005 L 174.046,58.654 L 175.151,40.795 L 162.363,38.981 L 161.632,23.341 L 146.002,22.542 L 133.259,7.750 L 113.476,7.012 L 93.789,6.000 L 69.207,24.081 L 68.969,29.737 L 50.613,26.343 L 50.995,40.383 L 40.390,38.490 L 37.261,49.210 L 23.263,46.040 L 6.000,67.795 L 12.706,84.852 L 19.479,117.718 L 26.772,111.750 L 27.136,107.758 L 40.127,108.481 Z" fill="none" stroke="#ff0000" stroke-width="0.1"/>
+<path d="M 52.224,109.797 L 68.292,112.613 L 82.656,117.590 L 96.511,114.792 L 101.443,128.836 L 116.094,123.813 L 124.890,127.218 L 133.955,118.949 L 141.592,119.203 L 146.697,106.506 L 162.642,106.741 L 154.012,96.469 L 171.064,86.612 L 175.233,71.724 L 161.502,67.076 L 162.489,51.119 L 150.840,49.467 L 150.153,34.770 L 140.262,34.264 L 127.583,19.547 L 112.945,19.001 L 97.449,18.204 L 80.954,30.337 L 80.376,44.050 L 63.012,40.839 L 63.392,54.784 L 48.890,52.197 L 45.618,63.406 L 27.973,59.410 L 19.698,69.838 L 24.251,81.420 L 27.229,95.871 L 41.327,84.334 L 40.218,96.467 L 55.740,97.330 Z" fill="none" stroke="#0000ff" stroke-width="0.2" stroke-dasharray="3,2"/>
+<line x1="100.645" y1="126.566" x2="89.323" y2="130.542" stroke="#000000" stroke-width="0.3"/>
+<line x1="136.171" y1="119.023" x2="135.772" y2="131.016" stroke="#000000" stroke-width="0.3"/>
+<line x1="158.294" y1="101.566" x2="167.481" y2="93.847" stroke="#000000" stroke-width="0.3"/>
+<circle cx="68.292" cy="112.613" r="1.2" fill="none" stroke="#000000" stroke-width="0.3"/>
+<text x="136.47" y="110.03" font-size="5" text-anchor="middle" font-family="Arial" fill="#000000">I → panel2</text>
+<line x1="162.405" y1="52.487" x2="174.382" y2="53.228" stroke="#000000" stroke-width="0.3"/>
+<line x1="148.889" y1="34.705" x2="149.502" y2="22.721" stroke="#000000" stroke-width="0.3"/>
+<line x1="126.534" y1="19.507" x2="126.981" y2="7.516" stroke="#000000" stroke-width="0.3"/>
+<circle cx="175.233" cy="71.724" r="1.2" fill="none" stroke="#000000" stroke-width="0.3"/>
+<text x="148.43" y="43.69" font-size="5" text-anchor="middle" font-family="Arial" fill="#000000">S76 → panel20</text>
+<line x1="80.655" y1="37.432" x2="68.666" y2="36.927" stroke="#000000" stroke-width="0.3"/>
+<line x1="63.102" y1="44.134" x2="51.107" y2="44.461" stroke="#000000" stroke-width="0.3"/>
+<line x1="48.276" y1="54.301" x2="36.757" y2="50.938" stroke="#000000" stroke-width="0.3"/>
+<circle cx="97.449" cy="18.204" r="1.2" fill="none" stroke="#000000" stroke-width="0.3"/>
+<text x="72.10" y="43.89" font-size="5" text-anchor="middle" font-family="Arial" fill="#000000">S46 → panel10</text>
+<line x1="21.895" y1="75.427" x2="10.727" y2="79.818" stroke="#000000" stroke-width="0.3"/>
+<line x1="19.967" y1="69.499" x2="10.567" y2="62.039" stroke="#000000" stroke-width="0.3"/>
+<line x1="23.970" y1="64.454" x2="14.570" y2="56.995" stroke="#000000" stroke-width="0.3"/>
+<circle cx="24.251" cy="81.420" r="1.2" fill="none" stroke="#000000" stroke-width="0.3"/>
+<text x="27.02" y="75.09" font-size="5" text-anchor="middle" font-family="Arial" fill="#000000">S83 → panel25</text>
+<line x1="41.246" y1="85.225" x2="29.295" y2="84.133" stroke="#000000" stroke-width="0.3"/>
+<line x1="33.283" y1="90.916" x2="40.883" y2="100.204" stroke="#000000" stroke-width="0.3"/>
+<line x1="26.529" y1="92.476" x2="14.776" y2="94.898" stroke="#000000" stroke-width="0.3"/>
+<circle cx="40.218" cy="96.467" r="1.2" fill="none" stroke="#000000" stroke-width="0.3"/>
+<text x="27.58" y="83.95" font-size="5" text-anchor="middle" font-family="Arial" fill="#000000">S79 → panel21</text>
+<line x1="57.258" y1="110.679" x2="55.186" y2="122.499" stroke="#000000" stroke-width="0.3"/>
+<line x1="53.878" y1="103.933" x2="42.328" y2="100.676" stroke="#000000" stroke-width="0.3"/>
+<line x1="51.404" y1="97.089" x2="50.738" y2="109.071" stroke="#000000" stroke-width="0.3"/>
+<circle cx="68.292" cy="112.613" r="1.2" fill="none" stroke="#000000" stroke-width="0.3"/>
+<text x="62.54" y="106.38" font-size="5" text-anchor="middle" font-family="Arial" fill="#000000">S64 → panel15</text>
+<text x="98.55" y="77.27" font-size="9" text-anchor="middle" font-family="Arial" font-weight="bold" fill="#000000">panel24</text>
+</svg>
