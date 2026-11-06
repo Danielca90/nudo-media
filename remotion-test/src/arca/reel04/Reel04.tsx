@@ -212,15 +212,15 @@ const AntesDeFirmar: React.FC = () => {
 const Remate: React.FC = () => {
   const t = useT();
   const o = ventana(t, 23.3, FIN_VOZ + 0.25, 0.35);
-  if (o <= 0) return null;
+  const boton = usePop(29.54, 240, 12);
   const servicios = [
     {txt: 'Revisamos cada caso', en: 24.84},
     {txt: 'Redactamos los documentos', en: 26.32},
     {txt: 'Te defendemos si llega una demanda', en: 27.78},
   ];
   const lema = tramo(t, 23.35, 23.8);
-  const boton = usePop(29.54, 240, 12);
   const cierre = tramo(t, 30.42, 30.9);
+  if (o <= 0) return null;
   return (
     <AbsoluteFill style={{opacity: o}}>
       <Mesa lx={0.5} ly={0.3} foco={1} />
