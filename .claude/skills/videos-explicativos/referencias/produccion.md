@@ -46,3 +46,19 @@
 
 ## Red necesaria
 `elevenlabsusercontent.com` (audio), `remotion.dev` y `github.com` (docs y skills), registro de npm.
+
+## Flujo "escena 3D grabada + Remotion encima" (sketches y parodias con personajes)
+Usado en `remotion-test/src/claude-taller/`. Sirve cuando hay personajes animados y varias versiones del mismo video.
+1. Escena en una página three.js (`escena/taller.html`): sombreado toon (MeshToonMaterial + rampa de 3 tonos) y
+   contorno negro (casco invertido con normales suavizadas). Todo depende de `window.__frame(t)`: determinista.
+2. Grabar cuadro a cuadro con Playwright (`video.js`, SwiftShader): ~0,17 s por cuadro a 1080×1920.
+   Devuelve por cuadro la posición en pantalla de las cabezas → `track.json`.
+3. Generar primero las voces, transcribirlas y **ajustar los tiempos de la escena a la voz** antes de grabar.
+4. Remotion: `<OffthreadVideo>` de fondo + globos de diálogo que siguen a cada personaje con `track.json`,
+   ventanas 2D (pantallas, avisos), onomatopeyas, audio y efectos. Una prop (`conVoz`) saca varias versiones
+   sin volver a grabar el 3D.
+- En sketches los **globos de cómic reemplazan a los subtítulos centrados** (que taparían al personaje central);
+  en la versión con voz las palabras se encienden al oírse.
+- Efectos de sonido con ElevenLabs Sound Effects (`sfx`, 1 toma): el látigo salió como 5 chasquidos en 12 s →
+  recortar uno con `silencedetect`.
+- No usar dos grabaciones en paralelo sobre la misma carpeta de cuadros.

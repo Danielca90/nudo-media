@@ -32,6 +32,8 @@ Complementa la skill `videos-explicativos`. Lo que se define aquí manda sobre l
 
 ## Videos hechos
 - `remotion-test/src/madera-verde/` — "¿Qué pasa si haces un mueble con madera verde?" (v3, 26,6 s).
+- `remotion-test/src/claude-taller/` — parodia "Un carpintero casual trabajando con Claude" (29,5 s, con y sin voz).
+  Taller 3D estilo toon, voz de Claude: Lulu (`CPv3Zr3CQCqE4ZzuCgBP`).
 
 ## Correcciones del usuario
 - 2026-11-05: subtítulos a media altura (no arriba), con borde negro y palabra clave resaltada.
