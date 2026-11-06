@@ -1,12 +1,15 @@
 ---
-name: estilo-arca-juridica
+name: arca-estilo
 description: Estilo de Arca Jurídica (@arcajuridica), firma colombiana de abogados consultores en derecho laboral para empresas. Úsala para cualquier reel, video, post gráfico o carrusel de Arca, junto con videos-explicativos (videos) o instagram-reels-colombia (piezas gráficas), y con asesoria-juridica-colombia para revisar el contenido legal.
 ---
 
-# Estilo – Arca Jurídica
+# Arca Estilo – Arca Jurídica
 
 Complementa `videos-explicativos` e `instagram-reels-colombia`. Lo que se define aquí manda sobre lo general.
 El contenido legal se valida con `asesoria-juridica-colombia` antes de publicar.
+
+**Datos de desempeño:** [desempeno.md](desempeno.md) (métricas por pieza, capturas en `insights/`,
+lecciones y metas). Cada captura de Insights que mande el usuario se registra ahí.
 
 **Antes de cualquier pieza, leer [estrategia-alcance.md](estrategia-alcance.md), en especial "Reglas nuevas
  para el gancho de Arca" (sección 0b, con datos del primer reel animado)**: gancho en
@@ -216,3 +219,5 @@ Estructura de arriba abajo:
 - 2026-11-06: el primer reel animado (reel 01, despidos) tuvo 2 s de tiempo medio. Gancho nuevo obligatorio: situación
   humana en el cuadro 0, texto grande en segunda persona, fuente y marca después del segundo 3,
   remate de venta ≤ 10 s (ver estrategia-alcance.md 0b).
+- 2026-11-06: la skill se renombró a `arca-estilo` y los análisis de desempeño se centralizan en
+  `desempeno.md` con las capturas en `insights/`.

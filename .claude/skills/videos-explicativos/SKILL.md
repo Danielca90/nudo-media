@@ -1,6 +1,6 @@
 ---
 name: videos-explicativos
-description: Método general para crear reels/videos explicativos verticales (1080×1920) con Remotion, 3D, voz de ElevenLabs y subtítulos sincronizados. Úsala siempre que se pida hacer, mejorar o renderizar un video explicativo para cualquier marca. El estilo propio de cada marca vive en una skill aparte (estilo-<marca>), que esta skill manda a cargar.
+description: Método general para crear reels/videos explicativos verticales (1080×1920) con Remotion, 3D, voz de ElevenLabs y subtítulos sincronizados. Úsala siempre que se pida hacer, mejorar o renderizar un video explicativo para cualquier marca. El estilo propio de cada marca vive en una skill aparte (estilo de la marca (`<marca>-estilo` o `estilo-<marca>`)), que esta skill manda a cargar.
 ---
 
 # Videos explicativos (método general)
@@ -64,10 +64,10 @@ Cada marca tiene **su propia skill de estilo**, separada de esta:
 | Marca | Skill | Estado |
 |---|---|---|
 | Nudo Design (@somos_nudodesign) | `estilo-nudo-design` | Creada |
-| Arca Jurídica (@arcajuridica) | `estilo-arca-juridica` | Creada (reel a cámara + post gráfico) |
+| Arca Jurídica (@arcajuridica) | `arca-estilo` | Creada (reel a cámara + post gráfico) |
 
 Reglas:
-1. **Antes de empezar un video, identificar la marca y cargar su skill `estilo-<marca>`.**
+1. **Antes de empezar un video, identificar la marca y cargar su skill `estilo de la marca (`<marca>-estilo` o `estilo-<marca>`)`.**
    Si no existe, preguntar al usuario por la marca y crearla con
    [plantillas/marca-SKILL.md](plantillas/marca-SKILL.md) a medida que el usuario
    dé instrucciones (no inventar el estilo de una marca).
@@ -80,7 +80,7 @@ Reglas:
 
 ## Flujo de trabajo
 
-1. **Marca y tema.** Cargar `estilo-<marca>`. Confirmar tema, duración (≈15–45 s) y formato.
+1. **Marca y tema.** Cargar `estilo de la marca (`<marca>-estilo` o `estilo-<marca>`)`. Confirmar tema, duración (≈15–45 s) y formato.
 2. **Guion.** Escribir el guion para voz (frases cortas, números en palabras).
    Si el usuario pide no revisarlo, seguir directo.
 3. **Técnica + plan de acción visual (obligatorio antes de programar).** Elegir 2D, 3D o mixto. Tabla

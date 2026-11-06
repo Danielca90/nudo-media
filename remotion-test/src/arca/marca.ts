@@ -1,5 +1,5 @@
 // Identidad visual de Arca Jurídica para videos animados (motion graphics).
-// Ver .claude/skills/estilo-arca-juridica/SKILL.md
+// Ver .claude/skills/arca-estilo/SKILL.md
 import {continueRender, delayRender, staticFile} from 'remotion';
 
 // Fuentes locales (public/fonts): el navegador de render en la nube no puede descargar de Google.

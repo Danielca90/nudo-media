@@ -302,7 +302,7 @@ export const Paso: React.FC<{n: number; en: number; hasta: number; etiqueta: str
 // ---------- remate de venta: "Arca se encarga" ----------
 export type Servicio = {texto: string; en: number};
 /**
- * Propuesta de valor al final de cada video (ver skill estilo-arca-juridica).
+ * Propuesta de valor al final de cada video (ver skill arca-estilo).
  * 1) pila de documentos del tema ("no tienes que hacerlo solo"), 2) escudo de Arca,
  * 3) lista de servicios con check dorado en cada verbo, 4) botón ESCRÍBENOS.
  */

@@ -11,7 +11,7 @@ decretos y circulares. Cambian cómo se deciden los casos nuevos y lo que las em
 El usuario manda el link apenas sale la noticia; el objetivo es tener el video **el mismo día**.
 
 Se usa junto con:
-- `estilo-arca-juridica` (marca, voz "Andrea Arca", remate de venta, escenario propio por tema),
+- `arca-estilo` (marca, voz "Andrea Arca", remate de venta, escenario propio por tema),
 - `videos-explicativos` (método, técnica 2D, render),
 - `asesoria-juridica-colombia` (lectura jurídica y datos vigentes).
 
@@ -48,7 +48,7 @@ Estructura de noticia:
    3 nov 2026"). Da credibilidad y diferencia a Arca de los medios.
 3. **Antes vs ahora:** comparación lado a lado.
 4. **Qué debe hacer tu empresa:** 2–3 acciones concretas.
-5. **Remate de venta** (de `estilo-arca-juridica`): "Y no tienes que hacerlo solo. En Arca
+5. **Remate de venta** (de `arca-estilo`): "Y no tienes que hacerlo solo. En Arca
    Jurídica revisamos…, ajustamos tus contratos/reglamento/políticas, hacemos el seguimiento y te
    defendemos si llega una demanda. Escríbenos y blindamos legalmente tu empresa."
 - Tono: informativo y sin opinión política ni partidista (nombrar al Gobierno o al Congreso solo
