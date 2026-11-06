@@ -102,6 +102,11 @@ cómo se expone el contenido**: que enganche y obligue a quedarse hasta el final
 6. **Remate con experiencia + palabra clave:** "Esta cuenta la hacemos antes de cada despido." + "Escríbenos
    CUENTA y la hacemos con tus números." La palabra clave genera comentarios o mensajes medibles.
 7. **Series:** "La cuenta · parte 2". El que vio la primera vuelve por la segunda.
+9. **Tipografía cinética (ref. I en `videos-explicativos/referencias/videos-de-referencia.md`):** en los reels
+   sin persona, la voz se escribe en pantalla frase por frase; palabras de unión pequeñas en crema, **la palabra
+   clave enorme en dorado** (o rojo óxido si es riesgo), fondos que alternan verde petróleo casi negro y crema
+   para cada idea nueva, cortes cada 1–1,5 s en el gancho. Combinada con "La cuenta": la tirilla aparece
+   cuando hay que sumar y la tipografía cuenta todo lo demás.
 8. Formato: sirve igual para reel (la voz lee la cuenta) y para carrusel 4:5 (una diapositiva por renglón).
 
 ## 1. Diagnóstico: por qué no llega a no seguidores
