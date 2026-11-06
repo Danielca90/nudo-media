@@ -44,6 +44,21 @@ Complementa la skill `videos-explicativos`. Lo que se define aquí manda sobre l
      Marcar "EP. 1, EP. 2" en la portada.
 - Fijar en el perfil los 3 reels con más vistas; bio con qué hace Nudo, ciudad y WhatsApp.
 
+## Calidad visual 3D (corrección del usuario, 2026-11-06)
+El primer corte de la polémica de la maciza "se veía feo": texturas dibujadas a mano (rayas), tableros
+flotando en negro, vapor de bolitas blancas y luz plana. Estándar desde ahora:
+- **Texturas fotográficas PBR** (Poly Haven, CC0, en `remotion-test/public/texturas/`): chapa de roble,
+  contrachapado, madera de cocina, baldosa, granito. Cargarlas con `useTexturas` (delayRender) como en
+  `src/nudo/polemica-maciza/Cocina3D.tsx`. Para madera: mapa de color + normal suave (0,35), rugosidad
+  constante ~0,6 (el mapa de rugosidad la hace ver plástica y con brillos blancos), sin barniz brillante.
+  Nunca texturas de rayas dibujadas en canvas para la madera principal.
+- **Escena con contexto real**, no objetos flotando: cocina completa (salpicadero, mesón de cuarzo,
+  muebles bajos y altos), taller, sala… según el tema.
+- **Luz:** HDRI de estudio como entorno (reflejos reales) + clave cálida con sombras + relleno + contorno.
+  Sin luces puntuales pegadas a la madera (manchas). Acabados mate en pinturas (puertas verde salvia).
+- **Vapor/humo:** sprites con degradado radial, nunca esferas.
+- Paleta de cocina que funcionó: madera de roble + verde salvia mate + cuarzo claro + baldosa blanca.
+
 ## Datos técnicos confirmados por el usuario (carpintero; manda sobre fuentes genéricas)
 - **Bisagras de cazoleta (cocinas y clósets):** tienen **un solo tornillo de ajuste** en el brazo, que mueve
   la puerta **a izquierda o derecha**. Si la puerta está torcida, se ajusta el tornillo de la bisagra de

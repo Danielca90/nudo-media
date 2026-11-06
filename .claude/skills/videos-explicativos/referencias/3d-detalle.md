@@ -170,3 +170,9 @@ list, fix what fails, re-render the stills. Do up to 3 rounds.
 - [ ] No flicker between frames (deterministic animation).
 
 Then render the full video, check the duration and audio sync, and deliver.
+
+## 13. Lesson learned (2026-11-06, Nudo)
+Hand-drawn canvas wood textures and objects floating on a dark void looked cheap. Use photographic
+CC0 PBR textures (Poly Haven, see `remotion-test/public/texturas/` and `assets/LICENCIAS.md`), an HDRI
+environment, a real set around the object, constant roughness ~0.6 on wood (roughness maps made it look
+plastic), and sprite-based steam/smoke. Reference implementation: `src/nudo/polemica-maciza/Cocina3D.tsx`.

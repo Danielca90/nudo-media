@@ -8,7 +8,7 @@ import {camaraEn, proyectar, Clave, Vec} from '../../madera-verde/camara';
 import {FONDOS} from '../../madera-verde/fondo';
 import {NUDO_FUENTES} from '../fuentes';
 import palabrasJson from './palabras.json';
-import {PuertaMaciza, Contrachapado, Hidrofugo, OllaVapor, Luces, PisoSombra, MACIZA, useMats} from './Tableros3D';
+import {PuertaMaciza, Contrachapado, Hidrofugo, OllaVapor, Luces, Cocina, MACIZA, P_MACIZA, P_CONTRA, P_HIDRO, useMats, useTexturas, Texturas} from './Cocina3D';
 
 type Palabra = {text: string; start: number; end: number};
 const PALABRAS = palabrasJson as Palabra[];
@@ -24,11 +24,7 @@ const tramo = (t: number, a: number, b: number) =>
   interpolate(t, [a, b], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: Easing.inOut(Easing.cubic)});
 const vent = (t: number, a: number, b: number, d = 0.25) => Math.min(tramo(t, a, a + d), 1 - tramo(t, b - d, b));
 
-// ---------- escena ----------
-const P_MACIZA: [number, number, number] = [-0.35, 0.78, 0];
-const P_CONTRA: [number, number, number] = [0.3, 0.33, 0.05];
-const P_HIDRO: [number, number, number] = [0.82, 0.33, 0.05];
-
+// ---------- escena (posiciones en Cocina3D) ----------
 // humedad: ciclo de hincharse y encogerse cuando la voz lo dice; luego vuelve a reposo
 const humedad = (t: number) => {
   if (t < 11.0) return -0.35 * tramo(t, 0, 0.6); // ya un poco encogida en el gancho (junta abierta)
@@ -40,17 +36,17 @@ const humedad = (t: number) => {
 const tuerce = (t: number) => 0.35 * tramo(t, 0, 0.6) * (1 - tramo(t, 4.4, 5.0)) + tramo(t, 13.7, 14.5) * (1 - tramo(t, 20.9, 21.6));
 
 const CLAVES: Clave[] = [
-  {t: 0, pos: [-0.33, 0.62, 1.55], mira: [-0.35, 0.72, 0]},
-  {t: 0.15, pos: [-0.31, 0.64, 1.38], mira: [-0.35, 0.72, 0]},
-  {t: 4.4, pos: [-0.27, 0.8, 0.5], mira: [-0.34, 0.78, 0]},
-  {t: 6.1, pos: [-0.3, 0.55, 1.5], mira: [-0.35, 0.52, 0]},
-  {t: 9.9, pos: [-0.35, 0.76, 1.12], mira: [-0.35, 0.76, 0]},
-  {t: 13.2, pos: [0.15, 0.95, 0.95], mira: [-0.35, 0.74, 0]},
-  {t: 15.8, pos: [0.72, 0.62, 0.95], mira: [0.38, 0.46, 0.08]},
-  {t: 17.1, pos: [1.22, 0.62, 0.95], mira: [0.9, 0.46, 0.08]},
-  {t: 18.6, pos: [0.62, 0.62, 1.6], mira: [0.58, 0.42, 0.05]},
-  {t: 20.9, pos: [-0.18, 0.86, 1.0], mira: [-0.35, 0.78, 0]},
-  {t: 25.3, pos: [0.22, 0.8, 2.75], mira: [0.22, 0.98, 0]},
+  {t: 0, pos: [-0.3, 1.5, 2.2], mira: [-0.33, 1.64, 0.2]},
+  {t: 0.15, pos: [-0.31, 1.52, 1.98], mira: [-0.34, 1.66, 0.2]},
+  {t: 4.4, pos: [-0.28, 1.86, 0.86], mira: [-0.34, 1.82, 0.3]},
+  {t: 6.1, pos: [-0.3, 1.38, 1.9], mira: [-0.34, 1.4, 0.2]},
+  {t: 9.9, pos: [-0.35, 1.8, 1.38], mira: [-0.35, 1.78, 0.3]},
+  {t: 13.2, pos: [0.15, 2.02, 1.28], mira: [-0.35, 1.78, 0.3]},
+  {t: 15.8, pos: [0.86, 1.36, 0.98], mira: [0.5, 1.2, 0.12]},
+  {t: 17.1, pos: [1.32, 1.36, 0.98], mira: [0.98, 1.2, 0.12]},
+  {t: 18.6, pos: [0.76, 1.32, 1.65], mira: [0.74, 1.2, 0.1]},
+  {t: 20.9, pos: [-0.15, 1.9, 1.28], mira: [-0.35, 1.8, 0.3]},
+  {t: 25.3, pos: [0.22, 1.5, 3.1], mira: [0.22, 1.95, 0]},
 ];
 
 // ---------- 2D ----------
@@ -131,7 +127,14 @@ const Humedad: React.FC<{h: number; op: number}> = ({h, op}) =>
   );
 
 export const PolemicaMaciza: React.FC = () => {
+  const tx = useTexturas();
+  if (!tx) return <AbsoluteFill style={{background: FONDOS.grafito.fondo}} />;
+  return <Contenido tx={tx} />;
+};
+
+const Contenido: React.FC<{tx: Texturas}> = ({tx}) => {
   const t = useT();
+  const m = useMats(tx);
   const cam = camaraEn(t, CLAVES, 0.85);
   const h = humedad(t);
   const tu = tuerce(t);
@@ -140,26 +143,25 @@ export const PolemicaMaciza: React.FC = () => {
   const calor = tramo(t, 8.4, 8.9) * (1 - tramo(t, 15.7, 16.2)) + 0.5 * tramo(t, 20.9, 21.5);
 
   const w = MACIZA.ancho / MACIZA.n;
-  const juntas = [1, 2, 3].map((k) => proyectar([P_MACIZA[0] - MACIZA.ancho / 2 + k * w, P_MACIZA[1] - 0.12, 0.012] as Vec, cam));
+  const juntas = [1, 2, 3].map((k) => proyectar([P_MACIZA[0] - MACIZA.ancho / 2 + k * w, P_MACIZA[1] - 0.12, P_MACIZA[2] + 0.012] as Vec, cam));
   const junta = juntas[1];
-  const pCanto1 = proyectar([P_CONTRA[0] + 0.184, P_CONTRA[1] + 0.15, P_CONTRA[2] + 0.1] as Vec, cam);
-  const pCanto2 = proyectar([P_HIDRO[0] + 0.184, P_HIDRO[1] + 0.15, P_HIDRO[2] + 0.1] as Vec, cam);
-  const pMaciza = proyectar([P_MACIZA[0], P_MACIZA[1], 0.02] as Vec, cam);
-  const pContra = proyectar([P_CONTRA[0], P_CONTRA[1], 0.06] as Vec, cam);
-  const pHidro = proyectar([P_HIDRO[0], P_HIDRO[1] - 0.1, 0.06] as Vec, cam);
+  const pCanto1 = proyectar([P_CONTRA[0] + 0.183, P_CONTRA[1] + 0.12, P_CONTRA[2] + 0.082] as Vec, cam);
+  const pCanto2 = proyectar([P_HIDRO[0] + 0.183, P_HIDRO[1] + 0.12, P_HIDRO[2] + 0.082] as Vec, cam);
+  const pMaciza = proyectar([P_MACIZA[0], P_MACIZA[1], P_MACIZA[2]] as Vec, cam);
+  const pContra = proyectar([P_CONTRA[0], P_CONTRA[1], P_CONTRA[2]] as Vec, cam);
+  const pHidro = proyectar([P_HIDRO[0], P_HIDRO[1] - 0.1, P_HIDRO[2]] as Vec, cam);
 
   return (
     <AbsoluteFill style={{background: FONDOS.grafito.fondo}}>
       <Audio src={staticFile('nudo/voz-polemica-maciza.mp3')} />
       <ThreeCanvas width={1080} height={1920} shadows>
         <Camara pos={cam.pos} mira={cam.mira} />
-        <Luces calida={tramo(t, 20.9, 21.6) * (1 - tramo(t, 25.2, 25.8))} />
-        <PisoSombra />
-        <Mueble />
-        <PuertaMaciza pos={P_MACIZA} humedad={h} tuerce={tu} gotas={gotas} />
-        <OllaVapor pos={[-0.35, 0.03, 0.26]} t={t} vapor={vapor} calor={calor} />
-        <Contrachapado pos={P_CONTRA} rot={[0, -0.5, 0]} />
-        <Hidrofugo pos={P_HIDRO} rot={[0, -0.5, 0]} sellado={tramo(t, 18.6, 19.3)} />
+        <Luces tx={tx} calida={tramo(t, 20.9, 21.6) * (1 - tramo(t, 25.2, 25.8))} />
+        <Cocina m={m} />
+        <PuertaMaciza m={m} humedad={h} tuerce={tu} gotas={gotas} />
+        <OllaVapor m={m} t={t} vapor={vapor} calor={calor} />
+        <Contrachapado m={m} />
+        <Hidrofugo m={m} sellado={tramo(t, 18.6, 19.3)} />
       </ThreeCanvas>
 
       {/* gancho: afirmación que divide */}
@@ -221,22 +223,5 @@ export const PolemicaMaciza: React.FC = () => {
   );
 };
 
-const useCurrentFrameSafe = (t: number) => Math.round(t * FPS);
 
-/** Mueble alto de cocina detrás de la puerta maciza (contexto: la puerta está encima de la estufa). */
-const Mueble: React.FC = () => {
-  const m = useMats();
-  return (
-    <group>
-      <mesh material={m.melamina} position={[P_MACIZA[0], P_MACIZA[1], -0.17]} castShadow receiveShadow>
-        <boxGeometry args={[0.48, 0.73, 0.32]} />
-      </mesh>
-      <mesh material={m.melamina} position={[P_MACIZA[0] + 0.5, P_MACIZA[1], -0.17]} castShadow receiveShadow>
-        <boxGeometry args={[0.48, 0.73, 0.32]} />
-      </mesh>
-      <mesh material={m.listones[2]} position={[P_MACIZA[0] + 0.5, P_MACIZA[1], 0.0]} castShadow>
-        <boxGeometry args={[0.45, 0.7, 0.02]} />
-      </mesh>
-    </group>
-  );
-};
+const useCurrentFrameSafe = (t: number) => Math.round(t * FPS);
