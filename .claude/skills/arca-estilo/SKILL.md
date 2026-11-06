@@ -240,3 +240,6 @@ Estructura de arriba abajo:
   `desempeno.md` con las capturas en `insights/`.
 - 2026-11-06: no repetir temas ya publicados (no se pueden subir de nuevo). Pide un estilo más profesional
   que el 2D vectorial: documental (Formato 0b). Primer reel: 04, cuánto cuesta despedir sin justa causa.
+- 2026-11-06: el usuario mandó de referencia "La cuenta" (carrusel con 2.797 envíos) vs. Baeza Abogados (4 envíos):
+  lo que vende es la exposición (bucle abierto, cuenta renglón por renglón, cifras exactas, palabra clave), no el
+  gráfico. Reglas en estrategia-alcance.md 0c. Visual mínimo: tirilla/documento sobre fondo oscuro.

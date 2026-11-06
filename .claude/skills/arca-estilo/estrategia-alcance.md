@@ -76,6 +76,34 @@ segundo 1. Voz: "¿Despediste a alguien con un mensaje? Le acabas de regalar una
    entiende en 1 segundo que esto le puede costar plata? Si no, rehacer.
 7. Probar 2 ganchos con "reels de prueba" (solo no seguidores) y publicar el que retenga más.
 
+
+## 0c. Cómo se expone el contenido: "La cuenta" vs. Baeza Abogados (2026-11-06)
+Capturas en `referencias/2026-11-06-*.jpg`. Lección del usuario: **en Arca no vende el gráfico, vende
+cómo se expone el contenido**: que enganche y obligue a quedarse hasta el final.
+
+| | Baeza Abogados (carrusel, 6) | "La cuenta" de un mentor de negocios (carrusel, 9) |
+|---|---|---|
+| Resultado | 24 me gusta · 2 reposts · 4 envíos | 4.216 me gusta · **1.259 comentarios** · 261 reposts · **2.797 envíos** |
+| Portada | Tema ("Reducción de semanas para pensionarse por tener hijos") + "Te cuento qué cambió…" | **Un número exacto y una pregunta sin responder**: "Su empleado le cuesta $2.864.324. Con el local y su sueldo, ¿cuánto tiene que vender?" |
+| Recorrido | Explica de una vez: qué cambió, qué establece, a quién aplica | **Arma la cuenta renglón por renglón**: empleado → dotación → local → su sueldo → total → ÷ margen → la respuesta. La respuesta sale al final |
+| Visual | Plantilla azul, fotos de la abogada, íconos | Muy simple: fondo café oscuro, serif grande, **tirilla de papel** con letra de máquina, puntos guía y el total en caja dorada; nota manuscrita en naranja |
+| Voz | Informativa | Conversación con el dueño ("usted"), pregunta "¿sí o no?", admite lo que falta ("y todavía faltan los impuestos…") |
+| Cierre | "¡Todavía no!" (buen giro) + @ | Autoridad propia ("esta cuenta yo la hago en la libreta antes de contratar a nadie") + **palabra clave para comentar** ("Comente JUNTA y le mando…") |
+
+### Reglas de exposición para Arca (mandan sobre el estilo visual)
+1. **Bucle abierto desde el cuadro 0:** un dato concreto que el gerente reconoce (su trabajadora, su salario)
+   + una pregunta cuya respuesta solo llega al final. Nunca dar la respuesta en el gancho.
+2. **Construir, no explicar:** cada plano agrega UN renglón (un concepto, una cifra, una consecuencia).
+   El espectador se queda porque ve crecer la cuenta y quiere el total.
+3. **Cifras exactas, no redondas** ($2.978.337, no "casi tres millones" en pantalla): se sienten reales y
+   calculadas. Con valores vigentes (SMMLV 2026 $1.750.905, auxilio $249.095) y supuestos escritos en pequeño.
+4. **Una idea por pantalla, texto grande.** El gráfico es solo la tirilla o el documento: simple y legible.
+5. **Honestidad que da autoridad:** decir lo que falta o lo que cambia según el caso ("cálculo orientativo").
+6. **Remate con experiencia + palabra clave:** "Esta cuenta la hacemos antes de cada despido." + "Escríbenos
+   CUENTA y la hacemos con tus números." La palabra clave genera comentarios o mensajes medibles.
+7. **Series:** "La cuenta · parte 2". El que vio la primera vuelve por la segunda.
+8. Formato: sirve igual para reel (la voz lee la cuenta) y para carrusel 4:5 (una diapositiva por renglón).
+
 ## 1. Diagnóstico: por qué no llega a no seguidores
 
 | # | Problema | Dónde se ve |
