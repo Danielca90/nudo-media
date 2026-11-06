@@ -44,6 +44,26 @@ Complementa la skill `videos-explicativos`. Lo que se define aquí manda sobre l
      Marcar "EP. 1, EP. 2" en la portada.
 - Fijar en el perfil los 3 reels con más vistas; bio con qué hace Nudo, ciudad y WhatsApp.
 
+## Gancho que convierte (pedido del usuario, 2026-11-06)
+El gancho no solo retiene: tiene que invitar a comentar desde el principio.
+- Abrir con algo que el espectador quiera responder: pregunta directa ("¿La puerta de tu cocina quedó
+  torcida?") o afirmación que divide ("La madera maciza NO es la mejor para tu cocina").
+- La pregunta para comentar se dice al final **y** queda escrita en grande en pantalla, con dos opciones
+  cortas cuando se pueda ("¿COCINA O CLÓSET?", "¿DE ACUERDO O NO?"): responder cuesta una palabra.
+- Responder todos los comentarios en la primera hora y fijar el más debatido.
+
+## Formato "polémica" (videos para generar comentarios)
+Objetivo: muchos comentarios → Instagram empuja el video. Reglas:
+- **Opinión fuerte pero defendible, nunca un dato falso.** La polémica sale de tomar partido en algo
+  donde la gente cree lo contrario, no de inventar. Un dato falso da razones válidas para desacreditar a
+  Nudo (marca de expertos que vende muebles).
+- Estructura: afirmación que divide en el cuadro 0 (titular grande) → "Sí, [lo repito]" → la razón
+  técnica en 2–3 frases con el objeto en 3D → matiz corto que deja a Nudo bien ("es hermosa, pero…") →
+  "¿Estás de acuerdo o no? Te leo en los comentarios" con SÍ / NO grandes en pantalla.
+- Temas candidatos: maciza vs. contrachapado/hidrófugo en cocinas; MDF no es "madera mala"; cocinas
+  abiertas; repisas flotantes; el blanco total en cocinas; laca vs. aceite.
+- Nada contra personas, marcas o competidores con nombre; nada que ponga en riesgo la seguridad.
+
 ## Videos hechos
 - `remotion-test/src/madera-verde/` — "¿Qué pasa si haces un mueble con madera verde?" (v3, 26,6 s).
 - `remotion-test/src/nudo/puerta-torcida/` — "¿La puerta de tu cocina quedó torcida?" (31 s, 3D: cocina
