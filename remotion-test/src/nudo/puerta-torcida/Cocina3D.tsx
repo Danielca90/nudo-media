@@ -134,7 +134,7 @@ export const Tornillo: React.FC<{pos: V3; giro?: number; mats: ReturnType<typeof
   </group>
 );
 
-export type GirosTornillos = {lado: number; prof: number; base: number};
+export type GirosTornillos = {ladoSup: number; ladoInf: number; base: number};
 
 /** Una bisagra de cazoleta: cazoleta en la puerta, base en el costado, brazo entre ambas y 4 tornillos. */
 const Bisagra: React.FC<{yh: number; e: EstadoPuerta; giros: GirosTornillos; mats: ReturnType<typeof useMateriales>}> = ({yh, e, giros, mats}) => {
@@ -154,9 +154,9 @@ const Bisagra: React.FC<{yh: number; e: EstadoPuerta; giros: GirosTornillos; mat
       <Caja tam={[0.006, 0.05, 0.036]} pos={[PLACA.x, yh, PLACA.z]} mat={mats.cazoleta} radio={0.0025} />
       {/* brazo */}
       <Brazo a={cazo} b={placa} ancho={0.012} alto={0.016} mat={mats.acero} />
-      {/* tornillos: 1 lateral (adelante), 2 profundidad (atrás), 3 altura (base) */}
-      <Tornillo pos={[t1[0] - 0.007, t1[1], t1[2]]} giro={giros.lado} mats={mats} />
-      <Tornillo pos={[t2[0] - 0.007, t2[1], t2[2]]} giro={giros.prof} mats={mats} />
+      {/* tornillo de ajuste lateral (adelante), tornillo de fijación del brazo (atrás) y tornillos de la base */}
+      <Tornillo pos={[t1[0] - 0.007, t1[1], t1[2]]} giro={yh === Y_BISAGRAS[0] ? giros.ladoSup : giros.ladoInf} mats={mats} />
+      <Tornillo pos={[t2[0] - 0.007, t2[1], t2[2]]} giro={0} mats={mats} />
       <Tornillo pos={[PLACA.x - 0.0035, yh + 0.017, PLACA.z]} giro={giros.base} mats={mats} r={0.0036} />
       <Tornillo pos={[PLACA.x - 0.0035, yh - 0.017, PLACA.z]} giro={giros.base} mats={mats} r={0.0036} />
     </group>

@@ -76,7 +76,7 @@ Objetivo: muchos comentarios → Instagram empuja el video. Reglas:
 ## Videos hechos
 - `remotion-test/src/madera-verde/` — "¿Qué pasa si haces un mueble con madera verde?" (v3, 26,6 s).
 - `remotion-test/src/nudo/puerta-torcida/` — "¿La puerta de tu cocina quedó torcida?" (31 s, 3D: cocina
-  completa, bisagra de cazoleta con 3 tornillos, destornillador; titular grande Anton en el cuadro 0;
+  completa, bisagra de cazoleta con su tornillo de ajuste (arriba y abajo) y los de atrás, destornillador; titular grande Anton en el cuadro 0;
   cierre con pregunta para comentar "¿cocina o clóset?"). Fuentes locales en `src/nudo/fuentes.ts`.
 - `remotion-test/src/nudo/polemica-maciza/` — polémica "La madera maciza NO es la mejor para tu cocina" (31 s, 3D:
   puerta de listones que se hincha/encoge/tuerce, olla con vapor, contrachapado e hidrófugo; cierre SÍ / NO).
