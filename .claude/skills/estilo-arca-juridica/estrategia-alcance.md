@@ -38,24 +38,28 @@ Metas a 6 semanas: no seguidores > 50 % de las vistas de reels; al menos 1 reel 
 seguidores +5 % al mes. Falta por reel (pestaña Contenido): retención a 3 s, tiempo medio,
 guardados, envíos y % no seguidores.
 
-## 0b. Primer reel animado publicado (6/11/2026) vs. Nudo
-| | Arca (reel animado, publicado 5/11) | Nudo (mejores reels) |
+## 0b. Primer reel animado publicado (reel 01, "Despedir sin demanda") vs. Nudo
+| | Arca · reel 01 (publicado 5/11) | Nudo (mejores reels) |
 |---|---|---|
 | Vistas / personas | 170 / 47 (por encima de su reel típico en las primeras 12 h) | 2.645 y 2.215 ("¿Tu chazo gira y no agarra?", células de la madera) |
 | Tiempo medio | **2 s** | — (pedir el dato) |
 | Guardados / envíos / seguidores | 0 / 1 / 0 | Alcance alto, pero pocos comentarios y seguidores |
 
-Lectura: Instagram sí lo repartió (la curva supera al reel típico), pero la gente se fue en el
-primer cuadro. El problema es el **primer cuadro y la primera frase**, no la distribución.
-Comparado con los reels de Nudo que funcionan:
-- **Nudo abre con el problema del espectador, en segunda persona y en pantalla grande:**
-  "¿TU CHAZO GIRA Y NO AGARRA?", con el objeto real moviéndose desde el cuadro 0. Arca abrió con
-  una institución ("La Corte Suprema acaba de…"), una tarjeta de fuente y un título serif pequeño
-  dentro de una caja: se lee como noticiero o como anuncio, no como "esto me pasa a mí".
-- **Nudo muestra la cosa; Arca mostró papeles.** En temas legales la "cosa" es una persona en una
-  situación con consecuencia: el jefe entregando la carta, el trabajador que vuelve con muletas,
-  la multa, el monto. Documentos y tarjetas van después, como explicación.
-- **Nudo no pone marca al inicio.** Arca tenía título de marca, franja y logo desde el segundo 0.
+Lectura: Instagram sí lo repartió, pero la gente se fue en el primer cuadro. El gancho del reel 01
+tenía la idea correcta (el chat "Desde mañana no vuelvas. Estás despedido." + la caja de regalo
+DEMANDA), pero **no se entendía en 1 segundo**:
+- En el cuadro 0 el celular venía entrando desde abajo y el mensaje era pequeño dentro de una
+  bodega llena de detalles: había que leer para entender.
+- El golpe ("DEMANDA") llegaba en el segundo 1,4–2,2, justo cuando la gente ya se iba.
+- La frase "Si despides así…" depende de haber leído el chat; no le habla directo al gerente.
+- El texto grande de la pantalla era el título serif pequeño "Despedir sin demanda: revisa 3 cosas":
+  promesa de lista, poca tensión, y con aspecto de anuncio de marca (caja, franja, logo desde el 0).
+Los reels que funcionan en Nudo, en cambio, ponen el problema del espectador en letras grandes y el
+objeto real moviéndose desde el cuadro 0, sin marca al inicio.
+
+Cómo debió abrir el reel 01: cuadro 0 con el celular ya en pantalla y el mensaje grande y legible,
+texto grande arriba "¿DESPEDISTE A ALGUIEN POR MENSAJE?", y el sello o la etiqueta DEMANDA antes del
+segundo 1. Voz: "¿Despediste a alguien con un mensaje? Le acabas de regalar una demanda."
 
 ### Reglas nuevas para el gancho de Arca (obligatorias)
 1. **Cuadro 0 con la situación ya en pantalla**, nada entrando desde afuera: persona + conflicto

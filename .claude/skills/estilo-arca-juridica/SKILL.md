@@ -213,6 +213,6 @@ Estructura de arriba abajo:
   usuario manda el link apenas sale la noticia → skill `noticias-laborales`.
 - 2026-11-05: el gancho del reel 03 (3D abstracto) rompió la regla de los primeros 3 s. Efectos y
   herramientas nuevas solo con propósito narrativo y sin romper el estilo 2D que ya funciona.
-- 2026-11-06: el primer reel animado tuvo 2 s de tiempo medio. Gancho nuevo obligatorio: situación
+- 2026-11-06: el primer reel animado (reel 01, despidos) tuvo 2 s de tiempo medio. Gancho nuevo obligatorio: situación
   humana en el cuadro 0, texto grande en segunda persona, fuente y marca después del segundo 3,
   remate de venta ≤ 10 s (ver estrategia-alcance.md 0b).
