@@ -6,6 +6,7 @@ import {esquemaVideo} from './madera-verde/fondo';
 import {Reel02, DURACION_SEG as DUR_ARCA02} from './arca/reel02/Reel02';
 import {Reel01, DURACION_SEG as DUR_ARCA01} from './arca/reel01/Reel01';
 import {Reel03, DURACION_SEG as DUR_ARCA03} from './arca/reel03/Reel03';
+import {Reel04, DUR_ARCA04} from './arca/reel04/Reel04';
 import {NoticiaSL1015, DURACION_SEG as DUR_SL1015} from './arca/noticia-2026-11-05-sl1015/NoticiaSL1015';
 
 export const RemotionRoot: React.FC = () => (
@@ -40,6 +41,14 @@ export const RemotionRoot: React.FC = () => (
     id="ArcaReel03"
     component={Reel03}
     durationInFrames={Math.round(DUR_ARCA03 * 30)}
+    fps={30}
+    width={1080}
+    height={1920}
+  />
+  <Composition
+    id="ArcaReel04"
+    component={Reel04}
+    durationInFrames={Math.round(DUR_ARCA04 * 30)}
     fps={30}
     width={1080}
     height={1920}

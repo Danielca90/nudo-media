@@ -131,6 +131,23 @@ gráficos llamativos, y **100 % automáticos**: la abogada no graba nada por aho
 - Logo: recortado del post de referencia (`public/arca/logo-*.png`, `emblema-*.png`). Cambiarlo por
   el archivo original en cuanto el usuario lo envíe.
 
+## Formato 0b – Video documental automático (desde 2026-11-06, reel 04)
+Pedido del usuario: menos animado, nada de ilustración plana "tipo Freepik vectorial" (se ve poco
+profesional para una firma de abogados). Estilo de reportaje / documental, con gancho fuerte.
+- **Mundo visual:** escritorio de madera oscura de noche, luz cálida de lámpara, papel con textura y
+  sombra real, profundidad de campo (desenfoque al cambiar de plano), grano de película y viñeta.
+- **Objetos reales del caso:** la carta (nombre tapado con barra negra), el expediente con foto y datos
+  reservados, la página de la norma con resaltador dorado, la cuenta en hoja contable. Nunca avatares
+  ni personajes ilustrados; la persona aparece como expediente reservado.
+- **Cámara:** acercamientos y paneos lentos (Ken Burns), un plano por idea, cambio de foco entre planos.
+- **Rótulo de fuente** tipo noticiero (línea dorada + serif) después del segundo 3.
+- **Gancho:** igual que las reglas 0b (cuadro 0 con la carta y el monto en grande, sin marca 3 s).
+- **Remate:** fondo oscuro, emblema, "No tienes que hacerlo solo." en serif itálica dorada, 3 servicios
+  con check dorado al decir cada verbo y botón ESCRÍBENOS. Luego el `Cierre` de siempre.
+- Código: `remotion-test/src/arca/documental.tsx` (`Mesa`, `Pelicula`, `Papel`, `Plano`, `Escribe`,
+  `Resalta`, `Rotulo`, `Firma`, `cop`) y `src/arca/reel04/` como ejemplo. Render ≈ 1 s por cuadro
+  (los filtros de grano y desenfoque son costosos).
+
 ## Formato 1 – Reel con la abogada a cámara (videos de referencia F y H)
 - Grabación real, vertical, plano medio-corto; la abogada habla directo a cámara con
   micrófono de mano. Fondo: su oficina con el **letrero de madera de Arca Jurídica**
@@ -221,3 +238,5 @@ Estructura de arriba abajo:
   remate de venta ≤ 10 s (ver estrategia-alcance.md 0b).
 - 2026-11-06: la skill se renombró a `arca-estilo` y los análisis de desempeño se centralizan en
   `desempeno.md` con las capturas en `insights/`.
+- 2026-11-06: no repetir temas ya publicados (no se pueden subir de nuevo). Pide un estilo más profesional
+  que el 2D vectorial: documental (Formato 0b). Primer reel: 04, cuánto cuesta despedir sin justa causa.

@@ -1,0 +1,467 @@
+[
+{
+"text": "Este",
+"start": 0.0,
+"end": 0.22
+},
+{
+"text": "despido",
+"start": 0.22,
+"end": 0.72
+},
+{
+"text": "te",
+"start": 0.72,
+"end": 0.9
+},
+{
+"text": "va",
+"start": 0.9,
+"end": 1.02
+},
+{
+"text": "a",
+"start": 1.02,
+"end": 1.1
+},
+{
+"text": "costar",
+"start": 1.1,
+"end": 1.42
+},
+{
+"text": "7",
+"start": 1.42,
+"end": 1.78
+},
+{
+"text": "millones",
+"start": 1.78,
+"end": 2.22
+},
+{
+"text": "de",
+"start": 2.22,
+"end": 2.46
+},
+{
+"text": "pesos.",
+"start": 2.46,
+"end": 2.76
+},
+{
+"text": "Tu",
+"start": 3.16,
+"end": 3.32
+},
+{
+"text": "trabajadora",
+"start": 3.32,
+"end": 3.84
+},
+{
+"text": "gana",
+"start": 3.84,
+"end": 4.1
+},
+{
+"text": "3",
+"start": 4.1,
+"end": 4.46
+},
+{
+"text": "millones,",
+"start": 4.46,
+"end": 4.84
+},
+{
+"text": "lleva",
+"start": 5.22,
+"end": 5.44
+},
+{
+"text": "3",
+"start": 5.44,
+"end": 5.76
+},
+{
+"text": "años",
+"start": 5.76,
+"end": 6.04
+},
+{
+"text": "con",
+"start": 6.04,
+"end": 6.24
+},
+{
+"text": "contrato",
+"start": 6.24,
+"end": 6.6
+},
+{
+"text": "indefinido",
+"start": 6.6,
+"end": 7.2
+},
+{
+"text": "y",
+"start": 7.2,
+"end": 7.48
+},
+{
+"text": "la",
+"start": 7.48,
+"end": 7.6
+},
+{
+"text": "despides",
+"start": 7.6,
+"end": 8.02
+},
+{
+"text": "sin",
+"start": 8.02,
+"end": 8.26
+},
+{
+"text": "justa",
+"start": 8.26,
+"end": 8.64
+},
+{
+"text": "causa.",
+"start": 8.64,
+"end": 8.92
+},
+{
+"text": "La",
+"start": 9.36,
+"end": 9.5
+},
+{
+"text": "ley",
+"start": 9.5,
+"end": 9.68
+},
+{
+"text": "te",
+"start": 9.68,
+"end": 9.86
+},
+{
+"text": "obliga",
+"start": 9.86,
+"end": 10.16
+},
+{
+"text": "a",
+"start": 10.16,
+"end": 10.24
+},
+{
+"text": "indemnizarla.",
+"start": 10.24,
+"end": 10.9
+},
+{
+"text": "30",
+"start": 11.24,
+"end": 11.4
+},
+{
+"text": "días",
+"start": 11.4,
+"end": 11.74
+},
+{
+"text": "de",
+"start": 11.74,
+"end": 11.9
+},
+{
+"text": "salario",
+"start": 11.9,
+"end": 12.28
+},
+{
+"text": "por",
+"start": 12.28,
+"end": 12.48
+},
+{
+"text": "el",
+"start": 12.48,
+"end": 12.6
+},
+{
+"text": "primer",
+"start": 12.6,
+"end": 12.82
+},
+{
+"text": "año",
+"start": 12.82,
+"end": 13.16
+},
+{
+"text": "y",
+"start": 13.16,
+"end": 13.44
+},
+{
+"text": "20",
+"start": 13.44,
+"end": 13.72
+},
+{
+"text": "días",
+"start": 13.72,
+"end": 14.06
+},
+{
+"text": "más",
+"start": 14.06,
+"end": 14.28
+},
+{
+"text": "por",
+"start": 14.28,
+"end": 14.54
+},
+{
+"text": "cada",
+"start": 14.54,
+"end": 14.86
+},
+{
+"text": "año",
+"start": 14.86,
+"end": 15.12
+},
+{
+"text": "adicional.",
+"start": 15.12,
+"end": 15.48
+},
+{
+"text": "3",
+"start": 15.98,
+"end": 16.16
+},
+{
+"text": "años,",
+"start": 16.16,
+"end": 16.44
+},
+{
+"text": "70",
+"start": 16.78,
+"end": 17.1
+},
+{
+"text": "días,",
+"start": 17.1,
+"end": 17.58
+},
+{
+"text": "7",
+"start": 17.94,
+"end": 18.26
+},
+{
+"text": "millones.",
+"start": 18.26,
+"end": 18.66
+},
+{
+"text": "Y",
+"start": 19.1,
+"end": 19.28
+},
+{
+"text": "eso",
+"start": 19.28,
+"end": 19.52
+},
+{
+"text": "es",
+"start": 19.52,
+"end": 19.72
+},
+{
+"text": "aparte",
+"start": 19.72,
+"end": 20.18
+},
+{
+"text": "de",
+"start": 20.18,
+"end": 20.26
+},
+{
+"text": "la",
+"start": 20.26,
+"end": 20.38
+},
+{
+"text": "liquidación.",
+"start": 20.38,
+"end": 20.92
+},
+{
+"text": "Antes",
+"start": 21.32,
+"end": 21.6
+},
+{
+"text": "de",
+"start": 21.6,
+"end": 21.74
+},
+{
+"text": "despedir,",
+"start": 21.74,
+"end": 22.3
+},
+{
+"text": "haz",
+"start": 22.5,
+"end": 22.6
+},
+{
+"text": "la",
+"start": 22.6,
+"end": 22.72
+},
+{
+"text": "cuenta.",
+"start": 22.72,
+"end": 23.0
+},
+{
+"text": "Y",
+"start": 23.32,
+"end": 23.46
+},
+{
+"text": "no",
+"start": 23.46,
+"end": 23.54
+},
+{
+"text": "tienes",
+"start": 23.54,
+"end": 23.78
+},
+{
+"text": "que",
+"start": 23.78,
+"end": 23.9
+},
+{
+"text": "hacerlo",
+"start": 23.9,
+"end": 24.18
+},
+{
+"text": "solo.",
+"start": 24.18,
+"end": 24.5
+},
+{
+"text": "Revisamos",
+"start": 24.84,
+"end": 25.26
+},
+{
+"text": "cada",
+"start": 25.26,
+"end": 25.66
+},
+{
+"text": "caso,",
+"start": 25.66,
+"end": 26.06
+},
+{
+"text": "redactamos",
+"start": 26.32,
+"end": 26.78
+},
+{
+"text": "los",
+"start": 26.78,
+"end": 26.94
+},
+{
+"text": "documentos",
+"start": 26.94,
+"end": 27.58
+},
+{
+"text": "y",
+"start": 27.58,
+"end": 27.78
+},
+{
+"text": "te",
+"start": 27.78,
+"end": 27.92
+},
+{
+"text": "defendemos",
+"start": 27.92,
+"end": 28.52
+},
+{
+"text": "si",
+"start": 28.52,
+"end": 28.7
+},
+{
+"text": "llega",
+"start": 28.7,
+"end": 28.88
+},
+{
+"text": "una",
+"start": 28.88,
+"end": 29.06
+},
+{
+"text": "demanda.",
+"start": 29.06,
+"end": 29.54
+},
+{
+"text": "Escríbenos",
+"start": 29.54,
+"end": 30.42
+},
+{
+"text": "y",
+"start": 30.42,
+"end": 30.56
+},
+{
+"text": "blindamos",
+"start": 30.56,
+"end": 31.08
+},
+{
+"text": "legalmente",
+"start": 31.08,
+"end": 31.82
+},
+{
+"text": "tu",
+"start": 31.82,
+"end": 31.96
+},
+{
+"text": "empresa.",
+"start": 31.96,
+"end": 32.22
+}
+]
