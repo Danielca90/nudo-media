@@ -29,7 +29,7 @@ export const Pelicula: React.FC<{grano?: number}> = ({grano = 0.09}) => {
   const frame = useCurrentFrame();
   return (
     <>
-      <AbsoluteFill style={{background: 'radial-gradient(ellipse 80% 70% at 50% 45%, rgba(0,0,0,0) 55%, rgba(0,0,0,.62) 100%)', pointerEvents: 'none'}} />
+      <AbsoluteFill style={{background: 'radial-gradient(ellipse 80% 70% at 50% 45%, rgba(0,0,0,0) 60%, rgba(0,0,0,.38) 100%)', pointerEvents: 'none'}} />
       <Img src={staticFile(`arca/doc/grano${frame % 8}.png`)} style={{position: 'absolute', width: W, height: H, opacity: grano * 1.4, pointerEvents: 'none'}} />
     </>
   );

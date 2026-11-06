@@ -1,3 +1,33 @@
+# Reel 04 v2 – "La cuenta": cuánta plata necesitas el día que despides sin justa causa
+
+**v2 (2026-11-06), reemplaza la versión documental de abajo.** Estructura de `arca-estilo/estrategia-alcance.md` 0c
+(bucle abierto, cuenta renglón por renglón, cifras exactas, giro honesto, palabra clave) + tipografía cinética
+(ref. I) + historia con números (ref. J). Voz "Andrea Arca", 44,8 s; video 47,4 s. Render ≈ 4 min con `npm run render:arca04`.
+
+| s | Fondo | Voz | Pantalla |
+|---|---|---|---|
+| 0–2 | noche | Tu trabajadora gana tres millones | TU TRABAJADORA GANA **$3.000.000** (visible desde el cuadro 0) |
+| 2–3,7 | crema | y lleva tres años contigo. | **3 AÑOS** |
+| 3,7–5,9 | mesa + carta | Si la despides mañana sin justa causa, | **SIN JUSTA CAUSA** en rojo óxido; carta de terminación |
+| 5,9–8 | crema | ¿cuánta plata necesitas ese día? | **ESE DÍA?** |
+| 8–25,4 | mesa + tirilla | Hagamos la cuenta… Total: trece millones ciento sesenta mil pesos. | Tirilla: indemnización $7.000.000 · cesantías e intereses $3.305.954 · prima $1.353.790 · vacaciones $1.500.000 · **ESE DÍA $13.159.744** (contador); supuestos en letra pequeña; subtítulo fijo |
+| 25,4–29 | crema / mesa | Más de cuatro meses de su salario, por una carta de una página. | **4 MESES** · **UNA PÁGINA** + carta |
+| 29–35 | noche / crema | Ojo: la liquidación se la debías igual. Lo que te cuesta la decisión son los siete millones. | **OJO** · **IGUAL** · **$7.000.000** en caja dorada |
+| 35–42,2 | noche | Esta cuenta la hacemos antes de cada despido: revisamos…, redactamos…, te defendemos… | Emblema; 3 servicios con check |
+| 42,2–44,8 | crema | Escríbenos CUENTA y la hacemos con tus números. | **CUENTA** en caja dorada |
+| 45,1–47,4 | cierre | — | Logo, lema, @ |
+
+Cálculo (supuestos en pantalla): ingreso 1/12/2023, despido 30/11/2026, salario $3.000.000 + auxilio $249.095 (base
+$3.249.095 para cesantías y prima). Indemnización 70 días = $7.000.000; cesantías 330 días = $2.978.337; intereses
+12 % proporcional = $327.617; prima 150 días = $1.353.790; vacaciones 15 días = $1.500.000. Total $13.159.744.
+Validar con la abogada antes de publicar. La palabra CUENTA exige que alguien de Arca responda los mensajes.
+
+Pie de foto: "¿Cuánta plata necesitas el día que despides a alguien sin justa causa? Hicimos la cuenta 👇
+Cálculo orientativo (art. 64 CST, salario menor a 10 mínimos). Escríbenos CUENTA y la hacemos con los números de tu
+empresa. #DespidoSinJustaCausa #Liquidación #DerechoLaboral #RecursosHumanos #Colombia"
+
+---
+
 # Reel 04 – Cuánto cuesta despedir sin justa causa
 
 Calendario: martes 17 nov 2026, 6:00 p. m. Voz "Andrea Arca" (`XrTN5zwTQo5HkNatlJ58`, eleven_v4), toma B de 32,6 s. Video 35 s.
