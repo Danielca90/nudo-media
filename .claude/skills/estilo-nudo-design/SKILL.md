@@ -30,6 +30,9 @@ Complementa la skill `videos-explicativos`. Lo que se define aquí manda sobre l
 - Gancho: pregunta concreta ("¿Qué pasa si haces un mueble con madera verde?").
 - Cierre: consejo práctico + **@somos_nudodesign** pequeño con borde negro, abajo al centro.
 
+## Estadísticas
+- Instagram (Insights, 30 días): ver `estadisticas-instagram.md` en esta carpeta. Consultarlo antes de elegir tema, gancho u hora de publicación.
+
 ## Videos hechos
 - `remotion-test/src/madera-verde/` — "¿Qué pasa si haces un mueble con madera verde?" (v3, 26,6 s).
 
