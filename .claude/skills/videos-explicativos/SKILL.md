@@ -80,7 +80,7 @@ Reglas:
 
 ## Flujo de trabajo
 
-1. **Marca y tema.** Cargar de estilo de la marca (`arca-estilo`, `estilo-nudo-design`…). Confirmar tema, duración (≈15–45 s) y formato.
+1. **Marca y tema.** Cargar la skill de estilo de la marca (`arca-estilo`, `estilo-nudo-design`…). Confirmar tema, duración (≈15–45 s) y formato.
 2. **Guion.** Escribir el guion para voz (frases cortas, números en palabras).
    Si el usuario pide no revisarlo, seguir directo.
 3. **Técnica + plan de acción visual (obligatorio antes de programar).** Elegir 2D, 3D o mixto. Tabla
