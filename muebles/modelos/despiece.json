@@ -1,0 +1,461 @@
+{
+ "cocina": {
+  "titulo": "Alacena de cocina",
+  "info": {
+   "compartimentos_mm": 102,
+   "ancho_puerta_mm": 236
+  },
+  "despiece": [
+   {
+    "pieza": "Puerta",
+    "cant": 2,
+    "largo": 494,
+    "ancho": 236,
+    "espesor": 18,
+    "cat": "frente"
+   },
+   {
+    "pieza": "Lateral",
+    "cant": 2,
+    "largo": 500,
+    "ancho": 182,
+    "espesor": 18,
+    "cat": "estructura"
+   },
+   {
+    "pieza": "Base",
+    "cant": 1,
+    "largo": 444,
+    "ancho": 182,
+    "espesor": 18,
+    "cat": "estructura"
+   },
+   {
+    "pieza": "Techo",
+    "cant": 1,
+    "largo": 444,
+    "ancho": 182,
+    "espesor": 18,
+    "cat": "estructura"
+   },
+   {
+    "pieza": "Entrepaño",
+    "cant": 3,
+    "largo": 444,
+    "ancho": 166,
+    "espesor": 18,
+    "cat": "entrepano"
+   },
+   {
+    "pieza": "Trasera",
+    "cant": 1,
+    "largo": 464,
+    "ancho": 444,
+    "espesor": 6,
+    "cat": "trasera"
+   }
+  ],
+  "cotas": [
+   {
+    "p0": [
+     5.0,
+     240,
+     1940
+    ],
+    "p1": [
+     485.0,
+     240,
+     1940
+    ],
+    "texto": "48 cm"
+   },
+   {
+    "p0": [
+     525.0,
+     240,
+     1400
+    ],
+    "p1": [
+     525.0,
+     240,
+     1900
+    ],
+    "texto": "50 cm"
+   },
+   {
+    "p0": [
+     525.0,
+     0,
+     1360
+    ],
+    "p1": [
+     525.0,
+     200,
+     1360
+    ],
+    "texto": "20 cm"
+   },
+   {
+    "p0": [
+     -60,
+     200,
+     0
+    ],
+    "p1": [
+     -60,
+     200,
+     1400
+    ],
+    "texto": "montaje 140 cm"
+   }
+  ],
+  "params": {
+   "titulo": "Alacena de cocina",
+   "hueco": [
+    490,
+    200,
+    2000
+   ],
+   "ancho": 480,
+   "fondo_total": 200,
+   "alto": 500,
+   "altura_montaje": 1400,
+   "espesor": 18,
+   "espesor_fondo": 6,
+   "entrepanos": 3,
+   "puertas": 2,
+   "luz_puertas": 3
+  }
+ },
+ "comoda": {
+  "titulo": "Cómoda del cuarto",
+  "info": {
+   "alto_frente_mm": 220,
+   "prof_caja_cajon_mm": 250,
+   "paso_libre_a_cama_mm": 180
+  },
+  "despiece": [
+   {
+    "pieza": "Lateral",
+    "cant": 2,
+    "largo": 1200,
+    "ancho": 302,
+    "espesor": 18,
+    "cat": "estructura"
+   },
+   {
+    "pieza": "Base",
+    "cant": 1,
+    "largo": 964,
+    "ancho": 302,
+    "espesor": 18,
+    "cat": "estructura"
+   },
+   {
+    "pieza": "Techo",
+    "cant": 1,
+    "largo": 964,
+    "ancho": 302,
+    "espesor": 18,
+    "cat": "estructura"
+   },
+   {
+    "pieza": "Frente cajón",
+    "cant": 5,
+    "largo": 994,
+    "ancho": 220,
+    "espesor": 18,
+    "cat": "frente"
+   },
+   {
+    "pieza": "Zócalo",
+    "cant": 1,
+    "largo": 964,
+    "ancho": 80,
+    "espesor": 18,
+    "cat": "estructura"
+   },
+   {
+    "pieza": "Cajón trasera",
+    "cant": 5,
+    "largo": 908,
+    "ancho": 170,
+    "espesor": 15,
+    "cat": "cajon"
+   },
+   {
+    "pieza": "Cajón contrafrente",
+    "cant": 5,
+    "largo": 908,
+    "ancho": 170,
+    "espesor": 15,
+    "cat": "cajon"
+   },
+   {
+    "pieza": "Cajón lateral",
+    "cant": 10,
+    "largo": 250,
+    "ancho": 170,
+    "espesor": 15,
+    "cat": "cajon"
+   },
+   {
+    "pieza": "Trasera",
+    "cant": 1,
+    "largo": 1084,
+    "ancho": 964,
+    "espesor": 6,
+    "cat": "trasera"
+   },
+   {
+    "pieza": "Cajón fondo",
+    "cant": 5,
+    "largo": 908,
+    "ancho": 220,
+    "espesor": 6,
+    "cat": "trasera"
+   }
+  ],
+  "cotas": [
+   {
+    "p0": [
+     100.0,
+     360,
+     1240
+    ],
+    "p1": [
+     1100.0,
+     360,
+     1240
+    ],
+    "texto": "100 cm"
+   },
+   {
+    "p0": [
+     1140.0,
+     360,
+     0
+    ],
+    "p1": [
+     1140.0,
+     360,
+     1200
+    ],
+    "texto": "120 cm"
+   },
+   {
+    "p0": [
+     1140.0,
+     0,
+     -40
+    ],
+    "p1": [
+     1140.0,
+     320,
+     -40
+    ],
+    "texto": "32 cm"
+   }
+  ],
+  "params": {
+   "titulo": "Cómoda del cuarto",
+   "hueco": [
+    1200,
+    500,
+    1400
+   ],
+   "ancho": 1000,
+   "fondo_total": 320,
+   "alto": 1200,
+   "espesor": 18,
+   "espesor_fondo": 6,
+   "zocalo": 80,
+   "cajones": 5,
+   "luz_frentes": 3
+  }
+ },
+ "closet": {
+  "titulo": "Clóset del cuarto principal",
+  "info": {
+   "colgado_libre_mm": 996,
+   "barra_desde_piso_mm": 1750,
+   "paso_entrepanos_b_mm": 279,
+   "prof_caja_cajon_mm": 350,
+   "margen_lateral_mm": 30
+  },
+  "despiece": [
+   {
+    "pieza": "Lateral",
+    "cant": 4,
+    "largo": 1800,
+    "ancho": 400,
+    "espesor": 18,
+    "cat": "estructura"
+   },
+   {
+    "pieza": "Base",
+    "cant": 2,
+    "largo": 684,
+    "ancho": 400,
+    "espesor": 18,
+    "cat": "estructura"
+   },
+   {
+    "pieza": "Techo",
+    "cant": 2,
+    "largo": 684,
+    "ancho": 400,
+    "espesor": 18,
+    "cat": "estructura"
+   },
+   {
+    "pieza": "Entrepaño sobre cajón",
+    "cant": 1,
+    "largo": 684,
+    "ancho": 394,
+    "espesor": 18,
+    "cat": "entrepano"
+   },
+   {
+    "pieza": "Entrepaño ropa",
+    "cant": 1,
+    "largo": 684,
+    "ancho": 394,
+    "espesor": 18,
+    "cat": "entrepano"
+   },
+   {
+    "pieza": "Maletero",
+    "cant": 1,
+    "largo": 684,
+    "ancho": 394,
+    "espesor": 18,
+    "cat": "entrepano"
+   },
+   {
+    "pieza": "Entrepaño",
+    "cant": 5,
+    "largo": 684,
+    "ancho": 384,
+    "espesor": 18,
+    "cat": "entrepano"
+   },
+   {
+    "pieza": "Frente cajón",
+    "cant": 1,
+    "largo": 678,
+    "ancho": 194,
+    "espesor": 18,
+    "cat": "frente"
+   },
+   {
+    "pieza": "Cajón trasera",
+    "cant": 1,
+    "largo": 628,
+    "ancho": 150,
+    "espesor": 15,
+    "cat": "cajon"
+   },
+   {
+    "pieza": "Cajón lateral",
+    "cant": 2,
+    "largo": 350,
+    "ancho": 150,
+    "espesor": 15,
+    "cat": "cajon"
+   },
+   {
+    "pieza": "Trasera",
+    "cant": 2,
+    "largo": 1764,
+    "ancho": 684,
+    "espesor": 6,
+    "cat": "trasera"
+   },
+   {
+    "pieza": "Cajón fondo",
+    "cant": 1,
+    "largo": 628,
+    "ancho": 335,
+    "espesor": 6,
+    "cat": "trasera"
+   }
+  ],
+  "cotas": [
+   {
+    "p0": [
+     30.0,
+     460,
+     2040
+    ],
+    "p1": [
+     1470.0,
+     460,
+     2040
+    ],
+    "texto": "144 cm"
+   },
+   {
+    "p0": [
+     1510.0,
+     460,
+     200
+    ],
+    "p1": [
+     1510.0,
+     460,
+     2000
+    ],
+    "texto": "180 cm"
+   },
+   {
+    "p0": [
+     1510.0,
+     460,
+     0
+    ],
+    "p1": [
+     1510.0,
+     460,
+     200
+    ],
+    "texto": "20 cm"
+   },
+   {
+    "p0": [
+     1510.0,
+     0,
+     160
+    ],
+    "p1": [
+     1510.0,
+     400,
+     160
+    ],
+    "texto": "40 cm"
+   }
+  ],
+  "params": {
+   "titulo": "Clóset del cuarto principal",
+   "hueco": [
+    1500,
+    400,
+    2000
+   ],
+   "fondo_total": 400,
+   "altura_piso": 200,
+   "alto_total": 2000,
+   "ancho_modulo": 720,
+   "separacion_modulos": 0,
+   "espesor": 18,
+   "espesor_fondo": 6,
+   "alto_cajon": 200,
+   "alto_espacio_ropa": 300,
+   "barra_desde_piso": 1750,
+   "maletero_sobre_barra": 70,
+   "diametro_barra": 25,
+   "entrepanos_b": 5,
+   "luz_frentes": 3
+  }
+ }
+}
