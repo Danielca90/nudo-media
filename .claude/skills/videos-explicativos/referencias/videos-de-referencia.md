@@ -31,3 +31,14 @@ Reglas generales que salen de la ref. I:
 - Contraste tipográfico (pequeña/fina vs. enorme/gruesa) en vez de efectos.
 - Objetos de foto recortada solo si son metáfora clara de la palabra que se está diciendo.
 - Rinde rápido: texto y planos, sin filtros pesados.
+
+## Historia con números en collage (2026-11-06)
+| Ref | Pieza | Qué se tomó |
+|---|---|---|
+| J | "Warren Buffett tiene $381 mil millones en efectivo" (31,7 s, finanzas, voz en off) | **Arco narrativo:** persona + número enorme (gancho) → **comparación que lo vuelve tangible** ("más que toda la economía de Grecia") → **giro "Pero…"** ("no lo está gastando") → evidencia con cifras (3 años vendiendo, el S&P subió 80 %) → contraste ("mientras todos compran, él espera") → **"¿Por qué?"** → respuesta con historia (1999, 2007: esperó y compró barato) → **cierre con bucle abierto** ("y ahora el mercado está en 230 %…"). **Visual:** collage de foto real recortada sobre superficies con textura (mesa con papeles, billetes, tablero, paño verde, bandera), cada frase en un escenario distinto, corte cada ≈1 s; **el número es el protagonista** (contador que rueda, dígitos que caen, cifra que se arma); manos reales que mueven billetes (stop motion); la palabra clave cambia de tipografía según la escena; subtítulo pequeño fijo abajo al centro y la palabra clave grande aparte. Hoja: `arca-estilo/referencias/2026-11-06-historia-con-numeros-hoja.jpg` |
+
+Reglas generales que salen de la ref. J:
+- Todo número grande va seguido de una comparación que el público sienta en su bolsillo.
+- Estructura de pregunta: dato → "pero" → "¿por qué?" → respuesta. Cada bloque abre la pregunta del siguiente.
+- Terminar con un dato que deja la historia abierta (lleva a guardar, comentar o seguir).
+- Dos capas de texto: subtítulo pequeño constante + palabra clave grande y cambiante.

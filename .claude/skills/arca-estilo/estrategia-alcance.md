@@ -107,6 +107,11 @@ cómo se expone el contenido**: que enganche y obligue a quedarse hasta el final
    clave enorme en dorado** (o rojo óxido si es riesgo), fondos que alternan verde petróleo casi negro y crema
    para cada idea nueva, cortes cada 1–1,5 s en el gancho. Combinada con "La cuenta": la tirilla aparece
    cuando hay que sumar y la tipografía cuenta todo lo demás.
+10. **Historia con números (ref. J):** cada cifra grande va con una comparación tangible para el gerente
+   ("$13.159.744 = más de cuatro meses del salario de esa persona"); estructura dato → "pero" → "¿por qué?" →
+   respuesta; collage de documentos y objetos reales (carta, nómina, billetes, calculadora) en superficies con
+   textura, un escenario por frase; el número es el protagonista (contador que rueda); subtítulo pequeño fijo
+   abajo + palabra clave grande aparte.
 8. Formato: sirve igual para reel (la voz lee la cuenta) y para carrusel 4:5 (una diapositiva por renglón).
 
 ## 1. Diagnóstico: por qué no llega a no seguidores
