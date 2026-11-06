@@ -44,6 +44,15 @@ Complementa la skill `videos-explicativos`. Lo que se define aquí manda sobre l
      Marcar "EP. 1, EP. 2" en la portada.
 - Fijar en el perfil los 3 reels con más vistas; bio con qué hace Nudo, ciudad y WhatsApp.
 
+## Datos técnicos confirmados por el usuario (carpintero; manda sobre fuentes genéricas)
+- **Bisagras de cazoleta (cocinas y clósets):** tienen **un solo tornillo de ajuste** en el brazo, que mueve
+  la puerta **a izquierda o derecha**. Si la puerta está torcida, se ajusta el tornillo de la bisagra de
+  **arriba** y el de la de **abajo** hasta alinearla. Los tornillos de **atrás** (en la base), según la
+  bisagra, permiten **subir o bajar** la puerta. No decir que hay "tres tornillos" ni ajuste de
+  profundidad (error del primer corte del reel de la puerta torcida, 2026-11-06).
+- Regla: antes de explicar cómo funciona un herraje, una técnica o un material, confirmar el mecanismo
+  real; si hay duda entre modelos, decir "según la bisagra / según el modelo".
+
 ## Gancho que convierte (pedido del usuario, 2026-11-06)
 El gancho no solo retiene: tiene que invitar a comentar desde el principio.
 - Abrir con algo que el espectador quiera responder: pregunta directa ("¿La puerta de tu cocina quedó
@@ -76,3 +85,5 @@ Objetivo: muchos comentarios → Instagram empuja el video. Reglas:
 - 2026-11-05: subtítulos a media altura (no arriba), con borde negro y palabra clave resaltada.
 - 2026-11-05: más contexto y detalle en los modelos; acercamientos al detalle sincronizados.
 - 2026-11-05: más volumen (sombras, degradado en patas); fondo café descartado → grafito.
+- 2026-11-06: corrección técnica de las bisagras (un tornillo de ajuste lateral; arriba y abajo para
+  enderezar; los de atrás suben/bajan según la bisagra). Reel de la puerta torcida rehecho.
