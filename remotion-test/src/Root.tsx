@@ -5,6 +5,8 @@ import {MaderaVerdeFinal, DURACION_FRAMES} from './madera-verde/MaderaVerdeFinal
 import {esquemaVideo} from './madera-verde/fondo';
 import {LAMINAS} from './carrusel-incapacidades/Laminas';
 import {Carrusel, CARRUSEL_FRAMES} from './carrusel-incapacidades/Carrusel';
+import {V1Permisos} from './videos-15s/V1Permisos';
+import {V2Dominical} from './videos-15s/V2Dominical';
 import {W, H, FPS, FRAMES} from './carrusel-incapacidades/tema';
 
 export const RemotionRoot: React.FC = () => (
@@ -31,5 +33,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition key={i} id={`IncapacidadesL${i + 1}`} component={L} durationInFrames={FRAMES} fps={FPS} width={W} height={H} />
   ))}
   <Composition id="IncapacidadesCarrusel" component={Carrusel} durationInFrames={CARRUSEL_FRAMES} fps={FPS} width={W} height={H} />
+  <Composition id="ArcaPermisos" component={V1Permisos} durationInFrames={450} fps={30} width={1080} height={1920} />
+  <Composition id="ArcaDominical" component={V2Dominical} durationInFrames={450} fps={30} width={1080} height={1920} />
   </>
 );

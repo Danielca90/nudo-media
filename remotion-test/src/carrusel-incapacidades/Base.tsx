@@ -13,13 +13,13 @@ const FUENTES: [string, string, string, string][] = [
   ['Inter', 'inter-latin-600-normal.woff2', '600', 'normal'],
   ['Inter', 'inter-latin-700-normal.woff2', '700', 'normal'],
 ];
-const useFuentes = () => {
+export const useFuentes = () => {
   const [h] = useState(() => delayRender('fuentes'));
   useEffect(() => {
     Promise.all(
       FUENTES.map(([fam, file, weight, style]) => {
         const ff = new FontFace(fam, `url(${staticFile('fonts/' + file)})`, {weight, style});
-        return ff.load().then((f) => document.fonts.add(f));
+        return ff.load().then((f) => (document.fonts as unknown as {add: (f: FontFace) => void}).add(f));
       }),
     ).then(() => continueRender(h)).catch(() => continueRender(h));
   }, [h]);
@@ -73,14 +73,14 @@ export const Titular: React.FC<{lineas: (string | [string, 'oro'])[]; size?: num
   </div>
 );
 
-const Nieve: React.FC<{color: string}> = ({color}) => {
+export const Nieve: React.FC<{color: string; alto?: number}> = ({color, alto = H}) => {
   const f = useCurrentFrame();
   return (
     <AbsoluteFill>
       {Array.from({length: 46}).map((_, i) => {
         const r = (s: string) => random(`${s}${i}`);
         const size = 3 + r('s') * 6;
-        const y = ((r('y') * H + f * (1 + r('v') * 2)) % (H + 30)) - 15;
+        const y = ((r('y') * alto + f * (1 + r('v') * 2)) % (alto + 30)) - 15;
         const x = r('x') * W + Math.sin((f + r('p') * 90) / 24) * 16;
         return <div key={i} style={{position: 'absolute', left: x, top: y, width: size, height: size, borderRadius: '50%', background: color, opacity: 0.18 + r('o') * 0.35}} />;
       })}
@@ -89,7 +89,7 @@ const Nieve: React.FC<{color: string}> = ({color}) => {
 };
 
 // Guirnalda dorada discreta
-const Guirnalda: React.FC<{modo: Modo}> = ({modo}) => {
+export const Guirnalda: React.FC<{modo: Modo}> = ({modo}) => {
   const f = useCurrentFrame();
   const n = 14;
   const hilo = modo === 'claro' ? '#2B364855' : '#EDEDEB44';
