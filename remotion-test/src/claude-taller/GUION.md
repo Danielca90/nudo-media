@@ -24,3 +24,8 @@ Efectos: látigo, tecleo, alerta de error, trombón triste (Sound Effects v2).
 - Ritmo más rápido: diálogo seguido, Claude contesta ("¡Ya mismo!", "¡Perdón, perdón!", "¡Listo! ¿Así?"), cortes cada 1–2 s.
 - Látigo audible (el recorte anterior quedó mudo), percusión tensa de fondo que se corta con el aviso de límite.
 - Música real pendiente: el conector básico de ElevenLabs no genera música (hace falta el conector completo).
+
+## Versión 3 — música
+- Música con ElevenLabs Music (`eleven_music_v2_5`, conector completo): persecución cómica instrumental (variación 2 de 4),
+  cortada en seco con el aviso de límite (15,4 s). Final con la frase triste de la variación 4 en lugar del trombón.
+- Antes de usar una pista marcada "Instrumental: No", transcribirla: si la transcripción sale vacía, no tiene letra.

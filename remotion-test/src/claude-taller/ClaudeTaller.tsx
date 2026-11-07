@@ -186,18 +186,15 @@ export const ClaudeTaller: React.FC<Props> = ({conVoz}) => {
       {conVoz && LINEAS.map((l, i) => (
         <Sequence key={i} from={f(l.inicio)}><Audio src={staticFile(`claude-taller/${l.voz}`)} volume={l.volumen ?? (l.quien === 'claude' ? 1.15 : 1)} /></Sequence>
       ))}
-      {/* base de percusión (adrenalina): se corta en seco con el aviso de límite */}
+      {/* música (ElevenLabs Music): entra con el gancho y se corta en seco con el aviso de límite */}
       <Sequence durationInFrames={f(LIMITE)}>
-        <Audio src={staticFile('claude-taller/percusion1.mp3')} loop
-          volume={(fr) => interpolate(fr / 30, [0, 1, 12.6, 15.3], [0.0, 0.32, 0.38, 0.5], {extrapolateRight: 'clamp'})} />
-      </Sequence>
-      <Sequence from={f(12.65)} durationInFrames={f(LIMITE - 12.65)}>
-        <Audio src={staticFile('claude-taller/percusion2.mp3')} loop volume={0.32} />
+        <Audio src={staticFile('claude-taller/musica.mp3')}
+          volume={(fr) => interpolate(fr / 30, [0, 0.4, 12.6, 15.3], [0.0, 0.42, 0.42, 0.55], {extrapolateRight: 'clamp'})} />
       </Sequence>
       {/* tecleo: más fuerte a medida que sube el estrés */}
       <Sequence durationInFrames={f(LIMITE)}>
         <Audio src={staticFile('claude-taller/teclado.mp3')} loop
-          volume={(fr) => interpolate(fr / 30, [0, 5.9, 11.2, 12.65, 15.3], [0.22, 0.3, 0.42, 0.6, 0.7], {extrapolateRight: 'clamp'})} />
+          volume={(fr) => interpolate(fr / 30, [0, 5.9, 11.2, 12.65, 15.3], [0.16, 0.22, 0.32, 0.45, 0.55], {extrapolateRight: 'clamp'})} />
       </Sequence>
       <Sequence from={f(12.65)} durationInFrames={f(LIMITE - 12.65)}>
         <Audio src={staticFile('claude-taller/teclado.mp3')} loop volume={0.4} playbackRate={1.35} />
@@ -206,7 +203,10 @@ export const ClaudeTaller: React.FC<Props> = ({conVoz}) => {
         <Sequence key={i} from={f(t - 0.06)}><Audio src={staticFile(`claude-taller/latigo${(i % 3) + 1}.mp3`)} volume={1.0} /></Sequence>
       ))}
       <Sequence from={f(LIMITE)}><Audio src={staticFile('claude-taller/error.mp3')} volume={0.9} /></Sequence>
-      <Sequence from={f(TROMBON)}><Audio src={staticFile('claude-taller/trombon.mp3')} volume={0.8} /></Sequence>
+      {/* final triste: frase lenta con la que cierra la música */}
+      <Sequence from={f(COLAPSO + 0.2)}>
+        <Audio src={staticFile('claude-taller/musica-triste.mp3')} volume={conVoz ? 0.38 : 0.6} />
+      </Sequence>
     </AbsoluteFill>
   );
 };
