@@ -3,6 +3,8 @@ import {Composition} from 'remotion';
 import {MaderaVerde} from './MaderaVerde';
 import {MaderaVerdeFinal, DURACION_FRAMES} from './madera-verde/MaderaVerdeFinal';
 import {esquemaVideo} from './madera-verde/fondo';
+import {LAMINAS} from './carrusel-incapacidades/Laminas';
+import {W, H, FPS, FRAMES} from './carrusel-incapacidades/tema';
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -24,5 +26,8 @@ export const RemotionRoot: React.FC = () => (
     width={1080}
     height={1920}
   />
+  {LAMINAS.map((L, i) => (
+    <Composition key={i} id={`IncapacidadesL${i + 1}`} component={L} durationInFrames={FRAMES} fps={FPS} width={W} height={H} />
+  ))}
   </>
 );
