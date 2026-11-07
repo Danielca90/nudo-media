@@ -1,0 +1,36 @@
+1
+00:00:00,000 --> 00:00:01,084
+Pagar el domingo como día
+
+2
+00:00:01,094 --> 00:00:02,441
+normal es un error.
+
+3
+00:00:02,462 --> 00:00:03,956
+Desde julio de 2026
+
+4
+00:00:03,966 --> 00:00:06,041
+el recargo es del 90 %.
+
+5
+00:00:06,051 --> 00:00:07,853
+Si trabaja
+domingos habitualmente debe
+
+6
+00:00:07,863 --> 00:00:09,460
+darle descanso compensatorio.
+
+7
+00:00:09,470 --> 00:00:10,930
+Si es ocasional el trabajador
+
+8
+00:00:10,940 --> 00:00:12,913
+elige: recargo o descanso.
+
+9
+00:00:12,923 --> 00:00:14,577
+Revise su nómina con nosotros.
