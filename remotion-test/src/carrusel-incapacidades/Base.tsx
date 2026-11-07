@@ -38,20 +38,26 @@ export const Linea: React.FC<{d?: number; children: React.ReactNode; style?: Rea
   const p = useAp(d, 22, 80);
   return (
     <div style={{overflow: 'hidden', paddingBottom: '0.12em', marginBottom: '-0.12em', ...style}}>
-      <div style={{transform: `translateY(${(1 - p) * 110}%)`}}>{children}</div>
+      <div style={{transform: `translateY(${(1 - p) * 110}%)`, filter: `blur(${(1 - p) * 10}px)`}}>{children}</div>
     </div>
   );
 };
 
 export const Aparece: React.FC<{d?: number; y?: number; x?: number; children: React.ReactNode; style?: React.CSSProperties}> = ({d = 0, y = 36, x = 0, children, style}) => {
   const p = useAp(d);
-  return <div style={{opacity: Math.min(1, p * 1.4), transform: `translate(${(1 - p) * x}px, ${(1 - p) * y}px)`, ...style}}>{children}</div>;
+  return <div style={{opacity: Math.min(1, p * 1.4), transform: `translate(${(1 - p) * x}px, ${(1 - p) * y}px)`, filter: `blur(${(1 - p) * 12}px)`, ...style}}>{children}</div>;
 };
 
 // Línea dorada que se dibuja
-export const FiloOro: React.FC<{d?: number; w?: number}> = ({d = 0, w = 140}) => {
+export const FiloOro: React.FC<{d?: number; t?: string; w?: number}> = ({d = 0, t = '', w = 140}) => {
   const p = useAp(d, 24, 70);
-  return <div style={{height: 4, width: w * p, background: C.oro, borderRadius: 2}} />;
+  return (
+    <div style={{display: 'flex', alignItems: 'center', gap: 16}}>
+      <div style={{width: 16, height: 16, borderRadius: '50%', background: C.oro, transform: `scale(${p})`, boxShadow: `0 0 0 ${6 * p}px ${C.oro}33`}} />
+      <div style={{fontSize: 21, letterSpacing: 6, fontWeight: 700, color: C.oro, opacity: p}}>{t}</div>
+      <div style={{height: 3, width: w * p, background: C.oro, borderRadius: 2, opacity: 0.6}} />
+    </div>
+  );
 };
 
 export const Titular: React.FC<{lineas: (string | [string, 'oro'])[]; size?: number; d?: number; modo: Modo}> = ({lineas, size = 104, d = 4, modo}) => (
@@ -106,9 +112,13 @@ const Guirnalda: React.FC<{modo: Modo}> = ({modo}) => {
   );
 };
 
-export const Marco: React.FC<{n: number; modo: Modo; children: React.ReactNode}> = ({n, modo, children}) => {
+export const Marco: React.FC<{n: number; modo: Modo; marca?: string; children: React.ReactNode}> = ({n, modo, marca, children}) => {
   useFuentes();
   const f = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const ap = spring({frame: f, fps, config: {damping: 200}, durationInFrames: 26});
+  const lado = (1 - ap) * 47;
+  const radio = 6 + (1 - ap) * 40;
   const claro = modo === 'claro';
   const fondo = claro
     ? C.hueso
@@ -117,7 +127,11 @@ export const Marco: React.FC<{n: number; modo: Modo; children: React.ReactNode}>
       : `radial-gradient(ellipse 130% 90% at 80% 15%, #475775 0%, ${C.navy} 45%, ${C.navyOsc} 100%)`;
   const dz = interpolate(f, [0, 150], [1, 1.06]);
   return (
-    <AbsoluteFill style={{background: fondo, fontFamily: SANS, color: tinta(modo), overflow: 'hidden'}}>
+    <AbsoluteFill style={{background: '#C9CCD2'}}>
+    <AbsoluteFill style={{background: fondo, fontFamily: SANS, color: tinta(modo), overflow: 'hidden', clipPath: `inset(${(1 - ap) * 28}% ${lado}% ${(1 - ap) * 28}% ${lado}% round ${radio}px)`, boxShadow: '0 40px 90px #0006'}}>
+      {marca && (
+        <div style={{position: 'absolute', left: -40 - (1 - ap) * 120 - f * 0.6, bottom: 70, fontFamily: SERIF, fontWeight: 900, fontSize: 560, lineHeight: 0.8, letterSpacing: -20, color: claro ? C.navy : '#fff', opacity: 0.07, whiteSpace: 'nowrap'}}>{marca}</div>
+      )}
       {claro && (
         <div style={{position: 'absolute', right: -260, top: 420, width: 900, height: 900, borderRadius: '50%', background: '#2B364810', transform: `scale(${dz})`}} />
       )}
@@ -137,6 +151,7 @@ export const Marco: React.FC<{n: number; modo: Modo; children: React.ReactNode}>
         <div style={{fontFamily: SERIF, fontSize: 30, color: claro ? C.oro : C.oroClaro, fontWeight: 700}}>0{n}<span style={{opacity: 0.5}}> / 06</span></div>
       </div>
       <div style={{position: 'absolute', left: 0, right: 0, bottom: 28, textAlign: 'center', fontSize: 17, opacity: 0.6}}>Orientación general, no es asesoría legal.</div>
+    </AbsoluteFill>
     </AbsoluteFill>
   );
 };
@@ -224,6 +239,6 @@ export const Lupa: React.FC<{size?: number}> = ({size = 240}) => {
 export const Panel: React.FC<{children: React.ReactNode; color?: string; style?: React.CSSProperties; d?: number}> = ({children, color = C.navy, style, d = 10}) => {
   const p = useAp(d, 22, 80);
   return (
-    <div style={{background: color, borderRadius: 44, padding: 44, boxShadow: '0 30px 60px #00000030', transform: `translateY(${(1 - p) * 70}px)`, opacity: p, ...style}}>{children}</div>
+    <div style={{background: color, borderRadius: 44, padding: 44, boxShadow: '0 30px 60px #00000030', transform: `translateX(${(1 - p) * 260}px)`, filter: `blur(${(1 - p) * 18}px)`, opacity: Math.min(1, p * 1.5), ...style}}>{children}</div>
   );
 };

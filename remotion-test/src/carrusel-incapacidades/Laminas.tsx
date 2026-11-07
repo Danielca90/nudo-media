@@ -12,7 +12,7 @@ export const L1: React.FC = () => {
   const celdas: (number | null)[] = [null, ...Array.from({length: 31}, (_, i) => i + 1)];
   return (
     <Marco n={1} modo="oscuro">
-      <FiloOro d={0} />
+      <FiloOro d={0} t="ALERTA DE TEMPORADA" />
       <div style={{height: 26}} />
       <Titular modo="oscuro" size={104} lineas={['Diciembre trae', 'un riesgo que', ['su nómina no ve.', 'oro']]} />
       <Panel color="#EDEDEB" d={30} style={{marginTop: 54, padding: '30px 34px', color: C.navy, position: 'relative'}}>
@@ -38,7 +38,7 @@ export const L1: React.FC = () => {
 const senales = ['Cae pegada a un festivo', 'Llega sin soporte de la EPS', 'Sellos o fechas que no cuadran'];
 export const L2: React.FC = () => (
   <Marco n={2} modo="claro">
-    <FiloOro d={0} />
+    <FiloOro d={0} t="SEÑALES" />
     <div style={{height: 26}} />
     <Titular modo="claro" size={100} lineas={['¿Es real la', ['incapacidad?', 'oro']]} />
     <Panel d={26} style={{marginTop: 50, display: 'flex', flexDirection: 'column', gap: 30, padding: '50px 46px'}}>
@@ -62,7 +62,7 @@ export const L3: React.FC = () => {
   const f = useCurrentFrame();
   return (
     <Marco n={3} modo="oscuro">
-      <FiloOro d={0} />
+      <FiloOro d={0} t="LO QUE EVITAR" />
       <div style={{height: 26}} />
       <Titular modo="oscuro" size={100} lineas={['Lo que', ['no debe hacer.', 'oro']]} />
       <div style={{marginTop: 46, display: 'flex', flexDirection: 'column', gap: 24}}>
@@ -91,7 +91,7 @@ export const L4: React.FC = () => {
   const alto = interpolate(f, [30, 110], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   return (
     <Marco n={4} modo="claro">
-      <FiloOro d={0} />
+      <FiloOro d={0} t="PASO A PASO" />
       <div style={{height: 26}} />
       <Titular modo="claro" size={100} lineas={['Lo que', ['sí debe hacer.', 'oro']]} />
       <Panel color={C.verde} d={24} style={{marginTop: 46, padding: '70px 46px', position: 'relative'}}>
@@ -112,7 +112,7 @@ export const L4: React.FC = () => {
 // 5. Consecuencias
 export const L5: React.FC = () => (
   <Marco n={5} modo="verde">
-    <FiloOro d={0} />
+    <FiloOro d={0} t="RIESGOS" />
     <div style={{height: 26}} />
     <Titular modo="verde" size={92} lineas={['Si es falsa,', ['hay consecuencias.', 'oro']]} />
     <div style={{display: 'flex', justifyContent: 'center', marginTop: 10}}><Aparece d={10} y={50}><Balanza size={420} /></Aparece></div>
@@ -135,7 +135,7 @@ export const L6: React.FC = () => {
   const pulso = 1 + 0.025 * Math.sin(f / 6);
   return (
     <Marco n={6} modo="oscuro">
-      <FiloOro d={0} />
+      <FiloOro d={0} t="SU SIGUIENTE PASO" />
       <div style={{height: 26}} />
       <Titular modo="oscuro" size={108} lineas={['Prepare su', ['empresa hoy.', 'oro']]} />
       <Aparece d={30}><div style={{marginTop: 38, fontSize: 36, lineHeight: 1.3, width: 640}}>Protocolo de verificación, formatos y proceso disciplinario listos para la temporada.</div></Aparece>
