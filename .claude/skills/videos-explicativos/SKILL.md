@@ -32,7 +32,9 @@ Reglas:
 
 ## Flujo de trabajo
 
-1. **Marca y tema.** Cargar `estilo-<marca>`. Confirmar tema, duración (≈15–45 s) y formato.
+1. **Marca, estilo y tema.** Cargar `estilo-<marca>`. Una marca puede tener **varios estilos de video**
+   (en Nudo: solo Remotion, SketchUp + Blender, low poly / sketch): usar el que diga el usuario o preguntarle.
+   Confirmar tema, duración (≈15–45 s) y formato.
 2. **Guion.** Escribir el guion para voz (frases cortas, números en palabras).
    Si el usuario pide no revisarlo, seguir directo.
 3. **Plan de acción visual (obligatorio antes de programar).** Tabla
