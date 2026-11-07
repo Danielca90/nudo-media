@@ -1,8 +1,8 @@
 import React from 'react';
 import {AbsoluteFill, Sequence, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import type {Caption} from '@remotion/captions';
-import {C, SERIF, SANS} from '../carrusel-incapacidades/tema';
-import {Aparece, Guirnalda, Linea, Modo, Nieve, tinta, useAp, useFuentes} from '../carrusel-incapacidades/Base';
+import {C, EST, SERIF, SANS} from '../carrusel-incapacidades/tema';
+import {Aparece, Aurora, Deco, Guirnalda, Linea, Modo, tinta, useAp, useFuentes} from '../carrusel-incapacidades/Base';
 
 export const VW = 1080;
 export const VH = 1920;
@@ -14,8 +14,8 @@ const fondoDe = (m: Modo) =>
   m === 'claro'
     ? C.hueso
     : m === 'verde'
-      ? `radial-gradient(ellipse 130% 70% at 80% 10%, #2A6158 0%, ${C.verde} 45%, #12302B 100%)`
-      : `radial-gradient(ellipse 130% 70% at 80% 10%, #475775 0%, ${C.navy} 45%, ${C.navyOsc} 100%)`;
+      ? `radial-gradient(ellipse 130% 70% at 80% 10%, ${C.glowVerde} 0%, ${C.verde} 45%, ${C.baseVerde} 100%)`
+      : `radial-gradient(ellipse 130% 70% at 80% 10%, ${C.glowNavy} 0%, ${C.navy} 45%, ${C.navyOsc} 100%)`;
 
 // Escena: ventana con fondo propio; entra con fade rápido y desenfoque
 export const Escena: React.FC<{desde: number; hasta: number; modo: Modo; children: React.ReactNode; marca?: string}> = ({desde, hasta, modo, children, marca}) => {
@@ -32,7 +32,8 @@ const EscenaInt: React.FC<{modo: Modo; marca?: string; children: React.ReactNode
   return (
     <AbsoluteFill style={{background: fondoDe(modo), opacity: o, color: tinta(modo), fontFamily: SANS, overflow: 'hidden'}}>
       {marca && <div style={{position: 'absolute', left: -60 - f * 0.9, bottom: 330, fontFamily: SERIF, fontWeight: 900, fontSize: 700, lineHeight: 0.8, letterSpacing: -24, color: claro ? C.navy : '#fff', opacity: 0.06, whiteSpace: 'nowrap'}}>{marca}</div>}
-      <Nieve color={claro ? C.oro : '#fff'} alto={VH} />
+      <Aurora claro={claro} alto={VH} />
+      <Deco claro={claro} alto={VH} />
       <Guirnalda modo={modo} />
       <div style={{position: 'absolute', top: 160, left: 0, right: 0, textAlign: 'center'}}>
         <div style={{fontFamily: SERIF, fontSize: 44, fontWeight: 700}}>Arca Jurídica</div>
@@ -53,8 +54,8 @@ export const Chip: React.FC<{t: string; nota: string; d: number; icono?: string;
   const p = useAp(d, 16, 140);
   return (
     <div style={{position: 'absolute', left: 80, right: 80, top, transform: `translateX(${(1 - p) * 420}px) scale(${0.96 + 0.04 * p})`, opacity: Math.min(1, p * 1.6), filter: `blur(${(1 - p) * 14}px)`}}>
-      <div style={{display: 'flex', alignItems: 'center', gap: 30, background: dorado ? C.oro : oscuro ? '#141C29' : C.hueso, color: dorado ? C.navyOsc : oscuro ? C.hueso : C.navy, borderRadius: 80, padding: '26px 40px', boxShadow: '0 24px 50px #0000004d'}}>
-        <div style={{width: 84, height: 84, borderRadius: '50%', background: dorado ? C.navyOsc : C.oro, color: C.hueso, fontSize: 46, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0}}>{icono}</div>
+      <div style={{display: 'flex', alignItems: 'center', gap: 30, background: dorado ? C.oro : oscuro ? C.panelOsc : C.hueso, color: dorado ? C.navyOsc : oscuro ? C.hueso : C.navy, borderRadius: EST.chip === 'tarjeta' ? 44 : 80, padding: '26px 40px', boxShadow: '0 24px 50px #0000004d'}}>
+        <div style={{width: 84, height: 84, borderRadius: EST.chip === 'tarjeta' ? 22 : '50%', background: dorado ? C.navyOsc : C.oro, color: C.hueso, fontSize: 46, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0}}>{icono}</div>
         <div>
           <div style={{fontFamily: SERIF, fontWeight: 900, fontSize: 56, lineHeight: 1.05}}>{t}</div>
           <div style={{fontSize: 32, fontWeight: 600, opacity: 0.85, marginTop: 4}}>{nota}</div>

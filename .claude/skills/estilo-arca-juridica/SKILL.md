@@ -18,8 +18,18 @@ Complementa `videos-explicativos`. Lo definido aquí manda sobre lo general.
 - ElevenLabs **"Andrea Arca"** (`XrTN5zwTQo5HkNatlJ58`, clonada, español colombiano), modelo `eleven_v4`.
 - Andrea habla pausado (~2,1 palabras/s): para 15 s el guion máx. ~38 palabras y se acelera 1,17x con `ffmpeg atempo=1.17` (dividir los tiempos del Scribe entre 1,17).
 
-## Paleta (referencia del usuario)
-verde `#1C453F`, oro `#A48843` (claro `#D8BC74`), navy `#2B3648` (oscuro `#18202D`), hueso `#EDEDEB`, taupe `#6D6359`. Rojo `#B3202E` / `#F08A92` solo para alertas (X, sello, tachado).
+## Temas: misma identidad, distinta apariencia (ALTERNAR)
+Regla del usuario: mantener la identidad visual **sin** que todo parezca "lo mismo con otro texto". Hay dos temas en `remotion-test/src/carrusel-incapacidades/tema.ts` (`TEMA_A`, `TEMA_B`, `aplicarTema`; envolver cada composición con `conTema('A'|'B', Comp)` de `Tema.tsx`). Alternar tema entre piezas consecutivas (A, B, A, B...) y, dentro de un mismo tema, cambiar también el color de fondo dominante y la posición de los objetos.
+
+| | Tema A "Navy y pino" | Tema B "Amatista y teal" |
+|---|---|---|
+| Colores | verde `#1C453F`, oro `#A48843` / `#D8BC74`, navy `#2B3648` / `#18202D`, hueso `#EDEDEB`, taupe `#6D6359` | Deep Space Blue `#18314F`, Dark Amethyst `#0D0630`, Muted Teal `#8BBEB2`, Metallic Gold `#CAAC4B`, Lime Green `#E6F9AF` (acento de palabra clave), hueso lima `#F2F6E4` |
+| Decoración | nieve + guirnalda | estrellas de 4 puntas que titilan + guirnalda |
+| Fondo | degradado liso | "aurora": manchas desenfocadas en movimiento |
+| Apertura | ranura vertical que se abre | círculo que se expande |
+| Chips / paneles | círculo + pastilla; esquina grande abajo-izquierda | azulejo cuadrado (como la paleta de referencia) + tarjeta; silueta espejada |
+Rojo `#B3202E` / `#F08A92` solo para alertas (X, sello, tachado) en ambos. Usar siempre tokens `C.*`, nunca hex sueltos. Sobre fondo claro usar `C.oroTxt` (oro más oscuro) para texto dorado.
+Para sumar un tercer tema: añadir otra paleta + banderas de estilo (`deco`, `apertura`, `chip`, `fondo`) en `tema.ts`.
 
 ## Tipografía
 Titulares **Playfair Display** 900 (palabra clave en cursiva dorada); cuerpo **Inter** 600/700. Fuentes en `remotion-test/public/fonts` (no depender de internet).
@@ -40,4 +50,5 @@ Apertura desde una ranura vertical que se abre a tarjeta con sombra grande; titu
 - Una escena por idea (≈3 s), con "chips" que entran en la palabra que la voz nombra. Cierre: botón WhatsApp + aviso legal. Dejar libres los 320 px inferiores.
 
 ## Correcciones del usuario
+- 2026-11-07: dio una segunda paleta (Lime Green, Metallic Gold, Muted Teal, Deep Space Blue, Dark Amethyst) para alternar estilos; es súper importante mantener la identidad pero no generar siempre "lo mismo".
 - 2026-11-07: el carrusel debe copiar la **estructura** de la referencia (paneles, objetos que se salen, globo, botón), no solo colores/tipografía.

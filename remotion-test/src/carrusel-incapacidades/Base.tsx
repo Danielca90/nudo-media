@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {AbsoluteFill, Img, continueRender, delayRender, interpolate, random, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
-import {C, W, H, SERIF, SANS} from './tema';
+import {C, EST, W, H, SERIF, SANS} from './tema';
 
 export type Modo = 'oscuro' | 'claro' | 'verde';
 
@@ -49,12 +49,12 @@ export const Aparece: React.FC<{d?: number; y?: number; x?: number; children: Re
 };
 
 // Línea dorada que se dibuja
-export const FiloOro: React.FC<{d?: number; t?: string; w?: number}> = ({d = 0, t = '', w = 140}) => {
+export const FiloOro: React.FC<{d?: number; t?: string; w?: number; claro?: boolean}> = ({d = 0, t = '', w = 140, claro}) => {
   const p = useAp(d, 24, 70);
   return (
     <div style={{display: 'flex', alignItems: 'center', gap: 16}}>
-      <div style={{width: 16, height: 16, borderRadius: '50%', background: C.oro, transform: `scale(${p})`, boxShadow: `0 0 0 ${6 * p}px ${C.oro}33`}} />
-      <div style={{fontSize: 21, letterSpacing: 6, fontWeight: 700, color: C.oro, opacity: p}}>{t}</div>
+      <div style={{width: 16, height: 16, borderRadius: '50%', background: claro ? C.oroTxt : C.oro, transform: `scale(${p})`, boxShadow: `0 0 0 ${6 * p}px ${C.oro}33`}} />
+      <div style={{fontSize: 21, letterSpacing: 6, fontWeight: 700, color: claro ? C.oroTxt : C.oro, opacity: p}}>{t}</div>
       <div style={{height: 3, width: w * p, background: C.oro, borderRadius: 2, opacity: 0.6}} />
     </div>
   );
@@ -66,7 +66,7 @@ export const Titular: React.FC<{lineas: (string | [string, 'oro'])[]; size?: num
       const oro = Array.isArray(l);
       return (
         <Linea key={i} d={d + i * 6}>
-          <span style={oro ? {color: modo === 'claro' ? C.oro : C.oroClaro, fontStyle: 'italic', fontWeight: 700} : undefined}>{oro ? l[0] : l}</span>
+          <span style={oro ? {color: modo === 'claro' ? C.oroTxt : C.oroClaro, fontStyle: 'italic', fontWeight: 700} : undefined}>{oro ? l[0] : l}</span>
         </Linea>
       );
     })}
@@ -88,11 +88,48 @@ export const Nieve: React.FC<{color: string; alto?: number}> = ({color, alto = H
   );
 };
 
+export const Estrellas: React.FC<{color: string; alto?: number}> = ({color, alto = H}) => {
+  const f = useCurrentFrame();
+  return (
+    <AbsoluteFill>
+      {Array.from({length: 22}).map((_, i) => {
+        const r = (s: string) => random(`e${s}${i}`);
+        const size = 14 + r('s') * 40;
+        const tw = 0.5 + 0.5 * Math.sin(f / (8 + r('t') * 10) + r('p') * 6);
+        return (
+          <svg key={i} width={size} height={size} viewBox="-50 -50 100 100" style={{position: 'absolute', left: r('x') * W, top: r('y') * alto, opacity: 0.15 + tw * 0.65, transform: `scale(${0.6 + tw * 0.6}) rotate(${f * 0.4 * (r('r') - 0.5)}deg)`}}>
+            <path d="M0 -48 C6 -14 14 -6 48 0 C14 6 6 14 0 48 C-6 14 -14 6 -48 0 C-14 -6 -6 -14 0 -48Z" fill={color} />
+          </svg>
+        );
+      })}
+    </AbsoluteFill>
+  );
+};
+
+export const Deco: React.FC<{claro: boolean; alto?: number}> = ({claro, alto = H}) =>
+  EST.deco === 'estrellas' ? <Estrellas color={claro ? C.oro : C.oroClaro} alto={alto} /> : <Nieve color={claro ? C.oro : '#fff'} alto={alto} />;
+
+// Fondo "aurora": manchas desenfocadas en movimiento (tema B)
+export const Aurora: React.FC<{claro: boolean; alto?: number}> = ({claro, alto = H}) => {
+  const f = useCurrentFrame();
+  if (EST.fondo !== 'aurora') return null;
+  const blob = (c: string, x: number, y: number, s: number, o: number) => (
+    <div style={{position: 'absolute', left: x - s / 2, top: y - s / 2, width: s, height: s, borderRadius: '50%', background: `radial-gradient(circle, ${c} 0%, transparent 70%)`, opacity: o, filter: 'blur(30px)'}} />
+  );
+  return (
+    <AbsoluteFill style={{overflow: 'hidden'}}>
+      {blob(C.glowVerde, 220 + Math.sin(f / 40) * 120, alto * 0.28 + Math.cos(f / 55) * 90, 900, claro ? 0.35 : 0.7)}
+      {blob(C.oro, 900 + Math.cos(f / 45) * 110, alto * 0.62 + Math.sin(f / 50) * 120, 700, claro ? 0.3 : 0.38)}
+      {blob(C.oroClaro, 540 + Math.sin(f / 60) * 160, alto * 0.9 + Math.cos(f / 35) * 70, 650, claro ? 0.3 : 0.2)}
+    </AbsoluteFill>
+  );
+};
+
 // Guirnalda dorada discreta
 export const Guirnalda: React.FC<{modo: Modo}> = ({modo}) => {
   const f = useCurrentFrame();
   const n = 14;
-  const hilo = modo === 'claro' ? '#2B364855' : '#EDEDEB44';
+  const hilo = modo === 'claro' ? `${C.navy}55` : `${C.hueso}44`;
   return (
     <svg width={W} height={130} style={{position: 'absolute', top: 0, left: 0}}>
       <path d={`M -10 14 Q ${W / 2} 110 ${W + 10} 14`} stroke={hilo} strokeWidth={3} fill="none" />
@@ -123,19 +160,20 @@ export const Marco: React.FC<{n: number; modo: Modo; marca?: string; children: R
   const fondo = claro
     ? C.hueso
     : modo === 'verde'
-      ? `radial-gradient(ellipse 130% 90% at 80% 15%, #2A6158 0%, ${C.verde} 45%, #12302B 100%)`
-      : `radial-gradient(ellipse 130% 90% at 80% 15%, #475775 0%, ${C.navy} 45%, ${C.navyOsc} 100%)`;
+      ? `radial-gradient(ellipse 130% 90% at 80% 15%, ${C.glowVerde} 0%, ${C.verde} 45%, ${C.baseVerde} 100%)`
+      : `radial-gradient(ellipse 130% 90% at 80% 15%, ${C.glowNavy} 0%, ${C.navy} 45%, ${C.navyOsc} 100%)`;
   const dz = interpolate(f, [0, 150], [1, 1.06]);
   return (
-    <AbsoluteFill style={{background: '#C9CCD2'}}>
-    <AbsoluteFill style={{background: fondo, fontFamily: SANS, color: tinta(modo), overflow: 'hidden', clipPath: `inset(${(1 - ap) * 28}% ${lado}% ${(1 - ap) * 28}% ${lado}% round ${radio}px)`, boxShadow: '0 40px 90px #0006'}}>
+    <AbsoluteFill style={{background: C.ventana}}>
+    <AbsoluteFill style={{background: fondo, fontFamily: SANS, color: tinta(modo), overflow: 'hidden', clipPath: EST.apertura === 'circulo' ? `circle(${ap * 78}% at 50% 42%)` : `inset(${(1 - ap) * 28}% ${lado}% ${(1 - ap) * 28}% ${lado}% round ${radio}px)`, boxShadow: '0 40px 90px #0006'}}>
       {marca && (
         <div style={{position: 'absolute', left: -40 - (1 - ap) * 120 - f * 0.6, bottom: 70, fontFamily: SERIF, fontWeight: 900, fontSize: 560, lineHeight: 0.8, letterSpacing: -20, color: claro ? C.navy : '#fff', opacity: 0.07, whiteSpace: 'nowrap'}}>{marca}</div>
       )}
       {claro && (
-        <div style={{position: 'absolute', right: -260, top: 420, width: 900, height: 900, borderRadius: '50%', background: '#2B364810', transform: `scale(${dz})`}} />
+        <div style={{position: 'absolute', right: -260, top: 420, width: 900, height: 900, borderRadius: '50%', background: `${C.navy}10`, transform: `scale(${dz})`}} />
       )}
-      <Nieve color={claro ? C.oro : '#fff'} />
+      <Aurora claro={claro} />
+      <Deco claro={claro} />
       <Guirnalda modo={modo} />
       {/* marca */}
       <div style={{position: 'absolute', top: 150, left: 0, right: 0, textAlign: 'center', opacity: interpolate(f, [0, 14], [0, 1], {extrapolateRight: 'clamp'})}}>
@@ -244,8 +282,9 @@ export const Panel: React.FC<{children: React.ReactNode; color?: string; style?:
 };
 
 // ---------- Estructura tipo Pereira: paneles asimétricos, globo, pastilla, hero que se sale ----------
-export const Blob: React.FC<{color?: string; radio?: string; style?: React.CSSProperties; d?: number; tab?: string; children?: React.ReactNode}> = ({color = C.navyOsc, radio = '56px 56px 56px 190px', style, d = 8, tab, children}) => {
+export const Blob: React.FC<{color?: string; radio?: string; style?: React.CSSProperties; d?: number; tab?: string; children?: React.ReactNode}> = ({color = C.navyOsc, radio: radioIn = '56px 56px 56px 190px', style, d = 8, tab, children}) => {
   const p = useAp(d, 22, 80);
+  const radio = EST.chip === 'tarjeta' ? radioIn.split(' ').reverse().join(' ') : radioIn;
   return (
     <div style={{position: 'absolute', transform: `translateY(${(1 - p) * 90}px)`, opacity: Math.min(1, p * 1.5), filter: `blur(${(1 - p) * 14}px)`, ...style}}>
       {tab && (
@@ -283,7 +322,7 @@ export const Globo: React.FC<{children: React.ReactNode; d?: number; style?: Rea
 export const Pastilla: React.FC<{t: string; d?: number; style?: React.CSSProperties; oro?: boolean}> = ({t, d = 60, style, oro}) => {
   const p = useAp(d);
   return (
-    <div style={{display: 'flex', alignItems: 'center', gap: 20, background: oro ? C.oro : '#8B94C4', color: oro ? C.navyOsc : '#fff', borderRadius: 60, padding: '18px 34px', fontSize: 26, fontWeight: 600, opacity: p, transform: `translateY(${(1 - p) * 30}px)`, ...style}}>
+    <div style={{display: 'flex', alignItems: 'center', gap: 20, background: oro ? C.oro : C.pastilla, color: oro ? C.navyOsc : C.pastillaTxt, borderRadius: 60, padding: '18px 34px', fontSize: 26, fontWeight: 600, opacity: p, transform: `translateY(${(1 - p) * 30}px)`, ...style}}>
       <div style={{width: 46, height: 46, borderRadius: '50%', border: '3px solid currentColor', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 26, flexShrink: 0}}>↓</div>
       <div style={{lineHeight: 1.2}}>{t}</div>
     </div>

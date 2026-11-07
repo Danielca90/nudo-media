@@ -22,7 +22,7 @@ const Gancho: React.FC = () => {
         <Img src={staticFile('objetos/o8card.jpg')} style={{width: '100%', borderRadius: 50, display: 'block', boxShadow: '0 40px 80px #00000066'}} />
       </Aparece>
       <div style={{position: 'absolute', left: 80, right: 80, top: 1110, display: 'flex', justifyContent: 'center', opacity: x, transform: `rotate(-6deg) scale(${1.8 - 0.8 * x})`}}>
-        <div style={{border: `14px solid ${"#F08A92"}`, color: "#F08A92", padding: '10px 60px', borderRadius: 20, fontSize: 170, fontWeight: 900, letterSpacing: 8}}>ERROR</div>
+        <div style={{border: `14px solid ${C.alerta}`, color: C.alerta, padding: '10px 60px', borderRadius: 20, fontSize: 170, fontWeight: 900, letterSpacing: 8}}>ERROR</div>
       </div>
     </AbsoluteFill>
   );
@@ -60,7 +60,7 @@ const Ocasional: React.FC = () => {
   const elige = interpolate(f, [s2f(12.0 - 9.45), s2f(12.6 - 9.45)], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   return (
     <AbsoluteFill>
-      <Grande t="OCASIONAL" size={150} d={0} italic color="#F08A92" style={{left: 80, top: 250}} />
+      <Grande t="OCASIONAL" size={150} d={0} italic color={C.alerta} style={{left: 80, top: 250}} />
       <Aparece d={s2f(10.46 - 9.45)} style={{position: 'absolute', left: 90, top: 440, fontSize: 52, fontWeight: 600, color: C.hueso}}>el trabajador elige</Aparece>
       <Chip t="Recargo" nota="90 % extra" d={s2f(11.5 - 9.45)} top={1000} icono="%" />
       <Chip t="Descanso" nota="compensatorio" d={s2f(12.0 - 9.45)} top={1210} icono="☾" dorado />

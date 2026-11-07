@@ -23,7 +23,7 @@ const Gancho: React.FC = () => {
       <Grande t="permiso?" size={190} d={2} italic color={C.oroClaro} style={{left: 80, top: 430}} />
       <Hero src="o3" w={620} d={0} style={{right: -130, top: 960 + (1 - caida) * -1100}} />
       <div style={{position: 'absolute', left: 80, right: 80, top: 1330, display: 'flex', justifyContent: 'center', opacity: sello, transform: `rotate(-6deg) scale(${1.8 - 0.8 * sello})`}}>
-        <div style={{border: `14px solid ${"#F08A92"}`, color: "#F08A92", padding: '10px 50px', borderRadius: 20, fontSize: 150, fontWeight: 900, letterSpacing: 8}}>DEMANDA</div>
+        <div style={{border: `14px solid ${C.alerta}`, color: C.alerta, padding: '10px 50px', borderRadius: 20, fontSize: 150, fontWeight: 900, letterSpacing: 8}}>DEMANDA</div>
       </div>
     </AbsoluteFill>
   );
@@ -51,7 +51,7 @@ const No: React.FC = () => (
 
 const Nunca: React.FC = () => (
   <AbsoluteFill>
-    <Grande t="NUNCA" size={215} d={0} italic color="#F08A92" style={{left: 80, top: 230}} />
+    <Grande t="NUNCA" size={215} d={0} italic color={C.alerta} style={{left: 80, top: 230}} />
     <Aparece d={6} style={{position: 'absolute', left: 90, top: 520, fontSize: 52, fontWeight: 600, color: C.hueso}}>puede negar</Aparece>
     <Hero src="o7" w={400} d={6} rot={-4} style={{right: -20, top: 470}} />
     <Chip t="Maternidad" nota="18 semanas" d={59} top={1000} icono="!" dorado />

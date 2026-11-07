@@ -15,7 +15,7 @@ export const L1: React.FC = () => {
       <FiloOro d={0} t="ALERTA DE TEMPORADA" />
       <div style={{height: 26}} />
       <div style={{width: 600}}><Titular modo="oscuro" size={78} lineas={['Diciembre trae', 'un riesgo que', 'su nómina', ['no ve.', 'oro']]} /></div>
-      <Blob d={26} style={{left: 0, right: 0, top: 440, bottom: 0, padding: '34px 40px'}} radio="56px 56px 56px 190px" color="#141C29">
+      <Blob d={26} style={{left: 0, right: 0, top: 440, bottom: 0, padding: '34px 40px'}} radio="56px 56px 56px 190px" color={C.panelOsc}>
         <div style={{display: 'flex', justifyContent: 'space-between', fontFamily: SERIF, fontWeight: 700, fontSize: 32, color: C.hueso}}><span>Diciembre</span><span style={{color: C.oroClaro}}>2026</span></div>
         <div style={{display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', marginTop: 8, textAlign: 'center', fontSize: 24, fontWeight: 600, color: C.hueso, position: 'relative'}}>
           {DIAS.map((d, i) => <div key={i} style={{color: C.oroClaro, fontSize: 18, letterSpacing: 3}}>{d}</div>)}
@@ -26,7 +26,7 @@ export const L1: React.FC = () => {
           ))}
           <div style={{position: 'absolute', left: `${(1 / 7) * 100}%`, top: 28 + 44 - 2, width: `${(4 / 7) * 100 * barra}%`, height: 44, borderRadius: 22, background: `${C.rojo}55`, border: `3px solid ${C.rojo}`, boxSizing: 'border-box'}} />
         </div>
-        <div style={{marginTop: 8, fontSize: 25, fontWeight: 600, color: '#F08A92', opacity: barra}}>¿Incapacidad pegada al festivo?</div>
+        <div style={{marginTop: 8, fontSize: 25, fontWeight: 600, color: C.alerta, opacity: barra}}>¿Incapacidad pegada al festivo?</div>
       </Blob>
       <Hero src="o1" w={470} style={{right: -190, top: 20}} d={10} rot={4} />
     </Marco>
@@ -37,7 +37,7 @@ export const L1: React.FC = () => {
 const senales = ['Cae pegada a un festivo', 'Llega sin soporte de la EPS', 'Sellos o fechas que no cuadran'];
 export const L2: React.FC = () => (
   <Marco n={2} marca="¿?" modo="claro">
-    <FiloOro d={0} t="SEÑALES" />
+    <FiloOro d={0} t="SEÑALES" claro />
     <div style={{height: 26}} />
     <div style={{width: 560}}><Titular modo="claro" size={76} lineas={['¿Es real la', ['incapacidad?', 'oro']]} /></div>
     <Aparece d={24}><div style={{marginTop: 16, width: 460, fontSize: 25, color: C.taupe, lineHeight: 1.3}}>Tres señales que justifican revisarla antes de pagarla.</div></Aparece>
@@ -78,7 +78,7 @@ export const L3: React.FC = () => {
           );
         })}
       </div>
-      <Blob d={60} color="#141C29" radio="56px 56px 56px 56px" style={{left: 0, width: 590, top: 560, bottom: 0, padding: '34px 40px'}}>
+      <Blob d={60} color={C.panelOsc} radio="56px 56px 56px 56px" style={{left: 0, width: 590, top: 560, bottom: 0, padding: '34px 40px'}}>
         <div style={{fontSize: 32, color: C.hueso, lineHeight: 1.3, fontFamily: SERIF}}>El <b style={{color: C.oroClaro}}>debido proceso</b> protege a la empresa.</div>
         <div style={{position: 'absolute', left: 40, bottom: 34}}><Pastilla t="Verifique antes de actuar." d={86} /></div>
       </Blob>
@@ -120,7 +120,7 @@ export const L5: React.FC = () => (
     <FiloOro d={0} t="RIESGOS" />
     <div style={{height: 26}} />
     <div style={{width: 900}}><Titular modo="verde" size={78} lineas={['Si es falsa,', ['hay consecuencias.', 'oro']]} /></div>
-    <Blob d={20} color="#0F2F2A" radio="190px 56px 56px 56px" style={{left: 0, right: 0, top: 400, bottom: 0, padding: '40px 40px'}}>
+    <Blob d={20} color={C.panelProf} radio="190px 56px 56px 56px" style={{left: 0, right: 0, top: 400, bottom: 0, padding: '40px 40px'}}>
       <div style={{position: 'absolute', left: 40, right: 40, bottom: 34, display: 'flex', gap: 22}}>
         {[['LABORAL', 'Puede ser justa causa de despido'], ['PENAL', 'Puede configurar falsedad en documento']].map(([a, b], i) => (
           <Aparece key={a} d={50 + i * 14} style={{flex: 1}}>
@@ -142,7 +142,7 @@ export const L6: React.FC = () => {
   const pulso = 1 + 0.025 * Math.sin(f / 6);
   return (
     <Marco n={6} marca="Hoy" modo="oscuro">
-      <Blob d={4} color="#141C29" tab="SU SIGUIENTE PASO" radio="0 56px 56px 190px" style={{left: 0, right: 0, top: 58, bottom: 0, padding: '46px 46px'}}>
+      <Blob d={4} color={C.panelOsc} tab="SU SIGUIENTE PASO" radio="0 56px 56px 190px" style={{left: 0, right: 0, top: 58, bottom: 0, padding: '46px 46px'}}>
         <div style={{width: 560}}><Titular modo="oscuro" size={78} lineas={['Prepare su', ['empresa hoy.', 'oro']]} d={14} /></div>
         <Aparece d={34}><div style={{marginTop: 28, fontSize: 29, lineHeight: 1.3, width: 480, color: C.hueso}}>Protocolo de verificación, formatos y proceso disciplinario listos para la temporada.</div></Aparece>
         <Aparece d={58} style={{position: 'absolute', left: 46, bottom: 120}}>
