@@ -8,6 +8,8 @@
     "render:madera-verde": "remotion render src/index.ts MaderaVerdeFinal out/madera-verde-final.mp4 --gl=swangle --chrome-mode=headless-shell --browser-executable=/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell"
   },
   "dependencies": {
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/playfair-display": "^5.3.0",
     "@react-three/fiber": "^9.2.0",
     "@remotion/captions": "^4.0.541",
     "@remotion/cli": "^4.0.541",

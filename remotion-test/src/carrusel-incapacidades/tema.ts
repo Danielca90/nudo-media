@@ -1,17 +1,17 @@
-// Estilo provisional Arca Jurídica x Navidad (pendiente de la imagen de referencia del usuario)
+// Estilo Arca Jurídica x Navidad. Paleta de referencia del usuario (verde/oro/navy/hueso/taupe).
 export const C = {
-  noche: '#0A1B33',
-  nocheClaro: '#14305A',
-  pino: '#0F3D34',
-  dorado: '#D9B25F',
-  doradoClaro: '#F3DDA0',
+  verde: '#1C453F',
+  oro: '#A48843',
+  oroClaro: '#D8BC74',
+  navy: '#2B3648',
+  navyOsc: '#18202D',
+  hueso: '#EDEDEB',
+  taupe: '#6D6359',
   rojo: '#B3202E',
-  rojoClaro: '#E0505B',
-  nieve: '#F7F4EE',
-  gris: '#A9B4C6',
 };
 export const W = 1080;
 export const H = 1350;
 export const FPS = 30;
-export const FRAMES = 150; // 5 s por lámina
-export const FUENTE = "Inter, 'Helvetica Neue', Arial, sans-serif";
+export const FRAMES = 150;
+export const SERIF = "'Playfair Display', Georgia, serif";
+export const SANS = "Inter, 'Helvetica Neue', Arial, sans-serif";
