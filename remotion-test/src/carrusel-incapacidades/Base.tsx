@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {AbsoluteFill, continueRender, delayRender, interpolate, random, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
+import {AbsoluteFill, Img, continueRender, delayRender, interpolate, random, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {C, W, H, SERIF, SANS} from './tema';
 
 export type Modo = 'oscuro' | 'claro' | 'verde';
@@ -240,5 +240,52 @@ export const Panel: React.FC<{children: React.ReactNode; color?: string; style?:
   const p = useAp(d, 22, 80);
   return (
     <div style={{background: color, borderRadius: 44, padding: 44, boxShadow: '0 30px 60px #00000030', transform: `translateX(${(1 - p) * 260}px)`, filter: `blur(${(1 - p) * 18}px)`, opacity: Math.min(1, p * 1.5), ...style}}>{children}</div>
+  );
+};
+
+// ---------- Estructura tipo Pereira: paneles asimétricos, globo, pastilla, hero que se sale ----------
+export const Blob: React.FC<{color?: string; radio?: string; style?: React.CSSProperties; d?: number; tab?: string; children?: React.ReactNode}> = ({color = C.navyOsc, radio = '56px 56px 56px 190px', style, d = 8, tab, children}) => {
+  const p = useAp(d, 22, 80);
+  return (
+    <div style={{position: 'absolute', transform: `translateY(${(1 - p) * 90}px)`, opacity: Math.min(1, p * 1.5), filter: `blur(${(1 - p) * 14}px)`, ...style}}>
+      {tab && (
+        <div style={{position: 'absolute', left: 0, top: -58, height: 64, padding: '0 34px', background: color, borderRadius: '28px 28px 0 0', display: 'flex', alignItems: 'center', fontSize: 22, letterSpacing: 5, fontWeight: 700, color: C.oroClaro}}>{tab}</div>
+      )}
+      <div style={{position: 'absolute', inset: 0, background: color, borderRadius: radio, boxShadow: '0 30px 70px #0000004d'}} />
+      <div style={{position: 'relative', height: '100%'}}>{children}</div>
+    </div>
+  );
+};
+
+export const Hero: React.FC<{src: string; w: number; style?: React.CSSProperties; d?: number; rot?: number}> = ({src, w, style, d = 14, rot = 0}) => {
+  const f = useCurrentFrame();
+  const p = useAp(d, 16, 70);
+  const flota = Math.sin((f + d) / 26) * 9;
+  return (
+    <div style={{position: 'absolute', width: w, transform: `translate(${(1 - p) * 140}px, ${flota}px) rotate(${rot + (1 - p) * 8}deg) scale(${0.85 + 0.15 * p})`, opacity: Math.min(1, p * 1.6), filter: `blur(${(1 - p) * 16}px) drop-shadow(0 34px 34px #00000055)`, ...style}}>
+      <Img src={staticFile(`objetos/${src}.png`)} style={{width: '100%', display: 'block'}} />
+    </div>
+  );
+};
+
+// Globo de diálogo (pregunta) con cola
+export const Globo: React.FC<{children: React.ReactNode; d?: number; style?: React.CSSProperties; cola?: 'izq' | 'centro'}> = ({children, d = 6, style, cola = 'centro'}) => {
+  const p = useAp(d, 14, 110);
+  return (
+    <div style={{position: 'absolute', transform: `scale(${0.6 + 0.4 * p})`, opacity: Math.min(1, p * 2), transformOrigin: 'bottom center', ...style}}>
+      <div style={{background: C.hueso, color: C.navy, borderRadius: 60, padding: '26px 46px', fontSize: 40, fontFamily: SERIF, fontWeight: 700, textAlign: 'center', lineHeight: 1.15, boxShadow: '0 20px 50px #0000004d'}}>{children}</div>
+      <div style={{position: 'absolute', bottom: -22, left: cola === 'centro' ? '50%' : 90, marginLeft: -22, width: 0, height: 0, borderLeft: '22px solid transparent', borderRight: '22px solid transparent', borderTop: `24px solid ${C.hueso}`}} />
+    </div>
+  );
+};
+
+// Botón-pastilla con ícono y nota (equivale al botón "Leia a legenda")
+export const Pastilla: React.FC<{t: string; d?: number; style?: React.CSSProperties; oro?: boolean}> = ({t, d = 60, style, oro}) => {
+  const p = useAp(d);
+  return (
+    <div style={{display: 'flex', alignItems: 'center', gap: 20, background: oro ? C.oro : '#8B94C4', color: oro ? C.navyOsc : '#fff', borderRadius: 60, padding: '18px 34px', fontSize: 26, fontWeight: 600, opacity: p, transform: `translateY(${(1 - p) * 30}px)`, ...style}}>
+      <div style={{width: 46, height: 46, borderRadius: '50%', border: '3px solid currentColor', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 26, flexShrink: 0}}>↓</div>
+      <div style={{lineHeight: 1.2}}>{t}</div>
+    </div>
   );
 };

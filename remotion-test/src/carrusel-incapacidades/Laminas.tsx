@@ -1,149 +1,156 @@
 import React from 'react';
 import {interpolate, useCurrentFrame} from 'remotion';
 import {C, SERIF} from './tema';
-import {Aparece, Balanza, Bola, FiloOro, Marco, Mazo, Panel, Titular, Lupa, useAp} from './Base';
+import {Aparece, Blob, FiloOro, Globo, Hero, Marco, Pastilla, Titular} from './Base';
 
 const DIAS = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
 
-// 1. Gancho
+// 1. Gancho: titular a la izquierda, hero que se sale del panel, panel navy con calendario
 export const L1: React.FC = () => {
   const f = useCurrentFrame();
   const barra = interpolate(f, [70, 100], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const celdas: (number | null)[] = [null, ...Array.from({length: 31}, (_, i) => i + 1)];
   return (
-    <Marco n={1} modo="oscuro">
+    <Marco n={1} marca="2026" modo="oscuro">
       <FiloOro d={0} t="ALERTA DE TEMPORADA" />
       <div style={{height: 26}} />
-      <Titular modo="oscuro" size={104} lineas={['Diciembre trae', 'un riesgo que', ['su nómina no ve.', 'oro']]} />
-      <Panel color="#EDEDEB" d={30} style={{marginTop: 54, padding: '30px 34px', color: C.navy, position: 'relative'}}>
-        <div style={{display: 'flex', justifyContent: 'space-between', fontFamily: SERIF, fontWeight: 700, fontSize: 34, marginBottom: 14}}><span>Diciembre</span><span style={{color: C.oro}}>2026</span></div>
-        <div style={{display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', rowGap: 4, textAlign: 'center', fontSize: 26, fontWeight: 600, position: 'relative'}}>
-          {DIAS.map((d, i) => <div key={i} style={{color: C.taupe, fontSize: 20, letterSpacing: 3}}>{d}</div>)}
+      <div style={{width: 600}}><Titular modo="oscuro" size={78} lineas={['Diciembre trae', 'un riesgo que', 'su nómina', ['no ve.', 'oro']]} /></div>
+      <Blob d={26} style={{left: 0, right: 0, top: 440, bottom: 0, padding: '34px 40px'}} radio="56px 56px 56px 190px" color="#141C29">
+        <div style={{display: 'flex', justifyContent: 'space-between', fontFamily: SERIF, fontWeight: 700, fontSize: 32, color: C.hueso}}><span>Diciembre</span><span style={{color: C.oroClaro}}>2026</span></div>
+        <div style={{display: 'grid', gridTemplateColumns: 'repeat(7, 1fr)', marginTop: 8, textAlign: 'center', fontSize: 24, fontWeight: 600, color: C.hueso, position: 'relative'}}>
+          {DIAS.map((d, i) => <div key={i} style={{color: C.oroClaro, fontSize: 18, letterSpacing: 3}}>{d}</div>)}
           {celdas.map((n, i) => (
-            <div key={i} style={{height: 56, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-              {n && <div style={{width: 48, height: 48, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: n === 8 || n === 25 ? C.oro : 'transparent', color: n === 8 || n === 25 ? '#fff' : C.navy}}>{n}</div>}
+            <div key={i} style={{height: 44, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+              {n && <div style={{width: 40, height: 40, borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', background: n === 8 || n === 25 ? C.oro : 'transparent', color: n === 8 || n === 25 ? '#fff' : C.hueso}}>{n}</div>}
             </div>
           ))}
-          {/* banda de incapacidad pegada al festivo 8 (martes) */}
-          <div style={{position: 'absolute', left: `${(1 / 7) * 100}%`, top: 64 + 56 * 1 - 14, width: `${(4 / 7) * 100 * barra}%`, height: 46, borderRadius: 23, background: C.rojo, opacity: 0.28, border: `3px solid ${C.rojo}`, boxSizing: 'border-box'}} />
+          <div style={{position: 'absolute', left: `${(1 / 7) * 100}%`, top: 28 + 44 - 2, width: `${(4 / 7) * 100 * barra}%`, height: 44, borderRadius: 22, background: `${C.rojo}55`, border: `3px solid ${C.rojo}`, boxSizing: 'border-box'}} />
         </div>
-        <div style={{marginTop: 12, fontSize: 26, fontWeight: 600, color: C.rojo, opacity: barra}}>¿Incapacidad pegada al festivo?</div>
-      </Panel>
-      <div style={{position: 'absolute', right: -30, top: -70}}><Aparece d={14} y={-120}><Bola size={150} /></Aparece></div>
+        <div style={{marginTop: 8, fontSize: 25, fontWeight: 600, color: '#F08A92', opacity: barra}}>¿Incapacidad pegada al festivo?</div>
+      </Blob>
+      <Hero src="o1" w={470} style={{right: -190, top: 20}} d={10} rot={4} />
     </Marco>
   );
 };
 
-// 2. Señales
+// 2. Señales: titular pequeño, hero lupa, panel con asimetría abajo-derecha
 const senales = ['Cae pegada a un festivo', 'Llega sin soporte de la EPS', 'Sellos o fechas que no cuadran'];
 export const L2: React.FC = () => (
-  <Marco n={2} modo="claro">
+  <Marco n={2} marca="¿?" modo="claro">
     <FiloOro d={0} t="SEÑALES" />
     <div style={{height: 26}} />
-    <Titular modo="claro" size={100} lineas={['¿Es real la', ['incapacidad?', 'oro']]} />
-    <Panel d={26} style={{marginTop: 50, display: 'flex', flexDirection: 'column', gap: 30, padding: '50px 46px'}}>
-      {senales.map((t, i) => (
-        <Aparece key={t} d={40 + i * 16} x={-60} y={0}>
-          <div style={{display: 'flex', alignItems: 'center', gap: 28}}>
-            <div style={{fontFamily: SERIF, fontWeight: 900, fontSize: 62, color: C.oroClaro, width: 88}}>0{i + 1}</div>
-            <div style={{fontSize: 40, fontWeight: 600, color: C.hueso, lineHeight: 1.15, width: 470}}>{t}</div>
-          </div>
-        </Aparece>
-      ))}
-      <Aparece d={96}><div style={{fontSize: 27, color: C.oroClaro, borderTop: `1px solid ${C.oro}88`, paddingTop: 22}}>Son alertas para revisar, no pruebas.</div></Aparece>
-    </Panel>
-    <div style={{position: 'absolute', right: -50, top: 420}}><Aparece d={70} y={30}><Lupa size={230} /></Aparece></div>
+    <div style={{width: 560}}><Titular modo="claro" size={76} lineas={['¿Es real la', ['incapacidad?', 'oro']]} /></div>
+    <Aparece d={24}><div style={{marginTop: 16, width: 460, fontSize: 25, color: C.taupe, lineHeight: 1.3}}>Tres señales que justifican revisarla antes de pagarla.</div></Aparece>
+    <Blob d={20} color={C.navy} radio="56px 56px 190px 56px" style={{left: 0, right: 0, top: 380, bottom: 0, padding: '44px 46px'}}>
+      <div style={{display: 'flex', flexDirection: 'column', gap: 22}}>
+        {senales.map((t, i) => (
+          <Aparece key={t} d={40 + i * 16} x={-60} y={0}>
+            <div style={{display: 'flex', alignItems: 'center', gap: 26}}>
+              <div style={{fontFamily: SERIF, fontWeight: 900, fontSize: 50, color: C.oroClaro, width: 84}}>0{i + 1}</div>
+              <div style={{fontSize: 36, fontWeight: 600, color: C.hueso, lineHeight: 1.15, width: 640}}>{t}</div>
+            </div>
+          </Aparece>
+        ))}
+      </div>
+      <div style={{position: 'absolute', left: 46, bottom: 44}}><Pastilla t="Son alertas, no pruebas." d={96} oro /></div>
+    </Blob>
+    <Hero src="o2" w={500} style={{right: -110, top: -60}} d={12} rot={-6} />
   </Marco>
 );
 
-// 3. NO
+// 3. NO: globo con pregunta, pastillas blancas, hero mazo que se sale
 const nos = ['Despedir de inmediato', 'Acusar sin pruebas', 'Descontar sin proceso'];
 export const L3: React.FC = () => {
   const f = useCurrentFrame();
   return (
-    <Marco n={3} modo="oscuro">
-      <FiloOro d={0} t="LO QUE EVITAR" />
-      <div style={{height: 26}} />
-      <Titular modo="oscuro" size={100} lineas={['Lo que', ['no debe hacer.', 'oro']]} />
-      <div style={{marginTop: 46, display: 'flex', flexDirection: 'column', gap: 24}}>
+    <Marco n={3} marca="NO" modo="oscuro">
+      <Globo style={{left: 0, top: 0, width: 640}} cola="izq" d={4}>¿Qué <i style={{color: C.oro}}>no</i> debe hacer?</Globo>
+      <div style={{position: 'absolute', top: 150, left: 0, width: 590, display: 'flex', flexDirection: 'column', gap: 22}}>
         {nos.map((t, i) => {
-          const tach = interpolate(f, [48 + i * 18, 60 + i * 18], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+          const tach = interpolate(f, [52 + i * 18, 64 + i * 18], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
           return (
-            <Aparece key={t} d={22 + i * 12} x={80} y={0}>
-              <div style={{background: C.hueso, borderRadius: 30, padding: '26px 34px', display: 'flex', alignItems: 'center', gap: 24, color: C.navy}}>
-                <div style={{width: 64, height: 64, borderRadius: '50%', background: C.rojo, color: '#fff', fontSize: 38, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', transform: `scale(${0.75 + 0.25 * tach})`}}>✕</div>
-                <div style={{position: 'relative', fontSize: 38, fontWeight: 700}}>{t}<div style={{position: 'absolute', left: 0, top: '56%', height: 5, width: `${tach * 100}%`, background: C.rojo}} /></div>
+            <Aparece key={t} d={20 + i * 12} x={-80} y={0}>
+              <div style={{background: C.hueso, borderRadius: 70, padding: '22px 30px', display: 'flex', alignItems: 'center', gap: 22, color: C.navy}}>
+                <div style={{width: 58, height: 58, borderRadius: '50%', background: C.rojo, color: '#fff', fontSize: 32, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, transform: `scale(${0.75 + 0.25 * tach})`}}>✕</div>
+                <div style={{position: 'relative', fontSize: 33, fontWeight: 700, lineHeight: 1.1}}>{t}<div style={{position: 'absolute', left: 0, top: '56%', height: 5, width: `${tach * 100}%`, background: C.rojo}} /></div>
               </div>
             </Aparece>
           );
         })}
       </div>
-      <div style={{position: 'absolute', right: -10, bottom: -20}}><Aparece d={70} y={40}><Mazo size={330} golpe={72} /></Aparece></div>
-      <Aparece d={90} style={{position: 'absolute', left: 0, bottom: 10}}><div style={{fontSize: 28, color: C.oroClaro, width: 520, lineHeight: 1.3}}>El debido proceso protege a la empresa.</div></Aparece>
+      <Blob d={60} color="#141C29" radio="56px 56px 56px 56px" style={{left: 0, width: 590, top: 560, bottom: 0, padding: '34px 40px'}}>
+        <div style={{fontSize: 32, color: C.hueso, lineHeight: 1.3, fontFamily: SERIF}}>El <b style={{color: C.oroClaro}}>debido proceso</b> protege a la empresa.</div>
+        <div style={{position: 'absolute', left: 40, bottom: 34}}><Pastilla t="Verifique antes de actuar." d={86} /></div>
+      </Blob>
+      <Hero src="o3" w={540} style={{right: -200, top: 250}} d={24} rot={-4} />
     </Marco>
   );
 };
 
-// 4. SÍ
+// 4. SÍ: panel verde con pestaña, titular dentro, pasos, hero que se sale por abajo-derecha
 const pasos = ['Verifique con la EPS o IPS que la emitió', 'Pida el soporte original', 'Cite a descargos por escrito'];
 export const L4: React.FC = () => {
   const f = useCurrentFrame();
   const alto = interpolate(f, [30, 110], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   return (
-    <Marco n={4} modo="claro">
-      <FiloOro d={0} t="PASO A PASO" />
-      <div style={{height: 26}} />
-      <Titular modo="claro" size={100} lineas={['Lo que', ['sí debe hacer.', 'oro']]} />
-      <Panel color={C.verde} d={24} style={{marginTop: 46, padding: '70px 46px', position: 'relative'}}>
-        <div style={{position: 'absolute', left: 80, top: 100, width: 5, height: 395 * alto, background: C.oro}} />
-        {pasos.map((t, i) => (
-          <Aparece key={t} d={40 + i * 22} x={-50} y={0} style={{marginBottom: i < 2 ? 70 : 0}}>
-            <div style={{display: 'flex', alignItems: 'center', gap: 30}}>
-              <div style={{width: 70, height: 70, borderRadius: '50%', background: C.oro, color: C.hueso, fontFamily: SERIF, fontWeight: 900, fontSize: 40, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, zIndex: 1}}>{i + 1}</div>
-              <div style={{fontSize: 42, fontWeight: 600, color: C.hueso, lineHeight: 1.18}}>{t}</div>
-            </div>
-          </Aparece>
-        ))}
-      </Panel>
+    <Marco n={4} marca="SÍ" modo="claro">
+      <Blob d={4} color={C.verde} tab="PASO A PASO" radio="0 56px 56px 190px" style={{left: 0, right: 0, top: 58, bottom: 0, padding: '46px 46px'}}>
+        <div style={{width: 560}}><Titular modo="oscuro" size={70} lineas={['Lo que', ['sí debe hacer.', 'oro']]} d={14} /></div>
+        <div style={{position: 'relative', marginTop: 36, width: 560}}>
+          <div style={{position: 'absolute', left: 27, top: 30, width: 4, height: 330 * alto, background: C.oro}} />
+          {pasos.map((t, i) => (
+            <Aparece key={t} d={40 + i * 20} x={-50} y={0} style={{marginBottom: i < 2 ? 40 : 0}}>
+              <div style={{display: 'flex', alignItems: 'center', gap: 24}}>
+                <div style={{width: 58, height: 58, borderRadius: '50%', background: C.oro, color: C.hueso, fontFamily: SERIF, fontWeight: 900, fontSize: 32, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, zIndex: 1}}>{i + 1}</div>
+                <div style={{fontSize: 31, fontWeight: 600, color: C.hueso, lineHeight: 1.18}}>{t}</div>
+              </div>
+            </Aparece>
+          ))}
+        </div>
+        <div style={{position: 'absolute', left: 46, bottom: 40}}><Pastilla t="Todo por escrito, con fecha." d={96} oro /></div>
+      </Blob>
+      <Hero src="o4" w={520} style={{right: -110, bottom: -70}} d={30} rot={6} />
     </Marco>
   );
 };
 
-// 5. Consecuencias
+// 5. Consecuencias: titular, balanza hero, panel con dos tarjetas anidadas
 export const L5: React.FC = () => (
-  <Marco n={5} modo="verde">
+  <Marco n={5} marca="Ley" modo="verde">
     <FiloOro d={0} t="RIESGOS" />
     <div style={{height: 26}} />
-    <Titular modo="verde" size={92} lineas={['Si es falsa,', ['hay consecuencias.', 'oro']]} />
-    <div style={{display: 'flex', justifyContent: 'center', marginTop: 10}}><Aparece d={10} y={50}><Balanza size={420} /></Aparece></div>
-    <div style={{display: 'flex', gap: 24, marginTop: 6}}>
-      {[['LABORAL', 'Puede ser justa causa de despido'], ['PENAL', 'Puede configurar falsedad en documento']].map(([a, b], i) => (
-        <Aparece key={a} d={50 + i * 14} style={{flex: 1}}>
-          <div style={{background: C.hueso, color: C.navy, borderRadius: 28, padding: '26px 28px', height: 190}}>
-            <div style={{fontSize: 21, letterSpacing: 6, color: C.oro, fontWeight: 700}}>{a}</div>
-            <div style={{fontFamily: SERIF, fontWeight: 700, fontSize: 32, lineHeight: 1.15, marginTop: 10}}>{b}</div>
-          </div>
-        </Aparece>
-      ))}
-    </div>
+    <div style={{width: 900}}><Titular modo="verde" size={78} lineas={['Si es falsa,', ['hay consecuencias.', 'oro']]} /></div>
+    <Blob d={20} color="#0F2F2A" radio="190px 56px 56px 56px" style={{left: 0, right: 0, top: 400, bottom: 0, padding: '40px 40px'}}>
+      <div style={{position: 'absolute', left: 40, right: 40, bottom: 34, display: 'flex', gap: 22}}>
+        {[['LABORAL', 'Puede ser justa causa de despido'], ['PENAL', 'Puede configurar falsedad en documento']].map(([a, b], i) => (
+          <Aparece key={a} d={50 + i * 14} style={{flex: 1}}>
+            <div style={{background: C.hueso, color: C.navy, borderRadius: 34, padding: '24px 26px', height: 180}}>
+              <div style={{fontSize: 20, letterSpacing: 6, color: C.oro, fontWeight: 700}}>{a}</div>
+              <div style={{fontFamily: SERIF, fontWeight: 700, fontSize: 30, lineHeight: 1.15, marginTop: 8}}>{b}</div>
+            </div>
+          </Aparece>
+        ))}
+      </div>
+    </Blob>
+    <Hero src="o5" w={400} style={{left: 250, top: 200}} d={14} />
   </Marco>
 );
 
-// 6. Cierre
+// 6. Cierre: panel navy con titular, hero teléfono que se sale, botón dorado
 export const L6: React.FC = () => {
   const f = useCurrentFrame();
   const pulso = 1 + 0.025 * Math.sin(f / 6);
   return (
-    <Marco n={6} modo="oscuro">
-      <FiloOro d={0} t="SU SIGUIENTE PASO" />
-      <div style={{height: 26}} />
-      <Titular modo="oscuro" size={108} lineas={['Prepare su', ['empresa hoy.', 'oro']]} />
-      <Aparece d={30}><div style={{marginTop: 38, fontSize: 36, lineHeight: 1.3, width: 640}}>Protocolo de verificación, formatos y proceso disciplinario listos para la temporada.</div></Aparece>
-      <Aparece d={56} style={{marginTop: 54}}>
-        <div style={{display: 'inline-block', transform: `scale(${pulso})`, transformOrigin: 'left center', background: C.oro, color: C.navyOsc, padding: '28px 50px', borderRadius: 60, fontSize: 40, fontWeight: 700}}>Escríbanos por WhatsApp</div>
-      </Aparece>
-      <Aparece d={76}><div style={{marginTop: 28, fontSize: 27, color: C.oroClaro}}>Guárdelo y compártalo con su equipo de RR. HH.</div></Aparece>
-      <div style={{position: 'absolute', right: 10, top: -90}}><Aparece d={6} y={-140}><Bola size={210} fase={1} /></Aparece></div>
+    <Marco n={6} marca="Hoy" modo="oscuro">
+      <Blob d={4} color="#141C29" tab="SU SIGUIENTE PASO" radio="0 56px 56px 190px" style={{left: 0, right: 0, top: 58, bottom: 0, padding: '46px 46px'}}>
+        <div style={{width: 560}}><Titular modo="oscuro" size={78} lineas={['Prepare su', ['empresa hoy.', 'oro']]} d={14} /></div>
+        <Aparece d={34}><div style={{marginTop: 28, fontSize: 29, lineHeight: 1.3, width: 480, color: C.hueso}}>Protocolo de verificación, formatos y proceso disciplinario listos para la temporada.</div></Aparece>
+        <Aparece d={58} style={{position: 'absolute', left: 46, bottom: 120}}>
+          <div style={{transform: `scale(${pulso})`, transformOrigin: 'left center', background: C.oro, color: C.navyOsc, padding: '22px 36px', borderRadius: 60, fontSize: 30, fontWeight: 700}}>Escríbanos por WhatsApp</div>
+        </Aparece>
+        <div style={{position: 'absolute', left: 46, bottom: 40}}><Pastilla t="Guárdelo para su equipo" d={80} style={{fontSize: 24}} /></div>
+      </Blob>
+      <Hero src="o6" w={360} style={{right: -60, top: 10}} d={12} rot={5} />
     </Marco>
   );
 };
