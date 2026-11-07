@@ -28,3 +28,6 @@ Es el estilo de la cuenta de láser (**@lasernudo**, placeholder en `remotion-te
 - `LaserSorteo100` — primer reel de la cuenta: "Corté 100 productos y los regalo a los primeros 100 comentarios" (20 s).
 - `LaserCorazon` — "Un corazón, dos llaveros" (14 s).
 - `LaserNavidad5` — "5 regalos grabados en láser para Navidad" (18,5 s).
+
+## Conceptos virales
+Para inventar el reto/concepto del reel (estilo MrBeast, productos simples con historia, concursos) usa la skill `ideas-virales-productos`.
