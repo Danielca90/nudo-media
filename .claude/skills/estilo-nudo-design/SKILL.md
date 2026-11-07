@@ -36,6 +36,7 @@ Complementa la skill `videos-explicativos`. Lo que se define aquí manda sobre l
   Taller 3D estilo toon, voz de Claude: Lulu (`CPv3Zr3CQCqE4ZzuCgBP`).
 
 ## Correcciones del usuario
+- 2026-11-07: los sketches deben tener **ritmo de adrenalina**: diálogo seguido sin huecos, respuestas del otro personaje, cortes cada 1–2 s y base rítmica de fondo. El 'muñequito de Claude' es **Claw'd** (pixelado, ojos cuadrados), no el destello.
 - 2026-11-05: subtítulos a media altura (no arriba), con borde negro y palabra clave resaltada.
 - 2026-11-05: más contexto y detalle en los modelos; acercamientos al detalle sincronizados.
 - 2026-11-05: más volumen (sombras, degradado en patas); fondo café descartado → grafito.

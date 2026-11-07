@@ -18,7 +18,7 @@ const Gancho: React.FC = () => {
   const frame = useCurrentFrame();
   const {fps} = useVideoConfig();
   const s = spring({frame, fps, config: {damping: 12, stiffness: 180}});
-  const sale = interpolate(frame, [f(1.75), f(2.05)], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const sale = interpolate(frame, [f(1.3), f(1.6)], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   return (
     <div style={{position: 'absolute', top: SAFE.top + 40, left: 60, right: 60, textAlign: 'center', opacity: sale,
       transform: `scale(${0.7 + s * 0.3}) rotate(${(1 - s) * -4}deg)`}}>
@@ -31,11 +31,12 @@ const Gancho: React.FC = () => {
 
 /* ---------- globos de diálogo ---------- */
 const Globo: React.FC<{linea: Linea; conVoz: boolean}> = ({linea, conVoz}) => {
-  const frame = useCurrentFrame() + f(linea.inicio); // frame absoluto (la Sequence empieza en linea.inicio)
+  const desde = linea.aparece ?? linea.inicio;
+  const frame = useCurrentFrame() + f(desde); // frame absoluto (la Sequence empieza cuando aparece el globo)
   const {fps} = useVideoConfig();
   const t = frame / fps;
   const tr = TRACK[Math.min(frame, TRACK.length - 1)][linea.quien];
-  const entra = spring({frame: frame - f(linea.inicio), fps, config: {damping: 11, stiffness: 220}});
+  const entra = spring({frame: frame - f(desde), fps, config: {damping: 11, stiffness: 220}});
   const sale = interpolate(t, [linea.fin - 0.2, linea.fin], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const grita = linea.palabras.some((p) => p.text === p.text.toUpperCase() && /[A-ZÁ]/.test(p.text));
   const ancho = 640;
@@ -86,7 +87,7 @@ const Onomatopeya: React.FC<{texto: string; i: number}> = ({texto, i}) => {
   const op = interpolate(frame, [12, 20], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const lado = i % 2 ? -1 : 1;
   return (
-    <div style={{position: 'absolute', left: clamp(tr[0] + lado * 210 - 160, 40, 700), top: clamp(tr[1] - 160, 300, 1300), width: 320, textAlign: 'center',
+    <div style={{position: 'absolute', left: clamp(tr[0] + lado * 270 - 160, 30, 730), top: clamp(tr[1] + 60, 420, 1350), width: 320, textAlign: 'center',
       transform: `scale(${s * 1.15}) rotate(${lado * -12}deg)`, opacity: op, fontFamily: FUENTE, fontWeight: 900, fontSize: 96, color: '#ffd23f', ...BORDE(14)}}>
       {texto}
     </div>
@@ -170,32 +171,39 @@ export const ClaudeTaller: React.FC<Props> = ({conVoz}) => {
   return (
     <AbsoluteFill style={{background: '#2b2d31'}}>
       <OffthreadVideo src={staticFile('claude-taller/escena3d.mp4')} muted />
-      <Sequence durationInFrames={f(2.1)}><Gancho /></Sequence>
+      <Sequence durationInFrames={f(1.65)}><Gancho /></Sequence>
       <Sequence from={f(REVES.inicio)} durationInFrames={f(REVES.fin - REVES.inicio)}><VentanaReves /></Sequence>
       <Sequence from={f(LIMITE)} durationInFrames={f(COLAPSO - LIMITE) + 20}><AvisoLimite /></Sequence>
       {LINEAS.map((l, i) => (
-        <Sequence key={i} from={f(l.inicio)} durationInFrames={f(l.fin - l.inicio)}><Globo linea={l} conVoz={conVoz} /></Sequence>
+        <Sequence key={i} from={f(l.aparece ?? l.inicio)} durationInFrames={f(l.fin - (l.aparece ?? l.inicio))}><Globo linea={l} conVoz={conVoz} /></Sequence>
       ))}
       {IMPACTOS.map((t, i) => (
         <Sequence key={i} from={f(t)} durationInFrames={22}><Onomatopeya texto={ONOMATOPEYAS[i]} i={i} /></Sequence>
       ))}
-      <Sequence from={f(27.4)}><Cierre /></Sequence>
+      <Sequence from={f(TROMBON)}><Cierre /></Sequence>
 
       {/* ---------- audio ---------- */}
       {conVoz && LINEAS.map((l, i) => (
-        <Sequence key={i} from={f(l.inicio)}><Audio src={staticFile(`claude-taller/${l.voz}`)} volume={l.quien === 'claude' ? 1.1 : 1} /></Sequence>
+        <Sequence key={i} from={f(l.inicio)}><Audio src={staticFile(`claude-taller/${l.voz}`)} volume={l.volumen ?? (l.quien === 'claude' ? 1.15 : 1)} /></Sequence>
       ))}
-      {/* tecleo: más fuerte a medida que sube el estrés; se corta en seco con el límite */}
+      {/* base de percusión (adrenalina): se corta en seco con el aviso de límite */}
+      <Sequence durationInFrames={f(LIMITE)}>
+        <Audio src={staticFile('claude-taller/percusion1.mp3')} loop
+          volume={(fr) => interpolate(fr / 30, [0, 1, 12.6, 15.3], [0.0, 0.32, 0.38, 0.5], {extrapolateRight: 'clamp'})} />
+      </Sequence>
+      <Sequence from={f(12.65)} durationInFrames={f(LIMITE - 12.65)}>
+        <Audio src={staticFile('claude-taller/percusion2.mp3')} loop volume={0.32} />
+      </Sequence>
+      {/* tecleo: más fuerte a medida que sube el estrés */}
       <Sequence durationInFrames={f(LIMITE)}>
         <Audio src={staticFile('claude-taller/teclado.mp3')} loop
-          volume={(fr) => interpolate(fr / 30, [0, 6.7, 14.3, 16.4, 20.2], [0.18, 0.25, 0.4, 0.62, 0.7], {extrapolateRight: 'clamp'})}
-          playbackRate={1} />
+          volume={(fr) => interpolate(fr / 30, [0, 5.9, 11.2, 12.65, 15.3], [0.22, 0.3, 0.42, 0.6, 0.7], {extrapolateRight: 'clamp'})} />
       </Sequence>
-      <Sequence from={f(16.4)} durationInFrames={f(LIMITE - 16.4)}>
-        <Audio src={staticFile('claude-taller/teclado.mp3')} loop volume={0.45} playbackRate={1.35} />
+      <Sequence from={f(12.65)} durationInFrames={f(LIMITE - 12.65)}>
+        <Audio src={staticFile('claude-taller/teclado.mp3')} loop volume={0.4} playbackRate={1.35} />
       </Sequence>
       {IMPACTOS.map((t, i) => (
-        <Sequence key={i} from={f(t - 0.06)}><Audio src={staticFile(i % 2 ? 'claude-taller/latigo2.mp3' : 'claude-taller/latigo.mp3')} volume={0.9} /></Sequence>
+        <Sequence key={i} from={f(t - 0.06)}><Audio src={staticFile(`claude-taller/latigo${(i % 3) + 1}.mp3`)} volume={1.0} /></Sequence>
       ))}
       <Sequence from={f(LIMITE)}><Audio src={staticFile('claude-taller/error.mp3')} volume={0.9} /></Sequence>
       <Sequence from={f(TROMBON)}><Audio src={staticFile('claude-taller/trombon.mp3')} volume={0.8} /></Sequence>

@@ -62,3 +62,5 @@ Usado en `remotion-test/src/claude-taller/`. Sirve cuando hay personajes animado
 - Efectos de sonido con ElevenLabs Sound Effects (`sfx`, 1 toma): el látigo salió como 5 chasquidos en 12 s →
   recortar uno con `silencedetect`.
 - No usar dos grabaciones en paralelo sobre la misma carpeta de cuadros.
+- Al recortar audio con ffmpeg y aplicar fades, usar `-ss` antes de `-i` o `asetpts=PTS-STARTPTS`; si no, el fade usa el tiempo del original y el recorte queda mudo. **Verificar siempre con `volumedetect`** que cada recorte suene.
+- Tiempos de la escena 3D en un solo objeto `TL` y planos como lista de tomas (`SHOTS`): retimear es cambiar números.

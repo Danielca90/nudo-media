@@ -18,3 +18,9 @@ Efectos: látigo, tecleo, alerta de error, trombón triste (Sound Effects v2).
 | 16,3–20,3 s | "¡MÁS RÁPIDO!" | Frenesí: tres latigazos, chispas y líneas de velocidad en el teclado, cámara tiembla | Claude al límite |
 | 20,3–23,6 s | (silencio + alerta) | Todo se congela; aviso "Alcanzaste el límite de uso de esta sesión" | Claude en shock |
 | 23,6–29,5 s | Claude: "Ay no… ¿y ahora qué hago?" | Claude se derrumba y llora; al carpintero se le cae el látigo; trombón triste; @somos_nudodesign | Los dos derrotados |
+
+## Versión 2 (rápida, 23 s) — correcciones del usuario
+- El personaje es **Claw'd** (mascota pixelada de Claude: cuerpo naranja, 2 ojos cuadrados, brazos de bloque, 4 patas), en 3D con bloques.
+- Ritmo más rápido: diálogo seguido, Claude contesta ("¡Ya mismo!", "¡Perdón, perdón!", "¡Listo! ¿Así?"), cortes cada 1–2 s.
+- Látigo audible (el recorte anterior quedó mudo), percusión tensa de fondo que se corta con el aviso de límite.
+- Música real pendiente: el conector básico de ElevenLabs no genera música (hace falta el conector completo).
