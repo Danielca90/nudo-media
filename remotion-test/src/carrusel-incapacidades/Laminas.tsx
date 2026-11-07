@@ -1,7 +1,7 @@
 import React from 'react';
 import {interpolate, useCurrentFrame} from 'remotion';
 import {C, SERIF} from './tema';
-import {Aparece, Blob, FiloOro, Globo, Hero, Marco, Pastilla, Titular} from './Base';
+import {Aparece, Blob, FiloOro, Globo, Hero, Logo, Marco, Pastilla, Titular} from './Base';
 
 const DIAS = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
 
@@ -145,9 +145,7 @@ export const L6: React.FC = () => {
       <Blob d={4} color={C.panelOsc} tab="SU SIGUIENTE PASO" radio="0 56px 56px 190px" style={{left: 0, right: 0, top: 58, bottom: 0, padding: '46px 46px'}}>
         <div style={{width: 560}}><Titular modo="oscuro" size={78} lineas={['Prepare su', ['empresa hoy.', 'oro']]} d={14} /></div>
         <Aparece d={34}><div style={{marginTop: 28, fontSize: 29, lineHeight: 1.3, width: 480, color: C.hueso}}>Protocolo de verificación, formatos y proceso disciplinario listos para la temporada.</div></Aparece>
-        <Aparece d={58} style={{position: 'absolute', left: 46, bottom: 120}}>
-          <div style={{transform: `scale(${pulso})`, transformOrigin: 'left center', background: C.oro, color: C.navyOsc, padding: '22px 36px', borderRadius: 60, fontSize: 30, fontWeight: 700}}>Escríbanos por WhatsApp</div>
-        </Aparece>
+        <Aparece d={58} style={{position: 'absolute', left: 46, bottom: 120}}><Logo h={170} /></Aparece>
         <div style={{position: 'absolute', left: 46, bottom: 40}}><Pastilla t="Guárdelo para su equipo" d={80} style={{fontSize: 24}} /></div>
       </Blob>
       <Hero src="o6" w={360} style={{right: -60, top: 10}} d={12} rot={5} />

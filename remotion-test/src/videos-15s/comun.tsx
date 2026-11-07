@@ -49,15 +49,16 @@ export const Grande: React.FC<{t: string; size: number; d?: number; color?: stri
   </div>
 );
 
-export const Chip: React.FC<{t: string; nota: string; d: number; icono?: string; top: number; dorado?: boolean; oscuro?: boolean}> = ({t, nota, d, icono = '✓', top, dorado, oscuro}) => {
+export const Chip: React.FC<{t: string; nota: string; d: number; icono?: string; top: number; dorado?: boolean; oscuro?: boolean; grande?: boolean}> = ({t, nota, d, icono = '✓', top, dorado, oscuro, grande}) => {
+  const k = grande ? 1.3 : 1;
   const p = useAp(d, 16, 140);
   return (
     <div style={{position: 'absolute', left: 80, right: 80, top, transform: `translateX(${(1 - p) * 420}px) scale(${0.96 + 0.04 * p})`, opacity: Math.min(1, p * 1.6), filter: `blur(${(1 - p) * 14}px)`}}>
-      <div style={{display: 'flex', alignItems: 'center', gap: 30, background: dorado ? C.oro : oscuro ? C.panelOsc : C.hueso, color: dorado ? C.navyOsc : oscuro ? C.hueso : C.navy, borderRadius: EST.chip === 'tarjeta' ? 44 : 80, padding: '26px 40px', boxShadow: '0 24px 50px #0000004d'}}>
-        <div style={{width: 84, height: 84, borderRadius: EST.chip === 'tarjeta' ? 22 : '50%', background: dorado ? C.navyOsc : C.oro, color: C.hueso, fontSize: 46, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0}}>{icono}</div>
+      <div style={{display: 'flex', alignItems: 'center', gap: 30, background: dorado ? C.oro : oscuro ? C.panelOsc : C.hueso, color: dorado ? C.navyOsc : oscuro ? C.hueso : C.navy, borderRadius: EST.chip === 'tarjeta' ? 44 : 80, padding: `${26 * k}px 40px`, boxShadow: '0 24px 50px #0000004d'}}>
+        <div style={{width: 84 * k, height: 84 * k, borderRadius: EST.chip === 'tarjeta' ? 22 : '50%', background: dorado ? C.navyOsc : C.oro, color: C.hueso, fontSize: 46 * k, fontWeight: 700, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0}}>{icono}</div>
         <div>
-          <div style={{fontFamily: SERIF, fontWeight: 900, fontSize: 56, lineHeight: 1.05}}>{t}</div>
-          <div style={{fontSize: 32, fontWeight: 600, opacity: 0.85, marginTop: 4}}>{nota}</div>
+          <div style={{fontFamily: SERIF, fontWeight: 900, fontSize: 56 * k, lineHeight: 1.05}}>{t}</div>
+          <div style={{fontSize: 32 * k, fontWeight: 600, opacity: 0.85, marginTop: 4}}>{nota}</div>
         </div>
       </div>
     </div>
@@ -134,6 +135,6 @@ export const Aviso: React.FC = () => (
 
 export const LogoCierre: React.FC<{top: number; d?: number}> = ({top, d = 24}) => (
   <Aparece d={d} style={{position: 'absolute', left: 0, right: 0, top, display: 'flex', justifyContent: 'center'}}>
-    <Logo h={300} />
+    <Logo h={400} />
   </Aparece>
 );

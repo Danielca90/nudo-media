@@ -307,11 +307,11 @@ export const Hero: React.FC<{src: string; w: number; style?: React.CSSProperties
 };
 
 // Globo de diálogo (pregunta) con cola
-export const Globo: React.FC<{children: React.ReactNode; d?: number; style?: React.CSSProperties; cola?: 'izq' | 'centro'}> = ({children, d = 6, style, cola = 'centro'}) => {
+export const Globo: React.FC<{children: React.ReactNode; d?: number; style?: React.CSSProperties; cola?: 'izq' | 'centro'; size?: number}> = ({children, d = 6, style, cola = 'centro', size = 40}) => {
   const p = useAp(d, 14, 110);
   return (
     <div style={{position: 'absolute', transform: `scale(${0.6 + 0.4 * p})`, opacity: Math.min(1, p * 2), transformOrigin: 'bottom center', ...style}}>
-      <div style={{background: C.hueso, color: C.navy, borderRadius: 60, padding: '26px 46px', fontSize: 40, fontFamily: SERIF, fontWeight: 700, textAlign: 'center', lineHeight: 1.15, boxShadow: '0 20px 50px #0000004d'}}>{children}</div>
+      <div style={{background: C.hueso, color: C.navy, borderRadius: 60, padding: '26px 46px', fontSize: size, fontFamily: SERIF, fontWeight: 700, textAlign: 'center', lineHeight: 1.15, boxShadow: '0 20px 50px #0000004d'}}>{children}</div>
       <div style={{position: 'absolute', bottom: -22, left: cola === 'centro' ? '50%' : 90, marginLeft: -22, width: 0, height: 0, borderLeft: '22px solid transparent', borderRight: '22px solid transparent', borderTop: `24px solid ${C.hueso}`}} />
     </div>
   );

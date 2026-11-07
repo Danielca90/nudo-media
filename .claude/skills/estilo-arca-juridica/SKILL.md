@@ -9,7 +9,7 @@ Complementa `videos-explicativos`. Lo definido aquí manda sobre lo general.
 
 ## Marca y público
 - **Arca Jurídica – Abogados Consultores** (logo oficial). Público: empleadores y RR. HH. en Colombia (a veces trabajadores).
-- Objetivo: posicionar y captar consultas por WhatsApp. Cierre: "Escríbanos por WhatsApp" (falta @ y número: pedirlos).
+- Objetivo: posicionar la marca y captar consultas. **Cierre sin número de WhatsApp, sin @ ni redes sociales** (decisión del usuario): solo el logo grande + frase de consulta ("Consúltenos", "Revísela con nosotros") + aviso legal. No poner botón de contacto.
 - Tratamiento: **usted**. Tono profesional, directo, sin promesas de resultado (ética de publicidad de abogados).
 - Siempre: "Orientación general, no es asesoría legal." Lenguaje condicional en lo penal/sancionatorio ("puede configurar", "puede ser").
 - Verificar toda cifra o norma con búsqueda antes de publicar y marcar para revisión del abogado.
@@ -47,9 +47,10 @@ Apertura desde una ranura vertical que se abre a tarjeta con sombra grande; titu
 ## Video corto (15 s)
 - Formato 1080×1920, 450 fotogramas. Subtítulos en la zona media (centro al 41 % del alto), Inter 800, borde negro, 1 palabra clave con recuadro dorado.
 - Gancho en 0–2 s: afirmación fuerte + el objeto ya en pantalla; golpe visual sincronizado con la palabra (mazo, sello).
-- Una escena por idea (≈3 s), con "chips" que entran en la palabra que la voz nombra. Cierre: botón WhatsApp + aviso legal. Dejar libres los 320 px inferiores.
+- Una escena por idea (≈3 s), con "chips" que entran en la palabra que la voz nombra. Cierre: logo grande + frase hablada + aviso legal (sin botón ni datos de contacto). Dejar libres los 320 px inferiores.
 
 ## Correcciones del usuario
+- 2026-11-07: "Sin número de WhatsApp ni redes sociales al final": retirado el botón de WhatsApp de todas las piezas y pies de foto.
 - 2026-11-07: entregó el logo oficial (isotipo de arca con check dorado + "ARCA JURÍDICA" + "ABOGADOS CONSULTORES"). Reemplaza el texto "Asesoría" que se había inventado; usar siempre el logo.
 - 2026-11-07: dio una segunda paleta (Lime Green, Metallic Gold, Muted Teal, Deep Space Blue, Dark Amethyst) para alternar estilos; es súper importante mantener la identidad pero no generar siempre "lo mismo".
 - 2026-11-07: el carrusel debe copiar la **estructura** de la referencia (paneles, objetos que se salen, globo, botón), no solo colores/tipografía.

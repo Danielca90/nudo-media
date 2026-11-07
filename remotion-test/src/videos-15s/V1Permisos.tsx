@@ -4,7 +4,7 @@ import {AbsoluteFill, interpolate, spring, staticFile, useCurrentFrame, useVideo
 import type {Caption} from '@remotion/captions';
 import {C} from '../carrusel-incapacidades/tema';
 import {Aparece, Hero} from '../carrusel-incapacidades/Base';
-import {Aviso, Boton, Chip, Escena, Grande, LogoCierre, Subs, s2f} from './comun';
+import {Aviso, Chip, Escena, Grande, LogoCierre, Subs, s2f} from './comun';
 import subs from './v1.subs.json';
 
 const CLAVES = ['demanda.', 'calamidad', 'viajes.', 'Nunca', 'paternidad.'];
@@ -64,8 +64,7 @@ const Cierre: React.FC = () => (
     <Grande t="Consúltenos" size={128} d={0} color={C.hueso} style={{left: 80, top: 250}} />
     <Grande t="antes de" size={128} d={3} color={C.hueso} style={{left: 80, top: 385}} />
     <Grande t="decir no." size={150} d={6} italic color={C.oroClaro} style={{left: 80, top: 520}} />
-    <Boton t="Escríbanos por WhatsApp" d={14} top={1060} />
-    <LogoCierre top={1270} />
+    <LogoCierre top={1010} d={14} />
     <Aviso />
   </AbsoluteFill>
 );
