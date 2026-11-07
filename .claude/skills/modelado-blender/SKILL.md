@@ -24,7 +24,8 @@ de teclado. El modelo queda **paramétrico**: cambiar un número y volver a corr
 1. `blender --version`. Si no existe: `bash scripts/instalar_blender.sh`.
    En el entorno en la nube **se borra al reiniciar**; reinstalar o pedir al usuario que lo agregue al script de arranque del entorno.
 2. Correr siempre sin pantalla: `blender -b -P mi_script.py -- <argumentos>` (los argumentos van después de `--`; leer con `sys.argv[-1]`).
-3. **No hay GPU**: Cycles en CPU. Referencia de tiempos con 4 núcleos: 480 px a 48 muestras ≈ 8 s por imagen; 900×700 a 32 muestras ≈ 30 s. Para iterar usar 16–32 muestras y resolución baja; subir solo para el render final.
+3. **No hay GPU**: Cycles en CPU. EEVEE y Workbench (render en tiempo real, estilo videojuego) también funcionan
+   instalando Mesa: `apt-get update && apt-get install -y libegl1 libgl1-mesa-dri libgles2` (se pierde al reiniciar). Referencia de tiempos con 4 núcleos: 480 px a 48 muestras ≈ 8 s por imagen; 900×700 a 32 muestras ≈ 30 s. Para iterar usar 16–32 muestras y resolución baja; subir solo para el render final.
 4. En el Mac del usuario: el **MCP de Blender** o la pestaña Scripting ejecutan el mismo código. La librería funciona igual allí (quitar `escena_nueva()` si se quiere trabajar sobre la escena abierta).
 
 Plantilla mínima:
