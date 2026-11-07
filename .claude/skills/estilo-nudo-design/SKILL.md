@@ -20,6 +20,7 @@ El usuario dice qué estilo quiere y se hace con ese formato.
 |---|---|---|---|
 | **Solo Remotion** (3D realista hecho en código) | Explicar un concepto de madera, materiales o carpintería con datos | [estilos/solo-remotion.md](estilos/solo-remotion.md) | `remotion-test/src/madera-verde/` |
 | **SketchUp + Blender** | Productos o instalaciones con modelos detallados (ej.: el video del chazo) | [estilos/sketchup-blender.md](estilos/sketchup-blender.md) | Video del chazo (hecho fuera de este repo) |
+| **Láser Nudo** (café oscuro + ámbar, como la web del láser) | Grabado/corte láser, sorteos, regalos personalizados | [estilos/laser-nudo.md](estilos/laser-nudo.md) | `remotion-test/src/laser/` |
 | **Low poly / sketch** (3D caricatura con personajes) | Parodias, humor y sketches virales con diálogo | [estilos/low-poly-sketch.md](estilos/low-poly-sketch.md) | `remotion-test/src/claude-taller/` |
 
 Para un estilo nuevo, crear su archivo en `estilos/` con la misma estructura (cuándo usarlo, flujo, visual,

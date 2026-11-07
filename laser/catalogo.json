@@ -1,0 +1,98 @@
+[
+ {
+  "id": "01_llaveros_pareja",
+  "titulo": "Llaveros de pareja",
+  "madera": "cedro",
+  "ancho_mm": 133.8,
+  "alto_mm": 65.4,
+  "nota": "Corazón partido en zigzag: las dos mitades solo encajan entre sí. 3 mm. Cambia nombres con --set nombre1=.. nombre2=.."
+ },
+ {
+  "id": "02_posavasos_mandala",
+  "titulo": "Posavasos mandala (set de 4)",
+  "madera": "pino",
+  "ancho_mm": 208.0,
+  "alto_mm": 208.0,
+  "nota": "4 posavasos Ø95 mm, cada uno con un mandala distinto. Sellar con aceite/cera para uso con vasos."
+ },
+ {
+  "id": "03_placa_cancion",
+  "titulo": "Placa de tu canción",
+  "madera": "pino",
+  "ancho_mm": 210.0,
+  "alto_mm": 120.0,
+  "nota": "Onda de sonido estilo reproductor (sin marcas de terceros). La foto es de ejemplo: reemplázala por tu imagen en LightBurn (capa de imagen, Jarvis/Stucki)."
+ },
+ {
+  "id": "04_fases_lunares",
+  "titulo": "Guirnalda de fases lunares",
+  "madera": "pino",
+  "ancho_mm": 274.0,
+  "alto_mm": 138.0,
+  "nota": "8 discos Ø60 mm con las fases de la luna. Dos agujeros por disco para enhebrar hilo de cáñamo."
+ },
+ {
+  "id": "05_adornos_navidad",
+  "titulo": "Adornos navideños personalizados",
+  "madera": "cedro",
+  "ancho_mm": 314.8,
+  "alto_mm": 90.2,
+  "nota": "Estrella, árbol, copo y bola con nombre. Cuelgan con cinta o hilo. Cambia nombre/año con --set nombre=.. anio=.."
+ },
+ {
+  "id": "06_triqui_viaje",
+  "titulo": "Triqui de viaje",
+  "madera": "pino",
+  "ancho_mm": 161.0,
+  "alto_mm": 226.0,
+  "nota": "Tablero 150 mm + 5 X y 5 O. Las fichas encajan sobre el tablero (casillas de 50 mm)."
+ },
+ {
+  "id": "07_vales_pareja",
+  "titulo": "Vales de pareja (12)",
+  "madera": "pino",
+  "ancho_mm": 277.0,
+  "alto_mm": 228.0,
+  "nota": "12 vales 85×50 mm. Se guardan en una bolsita o cajita; cambia las frases en lib/disenos.py (FRASES)."
+ },
+ {
+  "id": "08_placa_mascota",
+  "titulo": "Placa para mascota",
+  "madera": "cedro",
+  "ancho_mm": 194.5,
+  "alto_mm": 84.0,
+  "nota": "Hueso 92×38 mm y chapa Ø40 mm. Cambia nombre/teléfono con --set mascota=.. telefono=.."
+ },
+ {
+  "id": "09_marcapaginas",
+  "titulo": "Marcapáginas filigrana",
+  "madera": "cedro",
+  "ancho_mm": 218.0,
+  "alto_mm": 160.0,
+  "nota": "4 marcapáginas 46×150 mm con calados florales. Añade borla de hilo en el agujero superior."
+ },
+ {
+  "id": "10_placa_coordenadas",
+  "titulo": "Placa de coordenadas",
+  "madera": "pino",
+  "ancho_mm": 210.0,
+  "alto_mm": 160.0,
+  "nota": "Placa 200×150 mm: lugar, coordenadas y fecha. Parámetros: --set lugar=.. coordenadas=.. fecha=.."
+ },
+ {
+  "id": "sorteo_100_llaveros_hoja1",
+  "titulo": "Sorteo: llaveros #001–#050",
+  "madera": "cedro",
+  "ancho_mm": 334.0,
+  "alto_mm": 386.0,
+  "nota": ""
+ },
+ {
+  "id": "sorteo_100_llaveros_hoja2",
+  "titulo": "Sorteo: llaveros #051–#100",
+  "madera": "cedro",
+  "ancho_mm": 334.0,
+  "alto_mm": 386.0,
+  "nota": ""
+ }
+]

@@ -1,0 +1,64 @@
+{
+  "v1": {
+    "duracion": 20, "voz": "laser/audio/voz_v1_sorteo.mp3", "offset": 0.5,
+    "segmentos": [
+      {"t0": 0.5, "t1": 5.58, "texto": "Corté en láser 100 productos, y los voy a regalar a los primeros 100 comentarios de este video.", "claves": ["100", "regalar", "comentarios"]},
+      {"t0": 5.97, "t1": 9.28, "texto": "Sí, así de simple. Sigue la cuenta y comenta aquí abajo.", "claves": ["comenta", "sigue"]},
+      {"t0": 9.63, "t1": 10.92, "texto": "Cada llavero lleva su número,", "claves": ["número,"]},
+      {"t0": 11.18, "t1": 13.17, "texto": "el 1, para el primero que comente.", "claves": ["primero"]},
+      {"t0": 13.47, "t1": 16.7, "texto": "Corre, que se acaban. Las bases están en mi perfil.", "claves": ["acaban.", "bases"]}
+    ],
+    "eventos": [
+      {"t": 0.7, "tipo": "sizzle", "d": 1.8, "g": 0.55}, {"t": 2.6, "tipo": "sizzle", "d": 2.2, "g": 0.5},
+      {"t": 5.55, "tipo": "whoosh", "g": 0.6}, {"t": 9.4, "tipo": "whoosh", "g": 0.55}, {"t": 13.3, "tipo": "whoosh", "g": 0.55}, {"t": 17.5, "tipo": "whoosh", "g": 0.5},
+      {"t": 11.35, "tipo": "pop", "g": 0.8}, {"t": 12.3, "tipo": "pop", "g": 0.7}, {"t": 12.7, "tipo": "pop", "g": 0.7},
+      {"t": 14.2, "tipo": "tick", "g": 0.8}, {"t": 14.9, "tipo": "tick", "g": 0.8}, {"t": 15.6, "tipo": "tick", "g": 0.8}, {"t": 16.3, "tipo": "tick", "g": 0.8},
+      {"t": 17.7, "tipo": "ding", "g": 0.7}
+    ],
+    "pops": {"desde": 5.9, "hasta": 8.5, "n": 40}
+  },
+  "v2": {
+    "duracion": 14, "voz": "laser/audio/voz_v2_corazon.mp3", "offset": 0.4,
+    "segmentos": [
+      {"t0": 0.4, "t1": 1.8, "texto": "Un corazón de madera.", "claves": ["corazón"]},
+      {"t0": 2.27, "t1": 2.85, "texto": "Un láser.", "claves": ["láser."]},
+      {"t0": 3.29, "t1": 5.84, "texto": "Y dos llaveros que solo encajan entre ellos.", "claves": ["encajan"]},
+      {"t0": 6.14, "t1": 9.44, "texto": "El regalo perfecto para tu pareja, con sus nombres grabados.", "claves": ["regalo", "nombres"]},
+      {"t0": 9.78, "t1": 11.4, "texto": "Pídelo en el link de la bio.", "claves": ["bio."]}
+    ],
+    "eventos": [
+      {"t": 0.5, "tipo": "sizzle", "d": 1.5, "g": 0.55}, {"t": 3.3, "tipo": "sizzle", "d": 1.4, "g": 0.55}, {"t": 5.0, "tipo": "sizzle", "d": 1.3, "g": 0.4},
+      {"t": 2.2, "tipo": "whoosh", "g": 0.5}, {"t": 4.75, "tipo": "whoosh", "g": 0.5}, {"t": 9.5, "tipo": "whoosh", "g": 0.5},
+      {"t": 6.55, "tipo": "pop", "g": 1.0}, {"t": 6.6, "tipo": "tick", "g": 1.0}, {"t": 10.4, "tipo": "ding", "g": 0.7}
+    ]
+  },
+  "v3": {
+    "duracion": 18.5, "voz": "laser/audio/voz_v3_navidad.mp3", "offset": 0.4,
+    "segmentos": [
+      {"t0": 0.4, "t1": 3.16, "texto": "Cinco regalos grabados en láser para esta Navidad.", "claves": ["Cinco", "láser", "Navidad."]},
+      {"t0": 3.64, "t1": 3.91, "texto": "Uno,", "claves": ["Uno,"]},
+      {"t0": 4.27, "t1": 5.43, "texto": "las fases de la luna.", "claves": ["luna."]},
+      {"t0": 5.8, "t1": 7.64, "texto": "Dos, el triqui de viaje.", "claves": ["triqui"]},
+      {"t0": 7.95, "t1": 8.37, "texto": "Tres,", "claves": ["Tres,"]},
+      {"t0": 8.59, "t1": 9.71, "texto": "los vales de pareja.", "claves": ["vales"]},
+      {"t0": 10.02, "t1": 10.36, "texto": "Cuatro,", "claves": ["Cuatro,"]},
+      {"t0": 10.65, "t1": 11.95, "texto": "la placa de tu canción.", "claves": ["canción."]},
+      {"t0": 12.21, "t1": 12.67, "texto": "Cinco,", "claves": ["Cinco,"]},
+      {"t0": 12.89, "t1": 14.2, "texto": "la placa de tu mascota.", "claves": ["mascota."]},
+      {"t0": 14.52, "t1": 16.32, "texto": "Elige el tuyo y escríbenos.", "claves": ["escríbenos."]}
+    ],
+    "items": [
+      {"t": 3.55, "n": 1, "img": "04_fases_lunares", "nombre": "Fases de la luna"},
+      {"t": 5.75, "n": 2, "img": "06_triqui_viaje", "nombre": "Triqui de viaje"},
+      {"t": 7.9, "n": 3, "img": "07_vales_pareja", "nombre": "Vales de pareja"},
+      {"t": 9.95, "n": 4, "img": "03_placa_cancion", "nombre": "Placa de tu canción"},
+      {"t": 12.15, "n": 5, "img": "08_placa_mascota", "nombre": "Placa de tu mascota"}
+    ],
+    "fin": 14.4,
+    "eventos": [
+      {"t": 0.3, "tipo": "whoosh", "g": 0.5}, {"t": 3.5, "tipo": "pop", "g": 0.9}, {"t": 5.7, "tipo": "pop", "g": 0.9}, {"t": 7.85, "tipo": "pop", "g": 0.9},
+      {"t": 9.9, "tipo": "pop", "g": 0.9}, {"t": 12.1, "tipo": "pop", "g": 0.9}, {"t": 14.4, "tipo": "whoosh", "g": 0.5}, {"t": 15.0, "tipo": "ding", "g": 0.7},
+      {"t": 3.45, "tipo": "whoosh", "g": 0.35}, {"t": 5.65, "tipo": "whoosh", "g": 0.35}, {"t": 7.8, "tipo": "whoosh", "g": 0.35}, {"t": 9.85, "tipo": "whoosh", "g": 0.35}, {"t": 12.05, "tipo": "whoosh", "g": 0.35}
+    ]
+  }
+}
