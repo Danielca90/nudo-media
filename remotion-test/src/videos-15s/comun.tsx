@@ -2,7 +2,7 @@ import React from 'react';
 import {AbsoluteFill, Sequence, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import type {Caption} from '@remotion/captions';
 import {C, EST, SERIF, SANS} from '../carrusel-incapacidades/tema';
-import {Aparece, Aurora, Deco, Guirnalda, Linea, Modo, tinta, useAp, useFuentes} from '../carrusel-incapacidades/Base';
+import {Aparece, Aurora, Deco, Guirnalda, Linea, Logo, Modo, tinta, useAp, useFuentes} from '../carrusel-incapacidades/Base';
 
 export const VW = 1080;
 export const VH = 1920;
@@ -35,9 +35,8 @@ const EscenaInt: React.FC<{modo: Modo; marca?: string; children: React.ReactNode
       <Aurora claro={claro} alto={VH} />
       <Deco claro={claro} alto={VH} />
       <Guirnalda modo={modo} />
-      <div style={{position: 'absolute', top: 160, left: 0, right: 0, textAlign: 'center'}}>
-        <div style={{fontFamily: SERIF, fontSize: 44, fontWeight: 700}}>Arca Jurídica</div>
-        <div style={{fontSize: 19, letterSpacing: 13, marginTop: 4, color: claro ? C.taupe : C.oroClaro}}>A S E S O R Í A</div>
+      <div style={{position: 'absolute', top: 128, left: 0, right: 0, display: 'flex', justifyContent: 'center'}}>
+        <Logo claro={claro} h={128} />
       </div>
       {children}
     </AbsoluteFill>
@@ -131,4 +130,10 @@ export const Boton: React.FC<{t: string; d: number; top: number}> = ({t, d, top}
 
 export const Aviso: React.FC = () => (
   <div style={{position: 'absolute', left: 0, right: 0, top: 1620, textAlign: 'center', fontSize: 24, opacity: 0.6, color: C.hueso}}>Orientación general, no es asesoría legal.</div>
+);
+
+export const LogoCierre: React.FC<{top: number; d?: number}> = ({top, d = 24}) => (
+  <Aparece d={d} style={{position: 'absolute', left: 0, right: 0, top, display: 'flex', justifyContent: 'center'}}>
+    <Logo h={300} />
+  </Aparece>
 );

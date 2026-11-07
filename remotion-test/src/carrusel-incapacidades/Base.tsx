@@ -175,10 +175,9 @@ export const Marco: React.FC<{n: number; modo: Modo; marca?: string; children: R
       <Aurora claro={claro} />
       <Deco claro={claro} />
       <Guirnalda modo={modo} />
-      {/* marca */}
-      <div style={{position: 'absolute', top: 150, left: 0, right: 0, textAlign: 'center', opacity: interpolate(f, [0, 14], [0, 1], {extrapolateRight: 'clamp'})}}>
-        <div style={{fontFamily: SERIF, fontSize: 38, fontWeight: 700, color: tinta(modo)}}>Arca Jurídica</div>
-        <div style={{fontSize: 17, letterSpacing: 12, marginTop: 4, color: claro ? C.taupe : C.oroClaro}}>A S E S O R Í A</div>
+      {/* marca: logo oficial */}
+      <div style={{position: 'absolute', top: 124, left: 0, right: 0, display: 'flex', justifyContent: 'center', opacity: interpolate(f, [0, 14], [0, 1], {extrapolateRight: 'clamp'})}}>
+        <Logo claro={claro} h={150} />
       </div>
       <div style={{position: 'absolute', top: 290, left: 90, right: 90, bottom: 190}}>{children}</div>
       {/* pie */}
@@ -328,3 +327,8 @@ export const Pastilla: React.FC<{t: string; d?: number; style?: React.CSSPropert
     </div>
   );
 };
+
+// Logo oficial de Arca Jurídica (recortado, public/marca). `claro` = fondo claro -> logo a color.
+export const Logo: React.FC<{claro?: boolean; h?: number; style?: React.CSSProperties}> = ({claro, h = 150, style}) => (
+  <Img src={staticFile(`marca/${claro ? 'logo' : 'logo-claro'}.png`)} style={{height: h, display: 'block', ...style}} />
+);

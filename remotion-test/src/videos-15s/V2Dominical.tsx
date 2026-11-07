@@ -4,7 +4,7 @@ import {AbsoluteFill, Img, interpolate, spring, staticFile, useCurrentFrame, use
 import type {Caption} from '@remotion/captions';
 import {C, SERIF} from '../carrusel-incapacidades/tema';
 import {Aparece, Hero, useAp} from '../carrusel-incapacidades/Base';
-import {Aviso, Boton, Chip, Escena, Grande, Subs, s2f} from './comun';
+import {Aviso, Boton, Chip, Escena, Grande, LogoCierre, Subs, s2f} from './comun';
 import subs from './v2.subs.json';
 
 const CLAVES = ['error.', '90 %.', 'compensatorio.', 'ocasional', 'nómina']; 
@@ -75,6 +75,7 @@ const Cierre: React.FC = () => (
     <Grande t="nómina con" size={128} d={3} color={C.hueso} style={{left: 80, top: 385}} />
     <Grande t="nosotros." size={150} d={6} italic color={C.oroClaro} style={{left: 80, top: 520}} />
     <Boton t="Escríbanos por WhatsApp" d={14} top={1060} />
+    <LogoCierre top={1270} />
     <Aviso />
   </AbsoluteFill>
 );

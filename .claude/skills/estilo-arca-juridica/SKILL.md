@@ -8,7 +8,7 @@ description: Estilo de los carruseles y videos de Arca Jurídica (asesoría jur�
 Complementa `videos-explicativos`. Lo definido aquí manda sobre lo general.
 
 ## Marca y público
-- Arca Jurídica, "A S E S O R Í A". Público: empleadores y RR. HH. en Colombia (a veces trabajadores).
+- **Arca Jurídica – Abogados Consultores** (logo oficial). Público: empleadores y RR. HH. en Colombia (a veces trabajadores).
 - Objetivo: posicionar y captar consultas por WhatsApp. Cierre: "Escríbanos por WhatsApp" (falta @ y número: pedirlos).
 - Tratamiento: **usted**. Tono profesional, directo, sin promesas de resultado (ética de publicidad de abogados).
 - Siempre: "Orientación general, no es asesoría legal." Lenguaje condicional en lo penal/sancionatorio ("puede configurar", "puede ser").
@@ -35,7 +35,7 @@ Para sumar un tercer tema: añadir otra paleta + banderas de estilo (`deco`, `ap
 Titulares **Playfair Display** 900 (palabra clave en cursiva dorada); cuerpo **Inter** 600/700. Fuentes en `remotion-test/public/fonts` (no depender de internet).
 
 ## Estructura visual (referencia: carrusel tipo Pereira & Associados)
-- Marca centrada arriba ("Arca Jurídica" + "A S E S O R Í A"); guirnalda de luces doradas y nieve suave en temporada navideña.
+- Marca: **logo oficial** centrado arriba (`public/marca/logo.png` para fondos claros, `logo-claro.png` para fondos oscuros, `*-isotipo.png` solo el símbolo; componente `Logo` en `Base.tsx`). Nunca redibujar ni recolorear el logo salvo estas dos versiones; en el cierre de los videos va grande (`LogoCierre`). Colores del logo: verde petróleo ≈ `#0F3135`→negro y bronce→dorado claro; guirnalda de luces doradas y nieve suave en temporada navideña.
 - Paneles grandes con **una esquina muy redondeada** (190 px) y a veces pestaña tipo carpeta; fondos que alternan oscuro / hueso / verde.
 - Pregunta en **globo de diálogo**; pastillas blancas; botón-pastilla con ícono ↓ y nota corta.
 - **Objetos fotográficos recortados** que se salen del panel (generados con ElevenLabs `bytedance-seedream-5-pro` sobre fondo blanco + `birefnet-v2-bg-removal`), guardados en `public/objetos/`. Sin texto ni logos reales en las imágenes. Objetos blancos sobre blanco (papel, calendario) se pierden al recortar: usarlos como tarjeta redondeada.
@@ -50,5 +50,6 @@ Apertura desde una ranura vertical que se abre a tarjeta con sombra grande; titu
 - Una escena por idea (≈3 s), con "chips" que entran en la palabra que la voz nombra. Cierre: botón WhatsApp + aviso legal. Dejar libres los 320 px inferiores.
 
 ## Correcciones del usuario
+- 2026-11-07: entregó el logo oficial (isotipo de arca con check dorado + "ARCA JURÍDICA" + "ABOGADOS CONSULTORES"). Reemplaza el texto "Asesoría" que se había inventado; usar siempre el logo.
 - 2026-11-07: dio una segunda paleta (Lime Green, Metallic Gold, Muted Teal, Deep Space Blue, Dark Amethyst) para alternar estilos; es súper importante mantener la identidad pero no generar siempre "lo mismo".
 - 2026-11-07: el carrusel debe copiar la **estructura** de la referencia (paneles, objetos que se salen, globo, botón), no solo colores/tipografía.
