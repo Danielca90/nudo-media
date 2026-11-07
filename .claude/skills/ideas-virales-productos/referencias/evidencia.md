@@ -51,8 +51,30 @@ Investigado el 2026-11-07 con búsqueda web. Muchas fuentes son secundarias: ver
 | Concursos por "orden de llegada": sin fuente que confirme si requieren permiso | U | consultar Coljuegos/abogado |
 | Meta: bases claras, aviso de no patrocinio, sin premios en dinero por interacción; "seguir obligatorio" podría estar prohibido (sin verificar en la fuente oficial) | C/U | [Woobox](https://blog.woobox.com/instagram-giveaway-rules-to-remember-checklist-if-you-forget/), [Plexus](https://www.plexus.co/resources/blog/trade-promotions/social-media/terms-and-conditions/instagram) |
 
+## Libros clásicos y papers (segunda ronda, 2026-11-07)
+| Afirmación | Conf. | Fuente |
+|---|---|---|
+| Berger & Milkman (2012, JMR): ~7.000 artículos del NYT; la activación (asombro, enojo, ansiedad) aumenta compartir; la tristeza lo reduce; se mantiene controlando posición en portada | A | [paper](https://faculty.wharton.upenn.edu/wp-content/uploads/2011/11/Virality.pdf) |
+| Made to Stick: SUCCESs (simple, inesperado, concreto, creíble, emocional, historias) | B (resúmenes) | [Sightline](https://sightline.org/?p=34647) |
+| Loewenstein (1994, Psych. Bulletin 116(1):75-98): curiosidad = brecha de información; fMRI 2009: máxima con buena pista pero sin certeza; aplicación a clics sin experimentos | A/C | [Columbia (PDF)](https://shohamylab.zuckermaninstitute.columbia.edu/sites/default/files/2017-02/Curiosity.pdf), [Nautilus](https://nautil.us/curiosity-depends-on-what-you-already-know-235803) |
+| Green & Brock (2000, JPSP): transportación narrativa persuade; van Laer et al. (2014, JCR, 132 efectos, 76 artículos): trama imaginable, personajes identificables, verosimilitud | A | [meta-análisis (PDF)](https://openaccess.city.ac.uk/id/eprint/6755/1/SSRN-id2033192.pdf), [OnFiction](https://www.onfiction.ca/2014/02/research-bulletin-summarizing-over.html) |
+| Choice overload: meta-análisis 2010 (63 condiciones, 50 experimentos, N=5.036) efecto medio ≈ 0; el estudio de mermeladas no replicó | A | [Scheibehenne et al. (PDF)](https://abcwest.cogs.indiana.edu/pmwiki/pdf/scheibehenne.options.2010.pdf), [CS Monitor](https://m.csmonitor.com/Business/Donald-Marron/2012/0719/The-Paradox-of-Choice-A-theory-loses-favor) |
+| MAYA (Loewy) / Hit Makers: familiar + sorpresa; ensayo, no ciencia controlada | B/C | [Big Think](https://bigthink.com/plus/will-your-product-be-a-hit-or-a-flop-this-simple-rule-can-help-you-decide/), [Next Big Idea Club](https://nextbigideaclub.com/magazine/the-5-rules-for-making-a-hit/12732/) |
+| Fluidez de procesamiento (Reber, Schwarz, Winkielman 2004): más fluidez → más agrado estético; críticas por novedad/complejidad | A | [PDF](https://pages.ucsd.edu/~pwinkielman/reber-schwarz-winkielman-beauty-PSPR-2004.pdf), [Wikipedia](https://en.wikipedia.org/wiki/Processing_fluency) |
+| Salganik, Dodds & Watts (2006, Science 311:854-856): 14.341 participantes; influencia social → más desigualdad e impredecibilidad; lo mejor rara vez fracasa | A | [PDF](https://pdodds.w3.uvm.edu/research/papers/years/2006/salganik2006a.pdf) |
+| Handmade effect (Fuchs, Schreier, van Osselaer 2015, JM 79:98-110): lo hecho a mano "contiene amor"; más fuerte en regalos para seres queridos; ~17 % más disposición a pagar (prensa AMA) | A/B | [Univ. Viena](https://mib.univie.ac.at/en/research/recent-publications/publikationen-detailansicht/pure/b4c66f26-9ce8-4460-a816-7f46a6c4cd0c/show/publ/Pure), [ScienceDaily](https://sciencedaily.com/releases/2015/03/150324111544.htm) |
+| Flynn & Adams (2009, JESP): quien regala cree que más caro = más aprecio; quien recibe no | A | [Stanford GSB](https://www.gsb.stanford.edu/faculty-research/publications/money-cant-buy-love-asymmetric-beliefs-about-link-between-gift-price) |
+| Presenter's paradox (Weaver, Garcia, Schwarz 2012, JCR 39(3):445-460): añadir algo levemente favorable a algo muy favorable baja la evaluación | A | [IDEAS/RePEc](https://ideas.repec.org/a/oup/jconrs/doi10.1086-664497.html), [Phys.org](https://phys.org/news/2012-04-adding-mildly-favorable-dilute-big.pdf) |
+| Zeigarnik: meta-análisis 2025 (Ghibellini & Meier) sin validez universal; Ovsiankina (reanudar lo interrumpido) más general | A | [IDEAS/RePEc](https://ideas.repec.org/a/pal/palcom/v12y2025i1d10.1057_s41599-025-05000-w.html) |
+| Oxitocina y narrativa (Zak): críticas (Yong, Crockett), muestras pequeñas, estudio encargado por agencia | B | [Wikipedia](https://en.wikipedia.org/wiki/Paul_J._Zak), [RSA](https://thersa.org/blog/2012/07/does-oxytocin-man-have-real-magic-powers) |
+| Cialdini: 7 principios, "unidad" como identidad compartida | B | [Influence at Work](https://www.influenceatwork.com/6-principles-of-persuasion/), [ASU](https://blogs.wpcarey.asu.edu/20250422-gentle-science-persuasion-part-seven-unity) |
+| Alchemy (Sutherland): valor percibido según contexto; sin marca todo es commodity | C | [resumen](https://www.alexmurrell.co.uk/summaries/rory-sutherland-alchemy) |
+| Hooked (Eyal): disparador → acción → recompensa variable → inversión; sin validación controlada encontrada | C | [Farnam Street](https://fs.blog/hooked/) |
+
 ## Vacíos que seguir investigando
 - Cifras de demanda reales en Colombia (Mercado Libre, Google Trends, tu cuenta).
 - Políticas oficiales actuales de Meta sobre promociones.
 - Si Coljuegos considera "primeros N comentarios" fuera de su alcance.
 - Casos de retos largos de manufactura/grabado con buen desempeño (no se encontró ninguno).
+- Purple Cow (Godin), regla pico-final (Kahneman) y estudio de las toallas (Goldstein/Cialdini): búsquedas sin resultados útiles; pendientes.
+- Evidencia experimental sobre el viaje del héroe y persuasión (no encontrada).

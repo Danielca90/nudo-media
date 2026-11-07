@@ -53,20 +53,46 @@ Descarta ideas con 0 en viabilidad aunque sumen alto.
 - Ojo: personalizar artículos "de lujo" con el nombre puede generar temor al juicio social.
 - Efecto IKEA: valoramos más lo que ayudamos a crear **si lo terminamos**. Idea mía: dejar que el cliente elija frase/nombre y verlo en vivo.
 
-## 7. Concursos y regalos (Colombia: reglas duras)
+## 7. Regalos y premios: qué percibe quien recibe
+- **Más caro no es más agradecido.** Quien regala cree que un regalo más caro genera más aprecio; quien lo recibe no lo siente así (Flynn & Adams 2009). Un premio "costoso" impresiona en el video, pero lo que el ganador valora es que sea deseable y pensado.
+- **No sumes extras pequeños a un premio grande.** Quien evalúa promedia: un premio fuerte solo se ve más generoso que el mismo premio + un detalle menor (presenter's paradox, Weaver et al. 2012). Un premio protagonista, sin "y además…".
+- **Hecho a mano = contiene amor.** Lo artesanal resulta más atractivo porque se percibe que "lleva amor"; el efecto es fuerte en regalos para seres queridos (no para conocidos lejanos) y se reporta hasta ~17 % más de disposición a pagar (Fuchs et al. 2015). Para Nudo: mostrar las manos, el taller y el acabado; ideal Navidad y Día de la Madre.
+
+## 8. Concursos y regalos (Colombia: reglas duras)
 - **Coljuegos:** los sorteos con azar en redes necesitan autorización previa; no se puede promocionarlos antes; se reportan multas de 100 SMLMV. Un concurso por **orden de llegada no es azar**, pero no encontré fuente que confirme si Coljuegos lo exime: **consultar a Coljuegos o abogado antes de lanzar**.
 - **No cobrar al ganador por reclamar el premio** (advertencia de Coljuegos; es el patrón de las estafas). "Contra entrega" para el premio = riesgo legal (no resuelto) y de confianza.
 - **Meta/Instagram:** bases claras, aviso de que no está patrocinado por Instagram/Meta, no premiar con dinero a cambio de interacción. Exigir "seguir la cuenta" como condición obligatoria podría incumplir sus reglas (vendor, sin verificar en la fuente oficial).
 - Datos personales: Ley 1581. Publicidad veraz: Ley 1480.
 - Es orientación, **no asesoría legal**.
 
-## 8. Flujo de trabajo (cuando el usuario pida un concepto)
+## 9. Principios de libros clásicos (resumen operativo)
+| Libro / autor | Qué tomar | Confianza |
+|---|---|---|
+| *Made to Stick* (Heath, 2007): SUCCESs | Simple (la idea central), Inesperado (romper el patrón), Concreto (algo que se ve), Creíble, Emocional, Historia | B (libro; base en investigación no detallada aquí) |
+| *Contagious* (Berger): STEPPS | Moneda social, disparadores, emoción, público, valor práctico, historias | B (apoyado en Berger & Milkman 2012, A) |
+| *Hit Makers* (Thompson) / Loewy: MAYA | "Lo más avanzado que aún sea aceptable": familiar + sorpresa. Para vender algo nuevo, hazlo familiar; para vender algo familiar, hazlo sorprendente | B/C (ensayo, no experimento) |
+| *Influence* (Cialdini): 7 principios | Reciprocidad, simpatía, prueba social, autoridad, escasez, compromiso, **unidad** (identidad compartida: "los de Nudo") | B |
+| *Alchemy* (Sutherland) | El valor percibido depende del contexto; lo "ilógico" puede funcionar; sin marca, todo es commodity | C (ensayo) |
+| Loewenstein (1994): brecha de curiosidad | La curiosidad nace de un hueco de información que parece cerrable; máxima cuando hay una buena pista pero no certeza | A (teoría + fMRI 2009); su uso en clics no está probado |
+| Green & Brock (2000); van Laer et al. (2014, meta-análisis 132 efectos) | Una historia persuade más si transporta: trama imaginable, personaje identificable y verosimilitud | A |
+| Reber, Schwarz, Winkielman (2004): fluidez | Lo fácil de procesar (simetría, contraste, repetición, prototipo) gusta más y parece más verdadero. Base de lo minimalista | A (con críticas: lo novedoso/complejo también puede gustar) |
+| Salganik, Dodds, Watts (2006, *Science*, 14.341 personas) | La influencia social vuelve el éxito **desigual e impredecible**: lo mejor rara vez fracasa y lo peor rara vez triunfa, pero lo demás es lotería. Conclusión: muchas oportunidades, impulso temprano y no apostar todo a un video | A |
+
+## 10. Mitos o evidencia débil (no los vendas como hechos)
+- **Estudio de las mermeladas / "menos opciones venden más":** el meta-análisis de 2010 (50 experimentos) halló efecto promedio ≈ 0; solo aparece en ciertas condiciones. Pocos productos se justifican por foco y operación, no por esta "ley".
+- **Efecto Zeigarnik / "lazos abiertos se recuerdan más":** el meta-análisis de 2025 dice que no tiene validez universal. La tendencia a querer **terminar** lo interrumpido (Ovsiankina) sí es más general.
+- **Oxitocina y storytelling (Zak):** muestras pequeñas, estudios encargados por agencias y críticas fuertes. No citarlo.
+- **Modelo Hooked (Eyal):** marco de diseño, no teoría probada.
+- **"Los primeros 3 s deciden X %":** cifras de blogs que se contradicen. Mide con tus Insights.
+
+## 11. Flujo de trabajo (cuando el usuario pida un concepto)
 1. Pregunta mínima o supone y declara: producto, presupuesto, tiempo de máquina, país/canal.
-2. Genera **5 conceptos de una frase**; puntúa con la rúbrica (sección 2); elige 1-2.
+2. Genera **5 conceptos de una frase**; puntúa con la rúbrica (sección 2); elige 1-2. Revisa SUCCESs y MAYA (sección 9) como filtro.
 3. Define: apuesta numérica, contador/hitos, guion de 3 s, historia del producto, premio y reglas.
-4. **Prueba barata antes de producir en grande:** mismo producto con 2 historias o 2 ganchos en reels distintos; comparar guardados, compartidos, comentarios y mensajes.
-5. Lista de riesgos: legal, costo, capacidad de entrega.
-6. Si hay que producir video, usa `estilo-nudo-design` (estilo "Láser Nudo") y `videos-explicativos`.
+4. **Varias oportunidades, no una:** el éxito es en parte lotería (Salganik 2006). Planifica una serie, no un solo video.
+5. **Prueba barata antes de producir en grande:** mismo producto con 2 historias o 2 ganchos en reels distintos; comparar guardados, compartidos, comentarios y mensajes.
+6. Lista de riesgos: legal, costo, capacidad de entrega.
+7. Si hay que producir video, usa `estilo-nudo-design` (estilo "Láser Nudo") y `videos-explicativos`.
 
 ## Plantilla de concepto
 ```
@@ -92,4 +118,5 @@ Puntaje rúbrica /30:
 
 ## Correcciones del usuario
 - 2026-11-07: el concepto de referencia es el primer video de MrBeast, **contar números** ("I Counted to 100,000"): reto largo, número enorme, cero producción.
+- 2026-11-07: investigación profunda en libros y papers añadida (secciones 7, 9 y 10); el usuario pidió revisar literatura, libros y papers ("Ebola" fue un error de tipeo).
 - 2026-11-07: el usuario quiere que el premio se vea más costoso y propone envío "contra entrega"; advertir el riesgo legal/confianza (ver sección 7) pero la decisión es suya.
