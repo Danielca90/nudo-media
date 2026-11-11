@@ -10,6 +10,7 @@ import {V1Permisos} from './videos-15s/V1Permisos';
 import {V2Dominical} from './videos-15s/V2Dominical';
 import {V3Alcohol} from './videos-15s/V3Alcohol';
 import {V4Camaras} from './videos-15s/V4Camaras';
+import {RetablosLaser} from './retablos-laser/RetablosLaser';
 import {W, H, FPS, FRAMES} from './carrusel-incapacidades/tema';
 
 export const RemotionRoot: React.FC = () => (
@@ -46,5 +47,6 @@ export const RemotionRoot: React.FC = () => (
   <Composition id="ArcaDominicalB" component={conTema('B', V2Dominical)} durationInFrames={450} fps={30} width={1080} height={1920} />
   <Composition id="ArcaAlcohol" component={conTema('B', V3Alcohol)} durationInFrames={450} fps={30} width={1080} height={1920} />
   <Composition id="ArcaCamaras" component={conTema('A', V4Camaras)} durationInFrames={450} fps={30} width={1080} height={1920} />
+  <Composition id="NudoRetablosLaser" component={RetablosLaser} durationInFrames={300} fps={30} width={1080} height={1920} />
   </>
 );
