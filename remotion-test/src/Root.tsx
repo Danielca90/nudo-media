@@ -12,6 +12,11 @@ import {V3Alcohol} from './videos-15s/V3Alcohol';
 import {V4Camaras} from './videos-15s/V4Camaras';
 import {RetablosLaser} from './retablos-laser/RetablosLaser';
 import {RetablosLaserV2} from './retablos-laser/RetablosLaserV2';
+import {Pelota} from './kodland/Pelota';
+import {Robot, RobotPasos} from './kodland/Robot';
+import {Atardecer, AtardecerPaleta} from './kodland/Atardecer';
+import {Isla3D} from './kodland/Isla3D';
+import {Pinguino3D} from './kodland/Pinguino3D';
 import {W, H, FPS, FRAMES} from './carrusel-incapacidades/tema';
 
 export const RemotionRoot: React.FC = () => (
@@ -50,5 +55,12 @@ export const RemotionRoot: React.FC = () => (
   <Composition id="ArcaCamaras" component={conTema('A', V4Camaras)} durationInFrames={450} fps={30} width={1080} height={1920} />
   <Composition id="NudoRetablosLaser" component={RetablosLaser} durationInFrames={300} fps={30} width={1080} height={1920} />
   <Composition id="NudoRetablosLaserV2" component={RetablosLaserV2} durationInFrames={270} fps={30} width={1080} height={1920} />
+  <Composition id="KodPelota" component={Pelota} durationInFrames={90} fps={30} width={1080} height={1080} />
+  <Composition id="KodRobot" component={Robot} durationInFrames={210} fps={30} width={1080} height={1080} />
+  <Composition id="KodRobotPasos" component={RobotPasos} durationInFrames={1} fps={30} width={1080} height={1080} />
+  <Composition id="KodAtardecer" component={Atardecer} durationInFrames={180} fps={30} width={1080} height={1080} />
+  <Composition id="KodAtardecerPaleta" component={AtardecerPaleta} durationInFrames={1} fps={30} width={1080} height={1350} />
+  <Composition id="KodIsla3D" component={Isla3D} durationInFrames={240} fps={30} width={1080} height={1080} />
+  <Composition id="KodPinguino3D" component={Pinguino3D} durationInFrames={90} fps={30} width={1080} height={1080} />
   </>
 );
